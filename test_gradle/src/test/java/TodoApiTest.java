@@ -2,17 +2,10 @@ import static org.junit.Assert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse.BodyHandlers;
-
 import io.restassured.RestAssured;
-import io.restassured.RestAssured.*;
-import io.restassured.matcher.RestAssuredMatchers.*;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-import org.hamcrest.Matchers.*;
 import org.json.simple.JSONObject;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -45,6 +38,7 @@ public class TodoApiTest {
 
     @Test
     // todos
+    // FIXME: this test is failing due to the order of the todos being different
     void testTodoGetRequest() {
         Response response = RestAssured.get(BASE_URL + "/todos");
 
