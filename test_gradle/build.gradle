@@ -13,7 +13,7 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     implementation 'com.googlecode.json-simple:json-simple:1.1.1'
-}
+    testImplementation 'io.rest-assured:rest-assured:5.3.2'}
 
 test {
     useJUnitPlatform()
