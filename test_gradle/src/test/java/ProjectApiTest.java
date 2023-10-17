@@ -6,9 +6,11 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 import org.json.simple.JSONObject;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+
 
 class ProjectApiTest {
 	public static Process RunRestAPI;
@@ -25,40 +27,60 @@ class ProjectApiTest {
 			"    \"description\": \""+description+"\"" +
 			"}";
 
-	@BeforeEach
-	void setUp() throws Exception {
-		try {
-			RunRestAPI = Runtime.getRuntime().exec("java -jar runTodoManagerRestAPI-1.5.5.jar");
-			Thread.sleep(2000); // wait for server to start
-		} catch (IOException e) {
-			e.printStackTrace();
+	@BeforeAll
+	static void setUp() throws Exception {
+		int numTries = 10;
+		while (numTries>0) {
+			try {
+				RunRestAPI = Runtime.getRuntime().exec("java -jar runTodoManagerRestAPI-1.5.5.jar");
+				Thread.sleep(2000); // wait for server to start
+				numTries = 0;
+			} catch (IOException e) {
+				//System.out.println("ERROR!");
+				//e.printStackTrace();
+				numTries--;
+			}
 		}
 	}
 
-	@AfterEach
-	void tearDown() throws Exception {
+	@AfterAll
+	static void tearDown() throws Exception {
 		RunRestAPI.destroy();
 	}
 
-	@Test
-	void testProjectsAPI() {
-		assertEquals(1,1);
-	}
-
+	//WORKS!
 	@Test
 	void testGET() {
-		assertEquals(1,1);
+		RequestSpecification request = RestAssured.given();
+		Response response = request.get(BASE_URL);
+		assertEquals(200, response.getStatusCode());
 	}
 
+	//WORKS!
 	@Test
-	void testGETInt() {
-		assertEquals(1,1);
+	void testGETValidID() {
+		String validID = "1";
+		RequestSpecification request = RestAssured.given();
+		Response response = request.get(BASE_URL+"/"+validID);
+		assertEquals(200, response.getStatusCode());
+		assertEquals(validID, response.jsonPath().getString("projects[0].id"));
 	}
+
+	//WORKS!
+	@Test
+	void testGETInvalidID() {
+		String invalidID = "asdf";
+		RequestSpecification request = RestAssured.given();
+		Response response = request.get(BASE_URL + "/" + invalidID);
+		assertEquals(404, response.getStatusCode());
+		assertEquals("[Could not find an instance with projects/"+invalidID+"]",response.jsonPath().getString("errorMessages"));
+	}
+
 
 
 	//WORKS!
 	@Test
-	void testPOSTJSONObject() {
+	void testPOST() {
 		RequestSpecification request = RestAssured.given();
 		request.body(JSON_TO_POST);
 		Response response = request.post(BASE_URL);
@@ -69,8 +91,32 @@ class ProjectApiTest {
 		assertEquals(description, response.jsonPath().getString("description"));
 	}
 
+
+	//WORKS!
 	@Test
-	void testPOSTJSONObjectInt() {
-		assertEquals(1,1);
+	void testPOSTValidID() {
+		String validID = "1";
+		RequestSpecification request = RestAssured.given();
+		request.body(JSON_TO_POST);
+		Response response = request.post(BASE_URL+"/"+validID);
+		assertEquals(200, response.getStatusCode());
+		assertEquals(validID, response.jsonPath().getString("id"));
+		assertEquals(title, response.jsonPath().getString("title"));
+		assertEquals(completed, response.jsonPath().getString("completed"));
+		assertEquals(active, response.jsonPath().getString("active"));
+		assertEquals(description, response.jsonPath().getString("description"));
+	}
+
+
+	//WORKS!
+	@Test
+	void testPOSTInvalidID() {
+		String invalidID = "asdf";
+		RequestSpecification request = RestAssured.given();
+		request.body(JSON_TO_POST);
+		Response response = request.post(BASE_URL + "/" + invalidID);
+		assertEquals(404, response.getStatusCode());
+		assertEquals("[No such project entity instance with GUID or ID " + invalidID + " found]",
+				response.jsonPath().getString("errorMessages"));
 	}
 }
