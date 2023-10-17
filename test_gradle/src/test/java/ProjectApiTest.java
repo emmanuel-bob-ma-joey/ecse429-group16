@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import java.io.IOException;
 import io.restassured.RestAssured;
@@ -56,6 +57,14 @@ class ProjectApiTest {
 
 	//WORKS!
 	@Test
+	void testHEAD() {
+		RequestSpecification request = RestAssured.given();
+		Response response = request.head(BASE_URL);
+		assertEquals(200, response.getStatusCode());
+	}
+
+	//WORKS!
+	@Test
 	void testGETValidID() {
 		String validID = "1";
 		RequestSpecification request = RestAssured.given();
@@ -88,6 +97,37 @@ class ProjectApiTest {
 		assertEquals(active, response.jsonPath().getString("active"));
 		assertEquals(description, response.jsonPath().getString("description"));
 	}
+
+
+	@Test
+	void testPOSTSameJSONTwice() {
+		RequestSpecification request = RestAssured.given();
+		request.body(JSON_TO_POST);
+		Response response1 = request.post(BASE_URL);
+
+		request.body(JSON_TO_POST);
+		Response response2 = request.post(BASE_URL);
+
+		String ID1 = response1.jsonPath().getString("id");
+		String ID2 = response2.jsonPath().getString("id");
+
+		assertEquals(201, response1.getStatusCode());
+		assertEquals(201, response2.getStatusCode());
+
+		assertEquals(title, response1.jsonPath().getString("title"));
+		assertEquals(completed, response1.jsonPath().getString("completed"));
+		assertEquals(active, response1.jsonPath().getString("active"));
+		assertEquals(description, response1.jsonPath().getString("description"));
+
+		assertEquals(title, response2.jsonPath().getString("title"));
+		assertEquals(completed, response2.jsonPath().getString("completed"));
+		assertEquals(active, response2.jsonPath().getString("active"));
+		assertEquals(description, response2.jsonPath().getString("description"));
+
+		assertNotEquals(ID1, ID2);
+	}
+
+
 
 
 	//WORKS!
