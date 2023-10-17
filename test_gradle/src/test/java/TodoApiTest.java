@@ -23,7 +23,7 @@ public class TodoApiTest {
 
         try {
             RunRestAPI = Runtime.getRuntime().exec("java -jar runTodoManagerRestAPI-1.5.5.jar");
-            Thread.sleep(2000); // wait for server to start
+            Thread.sleep(3000); // wait for server to start
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -33,6 +33,7 @@ public class TodoApiTest {
     @AfterEach
     void tearDown() throws Exception {
         RunRestAPI.destroy();
+        Thread.sleep(1000);
     }
 
     @Test
@@ -97,7 +98,7 @@ public class TodoApiTest {
 
     @Test
     void testGetSpecificTodoWithID() {
-        String id = "2";
+        String id = "1";
         Response response = RestAssured.get(BASE_URL + "/todos" + "/" + id);
         assertEquals(200, response.getStatusCode());
         assertEquals(initialTodoWithId2, response.getBody().asString());
