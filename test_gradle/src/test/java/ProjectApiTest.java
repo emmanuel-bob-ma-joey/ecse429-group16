@@ -28,18 +28,18 @@ class ProjectApiTest {
 
 	@BeforeAll
 	static void setUp() throws Exception {
-		int numTries = 10;
-		while (numTries>0) {
+		//int numTries = 10;
+		//while (numTries>0) {
 			try {
 				RunRestAPI = Runtime.getRuntime().exec("java -jar runTodoManagerRestAPI-1.5.5.jar");
 				Thread.sleep(2000); // wait for server to start
-				numTries = 0;
+				//numTries = 0;
 			} catch (IOException e) {
-				//System.out.println("ERROR!");
-				//e.printStackTrace();
-				numTries--;
+				System.out.println("ERROR!");
+				e.printStackTrace();
+				//numTries--;
 			}
-		}
+		//}
 	}
 
 	@AfterAll
