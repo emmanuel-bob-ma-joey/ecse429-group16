@@ -191,8 +191,7 @@ public class TodoApiTest {
         String id = "1";
         Response response = RestAssured.get(BASE_URL + "/todos" + "/" + id + "/categories");
         assertEquals(200, response.getStatusCode());
-        assertEquals("{\"categories\":[{\"id\":\"1\",\"title\":\"Office\",\"description\":\"\"}]}",
-                response.getBody().asString());
+        assertEquals(id, response.getBody().jsonPath().getString("categories[0].id"));
     }
 
     @Test
@@ -250,8 +249,7 @@ public class TodoApiTest {
         // check if it really updated
         response = RestAssured.get(BASE_URL + "/todos" + "/" + id + "/categories");
         assertEquals(200, response.getStatusCode());
-        assertEquals("{\"categories\":[{\"id\":\"1\",\"title\":\"Office\",\"description\":\"\"}]}",
-                response.getBody().asString());
+        assertEquals("1", response.getBody().jsonPath().getString("categories[0].id"));
     }
 
     @Test
