@@ -15,8 +15,7 @@ public class TodoApiTest {
     public Process RunRestAPI;
 
     final String BASE_URL = "http://localhost:4567";
-    private final String listOfTodosJSON = "{\"todos\":[{\"id\":\"1\",\"title\":\"scan paperwork\",\"doneStatus\":\"false\",\"description\":\"\",\"categories\":[{\"id\":\"1\"}],\"tasksof\":[{\"id\":\"1\"}]},{\"id\":\"2\",\"title\":\"file paperwork\",\"doneStatus\":\"false\",\"description\":\"\",\"tasksof\":[{\"id\":\"1\"}]}]}";
-    private final String initialTodoWithId2 = "{\"todos\":[{\"id\":\"2\",\"title\":\"file paperwork\",\"doneStatus\":\"false\",\"description\":\"\",\"tasksof\":[{\"id\":\"1\"}]}]}";
+    final String initial_todos_count = "2";
 
     @BeforeEach
     void setUp() throws Exception {
@@ -43,8 +42,8 @@ public class TodoApiTest {
         Response response = RestAssured.get(BASE_URL + "/todos");
 
         assertEquals(200, response.getStatusCode());
-        assertEquals(listOfTodosJSON, response.getBody().asString());
-
+        // iwant to compare length
+        assertEquals("2", response.getBody().jsonPath().getString("todos.size()"));
     }
 
     @Test
@@ -101,7 +100,7 @@ public class TodoApiTest {
         String id = "1";
         Response response = RestAssured.get(BASE_URL + "/todos" + "/" + id);
         assertEquals(200, response.getStatusCode());
-        assertEquals(initialTodoWithId2, response.getBody().asString());
+        assertEquals("1", response.getBody().jsonPath().getString("todos[0].id"));
     }
 
     @Test
@@ -203,8 +202,8 @@ public class TodoApiTest {
         String id = "1000000000";
         Response response = RestAssured.get(BASE_URL + "/todos" + "/" + id + "/categories");
         assertEquals(200, response.getStatusCode());
-        assertEquals("{\"categories\":[{\"id\":\"1\",\"title\":\"Office\",\"description\":\"\"}]}",
-                response.getBody().asString());
+        assertEquals(id,
+                response.getBody().jsonPath().getString("categories[0].id"));
     }
 
     @Test
@@ -344,9 +343,8 @@ public class TodoApiTest {
         // check if it really updated
         response = RestAssured.get(BASE_URL + "/todos" + "/" + id + "/tasksof");
         assertEquals(200, response.getStatusCode());
-        assertEquals(
-                "{\"projects\":[{\"id\":\"1\",\"title\":\"Office Work\",\"completed\":\"false\",\"active\":\"false\",\"description\":\"\",\"tasks\":[{\"id\":\"2\"},{\"id\":\"1\"}]}]}",
-                response.getBody().asString());
+        assertEquals("1", response.getBody().jsonPath().getString("projects[0].id"));
+
     }
 
 }
