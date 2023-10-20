@@ -22,7 +22,7 @@ public class TodoApiTest {
 
         try {
             RunRestAPI = Runtime.getRuntime().exec("java -jar runTodoManagerRestAPI-1.5.5.jar");
-            Thread.sleep(2000); // wait for server to start
+            Thread.sleep(1000); // wait for server to start
         } catch (IOException e) {
             e.printStackTrace();
         }
