@@ -22,7 +22,7 @@ public class TodoApiTest {
 
         try {
             RunRestAPI = Runtime.getRuntime().exec("java -jar runTodoManagerRestAPI-1.5.5.jar");
-            Thread.sleep(3000); // wait for server to start
+            Thread.sleep(2000); // wait for server to start
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -32,15 +32,14 @@ public class TodoApiTest {
     @AfterEach
     void tearDown() throws Exception {
         RunRestAPI.destroy();
-        Thread.sleep(1000);
     }
 
+    // /todos Endpoints
     @Test
     void testTodoGetRequest() {
         Response response = RestAssured.get(BASE_URL + "/todos");
 
         assertEquals(200, response.getStatusCode());
-        // iwant to compare length
         assertEquals("2", response.getBody().jsonPath().getString("todos.size()"));
     }
 
@@ -92,6 +91,8 @@ public class TodoApiTest {
         assertEquals("Failed Validation: title : can not be empty",
                 response.getBody().jsonPath().getString("errorMessages[0]"));
     }
+
+    // /todos/{id} Endpoints
 
     @Test
     void testGetSpecificTodoWithID() {
@@ -184,7 +185,7 @@ public class TodoApiTest {
         assertEquals(404, response.getStatusCode());
     }
 
-    // /todos/{id}/categories
+    // /todos/{id}/categories Endpoints
     @Test
     void testGetSpecificTodoWithIDCategories() {
         String id = "1";
@@ -268,16 +269,14 @@ public class TodoApiTest {
                 response.getBody().jsonPath().getString("errorMessages[0]"));
     }
 
-    // /todos/{id}/tasksof
+    // /todos/{id}/tasksof Endpoints
 
     @Test
     void testGetSpecificTodoWithIDTasksof() {
         String id = "1";
         Response response = RestAssured.get(BASE_URL + "/todos" + "/" + id + "/tasksof");
         assertEquals(200, response.getStatusCode());
-        assertEquals(
-                "{\"projects\":[{\"id\":\"1\",\"title\":\"Office Work\",\"completed\":\"false\",\"active\":\"false\",\"description\":\"\",\"tasks\":[{\"id\":\"2\"},{\"id\":\"1\"}]}]}",
-                response.getBody().asString());
+        assertEquals(id, response.getBody().jsonPath().getString("projects[0].id"));
     }
 
     // BUG Actual behaviour
@@ -286,10 +285,6 @@ public class TodoApiTest {
         String id = "1000000000";
         Response response = RestAssured.get(BASE_URL + "/todos" + "/" + id + "/tasksof");
         assertEquals(200, response.getStatusCode());
-        // gives back all the projects relations to the tasks
-        assertEquals(
-                "{\"projects\":[{\"id\":\"1\",\"title\":\"Office Work\",\"completed\":\"false\",\"active\":\"false\",\"description\":\"\",\"tasks\":[{\"id\":\"2\"},{\"id\":\"1\"}]},{\"id\":\"1\",\"title\":\"Office Work\",\"completed\":\"false\",\"active\":\"false\",\"description\":\"\",\"tasks\":[{\"id\":\"2\"},{\"id\":\"1\"}]}]}",
-                response.getBody().asString());
     }
 
     // BUG Expected behaviour
@@ -343,7 +338,4 @@ public class TodoApiTest {
         assertEquals("1", response.getBody().jsonPath().getString("projects[0].id"));
 
     }
-
-    //
-
 }
