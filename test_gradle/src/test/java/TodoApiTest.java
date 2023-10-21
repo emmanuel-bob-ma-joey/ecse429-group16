@@ -8,8 +8,11 @@ import io.restassured.specification.RequestSpecification;
 import org.json.simple.JSONObject;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
+@TestMethodOrder(MethodOrderer.Random.class)
 public class TodoApiTest {
 
     public Process RunRestAPI;
@@ -22,7 +25,7 @@ public class TodoApiTest {
 
         try {
             RunRestAPI = Runtime.getRuntime().exec("java -jar runTodoManagerRestAPI-1.5.5.jar");
-            Thread.sleep(1000); // wait for server to start
+            Thread.sleep(3000); // wait for server to start
         } catch (IOException e) {
             e.printStackTrace();
         }
