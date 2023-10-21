@@ -5,14 +5,15 @@ import java.io.IOException;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 
 class ProjectApiTest {
-	public static Process RunRestAPI;
+	public  Process RunRestAPI;
 
 	static final String BASE_URL = "http://localhost:4567/projects";
 
@@ -26,8 +27,8 @@ class ProjectApiTest {
 			"    \"description\": \""+description+"\"" +
 			"}";
 
-	@BeforeAll
-	static void setUp() throws Exception {
+	@BeforeEach
+	 void setUp() throws Exception {
 		//int numTries = 10;
 		//while (numTries>0) {
 			try {
@@ -42,8 +43,8 @@ class ProjectApiTest {
 		//}
 	}
 
-	@AfterAll
-	static void tearDown() throws Exception {
+	@AfterEach
+	 void tearDown() throws Exception {
 		RunRestAPI.destroy();
 	}
 
