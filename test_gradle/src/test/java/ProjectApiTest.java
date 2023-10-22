@@ -5,14 +5,15 @@ import java.io.IOException;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 
 class ProjectApiTest {
-	public static Process RunRestAPI;
+	public  Process RunRestAPI;
 
 	static final String BASE_URL = "http://localhost:4567/projects";
 
@@ -26,24 +27,24 @@ class ProjectApiTest {
 			"    \"description\": \""+description+"\"" +
 			"}";
 
-	@BeforeAll
-	static void setUp() throws Exception {
-		int numTries = 10;
-		while (numTries>0) {
+	@BeforeEach
+	 void setUp() throws Exception {
+		//int numTries = 10;
+		//while (numTries>0) {
 			try {
 				RunRestAPI = Runtime.getRuntime().exec("java -jar runTodoManagerRestAPI-1.5.5.jar");
 				Thread.sleep(2000); // wait for server to start
-				numTries = 0;
+				//numTries = 0;
 			} catch (IOException e) {
-				//System.out.println("ERROR!");
-				//e.printStackTrace();
-				numTries--;
+				System.out.println("ERROR!");
+				e.printStackTrace();
+				//numTries--;
 			}
-		}
+		//}
 	}
 
-	@AfterAll
-	static void tearDown() throws Exception {
+	@AfterEach
+	 void tearDown() throws Exception {
 		RunRestAPI.destroy();
 	}
 

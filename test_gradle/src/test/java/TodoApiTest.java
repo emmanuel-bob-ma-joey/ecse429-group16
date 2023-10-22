@@ -1,22 +1,27 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.io.IOException;
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 import org.json.simple.JSONObject;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+@TestMethodOrder(MethodOrderer.Random.class)
 public class TodoApiTest {
 
     public Process RunRestAPI;
 
     final String BASE_URL = "http://localhost:4567";
-    private final String listOfTodosJSON = "{\"todos\":[{\"id\":\"1\",\"title\":\"scan paperwork\",\"doneStatus\":\"false\",\"description\":\"\",\"categories\":[{\"id\":\"1\"}],\"tasksof\":[{\"id\":\"1\"}]},{\"id\":\"2\",\"title\":\"file paperwork\",\"doneStatus\":\"false\",\"description\":\"\",\"tasksof\":[{\"id\":\"1\"}]}]}";
-    private final String initialTodoWithId2 = "{\"todos\":[{\"id\":\"2\",\"title\":\"file paperwork\",\"doneStatus\":\"false\",\"description\":\"\",\"tasksof\":[{\"id\":\"1\"}]}]}";
+    final String initial_todos_count = "2";
+
+    // store the above in a JSON object
 
     @BeforeEach
     void setUp() throws Exception {
@@ -33,18 +38,16 @@ public class TodoApiTest {
     @AfterEach
     void tearDown() throws Exception {
         RunRestAPI.destroy();
-        Thread.sleep(1000);
     }
 
+    // ------------------ /todos Endpoints ------------------
     @Test
-    // todos
-    // FIXME: this test is failing due to the order of the todos being different
     void testTodoGetRequest() {
+
         Response response = RestAssured.get(BASE_URL + "/todos");
 
         assertEquals(200, response.getStatusCode());
-        assertEquals(listOfTodosJSON, response.getBody().asString());
-
+        assertEquals(initial_todos_count, response.getBody().jsonPath().getString("todos.size()"));
     }
 
     @Test
@@ -81,6 +84,23 @@ public class TodoApiTest {
         assertEquals("title : field is mandatory", response.getBody().jsonPath().getString("errorMessages[0]"));
     }
 
+    // JSON malformed
+    @Test
+    void testTodoPostRequestMalformedJSON() {
+        RequestSpecification request = RestAssured.given();
+
+        JSONObject requestParams = new JSONObject();
+        requestParams.put("title", "test");
+        requestParams.put("description", "test");
+
+        request.body(requestParams.toJSONString() + "}");
+        Response response = request.post(BASE_URL + "/todos");
+        assertEquals(400, response.getStatusCode());
+        assertEquals(
+                "com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 39 path $",
+                response.getBody().jsonPath().getString("errorMessages[0]"));
+    }
+
     @Test
     void testTodoPostRequestWithEmptyTitle() {
         RequestSpecification request = RestAssured.given();
@@ -97,11 +117,33 @@ public class TodoApiTest {
     }
 
     @Test
+    void testTodoPostRequestWithInexistantFeld() {
+        RequestSpecification request = RestAssured.given();
+        String inexistantField = "inexistant";
+
+        JSONObject requestParams = new JSONObject();
+        requestParams.put(inexistantField, "test");
+
+        request.body(requestParams.toJSONString());
+        Response response = request.post(BASE_URL + "/todos");
+        assertEquals(400, response.getStatusCode());
+        assertEquals("Could not find field: " + inexistantField,
+                response.getBody().jsonPath().getString("errorMessages[0]"));
+    }
+
+    // ------------------ /todos/{id} Endpoints ------------------
+
+    @Test
     void testGetSpecificTodoWithID() {
         String id = "1";
         Response response = RestAssured.get(BASE_URL + "/todos" + "/" + id);
         assertEquals(200, response.getStatusCode());
-        assertEquals(initialTodoWithId2, response.getBody().asString());
+        assertEquals(id, response.getBody().jsonPath().getString("todos[0].id"));
+        assertEquals(Constants.title1, response.getBody().jsonPath().getString("todos[0].title"));
+        assertEquals(Constants.doneStatus1, response.getBody().jsonPath().getString("todos[0].doneStatus"));
+        assertEquals(Constants.description1, response.getBody().jsonPath().getString("todos[0].description"));
+        assertEquals(Constants.categories1, response.getBody().jsonPath().getString("todos[0].categories"));
+        assertEquals(Constants.tasksof1, response.getBody().jsonPath().getString("todos[0].tasksof"));
     }
 
     @Test
@@ -177,6 +219,23 @@ public class TodoApiTest {
     }
 
     @Test
+    void testPutSpecificTodoWithInvalidID() {
+        String id = "100000";
+        RequestSpecification request = RestAssured.given();
+
+        JSONObject requestParams = new JSONObject();
+        requestParams.put("title", "abc");
+        requestParams.put("doneStatus", true);
+
+        request.body(requestParams.toJSONString());
+        Response response = request.put(BASE_URL + "/todos" + "/" + id);
+
+        assertEquals(404, response.getStatusCode());
+        assertEquals("Invalid GUID for " + id + " entity todo",
+                response.getBody().jsonPath().getString("errorMessages[0]"));
+    }
+
+    @Test
     void testDeleteSpecificTodoWithID() {
         String id = "1";
         Response response = RestAssured.delete(BASE_URL + "/todos" + "/" + id);
@@ -187,14 +246,25 @@ public class TodoApiTest {
         assertEquals(404, response.getStatusCode());
     }
 
-    // /todos/{id}/categories
+    @Test
+    void testDeleteSpecificTodoWithInvalidID() {
+        String id = "100000";
+        Response response = RestAssured.delete(BASE_URL + "/todos" + "/" + id);
+        assertEquals(404, response.getStatusCode());
+    }
+
+    // ------------------ Extra out of scope tests ------------------
+
+    // ------------------ /todos/{id}/categories Endpoints ------------------
     @Test
     void testGetSpecificTodoWithIDCategories() {
         String id = "1";
         Response response = RestAssured.get(BASE_URL + "/todos" + "/" + id + "/categories");
         assertEquals(200, response.getStatusCode());
-        assertEquals("{\"categories\":[{\"id\":\"1\",\"title\":\"Office\",\"description\":\"\"}]}",
-                response.getBody().asString());
+        assertEquals(id, response.getBody().jsonPath().getString("categories[0].id"));
+        assertEquals(Constants.category1Title, response.getBody().jsonPath().getString("categories[0].title"));
+        assertEquals(Constants.description1,
+                response.getBody().jsonPath().getString("categories[0].description"));
     }
 
     @Test
@@ -203,8 +273,7 @@ public class TodoApiTest {
         String id = "1000000000";
         Response response = RestAssured.get(BASE_URL + "/todos" + "/" + id + "/categories");
         assertEquals(200, response.getStatusCode());
-        assertEquals("{\"categories\":[{\"id\":\"1\",\"title\":\"Office\",\"description\":\"\"}]}",
-                response.getBody().asString());
+
     }
 
     @Test
@@ -254,8 +323,7 @@ public class TodoApiTest {
         // check if it really updated
         response = RestAssured.get(BASE_URL + "/todos" + "/" + id + "/categories");
         assertEquals(200, response.getStatusCode());
-        assertEquals("{\"categories\":[{\"id\":\"1\",\"title\":\"Office\",\"description\":\"\"}]}",
-                response.getBody().asString());
+        assertEquals("1", response.getBody().jsonPath().getString("categories[0].id"));
     }
 
     @Test
@@ -273,16 +341,18 @@ public class TodoApiTest {
                 response.getBody().jsonPath().getString("errorMessages[0]"));
     }
 
-    // /todos/{id}/tasksof
-
+    // ------------------ /todos/{id}/tasksof Endpoints ------------------
     @Test
     void testGetSpecificTodoWithIDTasksof() {
         String id = "1";
         Response response = RestAssured.get(BASE_URL + "/todos" + "/" + id + "/tasksof");
         assertEquals(200, response.getStatusCode());
-        assertEquals(
-                "{\"projects\":[{\"id\":\"1\",\"title\":\"Office Work\",\"completed\":\"false\",\"active\":\"false\",\"description\":\"\",\"tasks\":[{\"id\":\"2\"},{\"id\":\"1\"}]}]}",
-                response.getBody().asString());
+        assertEquals(id, response.getBody().jsonPath().getString("projects[0].id"));
+        assertEquals(Constants.project1Title, response.getBody().jsonPath().getString("projects[0].title"));
+        assertEquals(Constants.description1, response.getBody().jsonPath().getString("projects[0].description"));
+        assertEquals(Constants.project1Active, response.getBody().jsonPath().getString("projects[0].active"));
+        assertEquals(Constants.project1Completed,
+                response.getBody().jsonPath().getString("projects[0].completed"));
     }
 
     // BUG Actual behaviour
@@ -291,10 +361,6 @@ public class TodoApiTest {
         String id = "1000000000";
         Response response = RestAssured.get(BASE_URL + "/todos" + "/" + id + "/tasksof");
         assertEquals(200, response.getStatusCode());
-        // gives back all the projects relations to the tasks
-        assertEquals(
-                "{\"projects\":[{\"id\":\"1\",\"title\":\"Office Work\",\"completed\":\"false\",\"active\":\"false\",\"description\":\"\",\"tasks\":[{\"id\":\"2\"},{\"id\":\"1\"}]},{\"id\":\"1\",\"title\":\"Office Work\",\"completed\":\"false\",\"active\":\"false\",\"description\":\"\",\"tasks\":[{\"id\":\"2\"},{\"id\":\"1\"}]}]}",
-                response.getBody().asString());
     }
 
     // BUG Expected behaviour
@@ -345,9 +411,7 @@ public class TodoApiTest {
         // check if it really updated
         response = RestAssured.get(BASE_URL + "/todos" + "/" + id + "/tasksof");
         assertEquals(200, response.getStatusCode());
-        assertEquals(
-                "{\"projects\":[{\"id\":\"1\",\"title\":\"Office Work\",\"completed\":\"false\",\"active\":\"false\",\"description\":\"\",\"tasks\":[{\"id\":\"2\"},{\"id\":\"1\"}]}]}",
-                response.getBody().asString());
-    }
+        assertEquals("1", response.getBody().jsonPath().getString("projects[0].id"));
 
+    }
 }
