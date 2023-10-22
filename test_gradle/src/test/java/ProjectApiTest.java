@@ -1,11 +1,10 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
-
 import java.io.IOException;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.*;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 
 @TestMethodOrder(MethodOrderer.Random.class)
@@ -40,7 +39,8 @@ public class ProjectApiTest {
 		Thread.sleep(1000);
 	}
 
-	//WORKS!
+	//-----------------------/projects Endpoints --------------------------------------
+
 	@Test
 	void testGET() {
 		RequestSpecification request = RestAssured.given();
@@ -48,7 +48,6 @@ public class ProjectApiTest {
 		assertEquals(200, response.getStatusCode());
 	}
 
-	//WORKS!
 	@Test
 	void testHEAD() {
 		RequestSpecification request = RestAssured.given();
@@ -56,40 +55,18 @@ public class ProjectApiTest {
 		assertEquals(200, response.getStatusCode());
 	}
 
-	//WORKS!
-	@Test
-	void testGETValidID() {
-		String validID = "1";
-		RequestSpecification request = RestAssured.given();
-		Response response = request.get(BASE_URL+"/"+validID);
-		assertEquals(200, response.getStatusCode());
-		assertEquals(validID, response.jsonPath().getString("projects[0].id"));
-	}
-
-	//WORKS!
-	@Test
-	void testGETInvalidID() {
-		String invalidID = "asdf";
-		RequestSpecification request = RestAssured.given();
-		Response response = request.get(BASE_URL + "/" + invalidID);
-		assertEquals(404, response.getStatusCode());
-		assertEquals("[Could not find an instance with projects/"+invalidID+"]",response.jsonPath().getString("errorMessages"));
-	}
-
-	//WORKS!!
 	@Test
 	void testPOSTMalformedJSON() {
 		RequestSpecification request = RestAssured.given();
 		request.body(JSON_TO_POST.replace(',', ' '));//all commas replaced by space, JSON is not properly formatted
 		Response response = request.post(BASE_URL);
 		assertEquals(400, response.getStatusCode());
-		assertEquals(null, response.jsonPath().getString("title"));
-		assertEquals(null, response.jsonPath().getString("completed"));
-		assertEquals(null, response.jsonPath().getString("active"));
-		assertEquals(null, response.jsonPath().getString("description"));
+        assertNull(response.jsonPath().getString("title"));
+        assertNull(response.jsonPath().getString("completed"));
+        assertNull(response.jsonPath().getString("active"));
+        assertNull(response.jsonPath().getString("description"));
 	}
 
-	//WORKS!
 	@Test
 	void testPOST() {
 		RequestSpecification request = RestAssured.given();
@@ -131,7 +108,7 @@ public class ProjectApiTest {
 		assertNotEquals(ID1, ID2);
 	}
 
-
+//-----------------------/projects/:id Endpoints --------------------------------------
 
 
 	//WORKS!
@@ -149,8 +126,6 @@ public class ProjectApiTest {
 		assertEquals(description, response.jsonPath().getString("description"));
 	}
 
-
-	//WORKS!
 	@Test
 	void testPOSTInvalidID() {
 		String invalidID = "asdf";
@@ -160,5 +135,23 @@ public class ProjectApiTest {
 		assertEquals(404, response.getStatusCode());
 		assertEquals("[No such project entity instance with GUID or ID " + invalidID + " found]",
 				response.jsonPath().getString("errorMessages"));
+	}
+
+	@Test
+	void testGETValidID() {
+		String validID = "1";
+		RequestSpecification request = RestAssured.given();
+		Response response = request.get(BASE_URL+"/"+validID);
+		assertEquals(200, response.getStatusCode());
+		assertEquals(validID, response.jsonPath().getString("projects[0].id"));
+	}
+
+	@Test
+	void testGETInvalidID() {
+		String invalidID = "asdf";
+		RequestSpecification request = RestAssured.given();
+		Response response = request.get(BASE_URL + "/" + invalidID);
+		assertEquals(404, response.getStatusCode());
+		assertEquals("[Could not find an instance with projects/"+invalidID+"]",response.jsonPath().getString("errorMessages"));
 	}
 }
