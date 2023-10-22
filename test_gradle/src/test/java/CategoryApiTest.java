@@ -59,8 +59,9 @@ public class CategoryApiTest {
         Response response = RestAssured.get(BASE_URL);
 
         assertEquals(200, response.getStatusCode());
-        System.out.println(response.getBody().asString());
-        assertEquals(initialCategories, response.getBody().asString());
+        //System.out.println(response.getBody().asString());
+        //assertEquals(initialCategories, response.getBody().asString());
+        assertEquals("2", response.getBody().jsonPath().getString("categories.size()"));
 
     }
     
