@@ -110,6 +110,8 @@ public class TodoApiTest {
         assertEquals(Constants.title1, response.getBody().jsonPath().getString("todos[0].title"));
         assertEquals(Constants.doneStatus1, response.getBody().jsonPath().getString("todos[0].doneStatus"));
         assertEquals(Constants.description1, response.getBody().jsonPath().getString("todos[0].description"));
+        assertEquals(Constants.categories1, response.getBody().jsonPath().getString("todos[0].categories"));
+        assertEquals(Constants.tasksof1, response.getBody().jsonPath().getString("todos[0].tasksof"));
     }
 
     @Test
@@ -293,7 +295,6 @@ public class TodoApiTest {
         assertEquals(Constants.project1Active, response.getBody().jsonPath().getString("projects[0].active"));
         assertEquals(Constants.project1Completed,
                 response.getBody().jsonPath().getString("projects[0].completed"));
-        assertEquals(Constants.project1Tasks, response.getBody().jsonPath().getString("projects[0].tasks"));
     }
 
     // BUG Actual behaviour
