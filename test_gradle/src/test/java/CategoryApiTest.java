@@ -473,7 +473,7 @@ public class CategoryApiTest {
 	        
 	        response = RestAssured.get(BASE_URL + "/" + CategoryId+"/projects");
 	        assertEquals(200, response.getStatusCode());
-	        assertEquals(null, response.getBody().jsonPath().getString("projects"));
+	        assertEquals("[]", response.getBody().jsonPath().getString("projects"));
 	        
 	        
 		    

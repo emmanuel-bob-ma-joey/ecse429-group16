@@ -38,6 +38,7 @@ public class TodoApiTest {
     @AfterEach
     void tearDown() throws Exception {
         RunRestAPI.destroy();
+        Thread.sleep(1000);
     }
 
     // ------------------ /todos Endpoints ------------------
