@@ -1,5 +1,6 @@
 import java.io.IOException;
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.*;
@@ -79,6 +80,15 @@ public class ProjectApiTest {
 		assertEquals(description, response.jsonPath().getString("description"));
 	}
 
+	@Test
+	public void testXmlPayload() {
+		Response response = RestAssured.given()
+				.accept(ContentType.XML)  // Request XML response
+				.when()
+				.get(BASE_URL);
+		assertEquals(200, response.getStatusCode());
+		assertEquals("application/xml", response.getContentType());
+	}
 
 	@Test
 	void testPOSTSameJSONTwice() {
