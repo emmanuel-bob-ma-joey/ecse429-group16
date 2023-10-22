@@ -1,6 +1,6 @@
-
 import java.io.IOException;
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -40,7 +40,7 @@ public class TodoApiTest {
         RunRestAPI.destroy();
     }
 
-    // /todos Endpoints
+    // ------------------ /todos Endpoints ------------------
     @Test
     void testTodoGetRequest() {
 
@@ -84,6 +84,23 @@ public class TodoApiTest {
         assertEquals("title : field is mandatory", response.getBody().jsonPath().getString("errorMessages[0]"));
     }
 
+    // JSON malformed
+    @Test
+    void testTodoPostRequestMalformedJSON() {
+        RequestSpecification request = RestAssured.given();
+
+        JSONObject requestParams = new JSONObject();
+        requestParams.put("title", "test");
+        requestParams.put("description", "test");
+
+        request.body(requestParams.toJSONString() + "}");
+        Response response = request.post(BASE_URL + "/todos");
+        assertEquals(400, response.getStatusCode());
+        assertEquals(
+                "com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 39 path $",
+                response.getBody().jsonPath().getString("errorMessages[0]"));
+    }
+
     @Test
     void testTodoPostRequestWithEmptyTitle() {
         RequestSpecification request = RestAssured.given();
@@ -99,7 +116,22 @@ public class TodoApiTest {
                 response.getBody().jsonPath().getString("errorMessages[0]"));
     }
 
-    // /todos/{id} Endpoints
+    @Test
+    void testTodoPostRequestWithInexistantFeld() {
+        RequestSpecification request = RestAssured.given();
+        String inexistantField = "inexistant";
+
+        JSONObject requestParams = new JSONObject();
+        requestParams.put(inexistantField, "test");
+
+        request.body(requestParams.toJSONString());
+        Response response = request.post(BASE_URL + "/todos");
+        assertEquals(400, response.getStatusCode());
+        assertEquals("Could not find field: " + inexistantField,
+                response.getBody().jsonPath().getString("errorMessages[0]"));
+    }
+
+    // ------------------ /todos/{id} Endpoints ------------------
 
     @Test
     void testGetSpecificTodoWithID() {
@@ -187,6 +219,23 @@ public class TodoApiTest {
     }
 
     @Test
+    void testPutSpecificTodoWithInvalidID() {
+        String id = "100000";
+        RequestSpecification request = RestAssured.given();
+
+        JSONObject requestParams = new JSONObject();
+        requestParams.put("title", "abc");
+        requestParams.put("doneStatus", true);
+
+        request.body(requestParams.toJSONString());
+        Response response = request.put(BASE_URL + "/todos" + "/" + id);
+
+        assertEquals(404, response.getStatusCode());
+        assertEquals("Invalid GUID for " + id + " entity todo",
+                response.getBody().jsonPath().getString("errorMessages[0]"));
+    }
+
+    @Test
     void testDeleteSpecificTodoWithID() {
         String id = "1";
         Response response = RestAssured.delete(BASE_URL + "/todos" + "/" + id);
@@ -197,7 +246,16 @@ public class TodoApiTest {
         assertEquals(404, response.getStatusCode());
     }
 
-    // /todos/{id}/categories Endpoints
+    @Test
+    void testDeleteSpecificTodoWithInvalidID() {
+        String id = "100000";
+        Response response = RestAssured.delete(BASE_URL + "/todos" + "/" + id);
+        assertEquals(404, response.getStatusCode());
+    }
+
+    // ------------------ Extra out of scope tests ------------------
+
+    // ------------------ /todos/{id}/categories Endpoints ------------------
     @Test
     void testGetSpecificTodoWithIDCategories() {
         String id = "1";
@@ -282,8 +340,7 @@ public class TodoApiTest {
                 response.getBody().jsonPath().getString("errorMessages[0]"));
     }
 
-    // /todos/{id}/tasksof Endpoints
-
+    // ------------------ /todos/{id}/tasksof Endpoints ------------------
     @Test
     void testGetSpecificTodoWithIDTasksof() {
         String id = "1";
