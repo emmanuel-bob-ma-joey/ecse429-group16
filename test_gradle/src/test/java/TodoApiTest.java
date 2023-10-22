@@ -1,4 +1,3 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.IOException;
 import io.restassured.RestAssured;
@@ -12,6 +11,8 @@ import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 @TestMethodOrder(MethodOrderer.Random.class)
 public class TodoApiTest {
 
@@ -19,6 +20,8 @@ public class TodoApiTest {
 
     final String BASE_URL = "http://localhost:4567";
     final String initial_todos_count = "2";
+
+    // store the above in a JSON object
 
     @BeforeEach
     void setUp() throws Exception {
@@ -40,10 +43,11 @@ public class TodoApiTest {
     // /todos Endpoints
     @Test
     void testTodoGetRequest() {
+
         Response response = RestAssured.get(BASE_URL + "/todos");
 
         assertEquals(200, response.getStatusCode());
-        assertEquals("2", response.getBody().jsonPath().getString("todos.size()"));
+        assertEquals(initial_todos_count, response.getBody().jsonPath().getString("todos.size()"));
     }
 
     @Test
@@ -102,7 +106,10 @@ public class TodoApiTest {
         String id = "1";
         Response response = RestAssured.get(BASE_URL + "/todos" + "/" + id);
         assertEquals(200, response.getStatusCode());
-        assertEquals("1", response.getBody().jsonPath().getString("todos[0].id"));
+        assertEquals(id, response.getBody().jsonPath().getString("todos[0].id"));
+        assertEquals(Constants.title1, response.getBody().jsonPath().getString("todos[0].title"));
+        assertEquals(Constants.doneStatus1, response.getBody().jsonPath().getString("todos[0].doneStatus"));
+        assertEquals(Constants.description1, response.getBody().jsonPath().getString("todos[0].description"));
     }
 
     @Test
@@ -195,6 +202,9 @@ public class TodoApiTest {
         Response response = RestAssured.get(BASE_URL + "/todos" + "/" + id + "/categories");
         assertEquals(200, response.getStatusCode());
         assertEquals(id, response.getBody().jsonPath().getString("categories[0].id"));
+        assertEquals(Constants.category1Title, response.getBody().jsonPath().getString("categories[0].title"));
+        assertEquals(Constants.description1,
+                response.getBody().jsonPath().getString("categories[0].description"));
     }
 
     @Test
@@ -278,6 +288,12 @@ public class TodoApiTest {
         Response response = RestAssured.get(BASE_URL + "/todos" + "/" + id + "/tasksof");
         assertEquals(200, response.getStatusCode());
         assertEquals(id, response.getBody().jsonPath().getString("projects[0].id"));
+        assertEquals(Constants.project1Title, response.getBody().jsonPath().getString("projects[0].title"));
+        assertEquals(Constants.description1, response.getBody().jsonPath().getString("projects[0].description"));
+        assertEquals(Constants.project1Active, response.getBody().jsonPath().getString("projects[0].active"));
+        assertEquals(Constants.project1Completed,
+                response.getBody().jsonPath().getString("projects[0].completed"));
+        assertEquals(Constants.project1Tasks, response.getBody().jsonPath().getString("projects[0].tasks"));
     }
 
     // BUG Actual behaviour
