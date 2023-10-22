@@ -1,5 +1,4 @@
-// make a class with all constants
-
+// Constants for the tests
 public class Constants {
 	
 	public static final String base_url = "http://localhost:4567";

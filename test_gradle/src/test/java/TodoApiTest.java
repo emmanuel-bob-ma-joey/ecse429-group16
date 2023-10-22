@@ -21,8 +21,6 @@ public class TodoApiTest {
     final String BASE_URL = Constants.base_url;
     final String initial_todos_count = "2";
 
-    // store the above in a JSON object
-
     @BeforeEach
     void setUp() throws Exception {
 
@@ -99,6 +97,34 @@ public class TodoApiTest {
         assertEquals(400, response.getStatusCode());
         assertEquals(
                 "com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 39 path $",
+                response.getBody().jsonPath().getString("errorMessages[0]"));
+    }
+
+    // XML formatted correctly
+    @Test
+    void testTodoPostRequestXML() {
+        RequestSpecification request = RestAssured.given();
+
+        String requestParams = "<todo><title>test</title><description>test</description></todo>";
+
+        request.body(requestParams);
+        Response response = request.contentType(ContentType.XML).post(BASE_URL + "/todos");
+        assertEquals(201, response.getStatusCode());
+        assertEquals("test", response.getBody().jsonPath().getString("title"));
+        assertEquals("test", response.getBody().jsonPath().getString("description"));
+    }
+
+    // XML malformed
+    @Test
+    void testTodoPostRequestMalformedXML() {
+        RequestSpecification request = RestAssured.given();
+
+        String requestParams = "<todo><title>test</title><description>test</description><todo>";
+
+        request.body(requestParams);
+        Response response = request.contentType(ContentType.XML).post(BASE_URL + "/todos");
+        assertEquals(400, response.getStatusCode());
+        assertEquals("Unclosed tag todo at 63 [character 64 line 1]",
                 response.getBody().jsonPath().getString("errorMessages[0]"));
     }
 
@@ -292,16 +318,16 @@ public class TodoApiTest {
         assertEquals(200, response.getStatusCode());
     }
 
-    // BUG: Actual behaviour
     @Test
+    // BUG: Actual behaviour
     void testHeadSpecificTodoWithInvalidIDCategoriesActual() {
         String id = "100000";
         Response response = RestAssured.head(BASE_URL + "/todos" + "/" + id + "/categories");
         assertEquals(200, response.getStatusCode());
     }
 
-    // BUG: Expected behaviour
     @Test
+    // BUG: Expected behaviour
     void testHeadSpecificTodoWithInvalidIDCategoriesExpected() {
         String id = "100000";
         Response response = RestAssured.head(BASE_URL + "/todos" + "/" + id + "/categories");
