@@ -49,6 +49,19 @@ public class TodoApiTest {
         assertEquals(initial_todos_count, response.getBody().jsonPath().getString("todos.size()"));
     }
 
+    // Check if it can get a XML response
+    @Test
+    void testTodoGetRequestXMLPayload() {
+
+        Response response = RestAssured.given()
+                .accept(ContentType.XML) // Request XML response
+                .when()
+                .get(BASE_URL + "/todos");
+
+        assertEquals(200, response.getStatusCode());
+        assertEquals("application/xml", response.getContentType());
+    }
+
     @Test
     void testTodoHeadRequest() {
         Response response = RestAssured.head(BASE_URL + "/todos");
