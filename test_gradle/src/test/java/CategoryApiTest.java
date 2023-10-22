@@ -6,14 +6,6 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.http.ContentType;
 import static io.restassured.RestAssured.given;
-//
-//import io.restassured.path.json.JsonPath;
-//import io.restassured.path.json.config.JsonPathConfig.NumberReturnType;
-//
-//
-//import static org.hamcrest.Matchers.*;
-//import java.util.List;
-//
 import org.json.simple.JSONObject;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
