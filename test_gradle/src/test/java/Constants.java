@@ -1,5 +1,4 @@
-// make a class with all constants
-
+// Constants for the tests
 public class Constants {
     // DATA in TODO 1
     public static final int id1 = 1;
