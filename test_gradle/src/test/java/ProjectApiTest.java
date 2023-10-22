@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ProjectApiTest {
 	public  Process RunRestAPI;
 
-	static final String BASE_URL = "http://localhost:4567/projects";
+	static final String BASE_URL = Constants.base_url+"/projects";
 
 	static final String title = "victor's project";
 	static final String completed = "true", active = "false";

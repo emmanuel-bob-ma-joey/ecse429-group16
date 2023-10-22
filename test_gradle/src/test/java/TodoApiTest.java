@@ -18,7 +18,7 @@ public class TodoApiTest {
 
     public Process RunRestAPI;
 
-    final String BASE_URL = "http://localhost:4567";
+    final String BASE_URL = Constants.base_url;
     final String initial_todos_count = "2";
 
     @BeforeEach
@@ -326,7 +326,6 @@ public class TodoApiTest {
 
     @Test
     void testHeadSpecificTodoWithIDCategories() {
-    	System.out.println("poop");
         String id = "1";
         Response response = RestAssured.head(BASE_URL + "/todos" + "/" + id + "/categories");
         assertEquals(200, response.getStatusCode());

@@ -1,25 +1,11 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.IOException;
 
-
-//
-//import org.junit.jupiter.api.AfterEach;
-//import org.junit.jupiter.api.BeforeEach;
-//import org.junit.jupiter.api.Test;
-//import io.restassured.RestAssured.*;
-
-import java.io.IOException;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-
-import io.restassured.path.json.JsonPath;
-import io.restassured.path.json.config.JsonPathConfig.NumberReturnType;
-
-
-import static org.hamcrest.Matchers.*;
-import java.util.List;
-
+import io.restassured.http.ContentType;
+import static io.restassured.RestAssured.given;
 import org.json.simple.JSONObject;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -27,13 +13,10 @@ import org.junit.jupiter.api.Test;
 
 public class CategoryApiTest {
 	 public Process RunRestAPI;
-
-    final String BASE_URL = "http://localhost:4567/categories";
-    //private final String listOfTodosJSON = "{\"todos\":[{\"id\":\"1\",\"title\":\"scan paperwork\",\"doneStatus\":\"false\",\"description\":\"\",\"categories\":[{\"id\":\"1\"}],\"tasksof\":[{\"id\":\"1\"}]},{\"id\":\"2\",\"title\":\"file paperwork\",\"doneStatus\":\"false\",\"description\":\"\",\"tasksof\":[{\"id\":\"1\"}]}]}";
-
-    //private final String initialCategories = "{\"categories\":[{\"id\":\"1\",\"title\":\"Office\",\"description\":\"\"},{\"id\":\"2\",\"title\":\"Home\",\"description\":\"\"}]}";
+	private final String BASE_URL = Constants.base_url+"/categories";
+    
     private final String initialCategory1 = "{\"categories\":[{\"id\":\"1\",\"title\":\"Office\",\"description\":\"\"}]}";
-    private final String initialCategories = "{\"categories\":[{\"id\":\"2\",\"title\":\"Home\",\"description\":\"\"},{\"id\":\"1\",\"title\":\"Office\",\"description\":\"\"}]}";
+    //private final String initialCategories = "{\"categories\":[{\"id\":\"2\",\"title\":\"Home\",\"description\":\"\"},{\"id\":\"1\",\"title\":\"Office\",\"description\":\"\"}]}";
     @BeforeEach
     void setUp() throws Exception {
 
@@ -51,10 +34,32 @@ public class CategoryApiTest {
         RunRestAPI.destroy();
         Thread.sleep(1000);
     }
+    
+    @Test
+    public void testJsonPayload() {
+        Response response = given()
+            .accept(ContentType.JSON)  // Request JSON response
+            .when()
+            .get(BASE_URL);
+
+        assertEquals(200, response.getStatusCode());
+        assertEquals("application/json", response.getContentType());
+    }
 
     @Test
-    // todos
-    // FIXME: this test is failing due to the order of the todos being different
+    public void testXmlPayload() {
+        Response response = given()
+            .accept(ContentType.XML)  // Request XML response
+            .when()
+            .get(BASE_URL);
+
+        assertEquals(200, response.getStatusCode());
+        assertEquals("application/xml", response.getContentType());
+    }
+    
+    //tests for /categories endpoint
+
+    @Test
     void testCategoryGetRequest() {
         Response response = RestAssured.get(BASE_URL);
 
@@ -143,6 +148,8 @@ public class CategoryApiTest {
 	      assertEquals(400, response.getStatusCode());
 	     
 	  }
+	
+	//tests for /categories/:id endpoint
 	
 	 @Test
 	   void testGetSpecificCategoryWithID() {
@@ -358,6 +365,8 @@ public class CategoryApiTest {
 	        assertEquals(404, response.getStatusCode());
 	    }
 	    
+	    //additional tests for /categories/:id/projects endpoint
+	    
 	    //bug
 	    @Test
 	   void testGetCategoryProjectWithInvalidID() {
@@ -431,6 +440,8 @@ public class CategoryApiTest {
 	       
 	
 	   }
+	   
+	   //additional tests for /categories/:id/projects/:id endpoint
 	   
 	   @Test
 	    void testDeleteInvalidProjectIdFromInvalidCategoryId() {
