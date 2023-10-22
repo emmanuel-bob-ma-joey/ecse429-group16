@@ -1,6 +1,10 @@
 // make a class with all constants
 
 public class Constants {
+	
+	public static final String base_url = "http://localhost:4567";
+	public static final String server_address="localhost";
+	public static final int port = 4567;
     // DATA in TODO 1
     public static final int id1 = 1;
     public static final String title1 = "scan paperwork";
@@ -8,6 +12,7 @@ public class Constants {
     public static final String description1 = "";
     public static final String categories1 = "[[id:1]]";
     public static final String tasksof1 = "[[id:1]]";
+    
 
     // DATA in TODO 2
     public static final int id2 = 2;
