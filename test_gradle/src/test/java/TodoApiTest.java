@@ -38,6 +38,7 @@ public class TodoApiTest {
     @AfterEach
     void tearDown() throws Exception {
         RunRestAPI.destroy();
+        Thread.sleep(1000);
     }
 
     // ------------------ /todos Endpoints ------------------
@@ -286,6 +287,7 @@ public class TodoApiTest {
 
     @Test
     void testHeadSpecificTodoWithIDCategories() {
+    	System.out.println("poop");
         String id = "1";
         Response response = RestAssured.head(BASE_URL + "/todos" + "/" + id + "/categories");
         assertEquals(200, response.getStatusCode());

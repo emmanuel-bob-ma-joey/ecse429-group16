@@ -46,6 +46,7 @@ class ProjectApiTest {
 	@AfterEach
 	 void tearDown() throws Exception {
 		RunRestAPI.destroy();
+		Thread.sleep(1000);
 	}
 
 	//WORKS!
