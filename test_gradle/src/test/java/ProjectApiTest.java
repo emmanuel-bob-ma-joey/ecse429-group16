@@ -7,40 +7,40 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
-@TestMethodOrder(MethodOrderer.Random.class)
+@TestMethodOrder(MethodOrderer.Random.class) // so that the tests are run in a random order
 public class ProjectApiTest {
-	public  Process RunRestAPI;
+	public Process RunRestAPI;
 
-	static final String BASE_URL = Constants.base_url+"/projects";
+	static final String BASE_URL = Constants.base_url + "/projects";
 
 	static final String title = "victor's project";
 	static final String completed = "true", active = "false";
 	static final String description = "a fun project";
 	static final String JSON_TO_POST = "{" +
-			"    \"title\": \""+title+"\"," +
-			"    \"completed\": "+completed+"," +
-			"    \"active\": "+active+"," +
-			"    \"description\": \""+description+"\"" +
+			"    \"title\": \"" + title + "\"," +
+			"    \"completed\": " + completed + "," +
+			"    \"active\": " + active + "," +
+			"    \"description\": \"" + description + "\"" +
 			"}";
 
 	@BeforeEach
-	 void setUp() throws Exception {
-			try {
-				RunRestAPI = Runtime.getRuntime().exec("java -jar runTodoManagerRestAPI-1.5.5.jar");
-				Thread.sleep(2000); // wait for server to start
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+	void setUp() throws Exception {
+		try {
+			RunRestAPI = Runtime.getRuntime().exec("java -jar runTodoManagerRestAPI-1.5.5.jar");
+			Thread.sleep(2000); // wait for server to start
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@AfterEach
-	 void tearDown() throws Exception {
+	void tearDown() throws Exception {
 		RunRestAPI.destroy();
 		Thread.sleep(1000);
 	}
 
-	//-----------------------/projects Endpoints --------------------------------------
+	// -----------------------/projects Endpoints
+	// --------------------------------------
 
 	@Test
 	void testGET() {
@@ -59,13 +59,13 @@ public class ProjectApiTest {
 	@Test
 	void testPOSTMalformedJSON() {
 		RequestSpecification request = RestAssured.given();
-		request.body(JSON_TO_POST.replace(',', ' '));//all commas replaced by space, JSON is not properly formatted
+		request.body(JSON_TO_POST.replace(',', ' '));// all commas replaced by space, JSON is not properly formatted
 		Response response = request.post(BASE_URL);
 		assertEquals(400, response.getStatusCode());
-        assertNull(response.jsonPath().getString("title"));
-        assertNull(response.jsonPath().getString("completed"));
-        assertNull(response.jsonPath().getString("active"));
-        assertNull(response.jsonPath().getString("description"));
+		assertNull(response.jsonPath().getString("title"));
+		assertNull(response.jsonPath().getString("completed"));
+		assertNull(response.jsonPath().getString("active"));
+		assertNull(response.jsonPath().getString("description"));
 	}
 
 	@Test
@@ -83,7 +83,7 @@ public class ProjectApiTest {
 	@Test
 	public void testXmlPayload() {
 		Response response = RestAssured.given()
-				.accept(ContentType.XML)  // Request XML response
+				.accept(ContentType.XML) // Request XML response
 				.when()
 				.get(BASE_URL);
 		assertEquals(200, response.getStatusCode());
@@ -118,16 +118,16 @@ public class ProjectApiTest {
 		assertNotEquals(ID1, ID2);
 	}
 
-//-----------------------/projects/:id Endpoints --------------------------------------
+	// -----------------------/projects/:id Endpoints
+	// --------------------------------------
 
-
-	//WORKS!
+	// WORKS!
 	@Test
 	void testPOSTValidID() {
 		String validID = "1";
 		RequestSpecification request = RestAssured.given();
 		request.body(JSON_TO_POST);
-		Response response = request.post(BASE_URL+"/"+validID);
+		Response response = request.post(BASE_URL + "/" + validID);
 		assertEquals(200, response.getStatusCode());
 		assertEquals(validID, response.jsonPath().getString("id"));
 		assertEquals(title, response.jsonPath().getString("title"));
@@ -151,7 +151,7 @@ public class ProjectApiTest {
 	void testGETValidID() {
 		String validID = "1";
 		RequestSpecification request = RestAssured.given();
-		Response response = request.get(BASE_URL+"/"+validID);
+		Response response = request.get(BASE_URL + "/" + validID);
 		assertEquals(200, response.getStatusCode());
 		assertEquals(validID, response.jsonPath().getString("projects[0].id"));
 	}
@@ -162,6 +162,7 @@ public class ProjectApiTest {
 		RequestSpecification request = RestAssured.given();
 		Response response = request.get(BASE_URL + "/" + invalidID);
 		assertEquals(404, response.getStatusCode());
-		assertEquals("[Could not find an instance with projects/"+invalidID+"]",response.jsonPath().getString("errorMessages"));
+		assertEquals("[Could not find an instance with projects/" + invalidID + "]",
+				response.jsonPath().getString("errorMessages"));
 	}
 }

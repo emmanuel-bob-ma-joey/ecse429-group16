@@ -9,13 +9,11 @@ import java.net.Socket;
 
 import static org.junit.Assert.assertTrue;
 
-@TestMethodOrder(MethodOrderer.Random.class)
+@TestMethodOrder(MethodOrderer.Random.class) // so that the tests are run in a random order
 public class StandaloneTest {
-
-	
     @Test
-	public void testServerStatus() {
-        String serverAddress = Constants.server_address; 
+    public void testServerStatus() {
+        String serverAddress = Constants.server_address;
         int serverPort = Constants.port;
 
         try {

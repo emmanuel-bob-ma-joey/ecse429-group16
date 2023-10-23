@@ -13,7 +13,7 @@ import org.junit.jupiter.api.TestMethodOrder;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@TestMethodOrder(MethodOrderer.Random.class)
+@TestMethodOrder(MethodOrderer.Random.class) // so that the tests are run in a random order
 public class TodoApiTest {
 
     public Process RunRestAPI;
@@ -26,7 +26,7 @@ public class TodoApiTest {
 
         try {
             RunRestAPI = Runtime.getRuntime().exec("java -jar runTodoManagerRestAPI-1.5.5.jar");
-            Thread.sleep(3000); // wait for server to start
+            Thread.sleep(2000); // wait for server to start
         } catch (IOException e) {
             e.printStackTrace();
         }
