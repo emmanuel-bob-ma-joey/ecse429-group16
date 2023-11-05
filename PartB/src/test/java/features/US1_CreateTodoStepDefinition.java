@@ -18,7 +18,6 @@ public class US1_CreateTodoStepDefinition {
     // BACKGROUND
     @Given("the application is running \\(US1)")
     public void the_todo_application_is_running() throws InterruptedException {
-        System.out.println("the_todo_application_is_running");
         HelperFunctions.startApplication();
     }
 
@@ -39,7 +38,6 @@ public class US1_CreateTodoStepDefinition {
 
     @When("I create a todo with the title {string} and description {string} \\(US1)")
     public void i_create_a_todo_with_title_and_the_description(String title, String description) {
-        System.out.println(title);
         Response response = HelperFunctions.createTodo(title, description, false);
         assertEquals(201, response.getStatusCode());
     }
@@ -52,9 +50,9 @@ public class US1_CreateTodoStepDefinition {
         for (Map<String, String> todo : todos) {
             String todoTitle = todo.get("title");
             String todoDescription = todo.get("description");
+
+            // check if the created todo is in the list of todos with correct data
             if (todoTitle.equals(title) && todoDescription.equals(description)) {
-                System.out.println(todoTitle);
-                System.out.println(todoDescription);
                 assertEquals(todoTitle, title);
                 assertEquals(todoDescription, description);
                 break;
@@ -90,6 +88,8 @@ public class US1_CreateTodoStepDefinition {
         for (Map<String, String> todo : todos) {
             String todoTitle = todo.get("title");
             Boolean todoDoneStatus = Boolean.parseBoolean(todo.get("doneStatus"));
+
+            // check if the created todo is in the list of todos with correct data
             if (todoTitle.equals(title) && todoDoneStatus == doneStatusBool) {
                 assertEquals(todoTitle, title);
                 assertEquals(todoDoneStatus.toString(), doneStatus);

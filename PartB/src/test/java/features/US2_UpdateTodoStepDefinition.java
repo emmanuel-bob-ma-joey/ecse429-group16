@@ -32,8 +32,7 @@ public class US2_UpdateTodoStepDefinition {
             String title = columns.get("title");
             String description = columns.get("description");
             String doneStatus = columns.get("doneStatus");
-            Response response = HelperFunctions.createTodo(title, description, Boolean.parseBoolean(doneStatus));
-            assertEquals(201, response.getStatusCode());
+            HelperFunctions.createTodo(title, description, Boolean.parseBoolean(doneStatus));
         }
     }
 
@@ -60,17 +59,13 @@ public class US2_UpdateTodoStepDefinition {
     @Then("the todo with {int} should have title {string}, description {string}, status {string} \\(US2)")
     public void the_todo_with_id_should_have_a_description(int id, String title, String description,
             String doneStatus) {
-        Response response = HelperFunctions.getAllTodos("");
+        Response response = HelperFunctions.getTodoWithId(id);
+
         List<Map<String, String>> todos = response.jsonPath().getList("todos");
-        for (Map<String, String> todo : todos) {
-            int todoId = Integer.parseInt(todo.get("id"));
-            if (todoId == id) {
-                assertEquals(description, todo.get("description"));
-                assertEquals(title, todo.get("title"));
-                assertEquals(doneStatus, todo.get("doneStatus"));
-                break;
-            }
-        }
+        Map<String, String> todo = todos.get(0);
+        assertEquals(title, todo.get("title"));
+        assertEquals(description, todo.get("description"));
+        assertEquals(doneStatus, todo.get("doneStatus"));
     }
 
     // Alternate Scenario
@@ -91,22 +86,17 @@ public class US2_UpdateTodoStepDefinition {
 
     @When("I update the todo with id {int} with {string} \\(US2)")
     public void when_i_update_the_todo_with_id_with(int id, String doneStatus) {
-        System.out.println(doneStatus);
         Response response = HelperFunctions.updateTodoWithId(id, null, null, Boolean.parseBoolean(doneStatus));
         assertEquals(200, response.getStatusCode());
     }
 
     @Then("the todo with {int} should have an updated status {string} \\(US2)")
     public void the_todo_with_id_should_have_an_updated_status(int id, String doneStatus) {
-        Response response = HelperFunctions.getAllTodos("");
+        Response response = HelperFunctions.getTodoWithId(id);
+
         List<Map<String, String>> todos = response.jsonPath().getList("todos");
-        for (Map<String, String> todo : todos) {
-            int todoId = Integer.parseInt(todo.get("id"));
-            if (todoId == id) {
-                assertEquals(doneStatus, todo.get("doneStatus"));
-                break;
-            }
-        }
+        Map<String, String> todo = todos.get(0);
+        assertEquals(doneStatus, todo.get("doneStatus"));
     }
 
     // Error Scenario

@@ -1,14 +1,11 @@
 package features;
 
 import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import java.io.IOException;
 
 import org.json.simple.JSONObject;
-
-import ecse429.todoManager.model.Todo;
 
 public class HelperFunctions {
     public static Process application;
@@ -16,6 +13,7 @@ public class HelperFunctions {
     private static String baseUrl = "http://localhost:4567";
 
     public static void startApplication() throws InterruptedException {
+
         try {
             application = Runtime.getRuntime().exec("java -jar runTodoManagerRestAPI-1.5.5.jar");
             Thread.sleep(1000); // wait for server to start
@@ -29,6 +27,8 @@ public class HelperFunctions {
             application.destroy();
         }
     }
+
+    // --------- Todo API Helper Functions ---------
 
     public static Response getAllTodos(String queryString) {
         RestAssured.baseURI = baseUrl;
@@ -48,6 +48,13 @@ public class HelperFunctions {
         RestAssured.baseURI = baseUrl;
         RequestSpecification request = RestAssured.given();
         Response response = request.get("/todo");
+        return response;
+    }
+
+    public static Response getTodoWithId(int id) {
+        RestAssured.baseURI = baseUrl;
+        RequestSpecification request = RestAssured.given();
+        Response response = request.get("/todos/" + id);
         return response;
     }
 
@@ -110,5 +117,7 @@ public class HelperFunctions {
 
         return response;
     }
+
+    // --------- Category API Helper Functions ---------
 
 }

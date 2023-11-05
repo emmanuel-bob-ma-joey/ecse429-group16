@@ -22,7 +22,7 @@ public class US3_GetAllTodoStepDefinition {
 
         HelperFunctions.startApplication();
 
-        // delete all todos
+        // delete all todos so that we can start fresh
         Response response = HelperFunctions.getAllTodos("");
         List<Map<String, String>> todos = response.jsonPath().getList("todos");
         for (Map<String, String> todo : todos) {
@@ -60,6 +60,8 @@ public class US3_GetAllTodoStepDefinition {
             String todoTitle = todo.get("title");
             String todoDescription = todo.get("description");
             String todoDoneStatus = todo.get("doneStatus");
+
+            // Check if the todo is in the list of todos
             if (todoTitle.equals(title) && todoDescription.equals(description)
                     && todoDoneStatus.equals(doneStatus)) {
                 assertEquals(todoTitle, title);
@@ -95,6 +97,8 @@ public class US3_GetAllTodoStepDefinition {
             String todoTitle = todo.get("title");
             String todoDescription = todo.get("description");
             String todoDoneStatus = todo.get("doneStatus");
+
+            // Check if the todo is in the list of todos
             if (todoTitle.equals(title) && todoDescription.equals(description)
                     && todoDoneStatus.equals(doneStatus)) {
                 assertEquals(todoTitle, title);

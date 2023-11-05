@@ -4,7 +4,7 @@ Feature: Delete a specific todo
     I want to delete a specific todo,
     so that I can remove it from my list.
 
-    Background: The application is running
+    Background: The todo application is running
         Given the todo application is running (US4)
         And the following todos exist in the system (US4)
             | title | description  | doneStatus |
@@ -22,6 +22,7 @@ Feature: Delete a specific todo
             | 3  |
 
     # Alternate flow
+    Scenario Outline:
 
     # Error Flow
     Scenario Outline: Delete a todo that does not exist

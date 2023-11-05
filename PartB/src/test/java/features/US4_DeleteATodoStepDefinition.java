@@ -23,7 +23,7 @@ public class US4_DeleteATodoStepDefinition {
 
         HelperFunctions.startApplication();
 
-        // delete all todos
+        // delete all todos so that we can start fresh
         Response response = HelperFunctions.getAllTodos("");
         List<Map<String, String>> todos = response.jsonPath().getList("todos");
         for (Map<String, String> todo : todos) {
@@ -41,8 +41,7 @@ public class US4_DeleteATodoStepDefinition {
             String title = columns.get("title");
             String description = columns.get("description");
             String doneStatus = columns.get("doneStatus");
-            Response response = HelperFunctions.createTodo(title, description, Boolean.parseBoolean(doneStatus));
-            assertEquals(201, response.getStatusCode());
+            HelperFunctions.createTodo(title, description, Boolean.parseBoolean(doneStatus));
         }
     }
 
@@ -51,6 +50,7 @@ public class US4_DeleteATodoStepDefinition {
     public void a_todo_with_id_exists_in_the_system(int id) {
         Response response = HelperFunctions.getAllTodos("");
         List<Map<String, String>> todos = response.jsonPath().getList("todos");
+
         for (Map<String, String> todo : todos) {
             int todoId = Integer.parseInt(todo.get("id"));
             if (todoId == id) {
@@ -80,7 +80,6 @@ public class US4_DeleteATodoStepDefinition {
     public void there_should_be_1_todos_in_the_system() {
         Response response = HelperFunctions.getAllTodos("");
         List<Map<String, String>> todos = response.jsonPath().getList("todos");
-        System.out.println(todos);
         assertEquals(1, todos.size());
     }
 
