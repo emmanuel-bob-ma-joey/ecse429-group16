@@ -32,21 +32,8 @@ public class US4_DeleteATodoStepDefinition {
         }
     }
 
-    @And("the following todos exist in the system \\(US4)")
-    public void the_following_todos_with_title_description_doneStatus_exist_in_the_system(
-            io.cucumber.datatable.DataTable dataTable) {
-
-        List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
-        for (Map<String, String> columns : rows) {
-            String title = columns.get("title");
-            String description = columns.get("description");
-            String doneStatus = columns.get("doneStatus");
-            HelperFunctions.createTodo(title, description, Boolean.parseBoolean(doneStatus));
-        }
-    }
-
     // Normal Scenario
-    @Given("the todo with id {int} exists in the system \\(US4)")
+    @Given("the completed todo with id {int} exists in the system \\(US4)")
     public void a_todo_with_id_exists_in_the_system(int id) {
         Response response = HelperFunctions.getAllTodos("");
         List<Map<String, String>> todos = response.jsonPath().getList("todos");
@@ -60,13 +47,26 @@ public class US4_DeleteATodoStepDefinition {
         }
     }
 
-    @When("I delete the todo with id {int} \\(US4)")
+    @And("the following completed todos exist in the system \\(US4)")
+    public void the_following_todos_with_title_description_doneStatus_exist_in_the_system(
+            io.cucumber.datatable.DataTable dataTable) {
+
+        List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
+        for (Map<String, String> columns : rows) {
+            String title = columns.get("title");
+            String description = columns.get("description");
+            String doneStatus = columns.get("doneStatus");
+            HelperFunctions.createTodo(title, description, Boolean.parseBoolean(doneStatus));
+        }
+    }
+
+    @When("I delete the completed todo with id {int} \\(US4)")
     public void i_delete_the_todo_with_id(int id) {
         Response response = HelperFunctions.deleteTodoWithId(id);
         assertEquals(200, response.getStatusCode());
     }
 
-    @Then("the todo with id {int} should not exist in the system \\(US4)")
+    @Then("the completed todo with id {int} should not exist in the system \\(US4)")
     public void the_todo_with_id_should_not_exist_in_the_system(int id) {
         Response response = HelperFunctions.getAllTodos("");
         List<Map<String, String>> todos = response.jsonPath().getList("todos");
@@ -84,6 +84,55 @@ public class US4_DeleteATodoStepDefinition {
     }
 
     // Alternate Scenario
+    @Given("the incompleted todo with id {int} exists in the system \\(US4)")
+    public void the_incompleted_todo_with_id_id_exists_in_the_system(int id) {
+        Response response = HelperFunctions.getAllTodos("");
+        List<Map<String, String>> todos = response.jsonPath().getList("todos");
+
+        for (Map<String, String> todo : todos) {
+            int todoId = Integer.parseInt(todo.get("id"));
+            if (todoId == id) {
+                assertEquals(id, todoId);
+                break;
+            }
+        }
+    }
+
+    @And("the following incompleted todos exist in the system \\(US4)")
+    public void the_following_incompleted_todos_with_title_description_doneStatus_exist_in_the_system(
+            io.cucumber.datatable.DataTable dataTable) {
+
+        List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
+        for (Map<String, String> columns : rows) {
+            String title = columns.get("title");
+            String description = columns.get("description");
+            String doneStatus = columns.get("doneStatus");
+            HelperFunctions.createTodo(title, description, Boolean.parseBoolean(doneStatus));
+        }
+    }
+
+    @When("I delete the incompleted todo with id {int} \\(US4)")
+    public void i_delete_the_incompleted_todo_with_id(int id) {
+        Response response = HelperFunctions.deleteTodoWithId(id);
+        assertEquals(200, response.getStatusCode());
+    }
+
+    @Then("the incompleted todo with id {int} should not exist in the system \\(US4)")
+    public void the_incompleted_todo_with_id_should_not_exist_in_the_system(int id) {
+        Response response = HelperFunctions.getAllTodos("");
+        List<Map<String, String>> todos = response.jsonPath().getList("todos");
+        for (Map<String, String> todo : todos) {
+            int todoId = Integer.parseInt(todo.get("id"));
+            assertNotEquals(todoId, id);
+        }
+    }
+
+    @Then("there should be 1 todo in the current system \\(US4)")
+    public void there_should_be_1_incompleted_todo_in_the_current_system() {
+        Response response = HelperFunctions.getAllTodos("");
+        List<Map<String, String>> todos = response.jsonPath().getList("todos");
+        assertEquals(1, todos.size());
+    }
 
     // Error flow
     @Given("the todo with id {int} does not exist in the system \\(US4)")

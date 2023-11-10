@@ -16,8 +16,8 @@ dependencies {
     testImplementation 'io.rest-assured:rest-assured:5.3.2'
 
     // cucumber
-    testImplementation "io.cucumber:cucumber-java:6.6.0"
-    testImplementation "io.cucumber:cucumber-junit:6.6.0"
+   testImplementation 'io.cucumber:cucumber-java:7.14.0'
+    testImplementation 'io.cucumber:cucumber-junit:7.14.0'
     
     // This is here to solve Eclipse IDE Junit 5 compatibility issues
     testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.6.2'
@@ -25,6 +25,28 @@ dependencies {
 
 test {
     useJUnitPlatform()
-    systemProperties = System.properties
 
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+task cucumberCliWithRandomizer() {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+              '--plugin', 'pretty',
+              '--plugin', 'html:target/cucumber-report.html', 
+              '--glue', 'features', 
+              'src/test/resources',
+              '--order', 'random',
+              ]
+        }
+    }
 }
