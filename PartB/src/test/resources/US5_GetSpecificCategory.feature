@@ -7,11 +7,11 @@ Feature: Get a specific category
     Background: The todo application is running
         Given the todo application is running (US5)
         And the following categories exist in the system: (US5)
-            | title                | description  | 
-            | category1                | description1 | 
-            | category2                | description2 | 
-            | category3                | description3 | 
-            | emptyDescriptionCategory |              | 
+            | title                    | description  |
+            | category1                | description1 |
+            | category2                | description2 |
+            | category3                | description3 |
+            | emptyDescriptionCategory |              |
 
     # Normal Flow
     Scenario Outline: Get a specific category that
@@ -20,10 +20,10 @@ Feature: Get a specific category
         Then I should get a category with id <id>, title "<title>", description "<description>"  (US5)
 
         Examples:
-            | id | title | description  | 
-            | 3  | category1 | description1 | 
-            | 4  | category2 | description2 | 
-            | 5  | category3 | description3 | 
+            | id | title     | description  |
+            | 3  | category1 | description1 |
+            | 4  | category2 | description2 |
+            | 5  | category3 | description3 |
 
     # Alternate flow
     Scenario Outline: Get a category that has an empty description
@@ -32,8 +32,8 @@ Feature: Get a specific category
         Then I should get a category that has an empty description with id <id>, title "<title>" and description "<description>"  (US5)
 
         Examples:
-            | id | title                | description | 
-            | 6  | emptyDescriptionCategory |             | 
+            | id | title                    | description |
+            | 6  | emptyDescriptionCategory |             |
 
 
 
@@ -44,5 +44,5 @@ Feature: Get a specific category
         Then I should receive a <statusCode> status code and an error message "<errorMessage>" (US5)
 
         Examples:
-            | id  | statusCode | errorMessage                              |
+            | id  | statusCode | errorMessage                                   |
             | 100 | 404        | Could not find an instance with categories/100 |

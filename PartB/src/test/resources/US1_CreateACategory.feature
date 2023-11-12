@@ -13,7 +13,7 @@ Feature: Create a Category
         When I create a category with the title "<title>" and description "<description>" (US1)
         Then the category with title "<title>" and the description "<description>" shall exist in the system (US1)
         Examples:
-            | title          | description            |
+            | title              | description                |
             | My first category  | This is my first category  |
             | My second category | This is my second category |
 
@@ -23,9 +23,9 @@ Feature: Create a Category
         When I create a category with the title "<title>" and description "<description>" (US1)
         Then the category with title "<title>" with a description "<description>" shall exist in the system (US1)
         Examples:
-            | title                  | description |
-            | My first category | this is my first category       |
-            | My Second category             | this is my second category       |
+            | title              | description                |
+            | My first category  | this is my first category  |
+            | My Second category | this is my second category |
 
 
     # Error Flow
