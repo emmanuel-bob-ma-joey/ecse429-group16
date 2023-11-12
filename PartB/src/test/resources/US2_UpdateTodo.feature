@@ -12,7 +12,7 @@ Feature: Update todo
             | todo2 | not done    | false      |
 
     # Normal Flow
-    Scenario Outline: Update a todo
+    Scenario Outline: Update a todo's title and description
         Given a todo with <id> exists in the system (US2)
         When I update the todo with <id> with a new description "<description>" (US2)
         Then the todo with <id> should have title "<title>", description "<description>", status "<doneStatus>" (US2)
