@@ -180,7 +180,7 @@ public class HelperFunctions {
         return response;
     }
 
-    public static Response updateCategoryWithIdAndInvalidDoneStatus(int id, String title) {
+    public static Response updateCategoryWithId(int id, String title) {
         RestAssured.baseURI = baseUrl;
         RequestSpecification request = RestAssured.given();
 

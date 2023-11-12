@@ -114,7 +114,7 @@ public class US2_UpdateCategoryStepDefinition {
 
     @When("I update the category with id {int} with empty title {string} \\(US2)")
     public void i_update_the_category_with_id_with_empty_title(int id) {
-        response = HelperFunctions.updatecategoryWithIdAndInvalidDoneStatus(id, null);
+        response = HelperFunctions.updateCategoryWithId(id, "");
         assertEquals(400, response.getStatusCode());
     }
 
