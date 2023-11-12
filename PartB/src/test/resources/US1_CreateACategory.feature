@@ -20,7 +20,7 @@ Feature: Create a Category
     # Alternative Flow
     Scenario Outline: Create a category that has already been created
         Given the category with title "<title>" does not exist in the system (US1)
-        When I create a category with the title "<title>" and description "<description>" (US1)
+        When I create a duplicate category with the title "<title>" and description "<description>" (US1)
         Then the category with title "<title>" with a description "<description>" shall exist in the system (US1)
         Examples:
             | title              | description                |

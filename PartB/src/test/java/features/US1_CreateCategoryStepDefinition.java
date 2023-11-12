@@ -72,15 +72,14 @@ public class US1_CreateCategoryStepDefinition {
         }
     }
 
-    @When("I create a category with the title {string} and description {string} \\(US1)")
-    public void i_create_a_category_with_the_title(String title, String description) {
-        Response response = HelperFunctions.createCategory(title,description);
+    @When("I create a duplicate category with the title {string} and description {string} \\(US1)")
+    public void i_create_a_duplicate_category_with_the_title(String title, String description) {
+        Response response = HelperFunctions.createCategory(title, description);
         assertEquals(201, response.getStatusCode());
     }
 
     @Then("the category with title {string} with a description {string} shall exist in the system \\(US1)")
     public void the_category_with_title_with_a_description_should_be_in_the_system(String title, String description) {
-        
 
         Response response = HelperFunctions.getAllCategories("");
         List<Map<String, String>> categories = response.jsonPath().getList("categories");
