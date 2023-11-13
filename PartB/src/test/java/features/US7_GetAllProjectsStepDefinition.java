@@ -11,12 +11,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class US2_GetAllProjectsStepDefinition {
+public class US7_GetAllProjectsStepDefinition {
 
     private Response response;
 
     // BACKGROUND
-    @Given("the project application is running \\(US3)")
+    @Given("the project application is running \\(US7)")
     public void the_project_application_is_running() throws InterruptedException {
         HelperFunctions.startApplication();
 
@@ -29,7 +29,7 @@ public class US2_GetAllProjectsStepDefinition {
         }
     }
 
-    @And("the following projects exist in the system \\(US3)")
+    @And("the following projects exist in the system \\(US7)")
     public void the_following_projects_exist_in_the_system(
             io.cucumber.datatable.DataTable dataTable) {
 
@@ -45,13 +45,13 @@ public class US2_GetAllProjectsStepDefinition {
     }
 
     // Normal Scenario
-    @When("I get all projects \\(US3)")
+    @When("I get all projects \\(US7)")
     public void i_get_all_projects() {
         Response response = HelperFunctions.getAllProjects("");
         assertEquals(200, response.getStatusCode());
     }
 
-    @Then("the projects with title {string}, description {string}, completed {string} and active {string} \\(US3)")
+    @Then("the projects with title {string}, description {string}, completed {string} and active {string} \\(US7)")
     public void the_todos_with_title_description_and_doneStatus(String title, String description, String completed, String active) {
         Response response = HelperFunctions.getAllProjects("");
         List<Map<String, String>> projects = response.jsonPath().getList("projects");
@@ -75,7 +75,7 @@ public class US2_GetAllProjectsStepDefinition {
     }
 
     // Alternate Scenario
-    @When("I get all projects with completed is true \\(US3)")
+    @When("I get all projects with completed is true \\(US7)")
     public void i_get_all_projects_with_completed_true() {
         response = HelperFunctions.getAllProjects("completed=true");
         List<Map<String, String>> projects = response.jsonPath().getList("projects");
@@ -85,13 +85,13 @@ public class US2_GetAllProjectsStepDefinition {
         }
     }
 
-    @Then("I should see 1 project \\(US3)")
+    @Then("I should see 1 project \\(US7)")
     public void i_should_see_1_project() {
         List<Map<String, String>> projects = response.jsonPath().getList("projects");
         assertEquals(1, projects.size());
     }
 
-    @Then("the projects with title {string}, description {string}, and active {string} \\(US3)")
+    @Then("the projects with title {string}, description {string}, and active {string} \\(US7)")
     public void the_projects_with_title_description_completecTrue_active(String title, String description,
                                                                             String active) {
         List<Map<String, String>> projects = response.jsonPath().getList("projects");
@@ -114,12 +114,12 @@ public class US2_GetAllProjectsStepDefinition {
     }
 
     // Error Scenario
-    @When("I get all projects with mistyped endpoint \\(US3)")
+    @When("I get all projects with mistyped endpoint \\(US7)")
     public void i_get_all_projects_with_mistyped_endpoint() {
         response = HelperFunctions.getAllProjectsWithIncorrectEndpoint();
     }
 
-    @Then("I should receive error code {int} \\(US3)")
+    @Then("I should receive error code {int} \\(US7)")
     public void i_should_see_error_code(int statusCode) {
         assertEquals(statusCode, response.getStatusCode());
     }

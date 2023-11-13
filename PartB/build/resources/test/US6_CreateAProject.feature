@@ -9,9 +9,9 @@ Feature: Create a Project
 
     # Normal Flow
     Scenario Outline: Create a project
-        Given the project with title "<title>" and the description "<description>" does not exist in the system (US1)
-        When I create a project with the title "<title>" and description "<description>" (US1)
-        Then the project with title "<title>" and the description "<description>" shall exist in the system (US1)
+        Given the project with title "<title>" and the description "<description>" does not exist in the system (US6)
+        When I create a project with the title "<title>" and description "<description>" (US6)
+        Then the project with title "<title>" and the description "<description>" shall exist in the system (US6)
         Examples:
             | title             | description               |
             | My first project  | This is my first project  |
@@ -19,9 +19,9 @@ Feature: Create a Project
 
     # Alternative Flow
     Scenario Outline: Create a project that has already been completed
-        Given the project with title "<title>" does not exist in the system (US1)
-        When I create a project with the title "<title>" and completed "<completed>" (US1)
-        Then the project with title "<title>" with a completed "<completed>" shall exist in the system (US1)
+        Given the project with title "<title>" does not exist in the system (US6)
+        When I create a project with the title "<title>" and completed "<completed>" (US6)
+        Then the project with title "<title>" with a completed "<completed>" shall exist in the system (US6)
         Examples:
             | title                  | completed |
             | A project with completed | true       |
@@ -30,8 +30,8 @@ Feature: Create a Project
 
     # Error Flow
     Scenario Outline: Create a project with an invalid id
-        When I create a project with an invalid id (US1)
-        Then the status code shall be <statusCode> with an error message "<errorMessage>" (US1)
+        When I create a project with an invalid id (US6)
+        Then the status code shall be <statusCode> with an error message "<errorMessage>" (US6)
         Examples:
             | id | statusCode | errorMessage                                |
             | asdf | 404        | No such project entity instance with GUID or ID asdf found |

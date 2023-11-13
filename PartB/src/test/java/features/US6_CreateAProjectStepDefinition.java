@@ -11,19 +11,19 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class US1_CreateAProjectStepDefinition {
+public class US6_CreateAProjectStepDefinition {
 
     private Response response;
 
     // BACKGROUND
-    @Given("the application is running \\(US1)")
+    @Given("the application is running \\(US6)")
     public void the_project_application_is_running() throws InterruptedException {
         HelperFunctions.startApplication();
     }
 
     // Normal Scenario
 
-    @Given("the project with title {string} and the description {string} does not exist in the system \\(US1)")
+    @Given("the project with title {string} and the description {string} does not exist in the system \\(US6)")
     public void the_project_with_title_and_the_description_does_not_exist_in_the_system(String title,
                                                                                      String description) {
 
@@ -36,13 +36,13 @@ public class US1_CreateAProjectStepDefinition {
         }
     }
 
-    @When("I create a project with the title {string} and description {string} \\(US1)")
+    @When("I create a project with the title {string} and description {string} \\(US6)")
     public void i_create_a_project_with_title_and_the_description(String title, String description) {
         Response response = HelperFunctions.createProject("", title, description, false, false);
         assertEquals(201, response.getStatusCode());
     }
 
-    @Then("the project with title {string} and the description {string} shall exist in the system \\(US1)")
+    @Then("the project with title {string} and the description {string} shall exist in the system \\(US6)")
     public void the_project_with_title_and_the_description_should_be_in_the_system(String title, String description) {
         Response response = HelperFunctions.getAllProjects("");
         List<Map<String, String>> projects = response.jsonPath().getList("projects");
@@ -62,7 +62,7 @@ public class US1_CreateAProjectStepDefinition {
 
     // Alternate Scenario
 
-    @Given("the project with title {string} does not exist in the system \\(US1)")
+    @Given("the project with title {string} does not exist in the system \\(US6)")
     public void the_project_with_title_does_not_exist_in_the_system(String title) {
         Response response = HelperFunctions.getAllProjects("");
         List<Map<String, String>> projects = response.jsonPath().getList("projects");
@@ -72,13 +72,13 @@ public class US1_CreateAProjectStepDefinition {
         }
     }
 
-    @When("I create a project with the title {string} and completed {string} \\(US1)")
+    @When("I create a project with the title {string} and completed {string} \\(US6)")
     public void i_create_a_project_with_the_title(String title, String completed) {
         Response response = HelperFunctions.createProject("", title, "", Boolean.parseBoolean(completed), false);
-        assertEquals(200, response.getStatusCode());
+        assertEquals(201, response.getStatusCode());
     }
 
-    @Then("the project with title {string} with a completed {string} shall exist in the system \\(US1)")
+    @Then("the project with title {string} with a completed {string} shall exist in the system \\(US6)")
     public void the_project_with_title_with_a_completed_should_be_in_the_system(String title, String completed) {
         boolean completedBool = Boolean.parseBoolean(completed);
 
@@ -101,14 +101,14 @@ public class US1_CreateAProjectStepDefinition {
 
 
     // Error Scenario
-    @When("I create a project with an invalid id \\(US1)")
+    @When("I create a project with an invalid id \\(US6)")
     public void i_create_a_project_with_invalid_id() {
         String invalidID = "asdf";
         response = HelperFunctions.createProject(invalidID, "title!", "description", false, false);
 
     }
 
-    @Then("the status code shall be {int} with an error message {string} \\(US1)")
+    @Then("the status code shall be {int} with an error message {string} \\(US6)")
     public void the_project_with_invalid_id_should_not_be_in_the_system(int statusCode, String errorMessage) {
         assertEquals(statusCode, response.getStatusCode());
         assertEquals(errorMessage, response.jsonPath().getString("errorMessages[0]"));
