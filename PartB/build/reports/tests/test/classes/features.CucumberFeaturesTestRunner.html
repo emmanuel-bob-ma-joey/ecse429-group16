@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">7</div>
+<div class="counter">4</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">11.824s</div>
+<div class="counter">19.936s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">30%</div>
+<div class="percent">60%</div>
 <p>successful</p>
 </div>
 </td>
@@ -73,96 +73,16 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="Create a project #1"></a>
-<h3 class="failures">Create a project #1</h3>
-<span class="code">
-<pre>io.cucumber.junit.UndefinedStepException: The step 'the application is running (US1)' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given(&quot;the application is running \\(US1)&quot;)
-public void the_application_is_running_us1() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-</pre>
-</span>
-</div>
-<div class="test">
 <a name="Create a project #2"></a>
 <h3 class="failures">Create a project #2</h3>
 <span class="code">
-<pre>io.cucumber.junit.UndefinedStepException: The step 'the application is running (US1)' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given(&quot;the application is running \\(US1)&quot;)
-public void the_application_is_running_us1() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="Create a project that has already been completed #1"></a>
-<h3 class="failures">Create a project that has already been completed #1</h3>
-<span class="code">
-<pre>io.cucumber.junit.UndefinedStepException: The step 'the application is running (US1)' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given(&quot;the application is running \\(US1)&quot;)
-public void the_application_is_running_us1() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="Create a project that has already been completed #2"></a>
-<h3 class="failures">Create a project that has already been completed #2</h3>
-<span class="code">
-<pre>io.cucumber.junit.UndefinedStepException: The step 'the application is running (US1)' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given(&quot;the application is running \\(US1)&quot;)
-public void the_application_is_running_us1() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="Create a project with an invalid id"></a>
-<h3 class="failures">Create a project with an invalid id</h3>
-<span class="code">
-<pre>io.cucumber.junit.UndefinedStepException: The step 'the application is running (US1)' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given(&quot;the application is running \\(US1)&quot;)
-public void the_application_is_running_us1() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="Get all projects #2"></a>
-<h3 class="failures">Get all projects #2</h3>
-<span class="code">
 <pre>java.net.ConnectException: Connection refused
 	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:574)
-	at java.base/sun.nio.ch.Net.connect(Net.java:563)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
-	at java.base/java.net.Socket.connect(Socket.java:648)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
@@ -177,9 +97,9 @@ public void the_application_is_running_us1() {
 	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
 	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
 	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
@@ -192,9 +112,9 @@ public void the_application_is_running_us1() {
 	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
 	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
 	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
@@ -224,9 +144,9 @@ public void the_application_is_running_us1() {
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
 	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
 	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
@@ -240,9 +160,227 @@ public void the_application_is_running_us1() {
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
 	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+	at features.HelperFunctions.getAllProjects(HelperFunctions.java:34)
+	at features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_does_not_exist_in_the_system(US6_CreateAProjectStepDefinition.java:30)
+	at ✽.the project with title &quot;My second project&quot; and the description &quot;This is my second project&quot; does not exist in the system (US6)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US6_CreateAProject.feature:12)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Create a project that has already been completed #2"></a>
+<h3 class="failures">Create a project that has already been completed #2</h3>
+<span class="code">
+<pre>java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+	at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)
+	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)
+	at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+	at features.HelperFunctions.getAllProjects(HelperFunctions.java:34)
+	at features.US6_CreateAProjectStepDefinition.the_project_with_title_does_not_exist_in_the_system(US6_CreateAProjectStepDefinition.java:67)
+	at ✽.the project with title &quot;Second Project&quot; does not exist in the system (US6)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US6_CreateAProject.feature:22)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Get all projects #1"></a>
+<h3 class="failures">Get all projects #1</h3>
+<span class="code">
+<pre>java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+	at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)
+	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)
+	at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
 	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
@@ -262,16 +400,16 @@ public void the_application_is_running_us1() {
 </span>
 </div>
 <div class="test">
-<a name="Get all projects with the wrong endpoint"></a>
-<h3 class="failures">Get all projects with the wrong endpoint</h3>
+<a name="Get all projects #3"></a>
+<h3 class="failures">Get all projects #3</h3>
 <span class="code">
 <pre>java.net.ConnectException: Connection refused
 	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:574)
-	at java.base/sun.nio.ch.Net.connect(Net.java:563)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
-	at java.base/java.net.Socket.connect(Socket.java:648)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
@@ -286,9 +424,9 @@ public void the_application_is_running_us1() {
 	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
 	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
 	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
@@ -300,10 +438,9 @@ public void the_application_is_running_us1() {
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
 	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
 	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at jdk.internal.reflect.GeneratedMethodAccessor142.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
 	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
@@ -332,10 +469,9 @@ public void the_application_is_running_us1() {
 	at io.restassured.filter.FilterContext$next.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
 	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at jdk.internal.reflect.GeneratedMethodAccessor131.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
 	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
@@ -348,10 +484,9 @@ public void the_application_is_running_us1() {
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
 	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at jdk.internal.reflect.GeneratedMethodAccessor130.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
 	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
@@ -382,54 +517,54 @@ public void the_application_is_running_us1() {
 </tr>
 </thead>
 <tr>
-<td class="failures">Create a project #1</td>
-<td class="failures">0.196s</td>
-<td class="failures">failed</td>
+<td class="success">Create a project #1</td>
+<td class="success">2.837s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">Create a project #2</td>
-<td class="failures">0.035s</td>
+<td class="failures">2.032s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="failures">Create a project that has already been completed #1</td>
-<td class="failures">0.023s</td>
-<td class="failures">failed</td>
+<td class="success">Create a project that has already been completed #1</td>
+<td class="success">2.245s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">Create a project that has already been completed #2</td>
-<td class="failures">0.018s</td>
+<td class="failures">2.024s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="failures">Create a project with an invalid id</td>
-<td class="failures">0.019s</td>
-<td class="failures">failed</td>
+<td class="success">Create a project with an invalid id</td>
+<td class="success">2.226s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Credit amount</td>
-<td class="success">0.015s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Get all projects #1</td>
-<td class="success">4.973s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="failures">Get all projects #2</td>
-<td class="failures">2.075s</td>
+<td class="failures">Get all projects #1</td>
+<td class="failures">2.023s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">Get all projects #3</td>
-<td class="success">2.400s</td>
+<td class="success">Get all projects #2</td>
+<td class="success">2.275s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">Get all projects with the wrong endpoint</td>
-<td class="failures">2.070s</td>
+<td class="failures">Get all projects #3</td>
+<td class="failures">2.019s</td>
 <td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">Get all projects with the wrong endpoint</td>
+<td class="success">2.252s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
@@ -438,176 +573,372 @@ public void the_application_is_running_us1() {
 <span class="code">
 <pre>
 Scenario Outline: Create a project                                                                                                  ?[90m# src/test/resources/US6_CreateAProject.feature:17?[0m
-  ?[33mGiven ?[0m?[33mthe application is running (US1)?[0m
-  ?[36mGiven ?[0m?[36mthe project with title ?[0m?[36m?[1m&quot;My first project&quot;?[0m?[36m and the description ?[0m?[36m?[1m&quot;This is my first project&quot;?[0m?[36m does not exist in the system (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)?[0m
-  ?[36mWhen ?[0m?[36mI create a project with the title ?[0m?[36m?[1m&quot;My first project&quot;?[0m?[36m and description ?[0m?[36m?[1m&quot;This is my first project&quot;?[0m?[36m (US6)?[0m                        ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_title_and_the_description(java.lang.String,java.lang.String)?[0m
-  ?[36mThen ?[0m?[36mthe project with title ?[0m?[36m?[1m&quot;My first project&quot;?[0m?[36m and the description ?[0m?[36m?[1m&quot;This is my first project&quot;?[0m?[36m shall exist in the system (US6)?[0m     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                                                            ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe project with title ?[0m?[32m?[1m&quot;My first project&quot;?[0m?[32m and the description ?[0m?[32m?[1m&quot;This is my first project&quot;?[0m?[32m does not exist in the system (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create a project with the title ?[0m?[32m?[1m&quot;My first project&quot;?[0m?[32m and description ?[0m?[32m?[1m&quot;This is my first project&quot;?[0m?[32m (US6)?[0m                        ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_title_and_the_description(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe project with title ?[0m?[32m?[1m&quot;My first project&quot;?[0m?[32m and the description ?[0m?[32m?[1m&quot;This is my first project&quot;?[0m?[32m shall exist in the system (US6)?[0m     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
 
 Scenario Outline: Create a project                                                                                                    ?[90m# src/test/resources/US6_CreateAProject.feature:18?[0m
-  ?[33mGiven ?[0m?[33mthe application is running (US1)?[0m
-  ?[36mGiven ?[0m?[36mthe project with title ?[0m?[36m?[1m&quot;My second project&quot;?[0m?[36m and the description ?[0m?[36m?[1m&quot;This is my second project&quot;?[0m?[36m does not exist in the system (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                                                              ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[31mGiven ?[0m?[31mthe project with title ?[0m?[31m?[1m&quot;My second project&quot;?[0m?[31m and the description ?[0m?[31m?[1m&quot;This is my second project&quot;?[0m?[31m does not exist in the system (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)?[0m
+      ?[31mjava.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+	at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)
+	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)
+	at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+	at features.HelperFunctions.getAllProjects(HelperFunctions.java:34)
+	at features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_does_not_exist_in_the_system(US6_CreateAProjectStepDefinition.java:30)
+	at ✽.the project with title &quot;My second project&quot; and the description &quot;This is my second project&quot; does not exist in the system (US6)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US6_CreateAProject.feature:12)
+?[0m
   ?[36mWhen ?[0m?[36mI create a project with the title ?[0m?[36m?[1m&quot;My second project&quot;?[0m?[36m and description ?[0m?[36m?[1m&quot;This is my second project&quot;?[0m?[36m (US6)?[0m                        ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_title_and_the_description(java.lang.String,java.lang.String)?[0m
   ?[36mThen ?[0m?[36mthe project with title ?[0m?[36m?[1m&quot;My second project&quot;?[0m?[36m and the description ?[0m?[36m?[1m&quot;This is my second project&quot;?[0m?[36m shall exist in the system (US6)?[0m     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
 
 Scenario Outline: Create a project that has already been completed                                               ?[90m# src/test/resources/US6_CreateAProject.feature:27?[0m
-  ?[33mGiven ?[0m?[33mthe application is running (US1)?[0m
-  ?[36mGiven ?[0m?[36mthe project with title ?[0m?[36m?[1m&quot;A project with completed&quot;?[0m?[36m does not exist in the system (US6)?[0m                     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_does_not_exist_in_the_system(java.lang.String)?[0m
-  ?[36mWhen ?[0m?[36mI create a project with the title ?[0m?[36m?[1m&quot;A project with completed&quot;?[0m?[36m and completed ?[0m?[36m?[1m&quot;true&quot;?[0m?[36m (US6)?[0m                   ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_the_title(java.lang.String,java.lang.String)?[0m
-  ?[36mThen ?[0m?[36mthe project with title ?[0m?[36m?[1m&quot;A project with completed&quot;?[0m?[36m with a completed ?[0m?[36m?[1m&quot;true&quot;?[0m?[36m shall exist in the system (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_with_a_completed_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                                         ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe project with title ?[0m?[32m?[1m&quot;A project with completed&quot;?[0m?[32m does not exist in the system (US6)?[0m                     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_does_not_exist_in_the_system(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create a project with the title ?[0m?[32m?[1m&quot;A project with completed&quot;?[0m?[32m and completed ?[0m?[32m?[1m&quot;true&quot;?[0m?[32m (US6)?[0m                   ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_the_title(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe project with title ?[0m?[32m?[1m&quot;A project with completed&quot;?[0m?[32m with a completed ?[0m?[32m?[1m&quot;true&quot;?[0m?[32m shall exist in the system (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_with_a_completed_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
 
 Scenario Outline: Create a project that has already been completed                                     ?[90m# src/test/resources/US6_CreateAProject.feature:28?[0m
-  ?[33mGiven ?[0m?[33mthe application is running (US1)?[0m
-  ?[36mGiven ?[0m?[36mthe project with title ?[0m?[36m?[1m&quot;Second Project&quot;?[0m?[36m does not exist in the system (US6)?[0m                     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_does_not_exist_in_the_system(java.lang.String)?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                               ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[31mGiven ?[0m?[31mthe project with title ?[0m?[31m?[1m&quot;Second Project&quot;?[0m?[31m does not exist in the system (US6)?[0m                     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_does_not_exist_in_the_system(java.lang.String)?[0m
+      ?[31mjava.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+	at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)
+	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)
+	at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+	at features.HelperFunctions.getAllProjects(HelperFunctions.java:34)
+	at features.US6_CreateAProjectStepDefinition.the_project_with_title_does_not_exist_in_the_system(US6_CreateAProjectStepDefinition.java:67)
+	at ✽.the project with title &quot;Second Project&quot; does not exist in the system (US6)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US6_CreateAProject.feature:22)
+?[0m
   ?[36mWhen ?[0m?[36mI create a project with the title ?[0m?[36m?[1m&quot;Second Project&quot;?[0m?[36m and completed ?[0m?[36m?[1m&quot;true&quot;?[0m?[36m (US6)?[0m                   ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_the_title(java.lang.String,java.lang.String)?[0m
   ?[36mThen ?[0m?[36mthe project with title ?[0m?[36m?[1m&quot;Second Project&quot;?[0m?[36m with a completed ?[0m?[36m?[1m&quot;true&quot;?[0m?[36m shall exist in the system (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_with_a_completed_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
 
 Scenario Outline: Create a project with an invalid id                                                                        ?[90m# src/test/resources/US6_CreateAProject.feature:37?[0m
-  ?[33mGiven ?[0m?[33mthe application is running (US1)?[0m
-  ?[36mWhen ?[0m?[36mI create a project with an invalid id (US6)?[0m                                                                           ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_invalid_id()?[0m
-  ?[36mThen ?[0m?[36mthe status code shall be ?[0m?[36m?[1m404?[0m?[36m with an error message ?[0m?[36m?[1m&quot;No such project entity instance with GUID or ID asdf found&quot;?[0m?[36m (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_invalid_id_should_not_be_in_the_system(int,java.lang.String)?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                                                     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mWhen ?[0m?[32mI create a project with an invalid id (US6)?[0m                                                                           ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_invalid_id()?[0m
+  ?[32mThen ?[0m?[32mthe status code shall be ?[0m?[32m?[1m404?[0m?[32m with an error message ?[0m?[32m?[1m&quot;No such project entity instance with GUID or ID asdf found&quot;?[0m?[32m (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_invalid_id_should_not_be_in_the_system(int,java.lang.String)?[0m
 
 Scenario Outline: Get all projects                                                                                  ?[90m# src/test/resources/US7_GetAllProjects.feature:21?[0m
-  ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m                                                                    ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
-  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US7)?[0m                                                              ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+  ?[31mGiven ?[0m?[31mthe project application is running (US7)?[0m                                                                    ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
+      ?[31mjava.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+	at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)
+	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)
+	at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+	at features.HelperFunctions.getAllProjects(HelperFunctions.java:34)
+	at features.US7_GetAllProjectsStepDefinition.the_project_application_is_running(US7_GetAllProjectsStepDefinition.java:24)
+	at ✽.the project application is running (US7)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US7_GetAllProjects.feature:8)
+?[0m
+  ?[36mAnd ?[0m?[36mthe following projects exist in the system (US7)?[0m                                                              ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title     | description   | completed | active |
     | project 1 | description 1 | false     | false  |
     | project 2 | description 2 | true      | true   |
     | project 3 | description 3 | false     | true   |
-  ?[32mWhen ?[0m?[32mI get all projects (US7)?[0m                                                                                     ?[90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects()?[0m
-  ?[32mThen ?[0m?[32mthe projects with title ?[0m?[32m?[1m&quot;project 1&quot;?[0m?[32m, description ?[0m?[32m?[1m&quot;description 1&quot;?[0m?[32m, completed ?[0m?[32m?[1m&quot;false&quot;?[0m?[32m and active ?[0m?[32m?[1m&quot;false&quot;?[0m?[32m (US7)?[0m ?[90m# features.US7_GetAllProjectsStepDefinition.the_todos_with_title_description_and_doneStatus(java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
+  ?[36mWhen ?[0m?[36mI get all projects (US7)?[0m                                                                                     ?[90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects()?[0m
+  ?[36mThen ?[0m?[36mthe projects with title ?[0m?[36m?[1m&quot;project 1&quot;?[0m?[36m, description ?[0m?[36m?[1m&quot;description 1&quot;?[0m?[36m, completed ?[0m?[36m?[1m&quot;false&quot;?[0m?[36m and active ?[0m?[36m?[1m&quot;false&quot;?[0m?[36m (US7)?[0m ?[90m# features.US7_GetAllProjectsStepDefinition.the_todos_with_title_description_and_doneStatus(java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
 
 Scenario Outline: Get all projects                                                                                ?[90m# src/test/resources/US7_GetAllProjects.feature:22?[0m
-  ?[31mGiven ?[0m?[31mthe project application is running (US7)?[0m                                                                  ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
-      ?[31mjava.net.ConnectException: Connection refused
-	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:574)
-	at java.base/sun.nio.ch.Net.connect(Net.java:563)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
-	at java.base/java.net.Socket.connect(Socket.java:648)
-	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
-	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
-	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
-	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
-	at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)
-	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)
-	at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
-	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
-	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.FilterContext$next.call(Unknown Source)
-	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.FilterContext$next.call(Unknown Source)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
-	at features.HelperFunctions.getAllProjects(HelperFunctions.java:34)
-	at features.US7_GetAllProjectsStepDefinition.the_project_application_is_running(US7_GetAllProjectsStepDefinition.java:24)
-	at ✽.the project application is running (US7)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US7_GetAllProjects.feature:8)
-?[0m
-  ?[36mAnd ?[0m?[36mthe following projects exist in the system (US7)?[0m                                                            ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m                                                                  ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US7)?[0m                                                            ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title     | description   | completed | active |
     | project 1 | description 1 | false     | false  |
     | project 2 | description 2 | true      | true   |
     | project 3 | description 3 | false     | true   |
-  ?[36mWhen ?[0m?[36mI get all projects (US7)?[0m                                                                                   ?[90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects()?[0m
-  ?[36mThen ?[0m?[36mthe projects with title ?[0m?[36m?[1m&quot;project 2&quot;?[0m?[36m, description ?[0m?[36m?[1m&quot;description 2&quot;?[0m?[36m, completed ?[0m?[36m?[1m&quot;true&quot;?[0m?[36m and active ?[0m?[36m?[1m&quot;true&quot;?[0m?[36m (US7)?[0m ?[90m# features.US7_GetAllProjectsStepDefinition.the_todos_with_title_description_and_doneStatus(java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI get all projects (US7)?[0m                                                                                   ?[90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects()?[0m
+  ?[32mThen ?[0m?[32mthe projects with title ?[0m?[32m?[1m&quot;project 2&quot;?[0m?[32m, description ?[0m?[32m?[1m&quot;description 2&quot;?[0m?[32m, completed ?[0m?[32m?[1m&quot;true&quot;?[0m?[32m and active ?[0m?[32m?[1m&quot;true&quot;?[0m?[32m (US7)?[0m ?[90m# features.US7_GetAllProjectsStepDefinition.the_todos_with_title_description_and_doneStatus(java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
 
 Scenario Outline: Get all projects                                                                                 ?[90m# src/test/resources/US7_GetAllProjects.feature:23?[0m
-  ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m                                                                   ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
-  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US7)?[0m                                                             ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
-    | title     | description   | completed | active |
-    | project 1 | description 1 | false     | false  |
-    | project 2 | description 2 | true      | true   |
-    | project 3 | description 3 | false     | true   |
-  ?[32mWhen ?[0m?[32mI get all projects (US7)?[0m                                                                                    ?[90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects()?[0m
-  ?[32mThen ?[0m?[32mthe projects with title ?[0m?[32m?[1m&quot;project 3&quot;?[0m?[32m, description ?[0m?[32m?[1m&quot;description 3&quot;?[0m?[32m, completed ?[0m?[32m?[1m&quot;false&quot;?[0m?[32m and active ?[0m?[32m?[1m&quot;true&quot;?[0m?[32m (US7)?[0m ?[90m# features.US7_GetAllProjectsStepDefinition.the_todos_with_title_description_and_doneStatus(java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
-
-Scenario Outline: Get all projects with the wrong endpoint ?[90m# src/test/resources/US7_GetAllProjects.feature:39?[0m
-  ?[31mGiven ?[0m?[31mthe project application is running (US7)?[0m           ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
+  ?[31mGiven ?[0m?[31mthe project application is running (US7)?[0m                                                                   ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
       ?[31mjava.net.ConnectException: Connection refused
 	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:574)
-	at java.base/sun.nio.ch.Net.connect(Net.java:563)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
-	at java.base/java.net.Socket.connect(Socket.java:648)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
@@ -622,9 +953,9 @@ Scenario Outline: Get all projects with the wrong endpoint ?[90m# src/test/resou
 	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
 	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
 	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
@@ -636,10 +967,9 @@ Scenario Outline: Get all projects with the wrong endpoint ?[90m# src/test/resou
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
 	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
 	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at jdk.internal.reflect.GeneratedMethodAccessor142.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
 	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
@@ -668,10 +998,9 @@ Scenario Outline: Get all projects with the wrong endpoint ?[90m# src/test/resou
 	at io.restassured.filter.FilterContext$next.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
 	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at jdk.internal.reflect.GeneratedMethodAccessor131.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
 	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
@@ -684,10 +1013,9 @@ Scenario Outline: Get all projects with the wrong endpoint ?[90m# src/test/resou
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
 	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at jdk.internal.reflect.GeneratedMethodAccessor130.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
 	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
@@ -704,13 +1032,23 @@ Scenario Outline: Get all projects with the wrong endpoint ?[90m# src/test/resou
 	at features.US7_GetAllProjectsStepDefinition.the_project_application_is_running(US7_GetAllProjectsStepDefinition.java:24)
 	at ✽.the project application is running (US7)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US7_GetAllProjects.feature:8)
 ?[0m
-  ?[36mAnd ?[0m?[36mthe following projects exist in the system (US7)?[0m     ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+  ?[36mAnd ?[0m?[36mthe following projects exist in the system (US7)?[0m                                                             ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title     | description   | completed | active |
     | project 1 | description 1 | false     | false  |
     | project 2 | description 2 | true      | true   |
     | project 3 | description 3 | false     | true   |
-  ?[36mWhen ?[0m?[36mI get all projects with mistyped endpoint (US7)?[0m     ?[90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects_with_mistyped_endpoint()?[0m
-  ?[36mThen ?[0m?[36mI should receive error code ?[0m?[36m?[1m404?[0m?[36m (US7)?[0m               ?[90m# features.US7_GetAllProjectsStepDefinition.i_should_see_error_code(int)?[0m
+  ?[36mWhen ?[0m?[36mI get all projects (US7)?[0m                                                                                    ?[90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects()?[0m
+  ?[36mThen ?[0m?[36mthe projects with title ?[0m?[36m?[1m&quot;project 3&quot;?[0m?[36m, description ?[0m?[36m?[1m&quot;description 3&quot;?[0m?[36m, completed ?[0m?[36m?[1m&quot;false&quot;?[0m?[36m and active ?[0m?[36m?[1m&quot;true&quot;?[0m?[36m (US7)?[0m ?[90m# features.US7_GetAllProjectsStepDefinition.the_todos_with_title_description_and_doneStatus(java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Get all projects with the wrong endpoint ?[90m# src/test/resources/US7_GetAllProjects.feature:39?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m           ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US7)?[0m     ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description   | completed | active |
+    | project 1 | description 1 | false     | false  |
+    | project 2 | description 2 | true      | true   |
+    | project 3 | description 3 | false     | true   |
+  ?[32mWhen ?[0m?[32mI get all projects with mistyped endpoint (US7)?[0m     ?[90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects_with_mistyped_endpoint()?[0m
+  ?[32mThen ?[0m?[32mI should receive error code ?[0m?[32m?[1m404?[0m?[32m (US7)?[0m               ?[90m# features.US7_GetAllProjectsStepDefinition.i_should_see_error_code(int)?[0m
 
 Scenario: Credit amount                      ?[90m# src/test/resources/example.feature:3?[0m
 givenAccountBalance
@@ -728,7 +1066,7 @@ givenAccountBalance
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.2</a> at Nov 12, 2023, 8:38:31 PM</p>
+<a href="http://www.gradle.org">Gradle 8.2</a> at Nov 12, 2023, 8:43:31 PM</p>
 </div>
 </div>
 </body>

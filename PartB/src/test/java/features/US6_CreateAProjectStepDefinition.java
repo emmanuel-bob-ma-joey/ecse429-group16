@@ -102,7 +102,7 @@ public class US6_CreateAProjectStepDefinition {
 
     // Error Scenario
     @When("I create a project with an invalid id \\(US6)")
-    public void i_create_a_project_with_invalid_id() {
+    public void i_create_a_project_with_an_invalid_id() {
         String invalidID = "asdf";
         response = HelperFunctions.createProject(invalidID, "title!", "description", false, false);
 

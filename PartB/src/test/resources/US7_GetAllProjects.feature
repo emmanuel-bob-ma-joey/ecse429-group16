@@ -28,7 +28,8 @@ Feature: Get All Projects
         Then I should see 1 project (US7)
         Then the projects with title "<title>", description "<description>", and active "<active>" (US7)
         Examples:
-            | project 2 | description 2 | true       | true   |
+            | title     | description   | active |
+            | project 2 | description 2 | true   |
 
     # Error flow
     Scenario Outline: Get all projects with the wrong endpoint

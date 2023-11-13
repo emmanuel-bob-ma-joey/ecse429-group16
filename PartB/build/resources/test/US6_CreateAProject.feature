@@ -5,7 +5,7 @@ Feature: Create a Project
     so that I can keep track of my responsabilities.
 
     Background: The project application is running
-        Given the application is running (US1)
+        Given the application is running (US6)
 
     # Normal Flow
     Scenario Outline: Create a project
