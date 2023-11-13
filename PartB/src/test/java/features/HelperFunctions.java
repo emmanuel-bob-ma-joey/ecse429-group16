@@ -59,7 +59,7 @@ public class HelperFunctions {
             response = request.post("/projects");
         else
             response = request.post("/projects/" + id);
-
+        //TODO BUG DOESNT WORK FOR /PROJECTS/ID
 
         return response;
     }
@@ -85,6 +85,39 @@ public class HelperFunctions {
         RestAssured.baseURI = baseUrl;
         RequestSpecification request = RestAssured.given();
         Response response = request.get("/projects/" + id);
+        return response;
+    }
+
+    public static Response updateProjectWithId(int id, String title, String description, boolean completed) {
+        RestAssured.baseURI = baseUrl;
+        RequestSpecification request = RestAssured.given();
+
+        request.header("Content-Type", "application/json");
+        JSONObject requestParams = new JSONObject();
+        requestParams.put("title", title);
+        requestParams.put("description", description);
+        requestParams.put("completed", completed);
+
+        request.body(requestParams.toJSONString());
+
+        Response response = request.post("/projects/" + id);
+
+        return response;
+    }
+    public static Response updateProjectWithIdAndInvalidCompleted(int id, String title,
+                                                                String completed) {
+        RestAssured.baseURI = baseUrl;
+        RequestSpecification request = RestAssured.given();
+
+        request.header("Content-Type", "application/json");
+        JSONObject requestParams = new JSONObject();
+        requestParams.put("title", title);
+        requestParams.put("completed", completed);
+
+        request.body(requestParams.toJSONString());
+
+        Response response = request.post("/projects/" + id);
+
         return response;
     }
 

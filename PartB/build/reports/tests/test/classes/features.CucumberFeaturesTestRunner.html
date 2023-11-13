@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">19</div>
+<div class="counter">24</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">6</div>
+<div class="counter">11</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1m15.56s</div>
+<div class="counter">1m36.02s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">68%</div>
+<div class="percent">54%</div>
 <p>successful</p>
 </div>
 </td>
@@ -144,6 +144,86 @@
 </pre>
 </span>
 </div>
+<div class="test">
+<a name="Mark a project as completed #1"></a>
+<h3 class="failures">Mark a project as completed #1</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError: expected: &lt;200&gt; but was: &lt;404&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at app//features.US10_UpdateProjectStepDefinition.when_i_update_the_project_with_id_with(US10_UpdateProjectStepDefinition.java:90)
+	at ✽.I update the project with id 3 with &quot;true&quot; (US10)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US10_UpdateProject.feature:27)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Mark a project as completed #2"></a>
+<h3 class="failures">Mark a project as completed #2</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError: expected: &lt;200&gt; but was: &lt;404&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at app//features.US10_UpdateProjectStepDefinition.when_i_update_the_project_with_id_with(US10_UpdateProjectStepDefinition.java:90)
+	at ✽.I update the project with id 4 with &quot;true&quot; (US10)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US10_UpdateProject.feature:27)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Update a project's title and description #1"></a>
+<h3 class="failures">Update a project's title and description #1</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError: expected: &lt;200&gt; but was: &lt;404&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at app//features.US10_UpdateProjectStepDefinition.i_update_the_project_with_id_with_a_new_description(US10_UpdateProjectStepDefinition.java:55)
+	at ✽.I update the project with 3 with a new description &quot;very fun proj&quot; (US10)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US10_UpdateProject.feature:17)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Update a project's title and description #2"></a>
+<h3 class="failures">Update a project's title and description #2</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError: expected: &lt;200&gt; but was: &lt;404&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at app//features.US10_UpdateProjectStepDefinition.i_update_the_project_with_id_with_a_new_description(US10_UpdateProjectStepDefinition.java:55)
+	at ✽.I update the project with 4 with a new description &quot;very boring proj&quot; (US10)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US10_UpdateProject.feature:17)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Update completed to invalid value"></a>
+<h3 class="failures">Update completed to invalid value</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError: expected: &lt;400&gt; but was: &lt;404&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at app//features.US10_UpdateProjectStepDefinition.i_update_the_project_with_id_with_invalid_completed(US10_UpdateProjectStepDefinition.java:120)
+	at ✽.I update the project with id 1 with invalid completed &quot;asd&quot; (US10)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US10_UpdateProject.feature:38)
+</pre>
+</span>
+</div>
 </div>
 <div id="tab1" class="tab">
 <h2>Tests</h2>
@@ -157,27 +237,27 @@
 </thead>
 <tr>
 <td class="success">Create a project #1</td>
-<td class="success">4.675s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">Create a project #2</td>
-<td class="success">4.049s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">Create a project that has already been completed #1</td>
 <td class="success">4.047s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">Create a project #2</td>
+<td class="success">4.043s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Create a project that has already been completed #1</td>
+<td class="success">4.065s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">Create a project that has already been completed #2</td>
-<td class="success">4.045s</td>
+<td class="success">4.054s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Create a project with an invalid id</td>
-<td class="success">4.050s</td>
+<td class="success">4.041s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -187,68 +267,93 @@
 </tr>
 <tr>
 <td class="failures">Delete a completed project</td>
-<td class="failures">4.037s</td>
+<td class="failures">4.049s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">Delete a project that does not exist</td>
-<td class="success">4.040s</td>
+<td class="success">4.032s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">Delete an active project</td>
-<td class="failures">4.053s</td>
+<td class="failures">4.040s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">Get a project that does not exist</td>
-<td class="success">4.053s</td>
+<td class="success">4.157s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">Get a project that has an empty description</td>
-<td class="failures">4.052s</td>
+<td class="failures">4.056s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">Get a specific project #1</td>
-<td class="failures">4.046s</td>
+<td class="failures">4.045s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">Get a specific project #2</td>
-<td class="failures">4.054s</td>
+<td class="failures">4.050s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">Get a specific project #3</td>
-<td class="failures">4.064s</td>
+<td class="failures">4.050s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">Get all projects #1</td>
-<td class="success">4.079s</td>
+<td class="success">4.117s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Get all projects #2</td>
-<td class="success">4.055s</td>
+<td class="success">4.071s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Get all projects #3</td>
-<td class="success">4.051s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">Get all projects with completed is true</td>
 <td class="success">4.062s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Get all projects with the wrong endpoint</td>
-<td class="success">4.042s</td>
+<td class="success">Get all projects with completed is true</td>
+<td class="success">4.072s</td>
 <td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Get all projects with the wrong endpoint</td>
+<td class="success">4.040s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">Mark a project as completed #1</td>
+<td class="failures">4.047s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">Mark a project as completed #2</td>
+<td class="failures">4.042s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">Update a project's title and description #1</td>
+<td class="failures">4.734s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">Update a project's title and description #2</td>
+<td class="failures">4.054s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">Update completed to invalid value</td>
+<td class="failures">4.042s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
@@ -256,6 +361,106 @@
 <h2>Standard output</h2>
 <span class="code">
 <pre>
+Scenario Outline: Update a project's title and description                                                                        ?[90m# src/test/resources/US10_UpdateProject.feature:21?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US10)?[0m                                                                                 ?[90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US10)?[0m                                                                           ?[90m# features.US10_UpdateProjectStepDefinition.the_following_projects_with_title_description_completed_active_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title       | description | completed | active |
+    | first proj  | fun proj    | false     | true   |
+    | second proj | boring proj | true      | false  |
+  ?[32mGiven ?[0m?[32ma project with ?[0m?[32m?[1m3?[0m?[32m exists in the system (US10)?[0m                                                                              ?[90m# features.US10_UpdateProjectStepDefinition.a_project_with_id_exists_in_the_system(int)?[0m
+  ?[31mWhen ?[0m?[31mI update the project with ?[0m?[31m?[1m3?[0m?[31m with a new description ?[0m?[31m?[1m&quot;very fun proj&quot;?[0m?[31m (US10)?[0m                                                  ?[90m# features.US10_UpdateProjectStepDefinition.i_update_the_project_with_id_with_a_new_description(int,java.lang.String)?[0m
+      ?[31morg.opentest4j.AssertionFailedError: expected: &lt;200&gt; but was: &lt;404&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at features.US10_UpdateProjectStepDefinition.i_update_the_project_with_id_with_a_new_description(US10_UpdateProjectStepDefinition.java:55)
+	at ✽.I update the project with 3 with a new description &quot;very fun proj&quot; (US10)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US10_UpdateProject.feature:17)
+?[0m
+  ?[36mThen ?[0m?[36mthe project with ?[0m?[36m?[1m3?[0m?[36m should have title ?[0m?[36m?[1m&quot;first proj&quot;?[0m?[36m, description ?[0m?[36m?[1m&quot;very fun proj&quot;?[0m?[36m, completed ?[0m?[36m?[1m&quot;false&quot;?[0m?[36m and active ?[0m?[36m?[1m&quot;true&quot;?[0m?[36m (US10)?[0m ?[90m# features.US10_UpdateProjectStepDefinition.the_project_with_id_should_have_a_description(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Update a project's title and description                                                                            ?[90m# src/test/resources/US10_UpdateProject.feature:22?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US10)?[0m                                                                                     ?[90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US10)?[0m                                                                               ?[90m# features.US10_UpdateProjectStepDefinition.the_following_projects_with_title_description_completed_active_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title       | description | completed | active |
+    | first proj  | fun proj    | false     | true   |
+    | second proj | boring proj | true      | false  |
+  ?[32mGiven ?[0m?[32ma project with ?[0m?[32m?[1m4?[0m?[32m exists in the system (US10)?[0m                                                                                  ?[90m# features.US10_UpdateProjectStepDefinition.a_project_with_id_exists_in_the_system(int)?[0m
+  ?[31mWhen ?[0m?[31mI update the project with ?[0m?[31m?[1m4?[0m?[31m with a new description ?[0m?[31m?[1m&quot;very boring proj&quot;?[0m?[31m (US10)?[0m                                                   ?[90m# features.US10_UpdateProjectStepDefinition.i_update_the_project_with_id_with_a_new_description(int,java.lang.String)?[0m
+      ?[31morg.opentest4j.AssertionFailedError: expected: &lt;200&gt; but was: &lt;404&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at features.US10_UpdateProjectStepDefinition.i_update_the_project_with_id_with_a_new_description(US10_UpdateProjectStepDefinition.java:55)
+	at ✽.I update the project with 4 with a new description &quot;very boring proj&quot; (US10)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US10_UpdateProject.feature:17)
+?[0m
+  ?[36mThen ?[0m?[36mthe project with ?[0m?[36m?[1m4?[0m?[36m should have title ?[0m?[36m?[1m&quot;second proj&quot;?[0m?[36m, description ?[0m?[36m?[1m&quot;very boring proj&quot;?[0m?[36m, completed ?[0m?[36m?[1m&quot;true&quot;?[0m?[36m and active ?[0m?[36m?[1m&quot;false&quot;?[0m?[36m (US10)?[0m ?[90m# features.US10_UpdateProjectStepDefinition.the_project_with_id_should_have_a_description(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Mark a project as completed                            ?[90m# src/test/resources/US10_UpdateProject.feature:31?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US10)?[0m                        ?[90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US10)?[0m                  ?[90m# features.US10_UpdateProjectStepDefinition.the_following_projects_with_title_description_completed_active_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title       | description | completed | active |
+    | first proj  | fun proj    | false     | true   |
+    | second proj | boring proj | true      | false  |
+  ?[32mGiven ?[0m?[32ma incomplete project with id ?[0m?[32m?[1m3?[0m?[32m exists in the system (US10)?[0m       ?[90m# features.US10_UpdateProjectStepDefinition.a_project_with_id__exists_in_the_system(int)?[0m
+  ?[31mWhen ?[0m?[31mI update the project with id ?[0m?[31m?[1m3?[0m?[31m with ?[0m?[31m?[1m&quot;true&quot;?[0m?[31m (US10)?[0m                 ?[90m# features.US10_UpdateProjectStepDefinition.when_i_update_the_project_with_id_with(int,java.lang.String)?[0m
+      ?[31morg.opentest4j.AssertionFailedError: expected: &lt;200&gt; but was: &lt;404&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at features.US10_UpdateProjectStepDefinition.when_i_update_the_project_with_id_with(US10_UpdateProjectStepDefinition.java:90)
+	at ✽.I update the project with id 3 with &quot;true&quot; (US10)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US10_UpdateProject.feature:27)
+?[0m
+  ?[36mThen ?[0m?[36mthe project with ?[0m?[36m?[1m3?[0m?[36m should have an updated completed ?[0m?[36m?[1m&quot;true&quot;?[0m?[36m (US10)?[0m ?[90m# features.US10_UpdateProjectStepDefinition.the_project_with_id_should_have_an_updated_completed(int,java.lang.String)?[0m
+
+Scenario Outline: Mark a project as completed                            ?[90m# src/test/resources/US10_UpdateProject.feature:32?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US10)?[0m                        ?[90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US10)?[0m                  ?[90m# features.US10_UpdateProjectStepDefinition.the_following_projects_with_title_description_completed_active_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title       | description | completed | active |
+    | first proj  | fun proj    | false     | true   |
+    | second proj | boring proj | true      | false  |
+  ?[32mGiven ?[0m?[32ma incomplete project with id ?[0m?[32m?[1m4?[0m?[32m exists in the system (US10)?[0m       ?[90m# features.US10_UpdateProjectStepDefinition.a_project_with_id__exists_in_the_system(int)?[0m
+  ?[31mWhen ?[0m?[31mI update the project with id ?[0m?[31m?[1m4?[0m?[31m with ?[0m?[31m?[1m&quot;true&quot;?[0m?[31m (US10)?[0m                 ?[90m# features.US10_UpdateProjectStepDefinition.when_i_update_the_project_with_id_with(int,java.lang.String)?[0m
+      ?[31morg.opentest4j.AssertionFailedError: expected: &lt;200&gt; but was: &lt;404&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at features.US10_UpdateProjectStepDefinition.when_i_update_the_project_with_id_with(US10_UpdateProjectStepDefinition.java:90)
+	at ✽.I update the project with id 4 with &quot;true&quot; (US10)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US10_UpdateProject.feature:27)
+?[0m
+  ?[36mThen ?[0m?[36mthe project with ?[0m?[36m?[1m4?[0m?[36m should have an updated completed ?[0m?[36m?[1m&quot;true&quot;?[0m?[36m (US10)?[0m ?[90m# features.US10_UpdateProjectStepDefinition.the_project_with_id_should_have_an_updated_completed(int,java.lang.String)?[0m
+
+Scenario Outline: Update completed to invalid value                                                 ?[90m# src/test/resources/US10_UpdateProject.feature:42?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US10)?[0m                                                   ?[90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US10)?[0m                                             ?[90m# features.US10_UpdateProjectStepDefinition.the_following_projects_with_title_description_completed_active_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title       | description | completed | active |
+    | first proj  | fun proj    | false     | true   |
+    | second proj | boring proj | true      | false  |
+  ?[32mGiven ?[0m?[32ma project with ?[0m?[32m?[1m1?[0m?[32m that exists in the system (US10)?[0m                                           ?[90m# features.US10_UpdateProjectStepDefinition.a_project_with_id_that_exists_in_the_system(int)?[0m
+  ?[31mWhen ?[0m?[31mI update the project with id ?[0m?[31m?[1m1?[0m?[31m with invalid completed ?[0m?[31m?[1m&quot;asd&quot;?[0m?[31m (US10)?[0m                           ?[90m# features.US10_UpdateProjectStepDefinition.i_update_the_project_with_id_with_invalid_completed(int,java.lang.String)?[0m
+      ?[31morg.opentest4j.AssertionFailedError: expected: &lt;400&gt; but was: &lt;404&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at features.US10_UpdateProjectStepDefinition.i_update_the_project_with_id_with_invalid_completed(US10_UpdateProjectStepDefinition.java:120)
+	at ✽.I update the project with id 1 with invalid completed &quot;asd&quot; (US10)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US10_UpdateProject.feature:38)
+?[0m
+  ?[36mThen ?[0m?[36mI should receive a ?[0m?[36m?[1m400?[0m?[36m response with ?[0m?[36m?[1m&quot;Failed Validation: completed should be BOOLEAN&quot;?[0m?[36m (US10)?[0m ?[90m# features.US10_UpdateProjectStepDefinition.i_should_receive_a_response_with_(int,java.lang.String)?[0m
+
 Scenario Outline: Create a project                                                                                                  ?[90m# src/test/resources/US6_CreateAProject.feature:17?[0m
   ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                                                            ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe project with title ?[0m?[32m?[1m&quot;My first project&quot;?[0m?[32m and the description ?[0m?[32m?[1m&quot;This is my first project&quot;?[0m?[32m does not exist in the system (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)?[0m
@@ -477,7 +682,7 @@ givenAccountBalance
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.2</a> at Nov 13, 2023, 4:42:36 PM</p>
+<a href="http://www.gradle.org">Gradle 8.2</a> at Nov 13, 2023, 5:22:04 PM</p>
 </div>
 </div>
 </body>
