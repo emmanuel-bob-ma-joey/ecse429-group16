@@ -80,4 +80,11 @@ public class HelperFunctions {
         return response;
     }
 
+    public static Response getProjectWithId(int id) {
+        RestAssured.baseURI = baseUrl;
+        RequestSpecification request = RestAssured.given();
+        Response response = request.get("/projects/" + id);
+        return response;
+    }
+
 }
