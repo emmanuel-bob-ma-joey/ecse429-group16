@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="features.CucumberFeaturesTestRunner" tests="10" skipped="0" failures="4" errors="0" timestamp="2023-11-13T01:43:11" hostname="Victors-MacBook-Pro.local" time="19.941">
+<testsuite name="features.CucumberFeaturesTestRunner" tests="11" skipped="0" failures="6" errors="0" timestamp="2023-11-13T01:50:41" hostname="Victors-MacBook-Pro.local" time="22.074">
   <properties/>
-  <testcase name="Create a project #1" classname="features.CucumberFeaturesTestRunner" time="2.837"/>
+  <testcase name="Create a project #1" classname="features.CucumberFeaturesTestRunner" time="2.855"/>
   <testcase name="Create a project #2" classname="features.CucumberFeaturesTestRunner" time="2.032">
     <failure message="java.net.ConnectException: Connection refused" type="java.net.ConnectException">java.net.ConnectException: Connection refused
 	at java.base/sun.nio.ch.Net.connect0(Native Method)
@@ -108,7 +108,7 @@
 </failure>
   </testcase>
   <testcase name="Create a project that has already been completed #1" classname="features.CucumberFeaturesTestRunner" time="2.245"/>
-  <testcase name="Create a project that has already been completed #2" classname="features.CucumberFeaturesTestRunner" time="2.024">
+  <testcase name="Create a project that has already been completed #2" classname="features.CucumberFeaturesTestRunner" time="2.027">
     <failure message="java.net.ConnectException: Connection refused" type="java.net.ConnectException">java.net.ConnectException: Connection refused
 	at java.base/sun.nio.ch.Net.connect0(Native Method)
 	at java.base/sun.nio.ch.Net.connect(Net.java:579)
@@ -213,8 +213,8 @@
 	at ✽.the project with title &quot;Second Project&quot; does not exist in the system (US6)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US6_CreateAProject.feature:22)
 </failure>
   </testcase>
-  <testcase name="Create a project with an invalid id" classname="features.CucumberFeaturesTestRunner" time="2.226"/>
-  <testcase name="Get all projects #1" classname="features.CucumberFeaturesTestRunner" time="2.023">
+  <testcase name="Create a project with an invalid id" classname="features.CucumberFeaturesTestRunner" time="2.257"/>
+  <testcase name="Get all projects #1" classname="features.CucumberFeaturesTestRunner" time="2.026">
     <failure message="java.net.ConnectException: Connection refused" type="java.net.ConnectException">java.net.ConnectException: Connection refused
 	at java.base/sun.nio.ch.Net.connect0(Native Method)
 	at java.base/sun.nio.ch.Net.connect(Net.java:579)
@@ -319,8 +319,8 @@
 	at ✽.the project application is running (US7)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US7_GetAllProjects.feature:8)
 </failure>
   </testcase>
-  <testcase name="Get all projects #2" classname="features.CucumberFeaturesTestRunner" time="2.275"/>
-  <testcase name="Get all projects #3" classname="features.CucumberFeaturesTestRunner" time="2.019">
+  <testcase name="Get all projects #2" classname="features.CucumberFeaturesTestRunner" time="2.289"/>
+  <testcase name="Get all projects #3" classname="features.CucumberFeaturesTestRunner" time="2.021">
     <failure message="java.net.ConnectException: Connection refused" type="java.net.ConnectException">java.net.ConnectException: Connection refused
 	at java.base/sun.nio.ch.Net.connect0(Native Method)
 	at java.base/sun.nio.ch.Net.connect(Net.java:579)
@@ -422,8 +422,121 @@
 	at ✽.the project application is running (US7)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US7_GetAllProjects.feature:8)
 </failure>
   </testcase>
-  <testcase name="Get all projects with the wrong endpoint" classname="features.CucumberFeaturesTestRunner" time="2.252"/>
-  <testcase name="Credit amount" classname="features.CucumberFeaturesTestRunner" time="0.003"/>
+  <testcase name="Get all projects with completed is true" classname="features.CucumberFeaturesTestRunner" time="2.292">
+    <failure message="org.opentest4j.AssertionFailedError: expected: java.lang.String@2ba024cb&lt;true&gt; but was: java.lang.Boolean@7af0d91b&lt;true&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: java.lang.String@2ba024cb&lt;true&gt; but was: java.lang.Boolean@7af0d91b&lt;true&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at app//features.US7_GetAllProjectsStepDefinition.i_get_all_projects_with_completed_true(US7_GetAllProjectsStepDefinition.java:84)
+	at ✽.I get all projects with completed is true (US7)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US7_GetAllProjects.feature:27)
+</failure>
+  </testcase>
+  <testcase name="Get all projects with the wrong endpoint" classname="features.CucumberFeaturesTestRunner" time="2.018">
+    <failure message="java.net.ConnectException: Connection refused" type="java.net.ConnectException">java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+	at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)
+	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)
+	at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor142.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor131.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor130.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+	at features.HelperFunctions.getAllProjects(HelperFunctions.java:34)
+	at features.US7_GetAllProjectsStepDefinition.the_project_application_is_running(US7_GetAllProjectsStepDefinition.java:24)
+	at ✽.the project application is running (US7)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US7_GetAllProjects.feature:8)
+</failure>
+  </testcase>
+  <testcase name="Credit amount" classname="features.CucumberFeaturesTestRunner" time="0.006"/>
   <system-out><![CDATA[
 Scenario Outline: Create a project                                                                                                  ?[90m# src/test/resources/US6_CreateAProject.feature:17?[0m
   ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                                                            ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
@@ -657,7 +770,7 @@ Scenario Outline: Create a project that has already been completed              
 
 Scenario Outline: Create a project with an invalid id                                                                        ?[90m# src/test/resources/US6_CreateAProject.feature:37?[0m
   ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                                                     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
-  ?[32mWhen ?[0m?[32mI create a project with an invalid id (US6)?[0m                                                                           ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_invalid_id()?[0m
+  ?[32mWhen ?[0m?[32mI create a project with an invalid id (US6)?[0m                                                                           ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_an_invalid_id()?[0m
   ?[32mThen ?[0m?[32mthe status code shall be ?[0m?[32m?[1m404?[0m?[32m with an error message ?[0m?[32m?[1m"No such project entity instance with GUID or ID asdf found"?[0m?[32m (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_invalid_id_should_not_be_in_the_system(int,java.lang.String)?[0m
 
 Scenario Outline: Get all projects                                                                                  ?[90m# src/test/resources/US7_GetAllProjects.feature:21?[0m
@@ -893,15 +1006,136 @@ Scenario Outline: Get all projects                                              
   ?[36mWhen ?[0m?[36mI get all projects (US7)?[0m                                                                                    ?[90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects()?[0m
   ?[36mThen ?[0m?[36mthe projects with title ?[0m?[36m?[1m"project 3"?[0m?[36m, description ?[0m?[36m?[1m"description 3"?[0m?[36m, completed ?[0m?[36m?[1m"false"?[0m?[36m and active ?[0m?[36m?[1m"true"?[0m?[36m (US7)?[0m ?[90m# features.US7_GetAllProjectsStepDefinition.the_todos_with_title_description_and_doneStatus(java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
 
-Scenario Outline: Get all projects with the wrong endpoint ?[90m# src/test/resources/US7_GetAllProjects.feature:39?[0m
-  ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m           ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
-  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US7)?[0m     ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+Scenario Outline: Get all projects with completed is true                                        ?[90m# src/test/resources/US7_GetAllProjects.feature:32?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m                                                 ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US7)?[0m                                           ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title     | description   | completed | active |
     | project 1 | description 1 | false     | false  |
     | project 2 | description 2 | true      | true   |
     | project 3 | description 3 | false     | true   |
-  ?[32mWhen ?[0m?[32mI get all projects with mistyped endpoint (US7)?[0m     ?[90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects_with_mistyped_endpoint()?[0m
-  ?[32mThen ?[0m?[32mI should receive error code ?[0m?[32m?[1m404?[0m?[32m (US7)?[0m               ?[90m# features.US7_GetAllProjectsStepDefinition.i_should_see_error_code(int)?[0m
+  ?[31mWhen ?[0m?[31mI get all projects with completed is true (US7)?[0m                                           ?[90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects_with_completed_true()?[0m
+      ?[31morg.opentest4j.AssertionFailedError: expected: java.lang.String@2ba024cb<true> but was: java.lang.Boolean@7af0d91b<true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at features.US7_GetAllProjectsStepDefinition.i_get_all_projects_with_completed_true(US7_GetAllProjectsStepDefinition.java:84)
+	at ✽.I get all projects with completed is true (US7)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US7_GetAllProjects.feature:27)
+?[0m
+  ?[36mThen ?[0m?[36mI should see 1 project (US7)?[0m                                                              ?[90m# features.US7_GetAllProjectsStepDefinition.i_should_see_1_project()?[0m
+  ?[36mThen ?[0m?[36mthe projects with title ?[0m?[36m?[1m"project 2"?[0m?[36m, description ?[0m?[36m?[1m"description 2"?[0m?[36m, and active ?[0m?[36m?[1m"true"?[0m?[36m (US7)?[0m ?[90m# features.US7_GetAllProjectsStepDefinition.the_projects_with_title_description_completecTrue_active(java.lang.String,java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Get all projects with the wrong endpoint ?[90m# src/test/resources/US7_GetAllProjects.feature:40?[0m
+  ?[31mGiven ?[0m?[31mthe project application is running (US7)?[0m           ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
+      ?[31mjava.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+	at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)
+	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)
+	at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor142.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor131.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor130.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+	at features.HelperFunctions.getAllProjects(HelperFunctions.java:34)
+	at features.US7_GetAllProjectsStepDefinition.the_project_application_is_running(US7_GetAllProjectsStepDefinition.java:24)
+	at ✽.the project application is running (US7)(file:///Users/victormicha/eclipse-workspace/ecse429-group16/PartB/src/test/resources/US7_GetAllProjects.feature:8)
+?[0m
+  ?[36mAnd ?[0m?[36mthe following projects exist in the system (US7)?[0m     ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description   | completed | active |
+    | project 1 | description 1 | false     | false  |
+    | project 2 | description 2 | true      | true   |
+    | project 3 | description 3 | false     | true   |
+  ?[36mWhen ?[0m?[36mI get all projects with mistyped endpoint (US7)?[0m     ?[90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects_with_mistyped_endpoint()?[0m
+  ?[36mThen ?[0m?[36mI should receive error code ?[0m?[36m?[1m404?[0m?[36m (US7)?[0m               ?[90m# features.US7_GetAllProjectsStepDefinition.i_should_see_error_code(int)?[0m
 
 Scenario: Credit amount                      ?[90m# src/test/resources/example.feature:3?[0m
 givenAccountBalance
