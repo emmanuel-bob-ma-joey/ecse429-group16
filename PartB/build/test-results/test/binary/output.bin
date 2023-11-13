@@ -38,18 +38,17 @@
 ì  [32mThen [0m[32mthe categories with title [0m[32m[1m"category3"[0m[32m, description [0m[32m[1m"description3"[0m[32m exist (US3)[0m [90m# features.US3_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)[0m
 application stopped
 
-çScenario Outline: Get all categories with a specific title                     [90m# src/test/resources/US3_GetAllCategories.feature:32[0m
+ÇScenario Outline: Get all categories with a specific title          [90m# src/test/resources/US3_GetAllCategories.feature:32[0m
 application started
  the_todo_application_is_running
-∫  [32mGiven [0m[32mthe todo application is running (US3)[0m                                  [90m# features.US3_GetAllCategoriesStepDefinition.the_todo_application_is_running()[0m
-˝  [32mAnd [0m[32mthe following categories exist in the system (US3)[0m                       [90m# features.US3_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+Ø  [32mGiven [0m[32mthe todo application is running (US3)[0m                       [90m# features.US3_GetAllCategoriesStepDefinition.the_todo_application_is_running()[0m
+Ú  [32mAnd [0m[32mthe following categories exist in the system (US3)[0m            [90m# features.US3_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
 !    | title     | description  |
 !    | category1 | description1 |
 !    | category2 | description2 |
 !    | category3 | description3 |
-S  [33mWhen [0m[33mI get all categories with status doneStatus "false" (US3)[0m
-7  [36mThen [0m[36mI should see 1 category (US3)[0m
-a  [36mThen [0m[36mthe categories with title "todo1", and description "description1" (US3)[0m
+‡  [32mWhen [0m[32mI get all categories with a specific title [0m[32m[1m"category1"[0m[32m (US3)[0m [90m# features.US3_GetAllCategoriesStepDefinition.i_get_all_categories_with_a_specific_title(java.lang.String)[0m
+˜  [32mThen [0m[32mI should see [0m[32m[1m1[0m[32m categories with title [0m[32m[1m"category1"[0m[32m (US3)[0m       [90m# features.US3_GetAllCategoriesStepDefinition.i_should_see_category_us3(java.lang.Integer,java.lang.String)[0m
 application stopped
 
 {Scenario Outline: Get all categories with the wrong endpoint [90m# src/test/resources/US3_GetAllCategories.feature:40[0m

@@ -11,7 +11,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class US3_GetAllCategoriesStepDefinition {
+public class US13_GetAllCategoriesStepDefinition {
 
     private Response response;
 
@@ -69,42 +69,24 @@ public class US3_GetAllCategoriesStepDefinition {
     }
 
     // Alternate Scenario
-    @When("I get all todos with status doneStatus {string} \\(US3)")
-    public void i_get_all_todos_with_status_doneStatus(String doneStatus) {
-        response = HelperFunctions.getAllTodos("doneStatus=false");
-        List<Map<String, String>> todos = response.jsonPath().getList("todos");
-        for (Map<String, String> todo : todos) {
-            String todoDoneStatus = todo.get("doneStatus");
-            assertEquals(todoDoneStatus, doneStatus);
+    @When("I get all categories with a specific title {string} \\(US3)")
+    public void i_get_all_categories_with_a_specific_title(String title) {
+        response = HelperFunctions.getAllCategories("title="+title);
+        List<Map<String, String>> categories = response.jsonPath().getList("categories");
+        for (Map<String, String> category : categories) {
+            String categoryTitle = category.get("title");
+            assertEquals(categoryTitle, title);
         }
     }
 
-    @Then("I should see 2 todos \\(US3)")
-    public void i_should_see_2_todos() {
-        List<Map<String, String>> todos = response.jsonPath().getList("todos");
-        assertEquals(2, todos.size());
+    @Then("I should see {int} categories with title {string} \\(US3)")
+    public void i_should_see_category_us3(Integer num, String title) {
+        response = HelperFunctions.getAllCategories("title="+title);
+        List<Map<String, String>> categories = response.jsonPath().getList("categories");
+        assertEquals(num, categories.size());
+
     }
-
-    @Then("the todos with title {string}, description {string} and incomplete doneStatus {string} \\(US3)")
-    public void the_todos_with_title_description_and_incompleted_doneStatus(String title, String description,
-            String doneStatus) {
-        List<Map<String, String>> todos = response.jsonPath().getList("todos");
-        for (Map<String, String> todo : todos) {
-            String todoTitle = todo.get("title");
-            String todoDescription = todo.get("description");
-            String todoDoneStatus = todo.get("doneStatus");
-
-            // Check if the todo is in the list of todos
-            if (todoTitle.equals(title) && todoDescription.equals(description)
-                    && todoDoneStatus.equals(doneStatus)) {
-                assertEquals(todoTitle, title);
-                assertEquals(todoDescription, description);
-                assertEquals(todoDoneStatus, doneStatus);
-                break;
-            }
-        }
-    }
-
+    
     // Error Scenario
     @When("I get all categories with mistyped endpoint \\(US3)")
     public void i_get_all_categories_with_mistyped_endpoint() {

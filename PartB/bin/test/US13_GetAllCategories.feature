@@ -25,11 +25,11 @@ Feature: Get All Categories
     # Alternate flow
     Scenario Outline: Get all categories with a specific title
         When I get all categories with a specific title "<title>" (US3)
-        Then I should see 1 category (US3)
-        Then the categories with title "<title>", and description "<description>" (US3)
+        Then I should see <num> categories with title "<title>" (US3)
+        # Then the categories with title "<title>", and description "<description>" (US3)
         Examples:
-            | title | description  | doneStatus |
-            | todo1 | description1 | false      |
+            | title | num  | 
+            | category1 | 1 | 
 
     # Error flow
     Scenario Outline: Get all categories with the wrong endpoint
