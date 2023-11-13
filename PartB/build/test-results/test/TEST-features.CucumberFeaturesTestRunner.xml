@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="features.CucumberFeaturesTestRunner" tests="5" skipped="0" failures="1" errors="0" timestamp="2023-11-13T17:48:21" hostname="MacBook-Pro.local" time="32.623">
+  <properties/>
+  <testcase name="Get all categories #1" classname="features.CucumberFeaturesTestRunner" time="8.122"/>
+  <testcase name="Get all categories #2" classname="features.CucumberFeaturesTestRunner" time="6.116"/>
+  <testcase name="Get all categories #3" classname="features.CucumberFeaturesTestRunner" time="6.129"/>
+  <testcase name="Get all categories with a specific title" classname="features.CucumberFeaturesTestRunner" time="6.141">
+    <failure message="io.cucumber.junit.UndefinedStepException: The step 'I get all categories with status doneStatus &quot;false&quot; (US3)' and 2 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@When(&quot;I get all categories with status doneStatus {string} \\(US3)&quot;)&#10;public void i_get_all_categories_with_status_done_status_us3(String string) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;I should see {int} category \\(US3)&quot;)&#10;public void i_should_see_category_us3(Integer int1) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;the categories with title {string}, and description {string} \\(US3)&quot;)&#10;public void the_categories_with_title_and_description_us3(String string, String string2) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: The step 'I get all categories with status doneStatus &quot;false&quot; (US3)' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;I get all categories with status doneStatus {string} \\(US3)&quot;)
+public void i_get_all_categories_with_status_done_status_us3(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;I should see {int} category \\(US3)&quot;)
+public void i_should_see_category_us3(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the categories with title {string}, and description {string} \\(US3)&quot;)
+public void the_categories_with_title_and_description_us3(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</failure>
+  </testcase>
+  <testcase name="Get all categories with the wrong endpoint" classname="features.CucumberFeaturesTestRunner" time="6.114"/>
+  <system-out><![CDATA[
+Scenario Outline: Get all categories                                                 ?[90m# src/test/resources/US3_GetAllCategories.feature:21?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                                        ?[90m# features.US3_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US3)?[0m                             ?[90m# features.US3_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description  |
+    | category1 | description1 |
+    | category2 | description2 |
+    | category3 | description3 |
+  ?[32mWhen ?[0m?[32mI get all categories (US3)?[0m                                                    ?[90m# features.US3_GetAllCategoriesStepDefinition.i_get_all_categories()?[0m
+  ?[32mThen ?[0m?[32mthe categories with title ?[0m?[32m?[1m"category1"?[0m?[32m, description ?[0m?[32m?[1m"description1"?[0m?[32m exist (US3)?[0m ?[90m# features.US3_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Get all categories                                                 ?[90m# src/test/resources/US3_GetAllCategories.feature:22?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                                        ?[90m# features.US3_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US3)?[0m                             ?[90m# features.US3_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description  |
+    | category1 | description1 |
+    | category2 | description2 |
+    | category3 | description3 |
+  ?[32mWhen ?[0m?[32mI get all categories (US3)?[0m                                                    ?[90m# features.US3_GetAllCategoriesStepDefinition.i_get_all_categories()?[0m
+  ?[32mThen ?[0m?[32mthe categories with title ?[0m?[32m?[1m"category2"?[0m?[32m, description ?[0m?[32m?[1m"description2"?[0m?[32m exist (US3)?[0m ?[90m# features.US3_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Get all categories                                                 ?[90m# src/test/resources/US3_GetAllCategories.feature:23?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                                        ?[90m# features.US3_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US3)?[0m                             ?[90m# features.US3_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description  |
+    | category1 | description1 |
+    | category2 | description2 |
+    | category3 | description3 |
+  ?[32mWhen ?[0m?[32mI get all categories (US3)?[0m                                                    ?[90m# features.US3_GetAllCategoriesStepDefinition.i_get_all_categories()?[0m
+  ?[32mThen ?[0m?[32mthe categories with title ?[0m?[32m?[1m"category3"?[0m?[32m, description ?[0m?[32m?[1m"description3"?[0m?[32m exist (US3)?[0m ?[90m# features.US3_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Get all categories with a specific title                     ?[90m# src/test/resources/US3_GetAllCategories.feature:32?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                                  ?[90m# features.US3_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US3)?[0m                       ?[90m# features.US3_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description  |
+    | category1 | description1 |
+    | category2 | description2 |
+    | category3 | description3 |
+  ?[33mWhen ?[0m?[33mI get all categories with status doneStatus "false" (US3)?[0m
+  ?[36mThen ?[0m?[36mI should see 1 category (US3)?[0m
+  ?[36mThen ?[0m?[36mthe categories with title "todo1", and description "description1" (US3)?[0m
+application stopped
+
+Scenario Outline: Get all categories with the wrong endpoint ?[90m# src/test/resources/US3_GetAllCategories.feature:40?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                ?[90m# features.US3_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US3)?[0m     ?[90m# features.US3_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description  |
+    | category1 | description1 |
+    | category2 | description2 |
+    | category3 | description3 |
+  ?[32mWhen ?[0m?[32mI get all categories with mistyped endpoint (US3)?[0m     ?[90m# features.US3_GetAllCategoriesStepDefinition.i_get_all_categories_with_mistyped_endpoint()?[0m
+  ?[32mThen ?[0m?[32mI should receive an error code ?[0m?[32m?[1m404?[0m?[32m (US3)?[0m              ?[90m# features.US3_GetAllCategoriesStepDefinition.i_should_see_an_error_code(int)?[0m
+application stopped
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

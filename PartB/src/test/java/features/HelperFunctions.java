@@ -16,7 +16,7 @@ public class HelperFunctions {
 
         try {
             application = Runtime.getRuntime().exec("java -jar runTodoManagerRestAPI-1.5.5.jar");
-            Thread.sleep(1000); // wait for server to start
+            Thread.sleep(3000); // wait for server to start
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -137,7 +137,7 @@ public class HelperFunctions {
     public static Response getAllCategoriesWithIncorrectEndpoint() {
         RestAssured.baseURI = baseUrl;
         RequestSpecification request = RestAssured.given();
-        Response response = request.get("/categories");
+        Response response = request.get("/category");
         return response;
     }
 
@@ -180,21 +180,21 @@ public class HelperFunctions {
         return response;
     }
 
-    public static Response updateCategoryWithId(int id, String title) {
-        RestAssured.baseURI = baseUrl;
-        RequestSpecification request = RestAssured.given();
+    // public static Response updateCategoryWithId(int id, String title) {
+    //     RestAssured.baseURI = baseUrl;
+    //     RequestSpecification request = RestAssured.given();
 
-        request.header("Content-Type", "application/json");
-        JSONObject requestParams = new JSONObject();
-        requestParams.put("title", title);
+    //     request.header("Content-Type", "application/json");
+    //     JSONObject requestParams = new JSONObject();
+    //     requestParams.put("title", title);
    
 
-        request.body(requestParams.toJSONString());
+    //     request.body(requestParams.toJSONString());
 
-        Response response = request.post("/categories/" + id);
+    //     Response response = request.post("/categories/" + id);
 
-        return response;
-    }
+    //     return response;
+    // }
 
     public static Response deleteCategoryWithId(int id) {
         RestAssured.baseURI = baseUrl;

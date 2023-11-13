@@ -5,21 +5,21 @@ Feature: Get All Categories
     so that I can see everything I have to do.
 
     Background: The todo application is running
-        Given the category application is running (US3)
+        Given the todo application is running (US3)
         And the following categories exist in the system (US3)
-            | title | description  | 
-            | category1 | description1 | 
-            | category2 | description2 | 
-            | category3 | description3 | 
+            | title     | description  |
+            | category1 | description1 |
+            | category2 | description2 |
+            | category3 | description3 |
 
     # Normal flow
     Scenario Outline: Get all categories
         When I get all categories (US3)
-        Then the categories with title "<title>", description "<description>" and doneStatus "<doneStatus>" (US3)
+        Then the categories with title "<title>", description "<description>" exist (US3)
         Examples:
-            | title | description  | 
-            | category1 | description1 | 
-            | category2 | description2 | 
+            | title     | description  |
+            | category1 | description1 |
+            | category2 | description2 |
             | category3 | description3 |
 
     # Alternate flow
