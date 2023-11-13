@@ -39,7 +39,7 @@ public class US7_GetAllProjectsStepDefinition {
             String description = columns.get("description");
             String active = columns.get("active");
             String completed = columns.get("completed");
-            Response response = HelperFunctions.createProject("", title, description,  Boolean.parseBoolean(completed), Boolean.parseBoolean(active));
+            Response response = HelperFunctions.createProject("", title, description,  completed, active);
             assertEquals(201, response.getStatusCode());
         }
     }
@@ -81,7 +81,7 @@ public class US7_GetAllProjectsStepDefinition {
         List<Map<String, String>> projects = response.jsonPath().getList("projects");
         for (Map<String, String> project : projects) {
             String completed = project.get("completed");
-            assertEquals(completed, true);
+            assertEquals(completed, "true");
         }
     }
 
@@ -107,7 +107,7 @@ public class US7_GetAllProjectsStepDefinition {
                 assertEquals(projectTitle, title);
                 assertEquals(projectDescription, description);
                 assertEquals(projectActive, active);
-                assertEquals(projectCompleted, true);
+                assertEquals(projectCompleted, "true");
                 break;
             }
         }

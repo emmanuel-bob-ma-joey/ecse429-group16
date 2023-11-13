@@ -1,6 +1,7 @@
 package features;
 
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 
 public class CommonStepDefinitions {
     /**
@@ -11,6 +12,11 @@ public class CommonStepDefinitions {
     @After
     public void tearDown() {
         HelperFunctions.stopApplication();
+    }
+
+    @Before
+    public void startUp() throws InterruptedException{
+        HelperFunctions.startApplication();
     }
 
 }

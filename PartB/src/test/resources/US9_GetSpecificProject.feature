@@ -45,4 +45,4 @@ Feature: Get a specific project
 
         Examples:
             | id  | statusCode | errorMessage                              |
-            | 100 | 404        | Could not find an instance with project/100 |
+            | 100 | 404        | Could not find an instance with projects/100 |

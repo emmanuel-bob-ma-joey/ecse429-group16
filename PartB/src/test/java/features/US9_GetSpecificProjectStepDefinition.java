@@ -41,7 +41,7 @@ public class US9_GetSpecificProjectStepDefinition {
             String description = columns.get("description");
             String completed = columns.get("completed");
             String active = columns.get("active");
-            HelperFunctions.createProject("", title, description, Boolean.parseBoolean(completed), Boolean.parseBoolean(active));
+            HelperFunctions.createProject("", title, description, completed, active);
         }
     }
 

@@ -39,9 +39,10 @@ public class US8_DeleteProjectStepDefinition {
 
         for (Map<String, String> project : projects) {
             int projID = Integer.parseInt(project.get("id"));
+            System.out.println(projID + "     " + id);
             if (projID == id) {
                 assertEquals(id, projID);
-                break;
+                return;
             }
         }
     }
@@ -52,11 +53,13 @@ public class US8_DeleteProjectStepDefinition {
 
         List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
         for (Map<String, String> columns : rows) {
+            String id = columns.get("id");
             String title = columns.get("title");
             String description = columns.get("description");
             String completed = columns.get("completed");
             String active = columns.get("active");
-            HelperFunctions.createProject("", title, description, Boolean.parseBoolean(completed), Boolean.parseBoolean(active));
+            Response r = HelperFunctions.createProject(id, title, description, completed, active);
+            assertEquals(200, r.getStatusCode());
         }
     }
 
@@ -104,11 +107,12 @@ public class US8_DeleteProjectStepDefinition {
 
         List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
         for (Map<String, String> columns : rows) {
+            String id = columns.get("id");
             String title = columns.get("title");
             String description = columns.get("description");
             String completed = columns.get("completed");
             String active = columns.get("active");
-            HelperFunctions.createProject("", title, description, Boolean.parseBoolean(completed), Boolean.parseBoolean(active));
+            HelperFunctions.createProject(id, title, description, completed, active);
         }
     }
 

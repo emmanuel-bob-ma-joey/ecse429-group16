@@ -40,7 +40,7 @@ public class HelperFunctions {
     }
 
 
-    public static Response createProject(String id, String title, String description, boolean completed, boolean active) {
+    public static Response createProject(String id, String title, String description, String completed, String active) {
         RestAssured.baseURI = baseUrl;
         RequestSpecification request = RestAssured.given();
 
@@ -48,8 +48,8 @@ public class HelperFunctions {
         JSONObject requestParams = new JSONObject();
         requestParams.put("title", title);
         requestParams.put("description", description);
-        requestParams.put("completed", completed);
-        requestParams.put("active", active);
+        requestParams.put("completed", Boolean.valueOf(completed));
+        requestParams.put("active", Boolean.valueOf(active));
 
         request.body(requestParams.toJSONString());
 
@@ -58,7 +58,8 @@ public class HelperFunctions {
         if (id.equals(""))
             response = request.post("/projects");
         else
-            response = request.post("/projects/"+id);
+            response = request.post("/projects/" + id);
+
 
         return response;
     }

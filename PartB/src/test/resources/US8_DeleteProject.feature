@@ -11,29 +11,29 @@ Feature: Delete a specific project
     Scenario Outline: Delete an active project
         Given the active project with id <id> exists in the system (US8)
         And the following active projects exist in the system (US8)
-            | title          | description        | completed | active |
-            | first project  | description proj 1 | true      | true   |
-            | second project | description proj 2 | false     | true   |
+            | id  | title          | description        | completed | active |
+            |  4  | first project  | description proj 1 | true      | true   |
+            |  5  | second project | description proj 2 | false     | true   |
         When I delete the active project with id <id> (US8)
         Then the active project with id <id> should not exist in the system (US8)
         Then there should be 1 active project in the system (US8)
         Examples:
             | id |
-            | 3  |
+            | 5  |
 
     # Alternate flow
     Scenario Outline: Delete a completed project
         Given the completed project with id <id> exists in the system (US8)
         And the following completed projects exist in the system (US8)
-            | title | description         | completed | active |
-            | proj 1 | first description  | true      | false  |
-            | proj 2 | second description | true      | true   |
+            | id | title  | description        | completed | active |
+            | 4  | proj 1 | first description  | true      | false  |
+            | 5  | proj 2 | second description | true      | true   |
         When I delete the completed project with id <id> (US8)
         Then the completed project with id <id> should not exist in the system (US8)
         Then there should be 1 project in the current system (US8)
         Examples:
             | id |
-            | 3  |
+            | 5  |
 
 
     # Error Flow
