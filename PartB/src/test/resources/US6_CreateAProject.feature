@@ -29,7 +29,7 @@ Feature: Create a Project
 
 
     # Error Flow
-    Scenario Outline: Create a project with empty title
+    Scenario Outline: Create a project with invalid id
         When I create a project with an invalid "<id>" and title "<title>" (US6)
         Then the status code shall be <statusCode> with an error message "<errorMessage>" (US6)
         Examples:
