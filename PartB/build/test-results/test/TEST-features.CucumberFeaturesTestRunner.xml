@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="features.CucumberFeaturesTestRunner" tests="23" skipped="0" failures="1" errors="0" timestamp="2023-11-14T03:59:17" hostname="macbook-air-3" time="61.891">
+<testsuite name="features.CucumberFeaturesTestRunner" tests="23" skipped="0" failures="1" errors="0" timestamp="2023-11-14T04:18:18" hostname="macbook-air-3" time="63.185">
   <properties/>
-  <testcase name="Update a project's title and description #1" classname="features.CucumberFeaturesTestRunner" time="7.899"/>
-  <testcase name="Update a project's title and description #2" classname="features.CucumberFeaturesTestRunner" time="2.615"/>
-  <testcase name="Mark a project as completed" classname="features.CucumberFeaturesTestRunner" time="2.657"/>
-  <testcase name="Update completed to invalid value" classname="features.CucumberFeaturesTestRunner" time="2.654"/>
-  <testcase name="Create a project #1" classname="features.CucumberFeaturesTestRunner" time="2.591"/>
-  <testcase name="Create a project #2" classname="features.CucumberFeaturesTestRunner" time="2.45"/>
-  <testcase name="Create a project that has already been completed #1" classname="features.CucumberFeaturesTestRunner" time="2.422"/>
-  <testcase name="Create a project that has already been completed #2" classname="features.CucumberFeaturesTestRunner" time="2.427"/>
-  <testcase name="Create a project with an invalid id" classname="features.CucumberFeaturesTestRunner" time="2.406">
-    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;404&gt; but was: &lt;201&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;404&gt; but was: &lt;201&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
-	at app//features.US6_CreateAProjectStepDefinition.the_project_with_invalid_id_should_not_be_in_the_system(US6_CreateAProjectStepDefinition.java:110)
-	at ✽.the status code shall be 404 with an error message &quot;No such project entity instance with GUID or ID asdf found&quot; (US6)(file:///Users/kevinluo/Documents/McGill/F2023/ecse429-group16/PartB/src/test/resources/US6_CreateAProject.feature:34)
+  <testcase name="Update a project's title and description #1" classname="features.CucumberFeaturesTestRunner" time="6.965"/>
+  <testcase name="Update a project's title and description #2" classname="features.CucumberFeaturesTestRunner" time="2.571"/>
+  <testcase name="Mark a project as completed" classname="features.CucumberFeaturesTestRunner" time="2.561"/>
+  <testcase name="Update completed to invalid value" classname="features.CucumberFeaturesTestRunner" time="2.637"/>
+  <testcase name="Create a project #1" classname="features.CucumberFeaturesTestRunner" time="2.612"/>
+  <testcase name="Create a project #2" classname="features.CucumberFeaturesTestRunner" time="2.446"/>
+  <testcase name="Create a project that has already been completed #1" classname="features.CucumberFeaturesTestRunner" time="2.61"/>
+  <testcase name="Create a project that has already been completed #2" classname="features.CucumberFeaturesTestRunner" time="2.433"/>
+  <testcase name="Create a project with empty title" classname="features.CucumberFeaturesTestRunner" time="2.158">
+    <failure message="io.cucumber.junit.UndefinedStepException: The step 'I create a project with an invalid asdf and title &quot;testing&quot; (US6)' is undefined.&#10;You can implement this step using the snippet(s) below:&#10;&#10;@When(&quot;I create a project with an invalid asdf and title {string} \\(US6)&quot;)&#10;public void i_create_a_project_with_an_invalid_asdf_and_title_us6(String string) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: The step 'I create a project with an invalid asdf and title &quot;testing&quot; (US6)' is undefined.
+You can implement this step using the snippet(s) below:
+
+@When(&quot;I create a project with an invalid asdf and title {string} \\(US6)&quot;)
+public void i_create_a_project_with_an_invalid_asdf_and_title_us6(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
 </failure>
   </testcase>
-  <testcase name="Get all projects #1" classname="features.CucumberFeaturesTestRunner" time="2.561"/>
-  <testcase name="Get all projects #2" classname="features.CucumberFeaturesTestRunner" time="2.566"/>
-  <testcase name="Get all projects #3" classname="features.CucumberFeaturesTestRunner" time="2.493"/>
-  <testcase name="Get all projects with completed is true" classname="features.CucumberFeaturesTestRunner" time="2.998"/>
-  <testcase name="Get all projects with the wrong endpoint" classname="features.CucumberFeaturesTestRunner" time="2.756"/>
-  <testcase name="Delete an active project" classname="features.CucumberFeaturesTestRunner" time="2.526"/>
-  <testcase name="Delete a completed project" classname="features.CucumberFeaturesTestRunner" time="2.558"/>
-  <testcase name="Delete a project that does not exist" classname="features.CucumberFeaturesTestRunner" time="2.446"/>
-  <testcase name="Get a specific project #1" classname="features.CucumberFeaturesTestRunner" time="2.52"/>
-  <testcase name="Get a specific project #2" classname="features.CucumberFeaturesTestRunner" time="2.794"/>
-  <testcase name="Get a specific project #3" classname="features.CucumberFeaturesTestRunner" time="2.482"/>
-  <testcase name="Get a project that has an empty description" classname="features.CucumberFeaturesTestRunner" time="2.485"/>
-  <testcase name="Get a project that does not exist" classname="features.CucumberFeaturesTestRunner" time="2.52"/>
-  <testcase name="Credit amount" classname="features.CucumberFeaturesTestRunner" time="0.012"/>
+  <testcase name="Get all projects #1" classname="features.CucumberFeaturesTestRunner" time="2.923"/>
+  <testcase name="Get all projects #2" classname="features.CucumberFeaturesTestRunner" time="2.54"/>
+  <testcase name="Get all projects #3" classname="features.CucumberFeaturesTestRunner" time="2.51"/>
+  <testcase name="Get all projects with completed is true" classname="features.CucumberFeaturesTestRunner" time="3.35"/>
+  <testcase name="Get all projects with the wrong endpoint" classname="features.CucumberFeaturesTestRunner" time="2.528"/>
+  <testcase name="Delete an active project" classname="features.CucumberFeaturesTestRunner" time="2.503"/>
+  <testcase name="Delete a completed project" classname="features.CucumberFeaturesTestRunner" time="2.491"/>
+  <testcase name="Delete a project that does not exist" classname="features.CucumberFeaturesTestRunner" time="2.409"/>
+  <testcase name="Get a specific project #1" classname="features.CucumberFeaturesTestRunner" time="2.524"/>
+  <testcase name="Get a specific project #2" classname="features.CucumberFeaturesTestRunner" time="2.702"/>
+  <testcase name="Get a specific project #3" classname="features.CucumberFeaturesTestRunner" time="2.525"/>
+  <testcase name="Get a project that has an empty description" classname="features.CucumberFeaturesTestRunner" time="2.636"/>
+  <testcase name="Get a project that does not exist" classname="features.CucumberFeaturesTestRunner" time="4.314"/>
+  <testcase name="Credit amount" classname="features.CucumberFeaturesTestRunner" time="0.132"/>
   <system-out><![CDATA[
 Scenario Outline: Update a project's title and description                                                                      ?[90m# src/test/resources/US10_UpdateProject.feature:21?[0m
   ?[32mGiven ?[0m?[32mthe project application is running (US10)?[0m                                                                               ?[90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()?[0m
@@ -100,20 +100,10 @@ Scenario Outline: Create a project that has already been completed              
   ?[32mWhen ?[0m?[32mI create a project with the title ?[0m?[32m?[1m"Second Project"?[0m?[32m and completed ?[0m?[32m?[1m"true"?[0m?[32m (US6)?[0m                   ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_the_title(java.lang.String,java.lang.String)?[0m
   ?[32mThen ?[0m?[32mthe project with title ?[0m?[32m?[1m"Second Project"?[0m?[32m with a completed ?[0m?[32m?[1m"true"?[0m?[32m shall exist in the system (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_with_a_completed_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
 
-Scenario Outline: Create a project with an invalid id                                                                        ?[90m# src/test/resources/US6_CreateAProject.feature:37?[0m
+Scenario Outline: Create a project with empty title                                                                          ?[90m# src/test/resources/US6_CreateAProject.feature:37?[0m
   ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                                                     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
-  ?[32mWhen ?[0m?[32mI create a project with an invalid id (US6)?[0m                                                                           ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_an_invalid_id()?[0m
-  ?[31mThen ?[0m?[31mthe status code shall be ?[0m?[31m?[1m404?[0m?[31m with an error message ?[0m?[31m?[1m"No such project entity instance with GUID or ID asdf found"?[0m?[31m (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_invalid_id_should_not_be_in_the_system(int,java.lang.String)?[0m
-      ?[31morg.opentest4j.AssertionFailedError: expected: <404> but was: <201>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
-	at features.US6_CreateAProjectStepDefinition.the_project_with_invalid_id_should_not_be_in_the_system(US6_CreateAProjectStepDefinition.java:110)
-	at ✽.the status code shall be 404 with an error message "No such project entity instance with GUID or ID asdf found" (US6)(file:///Users/kevinluo/Documents/McGill/F2023/ecse429-group16/PartB/src/test/resources/US6_CreateAProject.feature:34)
-?[0m
+  ?[33mWhen ?[0m?[33mI create a project with an invalid asdf and title "testing" (US6)?[0m
+  ?[36mThen ?[0m?[36mthe status code shall be ?[0m?[36m?[1m404?[0m?[36m with an error message ?[0m?[36m?[1m"No such project entity instance with GUID or ID asdf found"?[0m?[36m (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_invalid_id_should_not_be_in_the_system(int,java.lang.String)?[0m
 
 Scenario Outline: Get all projects                                                                                  ?[90m# src/test/resources/US7_GetAllProjects.feature:21?[0m
   ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m                                                                    ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m

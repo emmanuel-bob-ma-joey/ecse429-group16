@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1m1.84s</div>
+<div class="counter">1m3.08s</div>
 <p>duration</p>
 </div>
 </td>
@@ -73,18 +73,18 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="Create a project with an invalid id"></a>
-<h3 class="failures">Create a project with an invalid id</h3>
+<a name="Create a project with empty title"></a>
+<h3 class="failures">Create a project with empty title</h3>
 <span class="code">
-<pre>org.opentest4j.AssertionFailedError: expected: &lt;404&gt; but was: &lt;201&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
-	at app//features.US6_CreateAProjectStepDefinition.the_project_with_invalid_id_should_not_be_in_the_system(US6_CreateAProjectStepDefinition.java:110)
-	at ✽.the status code shall be 404 with an error message &quot;No such project entity instance with GUID or ID asdf found&quot; (US6)(file:///Users/kevinluo/Documents/McGill/F2023/ecse429-group16/PartB/src/test/resources/US6_CreateAProject.feature:34)
+<pre>io.cucumber.junit.UndefinedStepException: The step 'I create a project with an invalid asdf and title &quot;testing&quot; (US6)' is undefined.
+You can implement this step using the snippet(s) below:
+
+@When(&quot;I create a project with an invalid asdf and title {string} \\(US6)&quot;)
+public void i_create_a_project_with_an_invalid_asdf_and_title_us6(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
 </pre>
 </span>
 </div>
@@ -101,117 +101,117 @@
 </thead>
 <tr>
 <td class="success">Create a project #1</td>
-<td class="success">2.591s</td>
+<td class="success">2.612s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Create a project #2</td>
-<td class="success">2.450s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">Create a project that has already been completed #1</td>
-<td class="success">2.422s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">Create a project that has already been completed #2</td>
-<td class="success">2.427s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="failures">Create a project with an invalid id</td>
-<td class="failures">2.406s</td>
-<td class="failures">failed</td>
-</tr>
-<tr>
-<td class="success">Credit amount</td>
-<td class="success">0.012s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">Delete a completed project</td>
-<td class="success">2.558s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">Delete a project that does not exist</td>
 <td class="success">2.446s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">Create a project that has already been completed #1</td>
+<td class="success">2.610s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Create a project that has already been completed #2</td>
+<td class="success">2.433s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">Create a project with empty title</td>
+<td class="failures">2.158s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">Credit amount</td>
+<td class="success">0.132s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Delete a completed project</td>
+<td class="success">2.491s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Delete a project that does not exist</td>
+<td class="success">2.409s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">Delete an active project</td>
-<td class="success">2.526s</td>
+<td class="success">2.503s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Get a project that does not exist</td>
-<td class="success">2.520s</td>
+<td class="success">4.314s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Get a project that has an empty description</td>
-<td class="success">2.485s</td>
+<td class="success">2.636s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Get a specific project #1</td>
-<td class="success">2.520s</td>
+<td class="success">2.524s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Get a specific project #2</td>
-<td class="success">2.794s</td>
+<td class="success">2.702s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Get a specific project #3</td>
-<td class="success">2.482s</td>
+<td class="success">2.525s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Get all projects #1</td>
-<td class="success">2.561s</td>
+<td class="success">2.923s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Get all projects #2</td>
-<td class="success">2.566s</td>
+<td class="success">2.540s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Get all projects #3</td>
-<td class="success">2.493s</td>
+<td class="success">2.510s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Get all projects with completed is true</td>
-<td class="success">2.998s</td>
+<td class="success">3.350s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Get all projects with the wrong endpoint</td>
-<td class="success">2.756s</td>
+<td class="success">2.528s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Mark a project as completed</td>
-<td class="success">2.657s</td>
+<td class="success">2.561s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Update a project's title and description #1</td>
-<td class="success">7.899s</td>
+<td class="success">6.965s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Update a project's title and description #2</td>
-<td class="success">2.615s</td>
+<td class="success">2.571s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Update completed to invalid value</td>
-<td class="success">2.654s</td>
+<td class="success">2.637s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -284,20 +284,10 @@ Scenario Outline: Create a project that has already been completed              
   ?[32mWhen ?[0m?[32mI create a project with the title ?[0m?[32m?[1m&quot;Second Project&quot;?[0m?[32m and completed ?[0m?[32m?[1m&quot;true&quot;?[0m?[32m (US6)?[0m                   ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_the_title(java.lang.String,java.lang.String)?[0m
   ?[32mThen ?[0m?[32mthe project with title ?[0m?[32m?[1m&quot;Second Project&quot;?[0m?[32m with a completed ?[0m?[32m?[1m&quot;true&quot;?[0m?[32m shall exist in the system (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_with_a_completed_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
 
-Scenario Outline: Create a project with an invalid id                                                                        ?[90m# src/test/resources/US6_CreateAProject.feature:37?[0m
+Scenario Outline: Create a project with empty title                                                                          ?[90m# src/test/resources/US6_CreateAProject.feature:37?[0m
   ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                                                     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
-  ?[32mWhen ?[0m?[32mI create a project with an invalid id (US6)?[0m                                                                           ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_an_invalid_id()?[0m
-  ?[31mThen ?[0m?[31mthe status code shall be ?[0m?[31m?[1m404?[0m?[31m with an error message ?[0m?[31m?[1m&quot;No such project entity instance with GUID or ID asdf found&quot;?[0m?[31m (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_invalid_id_should_not_be_in_the_system(int,java.lang.String)?[0m
-      ?[31morg.opentest4j.AssertionFailedError: expected: &lt;404&gt; but was: &lt;201&gt;
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
-	at features.US6_CreateAProjectStepDefinition.the_project_with_invalid_id_should_not_be_in_the_system(US6_CreateAProjectStepDefinition.java:110)
-	at ✽.the status code shall be 404 with an error message &quot;No such project entity instance with GUID or ID asdf found&quot; (US6)(file:///Users/kevinluo/Documents/McGill/F2023/ecse429-group16/PartB/src/test/resources/US6_CreateAProject.feature:34)
-?[0m
+  ?[33mWhen ?[0m?[33mI create a project with an invalid asdf and title &quot;testing&quot; (US6)?[0m
+  ?[36mThen ?[0m?[36mthe status code shall be ?[0m?[36m?[1m404?[0m?[36m with an error message ?[0m?[36m?[1m&quot;No such project entity instance with GUID or ID asdf found&quot;?[0m?[36m (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_invalid_id_should_not_be_in_the_system(int,java.lang.String)?[0m
 
 Scenario Outline: Get all projects                                                                                  ?[90m# src/test/resources/US7_GetAllProjects.feature:21?[0m
   ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m                                                                    ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
@@ -455,7 +445,7 @@ givenAccountBalance
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at Nov. 13, 2023, 11:00:19 p.m.</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at Nov. 13, 2023, 11:19:21 p.m.</p>
 </div>
 </div>
 </body>

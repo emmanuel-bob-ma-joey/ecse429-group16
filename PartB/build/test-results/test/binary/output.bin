@@ -65,33 +65,13 @@
 
 
 
-¹Scenario Outline: Create a project with an invalid id                                                                        [90m# src/test/resources/US6_CreateAProject.feature:37[0m
+¹Scenario Outline: Create a project with empty title                                                                          [90m# src/test/resources/US6_CreateAProject.feature:37[0m
 
 é  [32mGiven [0m[32mthe application is running (US6)[0m                                                                                     [90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()[0m
 
-ì  [32mWhen [0m[32mI create a project with an invalid id (US6)[0m                                                                           [90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_an_invalid_id()[0m
+[  [33mWhen [0m[33mI create a project with an invalid asdf and title "testing" (US6)[0m
 
-¾  [31mThen [0m[31mthe status code shall be [0m[31m[1m404[0m[31m with an error message [0m[31m[1m"No such project entity instance with GUID or ID asdf found"[0m[31m (US6)[0m [90m# features.US6_CreateAProjectStepDefinition.the_project_with_invalid_id_should_not_be_in_the_system(int,java.lang.String)[0m
-
-O      [31morg.opentest4j.AssertionFailedError: expected: <404> but was: <201>
-
-Z	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-
-b	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-
-K	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-
-K	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-
-K	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-
-G	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
-
-‘	at features.US6_CreateAProjectStepDefinition.the_project_with_invalid_id_should_not_be_in_the_system(US6_CreateAProjectStepDefinition.java:110)
-
-ô	at âœ½.the status code shall be 404 with an error message "No such project entity instance with GUID or ID asdf found" (US6)(file:///Users/kevinluo/Documents/McGill/F2023/ecse429-group16/PartB/src/test/resources/US6_CreateAProject.feature:34)
-
-[0m
+¾  [36mThen [0m[36mthe status code shall be [0m[36m[1m404[0m[36m with an error message [0m[36m[1m"No such project entity instance with GUID or ID asdf found"[0m[36m (US6)[0m [90m# features.US6_CreateAProjectStepDefinition.the_project_with_invalid_id_should_not_be_in_the_system(int,java.lang.String)[0m
 
 °Scenario Outline: Get all projects                                                                                  [90m# src/test/resources/US7_GetAllProjects.feature:21[0m
 à  [32mGiven [0m[32mthe project application is running (US7)[0m                                                                    [90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()[0m

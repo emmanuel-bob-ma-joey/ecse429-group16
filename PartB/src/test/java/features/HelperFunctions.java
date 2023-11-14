@@ -60,6 +60,28 @@ public class HelperFunctions {
         return response;
     }
 
+    public static Response createProjectWithID(String id, String title, String description, String completed,
+            String active) {
+        RestAssured.baseURI = baseUrl;
+        RequestSpecification request = RestAssured.given();
+
+        request.header("Content-Type", "application/json");
+        JSONObject requestParams = new JSONObject();
+        requestParams.put("id", id);
+        requestParams.put("title", title);
+        requestParams.put("description", description);
+        requestParams.put("completed", Boolean.valueOf(completed));
+        requestParams.put("active", Boolean.valueOf(active));
+
+        request.body(requestParams.toJSONString());
+
+        Response response;
+
+        response = request.post("/projects");
+
+        return response;
+    }
+
     public static Response deleteProjectWithId(int id) {
         RestAssured.baseURI = baseUrl;
         RequestSpecification request = RestAssured.given();

@@ -98,11 +98,10 @@ public class US6_CreateAProjectStepDefinition {
     }
 
     // Error Scenario
-    @When("I create a project with an invalid id \\(US6)")
-    public void i_create_a_project_with_an_invalid_id() {
-        String invalidID = "asdf";
-        response = HelperFunctions.createProject("title!", "description", "false", "false");
-
+    @When("I create a project with an invalid {string} and title {string} \\(US6)")
+    public void i_create_a_project_with_an_invalid_id_and_title(String id, String title) {
+        response = HelperFunctions.createProjectWithID(id, title, "", "false", "false");
+        assertEquals(400, response.getStatusCode());
     }
 
     @Then("the status code shall be {int} with an error message {string} \\(US6)")
