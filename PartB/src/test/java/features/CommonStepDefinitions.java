@@ -10,9 +10,16 @@ public class CommonStepDefinitions {
      * for all scenerios in all feature files
      */
     @After
-    public void AfterScenario() {
+    public void tearDown() {
         System.out.println(" ------ After Scenario ------");
         HelperFunctions.stopApplication();
         System.out.println("application stopped");
+    }
+
+    @Before
+    public void startUp() throws InterruptedException {
+        System.out.println(" ------ Before Scenario ------");
+        HelperFunctions.startApplication();
+        System.out.println("application started");
     }
 }

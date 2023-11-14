@@ -1,6 +1,7 @@
 package features;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,7 @@ public class US12_UpdateCategoryStepDefinition {
     public void the_todo_application_is_running() throws InterruptedException {
         System.out.println("the_todo_application_is_running");
 
-        HelperFunctions.startApplication();
+        assertTrue(HelperFunctions.isApplicationRunning());
     }
 
     @And("the following categories exist in the system \\(US12)")

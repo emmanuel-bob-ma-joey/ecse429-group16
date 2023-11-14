@@ -1,6 +1,7 @@
 package features;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 import java.util.Map;
@@ -18,9 +19,7 @@ public class US3_GetAllTodoStepDefinition {
     // BACKGROUND
     @Given("the todo application is running \\(US3)")
     public void the_todo_application_is_running() throws InterruptedException {
-        System.out.println("the_todo_application_is_running");
-
-        HelperFunctions.startApplication();
+        assertTrue(HelperFunctions.isApplicationRunning());
 
         // delete all todos so that we can start fresh
         Response response = HelperFunctions.getAllTodos("");

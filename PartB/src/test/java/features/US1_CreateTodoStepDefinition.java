@@ -1,5 +1,6 @@
 package features;
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
@@ -18,7 +19,7 @@ public class US1_CreateTodoStepDefinition {
     // BACKGROUND
     @Given("the application is running \\(US1)")
     public void the_todo_application_is_running() throws InterruptedException {
-        HelperFunctions.startApplication();
+        assertTrue(HelperFunctions.isApplicationRunning());
     }
 
     // Normal Scenario

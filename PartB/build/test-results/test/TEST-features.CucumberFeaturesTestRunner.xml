@@ -1,77 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="features.CucumberFeaturesTestRunner" tests="69" skipped="0" failures="0" errors="0" timestamp="2023-11-14T19:16:07" hostname="macbook-air-3" time="245.746">
+<testsuite name="features.CucumberFeaturesTestRunner" tests="69" skipped="0" failures="0" errors="0" timestamp="2023-11-14T20:18:27" hostname="macbook-air-3" time="106.324">
   <properties/>
-  <testcase name="Update a project's title and description #1" classname="features.CucumberFeaturesTestRunner" time="7.262"/>
-  <testcase name="Update a project's title and description #2" classname="features.CucumberFeaturesTestRunner" time="3.553"/>
-  <testcase name="Mark a project as completed" classname="features.CucumberFeaturesTestRunner" time="3.698"/>
-  <testcase name="Update completed to invalid value" classname="features.CucumberFeaturesTestRunner" time="3.724"/>
-  <testcase name="Create a category #1" classname="features.CucumberFeaturesTestRunner" time="3.5"/>
-  <testcase name="Create a category #2" classname="features.CucumberFeaturesTestRunner" time="3.439"/>
-  <testcase name="Create a category that has already been created #1" classname="features.CucumberFeaturesTestRunner" time="3.586"/>
-  <testcase name="Create a category that has already been created #2" classname="features.CucumberFeaturesTestRunner" time="3.485"/>
-  <testcase name="Create a category with an empty title" classname="features.CucumberFeaturesTestRunner" time="3.386"/>
-  <testcase name="Update a categories title and description #1" classname="features.CucumberFeaturesTestRunner" time="3.796"/>
-  <testcase name="Update a categories title and description #2" classname="features.CucumberFeaturesTestRunner" time="3.572"/>
-  <testcase name="update a category with only the title #1" classname="features.CucumberFeaturesTestRunner" time="3.651"/>
-  <testcase name="update a category with only the title #2" classname="features.CucumberFeaturesTestRunner" time="3.483"/>
-  <testcase name="Update a category with empty title" classname="features.CucumberFeaturesTestRunner" time="3.436"/>
-  <testcase name="Get all categories #1" classname="features.CucumberFeaturesTestRunner" time="3.517"/>
-  <testcase name="Get all categories #2" classname="features.CucumberFeaturesTestRunner" time="3.489"/>
-  <testcase name="Get all categories #3" classname="features.CucumberFeaturesTestRunner" time="3.635"/>
-  <testcase name="Get all categories with a specific title" classname="features.CucumberFeaturesTestRunner" time="3.561"/>
-  <testcase name="Get all categories with the wrong endpoint" classname="features.CucumberFeaturesTestRunner" time="3.428"/>
-  <testcase name="Delete a category" classname="features.CucumberFeaturesTestRunner" time="3.493"/>
-  <testcase name="Delete a category that has an empty description" classname="features.CucumberFeaturesTestRunner" time="3.658"/>
-  <testcase name="Delete a category that does not exist" classname="features.CucumberFeaturesTestRunner" time="3.482"/>
-  <testcase name="Get a specific category that #1" classname="features.CucumberFeaturesTestRunner" time="3.47"/>
-  <testcase name="Get a specific category that #2" classname="features.CucumberFeaturesTestRunner" time="3.471"/>
-  <testcase name="Get a specific category that #3" classname="features.CucumberFeaturesTestRunner" time="3.644"/>
-  <testcase name="Get a category that has an empty description" classname="features.CucumberFeaturesTestRunner" time="3.447"/>
-  <testcase name="Get a category that does not exist" classname="features.CucumberFeaturesTestRunner" time="3.499"/>
-  <testcase name="Create a todo #1" classname="features.CucumberFeaturesTestRunner" time="3.409"/>
-  <testcase name="Create a todo #2" classname="features.CucumberFeaturesTestRunner" time="3.418"/>
-  <testcase name="Create a todo that has already been completed #1" classname="features.CucumberFeaturesTestRunner" time="3.656"/>
-  <testcase name="Create a todo that has already been completed #2" classname="features.CucumberFeaturesTestRunner" time="3.405"/>
-  <testcase name="Create a todo with an empty title" classname="features.CucumberFeaturesTestRunner" time="3.396"/>
-  <testcase name="Update a todo's title and description #1" classname="features.CucumberFeaturesTestRunner" time="3.416"/>
-  <testcase name="Update a todo's title and description #2" classname="features.CucumberFeaturesTestRunner" time="3.409"/>
-  <testcase name="Mark a tasks as done #1" classname="features.CucumberFeaturesTestRunner" time="3.652"/>
-  <testcase name="Mark a tasks as done #2" classname="features.CucumberFeaturesTestRunner" time="3.419"/>
-  <testcase name="Update doneStatus to invalid value" classname="features.CucumberFeaturesTestRunner" time="3.441"/>
-  <testcase name="Get all todos #1" classname="features.CucumberFeaturesTestRunner" time="3.48"/>
-  <testcase name="Get all todos #2" classname="features.CucumberFeaturesTestRunner" time="3.659"/>
-  <testcase name="Get all todos #3" classname="features.CucumberFeaturesTestRunner" time="3.456"/>
-  <testcase name="Get all todos with a specific status #1" classname="features.CucumberFeaturesTestRunner" time="3.497"/>
-  <testcase name="Get all todos with a specific status #2" classname="features.CucumberFeaturesTestRunner" time="3.465"/>
-  <testcase name="Get all todos with the wrong endpoint" classname="features.CucumberFeaturesTestRunner" time="3.407"/>
-  <testcase name="Delete a completed todo" classname="features.CucumberFeaturesTestRunner" time="3.598"/>
-  <testcase name="Delete an incompleted todo" classname="features.CucumberFeaturesTestRunner" time="3.723"/>
-  <testcase name="Delete a todo that does not exist" classname="features.CucumberFeaturesTestRunner" time="3.453"/>
-  <testcase name="Get a specific todo that #1" classname="features.CucumberFeaturesTestRunner" time="3.494"/>
-  <testcase name="Get a specific todo that #2" classname="features.CucumberFeaturesTestRunner" time="3.717"/>
-  <testcase name="Get a specific todo that #3" classname="features.CucumberFeaturesTestRunner" time="3.484"/>
-  <testcase name="Get a todo that has an empty description" classname="features.CucumberFeaturesTestRunner" time="3.474"/>
-  <testcase name="Get a todo that does not exist" classname="features.CucumberFeaturesTestRunner" time="3.501"/>
-  <testcase name="Create a project #1" classname="features.CucumberFeaturesTestRunner" time="3.409"/>
-  <testcase name="Create a project #2" classname="features.CucumberFeaturesTestRunner" time="3.371"/>
-  <testcase name="Create a project that has already been completed #1" classname="features.CucumberFeaturesTestRunner" time="3.616"/>
-  <testcase name="Create a project that has already been completed #2" classname="features.CucumberFeaturesTestRunner" time="3.39"/>
-  <testcase name="Create a project with empty title" classname="features.CucumberFeaturesTestRunner" time="3.411"/>
-  <testcase name="Get all projects #1" classname="features.CucumberFeaturesTestRunner" time="3.499"/>
-  <testcase name="Get all projects #2" classname="features.CucumberFeaturesTestRunner" time="3.415"/>
-  <testcase name="Get all projects #3" classname="features.CucumberFeaturesTestRunner" time="3.435"/>
-  <testcase name="Get all projects with completed is true" classname="features.CucumberFeaturesTestRunner" time="3.433"/>
-  <testcase name="Get all projects with the wrong endpoint" classname="features.CucumberFeaturesTestRunner" time="3.407"/>
-  <testcase name="Delete an active project" classname="features.CucumberFeaturesTestRunner" time="3.441"/>
-  <testcase name="Delete a completed project" classname="features.CucumberFeaturesTestRunner" time="3.45"/>
-  <testcase name="Delete a project that does not exist" classname="features.CucumberFeaturesTestRunner" time="3.662"/>
-  <testcase name="Get a specific project #1" classname="features.CucumberFeaturesTestRunner" time="3.511"/>
-  <testcase name="Get a specific project #2" classname="features.CucumberFeaturesTestRunner" time="3.445"/>
-  <testcase name="Get a specific project #3" classname="features.CucumberFeaturesTestRunner" time="3.501"/>
-  <testcase name="Get a project that has an empty description" classname="features.CucumberFeaturesTestRunner" time="3.418"/>
-  <testcase name="Get a project that does not exist" classname="features.CucumberFeaturesTestRunner" time="3.466"/>
+  <testcase name="Update a project's title and description #1" classname="features.CucumberFeaturesTestRunner" time="5.56"/>
+  <testcase name="Update a project's title and description #2" classname="features.CucumberFeaturesTestRunner" time="1.562"/>
+  <testcase name="Mark a project as completed" classname="features.CucumberFeaturesTestRunner" time="1.523"/>
+  <testcase name="Update completed to invalid value" classname="features.CucumberFeaturesTestRunner" time="1.821"/>
+  <testcase name="Create a category #1" classname="features.CucumberFeaturesTestRunner" time="1.454"/>
+  <testcase name="Create a category #2" classname="features.CucumberFeaturesTestRunner" time="1.423"/>
+  <testcase name="Create a category that has already been created #1" classname="features.CucumberFeaturesTestRunner" time="1.444"/>
+  <testcase name="Create a category that has already been created #2" classname="features.CucumberFeaturesTestRunner" time="1.59"/>
+  <testcase name="Create a category with an empty title" classname="features.CucumberFeaturesTestRunner" time="1.382"/>
+  <testcase name="Update a categories title and description #1" classname="features.CucumberFeaturesTestRunner" time="1.479"/>
+  <testcase name="Update a categories title and description #2" classname="features.CucumberFeaturesTestRunner" time="1.896"/>
+  <testcase name="update a category with only the title #1" classname="features.CucumberFeaturesTestRunner" time="1.508"/>
+  <testcase name="update a category with only the title #2" classname="features.CucumberFeaturesTestRunner" time="1.724"/>
+  <testcase name="Update a category with empty title" classname="features.CucumberFeaturesTestRunner" time="1.477"/>
+  <testcase name="Get all categories #1" classname="features.CucumberFeaturesTestRunner" time="1.673"/>
+  <testcase name="Get all categories #2" classname="features.CucumberFeaturesTestRunner" time="1.527"/>
+  <testcase name="Get all categories #3" classname="features.CucumberFeaturesTestRunner" time="1.508"/>
+  <testcase name="Get all categories with a specific title" classname="features.CucumberFeaturesTestRunner" time="1.531"/>
+  <testcase name="Get all categories with the wrong endpoint" classname="features.CucumberFeaturesTestRunner" time="1.489"/>
+  <testcase name="Delete a category" classname="features.CucumberFeaturesTestRunner" time="1.529"/>
+  <testcase name="Delete a category that has an empty description" classname="features.CucumberFeaturesTestRunner" time="1.504"/>
+  <testcase name="Delete a category that does not exist" classname="features.CucumberFeaturesTestRunner" time="1.432"/>
+  <testcase name="Get a specific category that #1" classname="features.CucumberFeaturesTestRunner" time="1.53"/>
+  <testcase name="Get a specific category that #2" classname="features.CucumberFeaturesTestRunner" time="1.535"/>
+  <testcase name="Get a specific category that #3" classname="features.CucumberFeaturesTestRunner" time="1.438"/>
+  <testcase name="Get a category that has an empty description" classname="features.CucumberFeaturesTestRunner" time="1.442"/>
+  <testcase name="Get a category that does not exist" classname="features.CucumberFeaturesTestRunner" time="1.422"/>
+  <testcase name="Create a todo #1" classname="features.CucumberFeaturesTestRunner" time="1.409"/>
+  <testcase name="Create a todo #2" classname="features.CucumberFeaturesTestRunner" time="1.391"/>
+  <testcase name="Create a todo that has already been completed #1" classname="features.CucumberFeaturesTestRunner" time="1.437"/>
+  <testcase name="Create a todo that has already been completed #2" classname="features.CucumberFeaturesTestRunner" time="1.387"/>
+  <testcase name="Create a todo with an empty title" classname="features.CucumberFeaturesTestRunner" time="1.364"/>
+  <testcase name="Update a todo's title and description #1" classname="features.CucumberFeaturesTestRunner" time="1.4"/>
+  <testcase name="Update a todo's title and description #2" classname="features.CucumberFeaturesTestRunner" time="1.451"/>
+  <testcase name="Mark a tasks as done #1" classname="features.CucumberFeaturesTestRunner" time="1.397"/>
+  <testcase name="Mark a tasks as done #2" classname="features.CucumberFeaturesTestRunner" time="1.42"/>
+  <testcase name="Update doneStatus to invalid value" classname="features.CucumberFeaturesTestRunner" time="1.426"/>
+  <testcase name="Get all todos #1" classname="features.CucumberFeaturesTestRunner" time="1.501"/>
+  <testcase name="Get all todos #2" classname="features.CucumberFeaturesTestRunner" time="1.456"/>
+  <testcase name="Get all todos #3" classname="features.CucumberFeaturesTestRunner" time="1.459"/>
+  <testcase name="Get all todos with a specific status #1" classname="features.CucumberFeaturesTestRunner" time="1.493"/>
+  <testcase name="Get all todos with a specific status #2" classname="features.CucumberFeaturesTestRunner" time="1.539"/>
+  <testcase name="Get all todos with the wrong endpoint" classname="features.CucumberFeaturesTestRunner" time="1.569"/>
+  <testcase name="Delete a completed todo" classname="features.CucumberFeaturesTestRunner" time="1.563"/>
+  <testcase name="Delete an incompleted todo" classname="features.CucumberFeaturesTestRunner" time="1.481"/>
+  <testcase name="Delete a todo that does not exist" classname="features.CucumberFeaturesTestRunner" time="1.48"/>
+  <testcase name="Get a specific todo that #1" classname="features.CucumberFeaturesTestRunner" time="1.482"/>
+  <testcase name="Get a specific todo that #2" classname="features.CucumberFeaturesTestRunner" time="1.51"/>
+  <testcase name="Get a specific todo that #3" classname="features.CucumberFeaturesTestRunner" time="1.462"/>
+  <testcase name="Get a todo that has an empty description" classname="features.CucumberFeaturesTestRunner" time="1.477"/>
+  <testcase name="Get a todo that does not exist" classname="features.CucumberFeaturesTestRunner" time="1.482"/>
+  <testcase name="Create a project #1" classname="features.CucumberFeaturesTestRunner" time="1.384"/>
+  <testcase name="Create a project #2" classname="features.CucumberFeaturesTestRunner" time="1.376"/>
+  <testcase name="Create a project that has already been completed #1" classname="features.CucumberFeaturesTestRunner" time="1.376"/>
+  <testcase name="Create a project that has already been completed #2" classname="features.CucumberFeaturesTestRunner" time="1.375"/>
+  <testcase name="Create a project with empty title" classname="features.CucumberFeaturesTestRunner" time="1.402"/>
+  <testcase name="Get all projects #1" classname="features.CucumberFeaturesTestRunner" time="1.452"/>
+  <testcase name="Get all projects #2" classname="features.CucumberFeaturesTestRunner" time="1.462"/>
+  <testcase name="Get all projects #3" classname="features.CucumberFeaturesTestRunner" time="1.425"/>
+  <testcase name="Get all projects with completed is true" classname="features.CucumberFeaturesTestRunner" time="1.463"/>
+  <testcase name="Get all projects with the wrong endpoint" classname="features.CucumberFeaturesTestRunner" time="1.429"/>
+  <testcase name="Delete an active project" classname="features.CucumberFeaturesTestRunner" time="1.467"/>
+  <testcase name="Delete a completed project" classname="features.CucumberFeaturesTestRunner" time="1.463"/>
+  <testcase name="Delete a project that does not exist" classname="features.CucumberFeaturesTestRunner" time="1.405"/>
+  <testcase name="Get a specific project #1" classname="features.CucumberFeaturesTestRunner" time="1.438"/>
+  <testcase name="Get a specific project #2" classname="features.CucumberFeaturesTestRunner" time="1.46"/>
+  <testcase name="Get a specific project #3" classname="features.CucumberFeaturesTestRunner" time="1.507"/>
+  <testcase name="Get a project that has an empty description" classname="features.CucumberFeaturesTestRunner" time="1.458"/>
+  <testcase name="Get a project that does not exist" classname="features.CucumberFeaturesTestRunner" time="1.464"/>
   <system-out><![CDATA[
 Scenario Outline: Update a project's title and description                                                                      ?[90m# src/test/resources/US10_UpdateProject.feature:21?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe project application is running (US10)?[0m                                                                               ?[90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following projects exist in the system (US10)?[0m                                                                         ?[90m# features.US10_UpdateProjectStepDefinition.the_following_projects_with_title_description_completed_active_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title       | description | completed | active |
@@ -84,6 +86,8 @@ Scenario Outline: Update a project's title and description                      
 application stopped
 
 Scenario Outline: Update a project's title and description                                                                          ?[90m# src/test/resources/US10_UpdateProject.feature:22?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe project application is running (US10)?[0m                                                                                   ?[90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following projects exist in the system (US10)?[0m                                                                             ?[90m# features.US10_UpdateProjectStepDefinition.the_following_projects_with_title_description_completed_active_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title       | description | completed | active |
@@ -96,6 +100,8 @@ Scenario Outline: Update a project's title and description                      
 application stopped
 
 Scenario Outline: Mark a project as completed                            ?[90m# src/test/resources/US10_UpdateProject.feature:31?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe project application is running (US10)?[0m                        ?[90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following projects exist in the system (US10)?[0m                  ?[90m# features.US10_UpdateProjectStepDefinition.the_following_projects_with_title_description_completed_active_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title       | description | completed | active |
@@ -108,6 +114,8 @@ Scenario Outline: Mark a project as completed                            ?[90m# 
 application stopped
 
 Scenario Outline: Update completed to invalid value                                                 ?[90m# src/test/resources/US10_UpdateProject.feature:41?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe project application is running (US10)?[0m                                                   ?[90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following projects exist in the system (US10)?[0m                                             ?[90m# features.US10_UpdateProjectStepDefinition.the_following_projects_with_title_description_completed_active_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title       | description | completed | active |
@@ -120,6 +128,8 @@ Scenario Outline: Update completed to invalid value                             
 application stopped
 
 Scenario Outline: Create a category                                                                                                     ?[90m# src/test/resources/US11_CreateACategory.feature:17?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe application is running (US11)?[0m                                                                                               ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe category with title ?[0m?[32m?[1m"My first category"?[0m?[32m and the description ?[0m?[32m?[1m"This is my first category"?[0m?[32m does not exist in the system (US11)?[0m ?[90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)?[0m
   ?[32mWhen ?[0m?[32mI create a category with the title ?[0m?[32m?[1m"My first category"?[0m?[32m and description ?[0m?[32m?[1m"This is my first category"?[0m?[32m (US11)?[0m                        ?[90m# features.US11_CreateCategoryStepDefinition.i_create_a_category_with_title_and_the_description(java.lang.String,java.lang.String)?[0m
@@ -128,6 +138,8 @@ Scenario Outline: Create a category                                             
 application stopped
 
 Scenario Outline: Create a category                                                                                                       ?[90m# src/test/resources/US11_CreateACategory.feature:18?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe application is running (US11)?[0m                                                                                                 ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe category with title ?[0m?[32m?[1m"My second category"?[0m?[32m and the description ?[0m?[32m?[1m"This is my second category"?[0m?[32m does not exist in the system (US11)?[0m ?[90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)?[0m
   ?[32mWhen ?[0m?[32mI create a category with the title ?[0m?[32m?[1m"My second category"?[0m?[32m and description ?[0m?[32m?[1m"This is my second category"?[0m?[32m (US11)?[0m                        ?[90m# features.US11_CreateCategoryStepDefinition.i_create_a_category_with_title_and_the_description(java.lang.String,java.lang.String)?[0m
@@ -136,6 +148,8 @@ Scenario Outline: Create a category                                             
 application stopped
 
 Scenario Outline: Create a category that has already been created                                                                  ?[90m# src/test/resources/US11_CreateACategory.feature:27?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe application is running (US11)?[0m                                                                                          ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe category with title ?[0m?[32m?[1m"My first category"?[0m?[32m does not exist in the system (US11)?[0m                                            ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_with_title_does_not_exist_in_the_system(java.lang.String)?[0m
   ?[32mWhen ?[0m?[32mI create a duplicate category with the title ?[0m?[32m?[1m"My first category"?[0m?[32m and description ?[0m?[32m?[1m"this is my first category"?[0m?[32m (US11)?[0m         ?[90m# features.US11_CreateCategoryStepDefinition.i_create_a_duplicate_category_with_the_title(java.lang.String,java.lang.String)?[0m
@@ -144,6 +158,8 @@ Scenario Outline: Create a category that has already been created               
 application stopped
 
 Scenario Outline: Create a category that has already been created                                                                    ?[90m# src/test/resources/US11_CreateACategory.feature:28?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe application is running (US11)?[0m                                                                                            ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe category with title ?[0m?[32m?[1m"My second category"?[0m?[32m does not exist in the system (US11)?[0m                                             ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_with_title_does_not_exist_in_the_system(java.lang.String)?[0m
   ?[32mWhen ?[0m?[32mI create a duplicate category with the title ?[0m?[32m?[1m"My second category"?[0m?[32m and description ?[0m?[32m?[1m"this is my second category"?[0m?[32m (US11)?[0m         ?[90m# features.US11_CreateCategoryStepDefinition.i_create_a_duplicate_category_with_the_title(java.lang.String,java.lang.String)?[0m
@@ -152,6 +168,8 @@ Scenario Outline: Create a category that has already been created               
 application stopped
 
 Scenario Outline: Create a category with an empty title                                                        ?[90m# src/test/resources/US11_CreateACategory.feature:37?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe application is running (US11)?[0m                                                                      ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mWhen ?[0m?[32mI create a category with empty title (US11)?[0m                                                             ?[90m# features.US11_CreateCategoryStepDefinition.i_create_a_category_with_empty_title()?[0m
   ?[32mThen ?[0m?[32mthe status code shall be ?[0m?[32m?[1m400?[0m?[32m with an error message ?[0m?[32m?[1m"Failed Validation: title : can not be empty"?[0m?[32m (US11)?[0m ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_with_empty_title_should_not_be_in_the_system(int,java.lang.String)?[0m
@@ -159,6 +177,8 @@ Scenario Outline: Create a category with an empty title                         
 application stopped
 
 Scenario Outline: Update a categories title and description                                          ?[90m# src/test/resources/US12_UpdateCategory.feature:21?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US12)?[0m                                                       ?[90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following categories exist in the system (US12)?[0m                                            ?[90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
@@ -172,6 +192,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Update a categories title and description                                          ?[90m# src/test/resources/US12_UpdateCategory.feature:22?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US12)?[0m                                                       ?[90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following categories exist in the system (US12)?[0m                                            ?[90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
@@ -185,6 +207,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: update a category with only the title                                           ?[90m# src/test/resources/US12_UpdateCategory.feature:31?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US12)?[0m                                                    ?[90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following categories exist in the system (US12)?[0m                                         ?[90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
@@ -198,6 +222,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: update a category with only the title                                           ?[90m# src/test/resources/US12_UpdateCategory.feature:32?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US12)?[0m                                                    ?[90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following categories exist in the system (US12)?[0m                                         ?[90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
@@ -211,6 +237,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Update a category with empty title              ?[90m# src/test/resources/US12_UpdateCategory.feature:42?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US12)?[0m                    ?[90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following categories exist in the system (US12)?[0m         ?[90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
@@ -224,6 +252,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get all categories                                                  ?[90m# src/test/resources/US13_GetAllCategories.feature:21?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US13)?[0m                                        ?[90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following categories exist in the system (US13)?[0m                             ?[90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
@@ -237,6 +267,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get all categories                                                  ?[90m# src/test/resources/US13_GetAllCategories.feature:22?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US13)?[0m                                        ?[90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following categories exist in the system (US13)?[0m                             ?[90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
@@ -250,6 +282,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get all categories                                                  ?[90m# src/test/resources/US13_GetAllCategories.feature:23?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US13)?[0m                                        ?[90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following categories exist in the system (US13)?[0m                             ?[90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
@@ -263,6 +297,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get all categories with a specific title           ?[90m# src/test/resources/US13_GetAllCategories.feature:32?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US13)?[0m                       ?[90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following categories exist in the system (US13)?[0m            ?[90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
@@ -276,6 +312,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get all categories with the wrong endpoint ?[90m# src/test/resources/US13_GetAllCategories.feature:40?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US13)?[0m               ?[90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following categories exist in the system (US13)?[0m    ?[90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
@@ -289,6 +327,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Delete a category                                 ?[90m# src/test/resources/US14_DeleteACategory.feature:22?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US14)?[0m                      ?[90m# features.US14_DeleteCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe category with id ?[0m?[32m?[1m3?[0m?[32m exists in the system (US14)?[0m          ?[90m# features.US14_DeleteCategoryStepDefinition.the_category_with_id_exists_in_the_system(java.lang.Integer)?[0m
@@ -303,6 +343,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Delete a category that has an empty description                         ?[90m# src/test/resources/US14_DeleteACategory.feature:37?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US14)?[0m                                            ?[90m# features.US14_DeleteCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe category with id ?[0m?[32m?[1m3?[0m?[32m no description exists in the system (US14)?[0m                 ?[90m# features.US14_DeleteCategoryStepDefinition.the_category_with_id_does_not_exist_in_the_system(java.lang.Integer)?[0m
@@ -317,6 +359,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Delete a category that does not exist                                                                      ?[90m# src/test/resources/US14_DeleteACategory.feature:47?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US14)?[0m                                                                               ?[90m# features.US14_DeleteCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe category with invalid id ?[0m?[32m?[1m"qwe"?[0m?[32m does not exist in the system (US14)?[0m                                               ?[90m# features.US14_DeleteCategoryStepDefinition.the_category_with_id_does_not_exist_in_the_system2(java.lang.String)?[0m
@@ -326,6 +370,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get a specific category that                                                 ?[90m# src/test/resources/US15_GetSpecificCategory.feature:24?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US15)?[0m                                                 ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following categories exist in the system: (US15)?[0m                                     ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
@@ -341,6 +387,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get a specific category that                                                 ?[90m# src/test/resources/US15_GetSpecificCategory.feature:25?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US15)?[0m                                                 ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following categories exist in the system: (US15)?[0m                                     ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
@@ -356,6 +404,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get a specific category that                                                 ?[90m# src/test/resources/US15_GetSpecificCategory.feature:26?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US15)?[0m                                                 ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following categories exist in the system: (US15)?[0m                                     ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
@@ -371,6 +421,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get a category that has an empty description                                                                     ?[90m# src/test/resources/US15_GetSpecificCategory.feature:36?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US15)?[0m                                                                                     ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following categories exist in the system: (US15)?[0m                                                                         ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
@@ -386,6 +438,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get a category that does not exist                                                                   ?[90m# src/test/resources/US15_GetSpecificCategory.feature:48?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US15)?[0m                                                                         ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following categories exist in the system: (US15)?[0m                                                             ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
@@ -401,6 +455,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Create a todo                                                                                            ?[90m# src/test/resources/US1_CreateATodo.feature:17?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe application is running (US1)?[0m                                                                                   ?[90m# features.US1_CreateTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe todo with title ?[0m?[32m?[1m"My first todo"?[0m?[32m and the description ?[0m?[32m?[1m"This is my first todo"?[0m?[32m does not exist in the system (US1)?[0m ?[90m# features.US1_CreateTodoStepDefinition.the_todo_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)?[0m
   ?[32mWhen ?[0m?[32mI create a todo with the title ?[0m?[32m?[1m"My first todo"?[0m?[32m and description ?[0m?[32m?[1m"This is my first todo"?[0m?[32m (US1)?[0m                        ?[90m# features.US1_CreateTodoStepDefinition.i_create_a_todo_with_title_and_the_description(java.lang.String,java.lang.String)?[0m
@@ -409,6 +465,8 @@ Scenario Outline: Create a todo                                                 
 application stopped
 
 Scenario Outline: Create a todo                                                                                              ?[90m# src/test/resources/US1_CreateATodo.feature:18?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe application is running (US1)?[0m                                                                                     ?[90m# features.US1_CreateTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe todo with title ?[0m?[32m?[1m"My second todo"?[0m?[32m and the description ?[0m?[32m?[1m"This is my second todo"?[0m?[32m does not exist in the system (US1)?[0m ?[90m# features.US1_CreateTodoStepDefinition.the_todo_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)?[0m
   ?[32mWhen ?[0m?[32mI create a todo with the title ?[0m?[32m?[1m"My second todo"?[0m?[32m and description ?[0m?[32m?[1m"This is my second todo"?[0m?[32m (US1)?[0m                        ?[90m# features.US1_CreateTodoStepDefinition.i_create_a_todo_with_title_and_the_description(java.lang.String,java.lang.String)?[0m
@@ -417,6 +475,8 @@ Scenario Outline: Create a todo                                                 
 application stopped
 
 Scenario Outline: Create a todo that has already been completed                                              ?[90m# src/test/resources/US1_CreateATodo.feature:27?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe application is running (US1)?[0m                                                                     ?[90m# features.US1_CreateTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe todo with title ?[0m?[32m?[1m"A todo with DoneStatus"?[0m?[32m does not exist in the system (US1)?[0m                      ?[90m# features.US1_CreateTodoStepDefinition.the_todo_with_title_does_not_exist_in_the_system(java.lang.String)?[0m
   ?[32mWhen ?[0m?[32mI create a todo with the title ?[0m?[32m?[1m"A todo with DoneStatus"?[0m?[32m and doneStatus ?[0m?[32m?[1m"true"?[0m?[32m (US1)?[0m                   ?[90m# features.US1_CreateTodoStepDefinition.i_create_a_todo_with_the_title(java.lang.String,java.lang.String)?[0m
@@ -425,6 +485,8 @@ Scenario Outline: Create a todo that has already been completed                 
 application stopped
 
 Scenario Outline: Create a todo that has already been completed                                  ?[90m# src/test/resources/US1_CreateATodo.feature:28?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe application is running (US1)?[0m                                                         ?[90m# features.US1_CreateTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe todo with title ?[0m?[32m?[1m"Finish US1"?[0m?[32m does not exist in the system (US1)?[0m                      ?[90m# features.US1_CreateTodoStepDefinition.the_todo_with_title_does_not_exist_in_the_system(java.lang.String)?[0m
   ?[32mWhen ?[0m?[32mI create a todo with the title ?[0m?[32m?[1m"Finish US1"?[0m?[32m and doneStatus ?[0m?[32m?[1m"true"?[0m?[32m (US1)?[0m                   ?[90m# features.US1_CreateTodoStepDefinition.i_create_a_todo_with_the_title(java.lang.String,java.lang.String)?[0m
@@ -433,6 +495,8 @@ Scenario Outline: Create a todo that has already been completed                 
 application stopped
 
 Scenario Outline: Create a todo with an empty title                                                           ?[90m# src/test/resources/US1_CreateATodo.feature:37?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe application is running (US1)?[0m                                                                      ?[90m# features.US1_CreateTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mWhen ?[0m?[32mI create a todo with empty title (US1)?[0m                                                                 ?[90m# features.US1_CreateTodoStepDefinition.i_create_a_todo_with_empty_title()?[0m
   ?[32mThen ?[0m?[32mthe status code shall be ?[0m?[32m?[1m400?[0m?[32m with an error message ?[0m?[32m?[1m"Failed Validation: title : can not be empty"?[0m?[32m (US1)?[0m ?[90m# features.US1_CreateTodoStepDefinition.the_todo_with_empty_title_should_not_be_in_the_system(int,java.lang.String)?[0m
@@ -440,7 +504,8 @@ Scenario Outline: Create a todo with an empty title                             
 application stopped
 
 Scenario Outline: Update a todo's title and description                                           ?[90m# src/test/resources/US2_UpdateTodo.feature:21?[0m
-the_todo_application_is_running
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe todo application is running (US2)?[0m                                                     ?[90m# features.US2_UpdateTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following todos exist in the system (US2)?[0m                                               ?[90m# features.US2_UpdateTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title | description | doneStatus |
@@ -453,7 +518,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Update a todo's title and description                                           ?[90m# src/test/resources/US2_UpdateTodo.feature:22?[0m
-the_todo_application_is_running
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe todo application is running (US2)?[0m                                                     ?[90m# features.US2_UpdateTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following todos exist in the system (US2)?[0m                                               ?[90m# features.US2_UpdateTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title | description | doneStatus |
@@ -466,7 +532,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Mark a tasks as done                            ?[90m# src/test/resources/US2_UpdateTodo.feature:31?[0m
-the_todo_application_is_running
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe todo application is running (US2)?[0m                     ?[90m# features.US2_UpdateTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following todos exist in the system (US2)?[0m               ?[90m# features.US2_UpdateTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title | description | doneStatus |
@@ -479,7 +546,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Mark a tasks as done                            ?[90m# src/test/resources/US2_UpdateTodo.feature:32?[0m
-the_todo_application_is_running
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe todo application is running (US2)?[0m                     ?[90m# features.US2_UpdateTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following todos exist in the system (US2)?[0m               ?[90m# features.US2_UpdateTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title | description | doneStatus |
@@ -492,7 +560,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Update doneStatus to invalid value                                                ?[90m# src/test/resources/US2_UpdateTodo.feature:42?[0m
-the_todo_application_is_running
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe todo application is running (US2)?[0m                                                       ?[90m# features.US2_UpdateTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following todos exist in the system (US2)?[0m                                                 ?[90m# features.US2_UpdateTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title | description | doneStatus |
@@ -505,7 +574,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get all todos                                                              ?[90m# src/test/resources/US3_GetAllTodo.feature:21?[0m
-the_todo_application_is_running
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                                                ?[90m# features.US3_GetAllTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following todos exist in the system (US3)?[0m                                          ?[90m# features.US3_GetAllTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title | description  | doneStatus |
@@ -518,7 +588,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get all todos                                                             ?[90m# src/test/resources/US3_GetAllTodo.feature:22?[0m
-the_todo_application_is_running
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                                               ?[90m# features.US3_GetAllTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following todos exist in the system (US3)?[0m                                         ?[90m# features.US3_GetAllTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title | description  | doneStatus |
@@ -531,7 +602,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get all todos                                                              ?[90m# src/test/resources/US3_GetAllTodo.feature:23?[0m
-the_todo_application_is_running
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                                                ?[90m# features.US3_GetAllTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following todos exist in the system (US3)?[0m                                          ?[90m# features.US3_GetAllTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title | description  | doneStatus |
@@ -544,7 +616,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get all todos with a specific status                                                  ?[90m# src/test/resources/US3_GetAllTodo.feature:32?[0m
-the_todo_application_is_running
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                                                           ?[90m# features.US3_GetAllTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following todos exist in the system (US3)?[0m                                                     ?[90m# features.US3_GetAllTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title | description  | doneStatus |
@@ -558,7 +631,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get all todos with a specific status                                                  ?[90m# src/test/resources/US3_GetAllTodo.feature:33?[0m
-the_todo_application_is_running
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                                                           ?[90m# features.US3_GetAllTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following todos exist in the system (US3)?[0m                                                     ?[90m# features.US3_GetAllTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title | description  | doneStatus |
@@ -572,7 +646,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get all todos with the wrong endpoint ?[90m# src/test/resources/US3_GetAllTodo.feature:41?[0m
-the_todo_application_is_running
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m           ?[90m# features.US3_GetAllTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following todos exist in the system (US3)?[0m     ?[90m# features.US3_GetAllTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title | description  | doneStatus |
@@ -585,6 +660,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Delete a completed todo                                ?[90m# src/test/resources/US4_DeleteATodo.feature:22?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US4)?[0m                            ?[90m# features.US4_DeleteATodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe completed todo with id ?[0m?[32m?[1m3?[0m?[32m exists in the system (US4)?[0m          ?[90m# features.US4_DeleteATodoStepDefinition.a_todo_with_id_exists_in_the_system(int)?[0m
@@ -599,6 +676,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Delete an incompleted todo                               ?[90m# src/test/resources/US4_DeleteATodo.feature:36?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US4)?[0m                              ?[90m# features.US4_DeleteATodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe incompleted todo with id ?[0m?[32m?[1m3?[0m?[32m exists in the system (US4)?[0m          ?[90m# features.US4_DeleteATodoStepDefinition.the_incompleted_todo_with_id_id_exists_in_the_system(int)?[0m
@@ -613,6 +692,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Delete a todo that does not exist                                                                   ?[90m# src/test/resources/US4_DeleteATodo.feature:46?[0m
+ ------ Before Scenario ------
+application started
 the_todo_application_is_running
   ?[32mGiven ?[0m?[32mthe todo application is running (US4)?[0m                                                                         ?[90m# features.US4_DeleteATodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe todo with id ?[0m?[32m?[1m10?[0m?[32m does not exist in the system (US4)?[0m                                                        ?[90m# features.US4_DeleteATodoStepDefinition.a_todo_with_id_does_not_exist_in_the_system(int)?[0m
@@ -622,7 +703,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get a specific todo that                                                                   ?[90m# src/test/resources/US5_GetSpecificTodo.feature:24?[0m
-the_todo_application_is_running
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe todo application is running (US5)?[0m                                                                ?[90m# features.US5_GetASpecificTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following todos exist in the system: (US5)?[0m                                                         ?[90m# features.US5_GetASpecificTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title                | description  | doneStatus |
@@ -637,7 +719,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get a specific todo that                                                                  ?[90m# src/test/resources/US5_GetSpecificTodo.feature:25?[0m
-the_todo_application_is_running
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe todo application is running (US5)?[0m                                                               ?[90m# features.US5_GetASpecificTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following todos exist in the system: (US5)?[0m                                                        ?[90m# features.US5_GetASpecificTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title                | description  | doneStatus |
@@ -652,7 +735,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get a specific todo that                                                                   ?[90m# src/test/resources/US5_GetSpecificTodo.feature:26?[0m
-the_todo_application_is_running
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe todo application is running (US5)?[0m                                                                ?[90m# features.US5_GetASpecificTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following todos exist in the system: (US5)?[0m                                                         ?[90m# features.US5_GetASpecificTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title                | description  | doneStatus |
@@ -667,7 +751,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get a todo that has an empty description                                                                                    ?[90m# src/test/resources/US5_GetSpecificTodo.feature:36?[0m
-the_todo_application_is_running
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe todo application is running (US5)?[0m                                                                                                 ?[90m# features.US5_GetASpecificTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following todos exist in the system: (US5)?[0m                                                                                          ?[90m# features.US5_GetASpecificTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title                | description  | doneStatus |
@@ -682,7 +767,8 @@ the_todo_application_is_running
 application stopped
 
 Scenario Outline: Get a todo that does not exist                                                                 ?[90m# src/test/resources/US5_GetSpecificTodo.feature:48?[0m
-the_todo_application_is_running
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe todo application is running (US5)?[0m                                                                    ?[90m# features.US5_GetASpecificTodoStepDefinition.the_todo_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following todos exist in the system: (US5)?[0m                                                             ?[90m# features.US5_GetASpecificTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title                | description  | doneStatus |
@@ -698,6 +784,8 @@ null
 application stopped
 
 Scenario Outline: Create a project                                                                                                  ?[90m# src/test/resources/US6_CreateAProject.feature:17?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                                                            ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe project with title ?[0m?[32m?[1m"My first project"?[0m?[32m and the description ?[0m?[32m?[1m"This is my first project"?[0m?[32m does not exist in the system (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)?[0m
   ?[32mWhen ?[0m?[32mI create a project with the title ?[0m?[32m?[1m"My first project"?[0m?[32m and description ?[0m?[32m?[1m"This is my first project"?[0m?[32m (US6)?[0m                        ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_title_and_the_description(java.lang.String,java.lang.String)?[0m
@@ -706,6 +794,8 @@ Scenario Outline: Create a project                                              
 application stopped
 
 Scenario Outline: Create a project                                                                                                    ?[90m# src/test/resources/US6_CreateAProject.feature:18?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                                                              ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe project with title ?[0m?[32m?[1m"My second project"?[0m?[32m and the description ?[0m?[32m?[1m"This is my second project"?[0m?[32m does not exist in the system (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)?[0m
   ?[32mWhen ?[0m?[32mI create a project with the title ?[0m?[32m?[1m"My second project"?[0m?[32m and description ?[0m?[32m?[1m"This is my second project"?[0m?[32m (US6)?[0m                        ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_title_and_the_description(java.lang.String,java.lang.String)?[0m
@@ -714,6 +804,8 @@ Scenario Outline: Create a project                                              
 application stopped
 
 Scenario Outline: Create a project that has already been completed                                               ?[90m# src/test/resources/US6_CreateAProject.feature:27?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                                         ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe project with title ?[0m?[32m?[1m"A project with completed"?[0m?[32m does not exist in the system (US6)?[0m                     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_does_not_exist_in_the_system(java.lang.String)?[0m
   ?[32mWhen ?[0m?[32mI create a project with the title ?[0m?[32m?[1m"A project with completed"?[0m?[32m and completed ?[0m?[32m?[1m"true"?[0m?[32m (US6)?[0m                   ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_the_title(java.lang.String,java.lang.String)?[0m
@@ -722,6 +814,8 @@ Scenario Outline: Create a project that has already been completed              
 application stopped
 
 Scenario Outline: Create a project that has already been completed                                     ?[90m# src/test/resources/US6_CreateAProject.feature:28?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                               ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe project with title ?[0m?[32m?[1m"Second Project"?[0m?[32m does not exist in the system (US6)?[0m                     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_does_not_exist_in_the_system(java.lang.String)?[0m
   ?[32mWhen ?[0m?[32mI create a project with the title ?[0m?[32m?[1m"Second Project"?[0m?[32m and completed ?[0m?[32m?[1m"true"?[0m?[32m (US6)?[0m                   ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_the_title(java.lang.String,java.lang.String)?[0m
@@ -730,6 +824,8 @@ Scenario Outline: Create a project that has already been completed              
 application stopped
 
 Scenario Outline: Create a project with empty title                                                                                  ?[90m# src/test/resources/US6_CreateAProject.feature:37?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                                                             ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mWhen ?[0m?[32mI create a project with an invalid ?[0m?[32m?[1m"asdf"?[0m?[32m and title ?[0m?[32m?[1m"testing"?[0m?[32m (US6)?[0m                                                           ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_an_invalid_id_and_title(java.lang.String,java.lang.String)?[0m
   ?[32mThen ?[0m?[32mthe status code shall be ?[0m?[32m?[1m400?[0m?[32m with an error message ?[0m?[32m?[1m"Invalid Creation: Failed Validation: Not allowed to create with id"?[0m?[32m (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_invalid_id_should_not_be_in_the_system(int,java.lang.String)?[0m
@@ -737,6 +833,8 @@ Scenario Outline: Create a project with empty title                             
 application stopped
 
 Scenario Outline: Get all projects                                                                                  ?[90m# src/test/resources/US7_GetAllProjects.feature:21?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m                                                                    ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following projects exist in the system (US7)?[0m                                                              ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title     | description   | completed | active |
@@ -749,6 +847,8 @@ Scenario Outline: Get all projects                                              
 application stopped
 
 Scenario Outline: Get all projects                                                                                ?[90m# src/test/resources/US7_GetAllProjects.feature:22?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m                                                                  ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following projects exist in the system (US7)?[0m                                                            ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title     | description   | completed | active |
@@ -761,6 +861,8 @@ Scenario Outline: Get all projects                                              
 application stopped
 
 Scenario Outline: Get all projects                                                                                 ?[90m# src/test/resources/US7_GetAllProjects.feature:23?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m                                                                   ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following projects exist in the system (US7)?[0m                                                             ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title     | description   | completed | active |
@@ -773,6 +875,8 @@ Scenario Outline: Get all projects                                              
 application stopped
 
 Scenario Outline: Get all projects with completed is true                                        ?[90m# src/test/resources/US7_GetAllProjects.feature:32?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m                                                 ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following projects exist in the system (US7)?[0m                                           ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title     | description   | completed | active |
@@ -786,6 +890,8 @@ Scenario Outline: Get all projects with completed is true                       
 application stopped
 
 Scenario Outline: Get all projects with the wrong endpoint ?[90m# src/test/resources/US7_GetAllProjects.feature:40?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m           ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following projects exist in the system (US7)?[0m     ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title     | description   | completed | active |
@@ -798,6 +904,8 @@ Scenario Outline: Get all projects with the wrong endpoint ?[90m# src/test/resou
 application stopped
 
 Scenario Outline: Delete an active project                               ?[90m# src/test/resources/US8_DeleteProject.feature:22?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe project application is running (US8)?[0m                         ?[90m# features.US8_DeleteProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe active project with id ?[0m?[32m?[1m2?[0m?[32m exists in the system (US8)?[0m          ?[90m# features.US8_DeleteProjectStepDefinition.active_project_with_id_exists_in_the_system(int)?[0m
   ?[32mAnd ?[0m?[32mthe following active projects exist in the system (US8)?[0m            ?[90m# features.US8_DeleteProjectStepDefinition.the_following_active_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
@@ -811,6 +919,8 @@ Scenario Outline: Delete an active project                               ?[90m# 
 application stopped
 
 Scenario Outline: Delete a completed project                                ?[90m# src/test/resources/US8_DeleteProject.feature:36?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe project application is running (US8)?[0m                            ?[90m# features.US8_DeleteProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe completed project with id ?[0m?[32m?[1m2?[0m?[32m exists in the system (US8)?[0m          ?[90m# features.US8_DeleteProjectStepDefinition.the_completed_project_with_id_id_exists_in_the_system(int)?[0m
   ?[32mAnd ?[0m?[32mthe following completed projects exist in the system (US8)?[0m            ?[90m# features.US8_DeleteProjectStepDefinition.the_following_completed_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
@@ -824,6 +934,8 @@ Scenario Outline: Delete a completed project                                ?[90
 application stopped
 
 Scenario Outline: Delete a project that does not exist                                                                   ?[90m# src/test/resources/US8_DeleteProject.feature:46?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe project application is running (US8)?[0m                                                                         ?[90m# features.US8_DeleteProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mGiven ?[0m?[32mthe project with id ?[0m?[32m?[1m10?[0m?[32m does not exist in the system (US8)?[0m                                                        ?[90m# features.US8_DeleteProjectStepDefinition.a_project_with_id_does_not_exist_in_the_system(int)?[0m
   ?[32mWhen ?[0m?[32mI delete the project with inexistant id ?[0m?[32m?[1m10?[0m?[32m (US8)?[0m                                                                  ?[90m# features.US8_DeleteProjectStepDefinition.i_delete_the_project_with_inexistant_id(int)?[0m
@@ -832,6 +944,8 @@ Scenario Outline: Delete a project that does not exist                          
 application stopped
 
 Scenario Outline: Get a specific project                                                                                       ?[90m# src/test/resources/US9_GetSpecificProject.feature:24?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe project application is running (US9)?[0m                                                                               ?[90m# features.US9_GetSpecificProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following projects exist in the system: (US9)?[0m                                                                        ?[90m# features.US9_GetSpecificProjectStepDefinition.the_following_projectss_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title       | description    | completed | active |
@@ -846,6 +960,8 @@ Scenario Outline: Get a specific project                                        
 application stopped
 
 Scenario Outline: Get a specific project                                                                                           ?[90m# src/test/resources/US9_GetSpecificProject.feature:25?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe project application is running (US9)?[0m                                                                                   ?[90m# features.US9_GetSpecificProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following projects exist in the system: (US9)?[0m                                                                            ?[90m# features.US9_GetSpecificProjectStepDefinition.the_following_projectss_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title       | description    | completed | active |
@@ -860,6 +976,8 @@ Scenario Outline: Get a specific project                                        
 application stopped
 
 Scenario Outline: Get a specific project                                                                                              ?[90m# src/test/resources/US9_GetSpecificProject.feature:26?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe project application is running (US9)?[0m                                                                                      ?[90m# features.US9_GetSpecificProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following projects exist in the system: (US9)?[0m                                                                               ?[90m# features.US9_GetSpecificProjectStepDefinition.the_following_projectss_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title       | description    | completed | active |
@@ -874,6 +992,8 @@ Scenario Outline: Get a specific project                                        
 application stopped
 
 Scenario Outline: Get a project that has an empty description                                                                                        ?[90m# src/test/resources/US9_GetSpecificProject.feature:36?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe project application is running (US9)?[0m                                                                                                     ?[90m# features.US9_GetSpecificProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following projects exist in the system: (US9)?[0m                                                                                              ?[90m# features.US9_GetSpecificProjectStepDefinition.the_following_projectss_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title       | description    | completed | active |
@@ -888,6 +1008,8 @@ Scenario Outline: Get a project that has an empty description                   
 application stopped
 
 Scenario Outline: Get a project that does not exist                                                                 ?[90m# src/test/resources/US9_GetSpecificProject.feature:48?[0m
+ ------ Before Scenario ------
+application started
   ?[32mGiven ?[0m?[32mthe project application is running (US9)?[0m                                                                    ?[90m# features.US9_GetSpecificProjectStepDefinition.the_project_application_is_running()?[0m
   ?[32mAnd ?[0m?[32mthe following projects exist in the system: (US9)?[0m                                                             ?[90m# features.US9_GetSpecificProjectStepDefinition.the_following_projectss_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title       | description    | completed | active |

@@ -16,7 +16,7 @@ public class HelperFunctions {
 
         try {
             application = Runtime.getRuntime().exec("java -jar runTodoManagerRestAPI-1.5.5.jar");
-            Thread.sleep(3000); // wait for server to start
+            Thread.sleep(1000); // wait for server to start
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -25,6 +25,16 @@ public class HelperFunctions {
     public static void stopApplication() {
         if (application != null) {
             application.destroy();
+            application = null;
+        }
+
+    }
+
+    public static boolean isApplicationRunning() {
+        if (application != null) {
+            return true;
+        } else {
+            return false;
         }
     }
 

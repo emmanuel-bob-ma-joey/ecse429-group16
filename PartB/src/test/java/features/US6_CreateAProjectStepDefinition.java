@@ -2,6 +2,7 @@ package features;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ public class US6_CreateAProjectStepDefinition {
     // BACKGROUND
     @Given("the application is running \\(US6)")
     public void the_project_application_is_running() throws InterruptedException {
-        HelperFunctions.startApplication();
+        assertTrue(HelperFunctions.isApplicationRunning());
     }
 
     // Normal Scenario
