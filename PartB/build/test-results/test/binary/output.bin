@@ -1,270 +1,838 @@
 
-∆Scenario Outline: Create a category                                                                                                     [90m# src/test/resources/US11_CreateACategory.feature:17[0m
-Ú  [32mGiven [0m[32mthe application is running (US11)[0m                                                                                               [90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()[0m
-Ë  [32mGiven [0m[32mthe category with title [0m[32m[1m"My first category"[0m[32m and the description [0m[32m[1m"This is my first category"[0m[32m does not exist in the system (US11)[0m [90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)[0m
-“  [32mWhen [0m[32mI create a category with the title [0m[32m[1m"My first category"[0m[32m and description [0m[32m[1m"This is my first category"[0m[32m (US11)[0m                        [90m# features.US11_CreateCategoryStepDefinition.i_create_a_category_with_title_and_the_description(java.lang.String,java.lang.String)[0m
-„  [32mThen [0m[32mthe category with title [0m[32m[1m"My first category"[0m[32m and the description [0m[32m[1m"This is my first category"[0m[32m shall exist in the system (US11)[0m     [90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_should_be_in_the_system(java.lang.String,java.lang.String)[0m
+ºScenario Outline: Update a project's title and description                                                                      [90m# src/test/resources/US10_UpdateProject.feature:21[0m
+Ï  [32mGiven [0m[32mthe project application is running (US10)[0m                                                                               [90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()[0m
+ª  [32mAnd [0m[32mthe following projects exist in the system (US10)[0m                                                                         [90m# features.US10_UpdateProjectStepDefinition.the_following_projects_with_title_description_completed_active_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+7    | title       | description | completed | active |
+7    | first proj  | fun proj    | false     | true   |
+7    | second proj | boring proj | true      | false  |
+â  [32mGiven [0m[32ma project with [0m[32m[1m2[0m[32m exists in the system (US10)[0m                                                                            [90m# features.US10_UpdateProjectStepDefinition.a_project_with_id_exists_in_the_system(int)[0m
+Ω  [32mWhen [0m[32mI update the project with [0m[32m[1m2[0m[32m with a new description [0m[32m[1m"fun project"[0m[32m (US10)[0m                                                  [90m# features.US10_UpdateProjectStepDefinition.i_update_the_project_with_id_with_a_new_description(int,java.lang.String)[0m
+¨  [32mThen [0m[32mthe project with [0m[32m[1m2[0m[32m should have title [0m[32m[1m"first proj"[0m[32m, description [0m[32m[1m"fun project"[0m[32m, completed [0m[32m[1m"false"[0m[32m and active [0m[32m[1m"true"[0m[32m (US10)[0m [90m# features.US10_UpdateProjectStepDefinition.the_project_with_id_should_have_a_description(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[0m
+ ------ After Scenario ------
 application stopped
 
-»Scenario Outline: Create a category                                                                                                       [90m# src/test/resources/US11_CreateACategory.feature:18[0m
-Ù  [32mGiven [0m[32mthe application is running (US11)[0m                                                                                                 [90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()[0m
-Í  [32mGiven [0m[32mthe category with title [0m[32m[1m"My second category"[0m[32m and the description [0m[32m[1m"This is my second category"[0m[32m does not exist in the system (US11)[0m [90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)[0m
-‘  [32mWhen [0m[32mI create a category with the title [0m[32m[1m"My second category"[0m[32m and description [0m[32m[1m"This is my second category"[0m[32m (US11)[0m                        [90m# features.US11_CreateCategoryStepDefinition.i_create_a_category_with_title_and_the_description(java.lang.String,java.lang.String)[0m
-Â  [32mThen [0m[32mthe category with title [0m[32m[1m"My second category"[0m[32m and the description [0m[32m[1m"This is my second category"[0m[32m shall exist in the system (US11)[0m     [90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_should_be_in_the_system(java.lang.String,java.lang.String)[0m
+¿Scenario Outline: Update a project's title and description                                                                          [90m# src/test/resources/US10_UpdateProject.feature:22[0m
+  [32mGiven [0m[32mthe project application is running (US10)[0m                                                                                   [90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()[0m
+ø  [32mAnd [0m[32mthe following projects exist in the system (US10)[0m                                                                             [90m# features.US10_UpdateProjectStepDefinition.the_following_projects_with_title_description_completed_active_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+7    | title       | description | completed | active |
+7    | first proj  | fun proj    | false     | true   |
+7    | second proj | boring proj | true      | false  |
+ç  [32mGiven [0m[32ma project with [0m[32m[1m3[0m[32m exists in the system (US10)[0m                                                                                [90m# features.US10_UpdateProjectStepDefinition.a_project_with_id_exists_in_the_system(int)[0m
+¡  [32mWhen [0m[32mI update the project with [0m[32m[1m3[0m[32m with a new description [0m[32m[1m"boring project"[0m[32m (US10)[0m                                                   [90m# features.US10_UpdateProjectStepDefinition.i_update_the_project_with_id_with_a_new_description(int,java.lang.String)[0m
+∞  [32mThen [0m[32mthe project with [0m[32m[1m3[0m[32m should have title [0m[32m[1m"second proj"[0m[32m, description [0m[32m[1m"boring project"[0m[32m, completed [0m[32m[1m"true"[0m[32m and active [0m[32m[1m"false"[0m[32m (US10)[0m [90m# features.US10_UpdateProjectStepDefinition.the_project_with_id_should_have_a_description(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[0m
+ ------ After Scenario ------
 application stopped
 
-¡Scenario Outline: Create a category that has already been created                                                                  [90m# src/test/resources/US11_CreateACategory.feature:27[0m
-Ì  [32mGiven [0m[32mthe application is running (US11)[0m                                                                                          [90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()[0m
-§  [32mGiven [0m[32mthe category with title [0m[32m[1m"My first category"[0m[32m does not exist in the system (US11)[0m                                            [90m# features.US11_CreateCategoryStepDefinition.the_todo_with_title_does_not_exist_in_the_system(java.lang.String)[0m
-«  [32mWhen [0m[32mI create a duplicate category with the title [0m[32m[1m"My first category"[0m[32m and description [0m[32m[1m"this is my first category"[0m[32m (US11)[0m         [90m# features.US11_CreateCategoryStepDefinition.i_create_a_duplicate_category_with_the_title(java.lang.String,java.lang.String)[0m
-›  [32mThen [0m[32mthe category with title [0m[32m[1m"My first category"[0m[32m with a description [0m[32m[1m"this is my first category"[0m[32m shall exist in the system (US11)[0m [90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_with_a_description_should_be_in_the_system(java.lang.String,java.lang.String)[0m
+ÖScenario Outline: Mark a project as completed                            [90m# src/test/resources/US10_UpdateProject.feature:31[0m
+µ  [32mGiven [0m[32mthe project application is running (US10)[0m                        [90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()[0m
+Ñ  [32mAnd [0m[32mthe following projects exist in the system (US10)[0m                  [90m# features.US10_UpdateProjectStepDefinition.the_following_projects_with_title_description_completed_active_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+7    | title       | description | completed | active |
+7    | first proj  | fun proj    | false     | true   |
+7    | second proj | boring proj | true      | false  |
+”  [32mGiven [0m[32ma incomplete project with id [0m[32m[1m2[0m[32m exists in the system (US10)[0m       [90m# features.US10_UpdateProjectStepDefinition.a_project_with_id__exists_in_the_system(int)[0m
+˘  [32mWhen [0m[32mI update the project with id [0m[32m[1m2[0m[32m with [0m[32m[1m"true"[0m[32m (US10)[0m                 [90m# features.US10_UpdateProjectStepDefinition.when_i_update_the_project_with_id_with(int,java.lang.String)[0m
+á  [32mThen [0m[32mthe project with [0m[32m[1m2[0m[32m should have an updated completed [0m[32m[1m"true"[0m[32m (US10)[0m [90m# features.US10_UpdateProjectStepDefinition.the_project_with_id_should_have_an_updated_completed(int,java.lang.String)[0m
+ ------ After Scenario ------
 application stopped
 
-√Scenario Outline: Create a category that has already been created                                                                    [90m# src/test/resources/US11_CreateACategory.feature:28[0m
-Ô  [32mGiven [0m[32mthe application is running (US11)[0m                                                                                            [90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()[0m
-¶  [32mGiven [0m[32mthe category with title [0m[32m[1m"My second category"[0m[32m does not exist in the system (US11)[0m                                             [90m# features.US11_CreateCategoryStepDefinition.the_todo_with_title_does_not_exist_in_the_system(java.lang.String)[0m
-…  [32mWhen [0m[32mI create a duplicate category with the title [0m[32m[1m"My second category"[0m[32m and description [0m[32m[1m"this is my second category"[0m[32m (US11)[0m         [90m# features.US11_CreateCategoryStepDefinition.i_create_a_duplicate_category_with_the_title(java.lang.String,java.lang.String)[0m
-ﬂ  [32mThen [0m[32mthe category with title [0m[32m[1m"My second category"[0m[32m with a description [0m[32m[1m"this is my second category"[0m[32m shall exist in the system (US11)[0m [90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_with_a_description_should_be_in_the_system(java.lang.String,java.lang.String)[0m
+†Scenario Outline: Update completed to invalid value                                                 [90m# src/test/resources/US10_UpdateProject.feature:41[0m
+–  [32mGiven [0m[32mthe project application is running (US10)[0m                                                   [90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()[0m
+ü  [32mAnd [0m[32mthe following projects exist in the system (US10)[0m                                             [90m# features.US10_UpdateProjectStepDefinition.the_following_projects_with_title_description_completed_active_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+7    | title       | description | completed | active |
+7    | first proj  | fun proj    | false     | true   |
+7    | second proj | boring proj | true      | false  |
+Ú  [32mGiven [0m[32ma project with [0m[32m[1m1[0m[32m that exists in the system (US10)[0m                                           [90m# features.US10_UpdateProjectStepDefinition.a_project_with_id_that_exists_in_the_system(int)[0m
+°  [32mWhen [0m[32mI update the project with id [0m[32m[1m1[0m[32m with invalid completed [0m[32m[1m"asd"[0m[32m (US10)[0m                           [90m# features.US10_UpdateProjectStepDefinition.i_update_the_project_with_id_with_invalid_completed(int,java.lang.String)[0m
+è  [32mThen [0m[32mI should receive a [0m[32m[1m400[0m[32m response with [0m[32m[1m"Failed Validation: completed should be BOOLEAN"[0m[32m (US10)[0m [90m# features.US10_UpdateProjectStepDefinition.i_should_receive_a_response_with_(int,java.lang.String)[0m
+ ------ After Scenario ------
 application stopped
 
-≠Scenario Outline: Create a category with an empty title                                                        [90m# src/test/resources/US11_CreateACategory.feature:37[0m
-Ÿ  [32mGiven [0m[32mthe application is running (US11)[0m                                                                      [90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()[0m
-ﬁ  [32mWhen [0m[32mI create a category with empty title (US11)[0m                                                             [90m# features.US11_CreateCategoryStepDefinition.i_create_a_category_with_empty_title()[0m
-Ø  [32mThen [0m[32mthe status code shall be [0m[32m[1m400[0m[32m with an error message [0m[32m[1m"Failed Validation: title : can not be empty"[0m[32m (US11)[0m [90m# features.US11_CreateCategoryStepDefinition.the_todo_with_empty_title_should_not_be_in_the_system(int,java.lang.String)[0m
+∆Scenario Outline: Create a category                                                                                                     [90m# src/test/resources/US11_CreateACategory.feature:17[0m
+Ú  [32mGiven [0m[32mthe application is running (US11)[0m                                                                                               [90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()[0m
+Ë  [32mGiven [0m[32mthe category with title [0m[32m[1m"My first category"[0m[32m and the description [0m[32m[1m"This is my first category"[0m[32m does not exist in the system (US11)[0m [90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)[0m
+“  [32mWhen [0m[32mI create a category with the title [0m[32m[1m"My first category"[0m[32m and description [0m[32m[1m"This is my first category"[0m[32m (US11)[0m                        [90m# features.US11_CreateCategoryStepDefinition.i_create_a_category_with_title_and_the_description(java.lang.String,java.lang.String)[0m
+„  [32mThen [0m[32mthe category with title [0m[32m[1m"My first category"[0m[32m and the description [0m[32m[1m"This is my first category"[0m[32m shall exist in the system (US11)[0m     [90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_should_be_in_the_system(java.lang.String,java.lang.String)[0m
+ ------ After Scenario ------
 application stopped
 
-¢Scenario Outline: Update a categories title and description                                          [90m# src/test/resources/US12_UpdateCategory.feature:21[0m
- the_todo_application_is_running
-œ  [32mGiven [0m[32mthe todo application is running (US12)[0m                                                       [90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()[0m
-í  [32mAnd [0m[32mthe following categories exist in the system (US12)[0m                                            [90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
-"    | title     | description   |
-"    | category1 | description 1 |
-"    | category2 | description 2 |
-  [32mGiven [0m[32ma category with [0m[32m[1m3[0m[32m exists in the system (US12)[0m                                                [90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_exists_in_the_system(int)[0m
-’  [32mWhen [0m[32mI update the category with id [0m[32m[1m3[0m[32m with a new title [0m[32m[1m"category1"[0m[32m, description [0m[32m[1m"category 1"[0m[32m (US12)[0m [90m# features.US12_UpdateCategoryStepDefinition.i_update_the_category_with_id_with_a_new_title_and_description(int,java.lang.String,java.lang.String)[0m
-≈  [32mThen [0m[32mthe category with id [0m[32m[1m3[0m[32m should have title [0m[32m[1m"category1"[0m[32m, description [0m[32m[1m"category 1"[0m[32m (US12)[0m         [90m# features.US12_UpdateCategoryStepDefinition.the_category_with_id_should_have_a_description(int,java.lang.String,java.lang.String)[0m
+»Scenario Outline: Create a category                                                                                                       [90m# src/test/resources/US11_CreateACategory.feature:18[0m
+Ù  [32mGiven [0m[32mthe application is running (US11)[0m                                                                                                 [90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()[0m
+Í  [32mGiven [0m[32mthe category with title [0m[32m[1m"My second category"[0m[32m and the description [0m[32m[1m"This is my second category"[0m[32m does not exist in the system (US11)[0m [90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)[0m
+‘  [32mWhen [0m[32mI create a category with the title [0m[32m[1m"My second category"[0m[32m and description [0m[32m[1m"This is my second category"[0m[32m (US11)[0m                        [90m# features.US11_CreateCategoryStepDefinition.i_create_a_category_with_title_and_the_description(java.lang.String,java.lang.String)[0m
+Â  [32mThen [0m[32mthe category with title [0m[32m[1m"My second category"[0m[32m and the description [0m[32m[1m"This is my second category"[0m[32m shall exist in the system (US11)[0m     [90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_should_be_in_the_system(java.lang.String,java.lang.String)[0m
+ ------ After Scenario ------
 application stopped
 
-¢Scenario Outline: Update a categories title and description                                          [90m# src/test/resources/US12_UpdateCategory.feature:22[0m
- the_todo_application_is_running
-œ  [32mGiven [0m[32mthe todo application is running (US12)[0m                                                       [90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()[0m
-í  [32mAnd [0m[32mthe following categories exist in the system (US12)[0m                                            [90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
-"    | title     | description   |
-"    | category1 | description 1 |
-"    | category2 | description 2 |
-  [32mGiven [0m[32ma category with [0m[32m[1m4[0m[32m exists in the system (US12)[0m                                                [90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_exists_in_the_system(int)[0m
-’  [32mWhen [0m[32mI update the category with id [0m[32m[1m4[0m[32m with a new title [0m[32m[1m"category2"[0m[32m, description [0m[32m[1m"category 2"[0m[32m (US12)[0m [90m# features.US12_UpdateCategoryStepDefinition.i_update_the_category_with_id_with_a_new_title_and_description(int,java.lang.String,java.lang.String)[0m
-≈  [32mThen [0m[32mthe category with id [0m[32m[1m4[0m[32m should have title [0m[32m[1m"category2"[0m[32m, description [0m[32m[1m"category 2"[0m[32m (US12)[0m         [90m# features.US12_UpdateCategoryStepDefinition.the_category_with_id_should_have_a_description(int,java.lang.String,java.lang.String)[0m
+¡Scenario Outline: Create a category that has already been created                                                                  [90m# src/test/resources/US11_CreateACategory.feature:27[0m
+Ì  [32mGiven [0m[32mthe application is running (US11)[0m                                                                                          [90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()[0m
+§  [32mGiven [0m[32mthe category with title [0m[32m[1m"My first category"[0m[32m does not exist in the system (US11)[0m                                            [90m# features.US11_CreateCategoryStepDefinition.the_todo_with_title_does_not_exist_in_the_system(java.lang.String)[0m
+«  [32mWhen [0m[32mI create a duplicate category with the title [0m[32m[1m"My first category"[0m[32m and description [0m[32m[1m"this is my first category"[0m[32m (US11)[0m         [90m# features.US11_CreateCategoryStepDefinition.i_create_a_duplicate_category_with_the_title(java.lang.String,java.lang.String)[0m
+›  [32mThen [0m[32mthe category with title [0m[32m[1m"My first category"[0m[32m with a description [0m[32m[1m"this is my first category"[0m[32m shall exist in the system (US11)[0m [90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_with_a_description_should_be_in_the_system(java.lang.String,java.lang.String)[0m
+ ------ After Scenario ------
 application stopped
 	
-	üScenario Outline: update a category with only the title                                           [90m# src/test/resources/US12_UpdateCategory.feature:31[0m
-	 the_todo_application_is_running
-	Ã  [32mGiven [0m[32mthe todo application is running (US12)[0m                                                    [90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()[0m
-	è  [32mAnd [0m[32mthe following categories exist in the system (US12)[0m                                         [90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
-	"    | title     | description   |
-	"    | category1 | description 1 |
-	"    | category2 | description 2 |
-	˝  [32mGiven [0m[32ma category with id [0m[32m[1m3[0m[32m exists in the system (US12)[0m                                          [90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_with_doneStatus_exists_in_the_system(int)[0m
-	î  [32mWhen [0m[32mI update the category with id [0m[32m[1m3[0m[32m with a title [0m[32m[1m"new category 1"[0m[32m and empty description (US12)[0m [90m# features.US12_UpdateCategoryStepDefinition.when_i_update_the_category_with_id_with(int,java.lang.String)[0m
-	ü  [32mThen [0m[32mthe category with [0m[32m[1m3[0m[32m should have an updated title [0m[32m[1m"new category 1"[0m[32m (US12)[0m                   [90m# features.US12_UpdateCategoryStepDefinition.the_category_with_id_should_have_an_updated_status(int,java.lang.String)[0m
+	√Scenario Outline: Create a category that has already been created                                                                    [90m# src/test/resources/US11_CreateACategory.feature:28[0m
+	Ô  [32mGiven [0m[32mthe application is running (US11)[0m                                                                                            [90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()[0m
+	¶  [32mGiven [0m[32mthe category with title [0m[32m[1m"My second category"[0m[32m does not exist in the system (US11)[0m                                             [90m# features.US11_CreateCategoryStepDefinition.the_todo_with_title_does_not_exist_in_the_system(java.lang.String)[0m
+	…  [32mWhen [0m[32mI create a duplicate category with the title [0m[32m[1m"My second category"[0m[32m and description [0m[32m[1m"this is my second category"[0m[32m (US11)[0m         [90m# features.US11_CreateCategoryStepDefinition.i_create_a_duplicate_category_with_the_title(java.lang.String,java.lang.String)[0m
+	ﬂ  [32mThen [0m[32mthe category with title [0m[32m[1m"My second category"[0m[32m with a description [0m[32m[1m"this is my second category"[0m[32m shall exist in the system (US11)[0m [90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_with_a_description_should_be_in_the_system(java.lang.String,java.lang.String)[0m
+	 ------ After Scenario ------
 	application stopped
 
 
 
-üScenario Outline: update a category with only the title                                           [90m# src/test/resources/US12_UpdateCategory.feature:32[0m
+≠Scenario Outline: Create a category with an empty title                                                        [90m# src/test/resources/US11_CreateACategory.feature:37[0m
 
- the_todo_application_is_running
+Ÿ  [32mGiven [0m[32mthe application is running (US11)[0m                                                                      [90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()[0m
 
-Ã  [32mGiven [0m[32mthe todo application is running (US12)[0m                                                    [90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()[0m
+ﬁ  [32mWhen [0m[32mI create a category with empty title (US11)[0m                                                             [90m# features.US11_CreateCategoryStepDefinition.i_create_a_category_with_empty_title()[0m
 
-è  [32mAnd [0m[32mthe following categories exist in the system (US12)[0m                                         [90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+Ø  [32mThen [0m[32mthe status code shall be [0m[32m[1m400[0m[32m with an error message [0m[32m[1m"Failed Validation: title : can not be empty"[0m[32m (US11)[0m [90m# features.US11_CreateCategoryStepDefinition.the_todo_with_empty_title_should_not_be_in_the_system(int,java.lang.String)[0m
 
-"    | title     | description   |
-
-"    | category1 | description 1 |
-
-"    | category2 | description 2 |
-
-˝  [32mGiven [0m[32ma category with id [0m[32m[1m4[0m[32m exists in the system (US12)[0m                                          [90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_with_doneStatus_exists_in_the_system(int)[0m
-
-î  [32mWhen [0m[32mI update the category with id [0m[32m[1m4[0m[32m with a title [0m[32m[1m"new category 2"[0m[32m and empty description (US12)[0m [90m# features.US12_UpdateCategoryStepDefinition.when_i_update_the_category_with_id_with(int,java.lang.String)[0m
-
-ü  [32mThen [0m[32mthe category with [0m[32m[1m4[0m[32m should have an updated title [0m[32m[1m"new category 2"[0m[32m (US12)[0m                   [90m# features.US12_UpdateCategoryStepDefinition.the_category_with_id_should_have_an_updated_status(int,java.lang.String)[0m
+ ------ After Scenario ------
 
 application stopped
 
-Scenario Outline: Update a category with empty title              [90m# src/test/resources/US12_UpdateCategory.feature:42[0m
+¢Scenario Outline: Update a categories title and description                                          [90m# src/test/resources/US12_UpdateCategory.feature:21[0m
  the_todo_application_is_running
-¨  [32mGiven [0m[32mthe todo application is running (US12)[0m                    [90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()[0m
-Ô  [32mAnd [0m[32mthe following categories exist in the system (US12)[0m         [90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+œ  [32mGiven [0m[32mthe todo application is running (US12)[0m                                                       [90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()[0m
+í  [32mAnd [0m[32mthe following categories exist in the system (US12)[0m                                            [90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
 "    | title     | description   |
 "    | category1 | description 1 |
 "    | category2 | description 2 |
-“  [32mGiven [0m[32ma category with [0m[32m[1m1[0m[32m that exists in the system (US12)[0m        [90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_that_exists_in_the_system(int)[0m
-‘  [32mWhen [0m[32mI update the category with id [0m[32m[1m1[0m[32m with an empty title (US12)[0m [90m# features.US12_UpdateCategoryStepDefinition.i_update_the_category_with_id_with_empty_title(int)[0m
-∆  [32mThen [0m[32mI should receive a [0m[32m[1m400[0m[32m response (US12)[0m                     [90m# features.US12_UpdateCategoryStepDefinition.i_should_receive_a_response_with(int)[0m
+  [32mGiven [0m[32ma category with [0m[32m[1m3[0m[32m exists in the system (US12)[0m                                                [90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_exists_in_the_system(int)[0m
+’  [32mWhen [0m[32mI update the category with id [0m[32m[1m3[0m[32m with a new title [0m[32m[1m"category1"[0m[32m, description [0m[32m[1m"category 1"[0m[32m (US12)[0m [90m# features.US12_UpdateCategoryStepDefinition.i_update_the_category_with_id_with_a_new_title_and_description(int,java.lang.String,java.lang.String)[0m
+≈  [32mThen [0m[32mthe category with id [0m[32m[1m3[0m[32m should have title [0m[32m[1m"category1"[0m[32m, description [0m[32m[1m"category 1"[0m[32m (US12)[0m         [90m# features.US12_UpdateCategoryStepDefinition.the_category_with_id_should_have_a_description(int,java.lang.String,java.lang.String)[0m
+ ------ After Scenario ------
 application stopped
 
-ïScenario Outline: Get all categories                                                  [90m# src/test/resources/US13_GetAllCategories.feature:21[0m
+¢Scenario Outline: Update a categories title and description                                          [90m# src/test/resources/US12_UpdateCategory.feature:22[0m
  the_todo_application_is_running
-¬  [32mGiven [0m[32mthe todo application is running (US13)[0m                                        [90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()[0m
-Ö  [32mAnd [0m[32mthe following categories exist in the system (US13)[0m                             [90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
-!    | title     | description  |
-!    | category1 | description1 |
-!    | category2 | description2 |
-!    | category3 | description3 |
-∑  [32mWhen [0m[32mI get all categories (US13)[0m                                                    [90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories()[0m
-ï  [32mThen [0m[32mthe categories with title [0m[32m[1m"category1"[0m[32m, description [0m[32m[1m"description1"[0m[32m exist (US13)[0m [90m# features.US13_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)[0m
+œ  [32mGiven [0m[32mthe todo application is running (US12)[0m                                                       [90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()[0m
+í  [32mAnd [0m[32mthe following categories exist in the system (US12)[0m                                            [90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+"    | title     | description   |
+"    | category1 | description 1 |
+"    | category2 | description 2 |
+  [32mGiven [0m[32ma category with [0m[32m[1m4[0m[32m exists in the system (US12)[0m                                                [90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_exists_in_the_system(int)[0m
+’  [32mWhen [0m[32mI update the category with id [0m[32m[1m4[0m[32m with a new title [0m[32m[1m"category2"[0m[32m, description [0m[32m[1m"category 2"[0m[32m (US12)[0m [90m# features.US12_UpdateCategoryStepDefinition.i_update_the_category_with_id_with_a_new_title_and_description(int,java.lang.String,java.lang.String)[0m
+≈  [32mThen [0m[32mthe category with id [0m[32m[1m4[0m[32m should have title [0m[32m[1m"category2"[0m[32m, description [0m[32m[1m"category 2"[0m[32m (US12)[0m         [90m# features.US12_UpdateCategoryStepDefinition.the_category_with_id_should_have_a_description(int,java.lang.String,java.lang.String)[0m
+ ------ After Scenario ------
 application stopped
 
-ïScenario Outline: Get all categories                                                  [90m# src/test/resources/US13_GetAllCategories.feature:22[0m
+üScenario Outline: update a category with only the title                                           [90m# src/test/resources/US12_UpdateCategory.feature:31[0m
  the_todo_application_is_running
-¬  [32mGiven [0m[32mthe todo application is running (US13)[0m                                        [90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()[0m
-Ö  [32mAnd [0m[32mthe following categories exist in the system (US13)[0m                             [90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
-!    | title     | description  |
-!    | category1 | description1 |
-!    | category2 | description2 |
-!    | category3 | description3 |
-∑  [32mWhen [0m[32mI get all categories (US13)[0m                                                    [90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories()[0m
-ï  [32mThen [0m[32mthe categories with title [0m[32m[1m"category2"[0m[32m, description [0m[32m[1m"description2"[0m[32m exist (US13)[0m [90m# features.US13_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)[0m
+Ã  [32mGiven [0m[32mthe todo application is running (US12)[0m                                                    [90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()[0m
+è  [32mAnd [0m[32mthe following categories exist in the system (US12)[0m                                         [90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+"    | title     | description   |
+"    | category1 | description 1 |
+"    | category2 | description 2 |
+˝  [32mGiven [0m[32ma category with id [0m[32m[1m3[0m[32m exists in the system (US12)[0m                                          [90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_with_doneStatus_exists_in_the_system(int)[0m
+î  [32mWhen [0m[32mI update the category with id [0m[32m[1m3[0m[32m with a title [0m[32m[1m"new category 1"[0m[32m and empty description (US12)[0m [90m# features.US12_UpdateCategoryStepDefinition.when_i_update_the_category_with_id_with(int,java.lang.String)[0m
+ü  [32mThen [0m[32mthe category with [0m[32m[1m3[0m[32m should have an updated title [0m[32m[1m"new category 1"[0m[32m (US12)[0m                   [90m# features.US12_UpdateCategoryStepDefinition.the_category_with_id_should_have_an_updated_status(int,java.lang.String)[0m
+ ------ After Scenario ------
 application stopped
 
-ïScenario Outline: Get all categories                                                  [90m# src/test/resources/US13_GetAllCategories.feature:23[0m
+üScenario Outline: update a category with only the title                                           [90m# src/test/resources/US12_UpdateCategory.feature:32[0m
  the_todo_application_is_running
-¬  [32mGiven [0m[32mthe todo application is running (US13)[0m                                        [90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()[0m
-Ö  [32mAnd [0m[32mthe following categories exist in the system (US13)[0m                             [90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
-!    | title     | description  |
-!    | category1 | description1 |
-!    | category2 | description2 |
-!    | category3 | description3 |
-∑  [32mWhen [0m[32mI get all categories (US13)[0m                                                    [90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories()[0m
-ï  [32mThen [0m[32mthe categories with title [0m[32m[1m"category3"[0m[32m, description [0m[32m[1m"description3"[0m[32m exist (US13)[0m [90m# features.US13_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)[0m
+Ã  [32mGiven [0m[32mthe todo application is running (US12)[0m                                                    [90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()[0m
+è  [32mAnd [0m[32mthe following categories exist in the system (US12)[0m                                         [90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+"    | title     | description   |
+"    | category1 | description 1 |
+"    | category2 | description 2 |
+˝  [32mGiven [0m[32ma category with id [0m[32m[1m4[0m[32m exists in the system (US12)[0m                                          [90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_with_doneStatus_exists_in_the_system(int)[0m
+î  [32mWhen [0m[32mI update the category with id [0m[32m[1m4[0m[32m with a title [0m[32m[1m"new category 2"[0m[32m and empty description (US12)[0m [90m# features.US12_UpdateCategoryStepDefinition.when_i_update_the_category_with_id_with(int,java.lang.String)[0m
+ü  [32mThen [0m[32mthe category with [0m[32m[1m4[0m[32m should have an updated title [0m[32m[1m"new category 2"[0m[32m (US12)[0m                   [90m# features.US12_UpdateCategoryStepDefinition.the_category_with_id_should_have_an_updated_status(int,java.lang.String)[0m
+ ------ After Scenario ------
 application stopped
 
-ÑScenario Outline: Get all categories with a specific title           [90m# src/test/resources/US13_GetAllCategories.feature:32[0m
+Scenario Outline: Update a category with empty title              [90m# src/test/resources/US12_UpdateCategory.feature:42[0m
  the_todo_application_is_running
-±  [32mGiven [0m[32mthe todo application is running (US13)[0m                       [90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()[0m
-Ù  [32mAnd [0m[32mthe following categories exist in the system (US13)[0m            [90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
-!    | title     | description  |
-!    | category1 | description1 |
-!    | category2 | description2 |
-!    | category3 | description3 |
-‚  [32mWhen [0m[32mI get all categories with a specific title [0m[32m[1m"category1"[0m[32m (US13)[0m [90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories_with_a_specific_title(java.lang.String)[0m
-˘  [32mThen [0m[32mI should see [0m[32m[1m1[0m[32m categories with title [0m[32m[1m"category1"[0m[32m (US13)[0m       [90m# features.US13_GetAllCategoriesStepDefinition.i_should_see_category_us3(java.lang.Integer,java.lang.String)[0m
+¨  [32mGiven [0m[32mthe todo application is running (US12)[0m                    [90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()[0m
+Ô  [32mAnd [0m[32mthe following categories exist in the system (US12)[0m         [90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+"    | title     | description   |
+"    | category1 | description 1 |
+"    | category2 | description 2 |
+“  [32mGiven [0m[32ma category with [0m[32m[1m1[0m[32m that exists in the system (US12)[0m        [90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_that_exists_in_the_system(int)[0m
+‘  [32mWhen [0m[32mI update the category with id [0m[32m[1m1[0m[32m with an empty title (US12)[0m [90m# features.US12_UpdateCategoryStepDefinition.i_update_the_category_with_id_with_empty_title(int)[0m
+∆  [32mThen [0m[32mI should receive a [0m[32m[1m400[0m[32m response (US12)[0m                     [90m# features.US12_UpdateCategoryStepDefinition.i_should_receive_a_response_with(int)[0m
+ ------ After Scenario ------
 application stopped
 
-|Scenario Outline: Get all categories with the wrong endpoint [90m# src/test/resources/US13_GetAllCategories.feature:40[0m
+ïScenario Outline: Get all categories                                                  [90m# src/test/resources/US13_GetAllCategories.feature:21[0m
  the_todo_application_is_running
-©  [32mGiven [0m[32mthe todo application is running (US13)[0m               [90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()[0m
-Ï  [32mAnd [0m[32mthe following categories exist in the system (US13)[0m    [90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+¬  [32mGiven [0m[32mthe todo application is running (US13)[0m                                        [90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()[0m
+Ö  [32mAnd [0m[32mthe following categories exist in the system (US13)[0m                             [90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
 !    | title     | description  |
 !    | category1 | description1 |
 !    | category2 | description2 |
 !    | category3 | description3 |
-µ  [32mWhen [0m[32mI get all categories with mistyped endpoint (US13)[0m    [90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories_with_mistyped_endpoint()[0m
-Ω  [32mThen [0m[32mI should receive an error code [0m[32m[1m404[0m[32m (US13)[0m             [90m# features.US13_GetAllCategoriesStepDefinition.i_should_see_an_error_code(int)[0m
+∑  [32mWhen [0m[32mI get all categories (US13)[0m                                                    [90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories()[0m
+ï  [32mThen [0m[32mthe categories with title [0m[32m[1m"category1"[0m[32m, description [0m[32m[1m"description1"[0m[32m exist (US13)[0m [90m# features.US13_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)[0m
+ ------ After Scenario ------
 application stopped
 
-ÇScenario Outline: Delete a category                                 [90m# src/test/resources/US14_DeleteACategory.feature:22[0m
+ïScenario Outline: Get all categories                                                  [90m# src/test/resources/US13_GetAllCategories.feature:22[0m
  the_todo_application_is_running
-Æ  [32mGiven [0m[32mthe todo application is running (US14)[0m                      [90m# features.US14_DeleteCategoryStepDefinition.the_todo_application_is_running()[0m
-ﬂ  [32mGiven [0m[32mthe category with id [0m[32m[1m3[0m[32m exists in the system (US14)[0m          [90m# features.US14_DeleteCategoryStepDefinition.the_category_with_id_exists_in_the_system(java.lang.Integer)[0m
-Ò  [32mAnd [0m[32mthe following categories exist in the current system (US14)[0m   [90m# features.US14_DeleteCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+¬  [32mGiven [0m[32mthe todo application is running (US13)[0m                                        [90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()[0m
+Ö  [32mAnd [0m[32mthe following categories exist in the system (US13)[0m                             [90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
 !    | title     | description  |
 !    | category1 | description1 |
 !    | category2 | description2 |
-”  [32mWhen [0m[32mI delete the category with id [0m[32m[1m3[0m[32m (US14)[0m                       [90m# features.US14_DeleteCategoryStepDefinition.i_delete_the_category_with_id(java.lang.Integer)[0m
-È  [32mThen [0m[32mthe category with id [0m[32m[1m3[0m[32m should not exist in the system (US14)[0m [90m# features.US14_DeleteCategoryStepDefinition.the_category_with_id_should_not_exist_in_the_system(java.lang.Integer)[0m
-≥  [32mThen [0m[32mthere should be 1 todo in the system (US14)[0m                  [90m# features.US14_DeleteCategoryStepDefinition.there_should_be_1_todo_in_the_system()[0m
+!    | category3 | description3 |
+∑  [32mWhen [0m[32mI get all categories (US13)[0m                                                    [90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories()[0m
+ï  [32mThen [0m[32mthe categories with title [0m[32m[1m"category2"[0m[32m, description [0m[32m[1m"description2"[0m[32m exist (US13)[0m [90m# features.US13_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)[0m
+ ------ After Scenario ------
 application stopped
 
-òScenario Outline: Delete a category that has an empty description                         [90m# src/test/resources/US14_DeleteACategory.feature:37[0m
+ïScenario Outline: Get all categories                                                  [90m# src/test/resources/US13_GetAllCategories.feature:23[0m
  the_todo_application_is_running
-ƒ  [32mGiven [0m[32mthe todo application is running (US14)[0m                                            [90m# features.US14_DeleteCategoryStepDefinition.the_todo_application_is_running()[0m
-˝  [32mGiven [0m[32mthe category with id [0m[32m[1m3[0m[32m no description exists in the system (US14)[0m                 [90m# features.US14_DeleteCategoryStepDefinition.the_category_with_id_does_not_exist_in_the_system(java.lang.Integer)[0m
-à  [32mAnd [0m[32mthe following categories exist in the system (US14)[0m                                 [90m# features.US14_DeleteCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system2(io.cucumber.datatable.DataTable)[0m
-    | title | description  |
-    | todo1 | description1 |
-    | todo2 | [empty]      |
-ˇ  [32mWhen [0m[32mI delete the category without a description with id [0m[32m[1m3[0m[32m (US14)[0m                       [90m# features.US14_DeleteCategoryStepDefinition.i_delete_the_category_without_a_description_with_id(java.lang.Integer)[0m
-ï  [32mThen [0m[32mthe category without a description with id [0m[32m[1m3[0m[32m should not exist in the system (US14)[0m [90m# features.US14_DeleteCategoryStepDefinition.the_category_without_a_description_with_id_should_not_exist_in_the_system(java.lang.Integer)[0m
-—  [32mThen [0m[32mthere should be 1 todo in the current system (US14)[0m                                [90m# features.US14_DeleteCategoryStepDefinition.there_should_be_1_todo_in_the_current_system()[0m
+¬  [32mGiven [0m[32mthe todo application is running (US13)[0m                                        [90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()[0m
+Ö  [32mAnd [0m[32mthe following categories exist in the system (US13)[0m                             [90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+!    | title     | description  |
+!    | category1 | description1 |
+!    | category2 | description2 |
+!    | category3 | description3 |
+∑  [32mWhen [0m[32mI get all categories (US13)[0m                                                    [90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories()[0m
+ï  [32mThen [0m[32mthe categories with title [0m[32m[1m"category3"[0m[32m, description [0m[32m[1m"description3"[0m[32m exist (US13)[0m [90m# features.US13_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)[0m
+ ------ After Scenario ------
 application stopped
 
-ªScenario Outline: Delete a category that does not exist                                                                      [90m# src/test/resources/US14_DeleteACategory.feature:47[0m
+ÑScenario Outline: Get all categories with a specific title           [90m# src/test/resources/US13_GetAllCategories.feature:32[0m
  the_todo_application_is_running
-Á  [32mGiven [0m[32mthe todo application is running (US14)[0m                                                                               [90m# features.US14_DeleteCategoryStepDefinition.the_todo_application_is_running()[0m
-†  [32mGiven [0m[32mthe category with invalid id [0m[32m[1m"qwe"[0m[32m does not exist in the system (US14)[0m                                               [90m# features.US14_DeleteCategoryStepDefinition.the_category_with_id_does_not_exist_in_the_system2(java.lang.String)[0m
-ñ  [32mWhen [0m[32mI delete the category with inexistant id [0m[32m[1m"qwe"[0m[32m (US14)[0m                                                                 [90m# features.US14_DeleteCategoryStepDefinition.i_delete_the_category_with_inexistant_id(java.lang.String)[0m
-ø  [32mThen [0m[32mI should receive a status code [0m[32m[1m404[0m[32m and see an error message [0m[32m[1m"Could not find any instances with categories/qwe"[0m[32m (US14)[0m [90m# features.US14_DeleteCategoryStepDefinition.i_should_receive_a_status_code_and_see_an_error_message(int,java.lang.String)[0m
+±  [32mGiven [0m[32mthe todo application is running (US13)[0m                       [90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()[0m
+Ù  [32mAnd [0m[32mthe following categories exist in the system (US13)[0m            [90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+!    | title     | description  |
+!    | category1 | description1 |
+!    | category2 | description2 |
+!    | category3 | description3 |
+‚  [32mWhen [0m[32mI get all categories with a specific title [0m[32m[1m"category1"[0m[32m (US13)[0m [90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories_with_a_specific_title(java.lang.String)[0m
+˘  [32mThen [0m[32mI should see [0m[32m[1m1[0m[32m categories with title [0m[32m[1m"category1"[0m[32m (US13)[0m       [90m# features.US13_GetAllCategoriesStepDefinition.i_should_see_category_us3(java.lang.Integer,java.lang.String)[0m
+ ------ After Scenario ------
 application stopped
 
-°Scenario Outline: Get a specific category that                                                 [90m# src/test/resources/US15_GetSpecificCategory.feature:24[0m
+|Scenario Outline: Get all categories with the wrong endpoint [90m# src/test/resources/US13_GetAllCategories.feature:40[0m
  the_todo_application_is_running
-Œ  [32mGiven [0m[32mthe todo application is running (US15)[0m                                                 [90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()[0m
-ë  [32mAnd [0m[32mthe following categories exist in the system: (US15)[0m                                     [90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
-0    | title                    | description  |
-0    | category1                | description1 |
-0    | category2                | description2 |
-0    | category3                | description3 |
-0    | emptyDescriptionCategory | [empty]      |
-ˇ  [32mGiven [0m[32mthe category with id [0m[32m[1m3[0m[32m exists in the system (US15)[0m                                     [90m# features.US15_GetSpecificCategoryStepDefinition.the_category_with_id_exists_in_the_system(java.lang.Integer)[0m
-  [32mWhen [0m[32mI get the category with specific id [0m[32m[1m3[0m[32m (US15)[0m                                            [90m# features.US15_GetSpecificCategoryStepDefinition.i_get_the_category_with_id(java.lang.Integer)[0m
-Ã  [32mThen [0m[32mI should get a category with id [0m[32m[1m3[0m[32m, title [0m[32m[1m"category1"[0m[32m, description [0m[32m[1m"description1"[0m[32m (US15)[0m [90m# features.US15_GetSpecificCategoryStepDefinition.then_i_should_get_a_category_with_id_title_description(int,java.lang.String,java.lang.String)[0m
+©  [32mGiven [0m[32mthe todo application is running (US13)[0m               [90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()[0m
+Ï  [32mAnd [0m[32mthe following categories exist in the system (US13)[0m    [90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+!    | title     | description  |
+!    | category1 | description1 |
+!    | category2 | description2 |
+!    | category3 | description3 |
+µ  [32mWhen [0m[32mI get all categories with mistyped endpoint (US13)[0m    [90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories_with_mistyped_endpoint()[0m
+Ω  [32mThen [0m[32mI should receive an error code [0m[32m[1m404[0m[32m (US13)[0m             [90m# features.US13_GetAllCategoriesStepDefinition.i_should_see_an_error_code(int)[0m
+ ------ After Scenario ------
 application stopped
 
-°Scenario Outline: Get a specific category that                                                 [90m# src/test/resources/US15_GetSpecificCategory.feature:25[0m
+ÇScenario Outline: Delete a category                                 [90m# src/test/resources/US14_DeleteACategory.feature:22[0m
  the_todo_application_is_running
-Œ  [32mGiven [0m[32mthe todo application is running (US15)[0m                                                 [90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()[0m
-ë  [32mAnd [0m[32mthe following categories exist in the system: (US15)[0m                                     [90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
-0    | title                    | description  |
-0    | category1                | description1 |
-0    | category2                | description2 |
-0    | category3                | description3 |
-0    | emptyDescriptionCategory | [empty]      |
-ˇ  [32mGiven [0m[32mthe category with id [0m[32m[1m4[0m[32m exists in the system (US15)[0m                                     [90m# features.US15_GetSpecificCategoryStepDefinition.the_category_with_id_exists_in_the_system(java.lang.Integer)[0m
-  [32mWhen [0m[32mI get the category with specific id [0m[32m[1m4[0m[32m (US15)[0m                                            [90m# features.US15_GetSpecificCategoryStepDefinition.i_get_the_category_with_id(java.lang.Integer)[0m
-Ã  [32mThen [0m[32mI should get a category with id [0m[32m[1m4[0m[32m, title [0m[32m[1m"category2"[0m[32m, description [0m[32m[1m"description2"[0m[32m (US15)[0m [90m# features.US15_GetSpecificCategoryStepDefinition.then_i_should_get_a_category_with_id_title_description(int,java.lang.String,java.lang.String)[0m
+Æ  [32mGiven [0m[32mthe todo application is running (US14)[0m                      [90m# features.US14_DeleteCategoryStepDefinition.the_todo_application_is_running()[0m
+ﬂ  [32mGiven [0m[32mthe category with id [0m[32m[1m3[0m[32m exists in the system (US14)[0m          [90m# features.US14_DeleteCategoryStepDefinition.the_category_with_id_exists_in_the_system(java.lang.Integer)[0m
+Ò  [32mAnd [0m[32mthe following categories exist in the current system (US14)[0m   [90m# features.US14_DeleteCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+!    | title     | description  |
+!    | category1 | description1 |
+!    | category2 | description2 |
+”  [32mWhen [0m[32mI delete the category with id [0m[32m[1m3[0m[32m (US14)[0m                       [90m# features.US14_DeleteCategoryStepDefinition.i_delete_the_category_with_id(java.lang.Integer)[0m
+È  [32mThen [0m[32mthe category with id [0m[32m[1m3[0m[32m should not exist in the system (US14)[0m [90m# features.US14_DeleteCategoryStepDefinition.the_category_with_id_should_not_exist_in_the_system(java.lang.Integer)[0m
+≥  [32mThen [0m[32mthere should be 1 todo in the system (US14)[0m                  [90m# features.US14_DeleteCategoryStepDefinition.there_should_be_1_todo_in_the_system()[0m
+ ------ After Scenario ------
 application stopped
 
-°Scenario Outline: Get a specific category that                                                 [90m# src/test/resources/US15_GetSpecificCategory.feature:26[0m
+òScenario Outline: Delete a category that has an empty description                         [90m# src/test/resources/US14_DeleteACategory.feature:37[0m
  the_todo_application_is_running
-Œ  [32mGiven [0m[32mthe todo application is running (US15)[0m                                                 [90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()[0m
-ë  [32mAnd [0m[32mthe following categories exist in the system: (US15)[0m                                     [90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
-0    | title                    | description  |
-0    | category1                | description1 |
-0    | category2                | description2 |
-0    | category3                | description3 |
-0    | emptyDescriptionCategory | [empty]      |
-ˇ  [32mGiven [0m[32mthe category with id [0m[32m[1m5[0m[32m exists in the system (US15)[0m                                     [90m# features.US15_GetSpecificCategoryStepDefinition.the_category_with_id_exists_in_the_system(java.lang.Integer)[0m
-  [32mWhen [0m[32mI get the category with specific id [0m[32m[1m5[0m[32m (US15)[0m                                            [90m# features.US15_GetSpecificCategoryStepDefinition.i_get_the_category_with_id(java.lang.Integer)[0m
-Ã  [32mThen [0m[32mI should get a category with id [0m[32m[1m5[0m[32m, title [0m[32m[1m"category3"[0m[32m, description [0m[32m[1m"description3"[0m[32m (US15)[0m [90m# features.US15_GetSpecificCategoryStepDefinition.then_i_should_get_a_category_with_id_title_description(int,java.lang.String,java.lang.String)[0m
+ƒ  [32mGiven [0m[32mthe todo application is running (US14)[0m                                            [90m# features.US14_DeleteCategoryStepDefinition.the_todo_application_is_running()[0m
+˝  [32mGiven [0m[32mthe category with id [0m[32m[1m3[0m[32m no description exists in the system (US14)[0m                 [90m# features.US14_DeleteCategoryStepDefinition.the_category_with_id_does_not_exist_in_the_system(java.lang.Integer)[0m
+à  [32mAnd [0m[32mthe following categories exist in the system (US14)[0m                                 [90m# features.US14_DeleteCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system2(io.cucumber.datatable.DataTable)[0m
+    | title | description  |
+    | todo1 | description1 |
+    | todo2 | [empty]      |
+ˇ  [32mWhen [0m[32mI delete the category without a description with id [0m[32m[1m3[0m[32m (US14)[0m                       [90m# features.US14_DeleteCategoryStepDefinition.i_delete_the_category_without_a_description_with_id(java.lang.Integer)[0m
+ï  [32mThen [0m[32mthe category without a description with id [0m[32m[1m3[0m[32m should not exist in the system (US14)[0m [90m# features.US14_DeleteCategoryStepDefinition.the_category_without_a_description_with_id_should_not_exist_in_the_system(java.lang.Integer)[0m
+—  [32mThen [0m[32mthere should be 1 todo in the current system (US14)[0m                                [90m# features.US14_DeleteCategoryStepDefinition.there_should_be_1_todo_in_the_current_system()[0m
+ ------ After Scenario ------
 application stopped
 
-≈Scenario Outline: Get a category that has an empty description                                                                     [90m# src/test/resources/US15_GetSpecificCategory.feature:36[0m
+ªScenario Outline: Delete a category that does not exist                                                                      [90m# src/test/resources/US14_DeleteACategory.feature:47[0m
  the_todo_application_is_running
-Ú  [32mGiven [0m[32mthe todo application is running (US15)[0m                                                                                     [90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()[0m
-µ  [32mAnd [0m[32mthe following categories exist in the system: (US15)[0m                                                                         [90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
-0    | title                    | description  |
-0    | category1                | description1 |
-0    | category2                | description2 |
-0    | category3                | description3 |
-0    | emptyDescriptionCategory | [empty]      |
-∂  [32mGiven [0m[32mthe category with id [0m[32m[1m6[0m[32m and no description exists in the system (US15)[0m                                                      [90m# features.US15_GetSpecificCategoryStepDefinition.the_category_with_id_and_no_description_exists_in_the_system(java.lang.Integer)[0m
-¨  [32mWhen [0m[32mI get the category with id [0m[32m[1m6[0m[32m that has no description (US15)[0m                                                                 [90m# features.US15_GetSpecificCategoryStepDefinition.i_get_the_category_with_id_that_has_no_description(java.lang.Integer)[0m
-õ  [32mThen [0m[32mI should get a category that has an empty description with id [0m[32m[1m6[0m[32m, title [0m[32m[1m"emptyDescriptionCategory"[0m[32m and description [0m[32m[1m""[0m[32m (US15)[0m [90m# features.US15_GetSpecificCategoryStepDefinition.i_should_get_a_category_that_has_an_empty_description_with_id_title_and_description(java.lang.Integer,java.lang.String,java.lang.String)[0m
+Á  [32mGiven [0m[32mthe todo application is running (US14)[0m                                                                               [90m# features.US14_DeleteCategoryStepDefinition.the_todo_application_is_running()[0m
+†  [32mGiven [0m[32mthe category with invalid id [0m[32m[1m"qwe"[0m[32m does not exist in the system (US14)[0m                                               [90m# features.US14_DeleteCategoryStepDefinition.the_category_with_id_does_not_exist_in_the_system2(java.lang.String)[0m
+ñ  [32mWhen [0m[32mI delete the category with inexistant id [0m[32m[1m"qwe"[0m[32m (US14)[0m                                                                 [90m# features.US14_DeleteCategoryStepDefinition.i_delete_the_category_with_inexistant_id(java.lang.String)[0m
+ø  [32mThen [0m[32mI should receive a status code [0m[32m[1m404[0m[32m and see an error message [0m[32m[1m"Could not find any instances with categories/qwe"[0m[32m (US14)[0m [90m# features.US14_DeleteCategoryStepDefinition.i_should_receive_a_status_code_and_see_an_error_message(int,java.lang.String)[0m
+ ------ After Scenario ------
 application stopped
 
-πScenario Outline: Get a category that does not exist                                                                   [90m# src/test/resources/US15_GetSpecificCategory.feature:48[0m
+°Scenario Outline: Get a specific category that                                                 [90m# src/test/resources/US15_GetSpecificCategory.feature:24[0m
  the_todo_application_is_running
-Ê  [32mGiven [0m[32mthe todo application is running (US15)[0m                                                                         [90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()[0m
-©  [32mAnd [0m[32mthe following categories exist in the system: (US15)[0m                                                             [90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+Œ  [32mGiven [0m[32mthe todo application is running (US15)[0m                                                 [90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()[0m
+ë  [32mAnd [0m[32mthe following categories exist in the system: (US15)[0m                                     [90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
 0    | title                    | description  |
 0    | category1                | description1 |
 0    | category2                | description2 |
 0    | category3                | description3 |
 0    | emptyDescriptionCategory | [empty]      |
-ü  [32mGiven [0m[32mthe category with id [0m[32m[1m100[0m[32m does not exist in the system (US15)[0m                                                   [90m# features.US15_GetSpecificCategoryStepDefinition.the_category_with_id_does_not_exist_in_the_system(java.lang.Integer)[0m
-ê  [32mWhen [0m[32mI get the category with invalid id [0m[32m[1m100[0m[32m (US15)[0m                                                                   [90m# features.US15_GetSpecificCategoryStepDefinition.i_get_the_category_with_invalid_id(java.lang.Integer)[0m
-∫  [32mThen [0m[32mI should receive a [0m[32m[1m404[0m[32m status code and an error message [0m[32m[1m"Could not find an instance with categories/100"[0m[32m (US15)[0m [90m# features.US15_GetSpecificCategoryStepDefinition.i_should_receive_a_status_code_and_an_error_message(int,java.lang.String)[0m
+ˇ  [32mGiven [0m[32mthe category with id [0m[32m[1m3[0m[32m exists in the system (US15)[0m                                     [90m# features.US15_GetSpecificCategoryStepDefinition.the_category_with_id_exists_in_the_system(java.lang.Integer)[0m
+  [32mWhen [0m[32mI get the category with specific id [0m[32m[1m3[0m[32m (US15)[0m                                            [90m# features.US15_GetSpecificCategoryStepDefinition.i_get_the_category_with_id(java.lang.Integer)[0m
+Ã  [32mThen [0m[32mI should get a category with id [0m[32m[1m3[0m[32m, title [0m[32m[1m"category1"[0m[32m, description [0m[32m[1m"description1"[0m[32m (US15)[0m [90m# features.US15_GetSpecificCategoryStepDefinition.then_i_should_get_a_category_with_id_title_description(int,java.lang.String,java.lang.String)[0m
+ ------ After Scenario ------
 application stopped
+
+°Scenario Outline: Get a specific category that                                                 [90m# src/test/resources/US15_GetSpecificCategory.feature:25[0m
+ the_todo_application_is_running
+Œ  [32mGiven [0m[32mthe todo application is running (US15)[0m                                                 [90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()[0m
+ë  [32mAnd [0m[32mthe following categories exist in the system: (US15)[0m                                     [90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+0    | title                    | description  |
+0    | category1                | description1 |
+0    | category2                | description2 |
+0    | category3                | description3 |
+0    | emptyDescriptionCategory | [empty]      |
+ˇ  [32mGiven [0m[32mthe category with id [0m[32m[1m4[0m[32m exists in the system (US15)[0m                                     [90m# features.US15_GetSpecificCategoryStepDefinition.the_category_with_id_exists_in_the_system(java.lang.Integer)[0m
+  [32mWhen [0m[32mI get the category with specific id [0m[32m[1m4[0m[32m (US15)[0m                                            [90m# features.US15_GetSpecificCategoryStepDefinition.i_get_the_category_with_id(java.lang.Integer)[0m
+Ã  [32mThen [0m[32mI should get a category with id [0m[32m[1m4[0m[32m, title [0m[32m[1m"category2"[0m[32m, description [0m[32m[1m"description2"[0m[32m (US15)[0m [90m# features.US15_GetSpecificCategoryStepDefinition.then_i_should_get_a_category_with_id_title_description(int,java.lang.String,java.lang.String)[0m
+ ------ After Scenario ------
+application stopped
+
+°Scenario Outline: Get a specific category that                                                 [90m# src/test/resources/US15_GetSpecificCategory.feature:26[0m
+ the_todo_application_is_running
+Œ  [32mGiven [0m[32mthe todo application is running (US15)[0m                                                 [90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()[0m
+ë  [32mAnd [0m[32mthe following categories exist in the system: (US15)[0m                                     [90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+0    | title                    | description  |
+0    | category1                | description1 |
+0    | category2                | description2 |
+0    | category3                | description3 |
+0    | emptyDescriptionCategory | [empty]      |
+ˇ  [32mGiven [0m[32mthe category with id [0m[32m[1m5[0m[32m exists in the system (US15)[0m                                     [90m# features.US15_GetSpecificCategoryStepDefinition.the_category_with_id_exists_in_the_system(java.lang.Integer)[0m
+  [32mWhen [0m[32mI get the category with specific id [0m[32m[1m5[0m[32m (US15)[0m                                            [90m# features.US15_GetSpecificCategoryStepDefinition.i_get_the_category_with_id(java.lang.Integer)[0m
+Ã  [32mThen [0m[32mI should get a category with id [0m[32m[1m5[0m[32m, title [0m[32m[1m"category3"[0m[32m, description [0m[32m[1m"description3"[0m[32m (US15)[0m [90m# features.US15_GetSpecificCategoryStepDefinition.then_i_should_get_a_category_with_id_title_description(int,java.lang.String,java.lang.String)[0m
+ ------ After Scenario ------
+application stopped
+
+≈Scenario Outline: Get a category that has an empty description                                                                     [90m# src/test/resources/US15_GetSpecificCategory.feature:36[0m
+ the_todo_application_is_running
+Ú  [32mGiven [0m[32mthe todo application is running (US15)[0m                                                                                     [90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()[0m
+µ  [32mAnd [0m[32mthe following categories exist in the system: (US15)[0m                                                                         [90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+0    | title                    | description  |
+0    | category1                | description1 |
+0    | category2                | description2 |
+0    | category3                | description3 |
+0    | emptyDescriptionCategory | [empty]      |
+∂  [32mGiven [0m[32mthe category with id [0m[32m[1m6[0m[32m and no description exists in the system (US15)[0m                                                      [90m# features.US15_GetSpecificCategoryStepDefinition.the_category_with_id_and_no_description_exists_in_the_system(java.lang.Integer)[0m
+¨  [32mWhen [0m[32mI get the category with id [0m[32m[1m6[0m[32m that has no description (US15)[0m                                                                 [90m# features.US15_GetSpecificCategoryStepDefinition.i_get_the_category_with_id_that_has_no_description(java.lang.Integer)[0m
+õ  [32mThen [0m[32mI should get a category that has an empty description with id [0m[32m[1m6[0m[32m, title [0m[32m[1m"emptyDescriptionCategory"[0m[32m and description [0m[32m[1m""[0m[32m (US15)[0m [90m# features.US15_GetSpecificCategoryStepDefinition.i_should_get_a_category_that_has_an_empty_description_with_id_title_and_description(java.lang.Integer,java.lang.String,java.lang.String)[0m
+ ------ After Scenario ------
+application stopped
+
+πScenario Outline: Get a category that does not exist                                                                   [90m# src/test/resources/US15_GetSpecificCategory.feature:48[0m
+ the_todo_application_is_running
+Ê  [32mGiven [0m[32mthe todo application is running (US15)[0m                                                                         [90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()[0m
+©  [32mAnd [0m[32mthe following categories exist in the system: (US15)[0m                                                             [90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+0    | title                    | description  |
+0    | category1                | description1 |
+0    | category2                | description2 |
+0    | category3                | description3 |
+0    | emptyDescriptionCategory | [empty]      |
+ü  [32mGiven [0m[32mthe category with id [0m[32m[1m100[0m[32m does not exist in the system (US15)[0m                                                   [90m# features.US15_GetSpecificCategoryStepDefinition.the_category_with_id_does_not_exist_in_the_system(java.lang.Integer)[0m
+ê  [32mWhen [0m[32mI get the category with invalid id [0m[32m[1m100[0m[32m (US15)[0m                                                                   [90m# features.US15_GetSpecificCategoryStepDefinition.i_get_the_category_with_invalid_id(java.lang.Integer)[0m
+∫  [32mThen [0m[32mI should receive a [0m[32m[1m404[0m[32m status code and an error message [0m[32m[1m"Could not find an instance with categories/100"[0m[32m (US15)[0m [90m# features.US15_GetSpecificCategoryStepDefinition.i_should_receive_a_status_code_and_an_error_message(int,java.lang.String)[0m
+ ------ After Scenario ------
+application stopped
+
+¥Scenario Outline: Create a todo                                                                                            [90m# src/test/resources/US1_CreateATodo.feature:17[0m
+‡  [32mGiven [0m[32mthe application is running (US1)[0m                                                                                   [90m# features.US1_CreateTodoStepDefinition.the_todo_application_is_running()[0m
+“  [32mGiven [0m[32mthe todo with title [0m[32m[1m"My first todo"[0m[32m and the description [0m[32m[1m"This is my first todo"[0m[32m does not exist in the system (US1)[0m [90m# features.US1_CreateTodoStepDefinition.the_todo_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)[0m
+º  [32mWhen [0m[32mI create a todo with the title [0m[32m[1m"My first todo"[0m[32m and description [0m[32m[1m"This is my first todo"[0m[32m (US1)[0m                        [90m# features.US1_CreateTodoStepDefinition.i_create_a_todo_with_title_and_the_description(java.lang.String,java.lang.String)[0m
+Õ  [32mThen [0m[32mthe todo with title [0m[32m[1m"My first todo"[0m[32m and the description [0m[32m[1m"This is my first todo"[0m[32m shall exist in the system (US1)[0m     [90m# features.US1_CreateTodoStepDefinition.the_todo_with_title_and_the_description_should_be_in_the_system(java.lang.String,java.lang.String)[0m
+ ------ After Scenario ------
+application stopped
+
+∂Scenario Outline: Create a todo                                                                                              [90m# src/test/resources/US1_CreateATodo.feature:18[0m
+‚  [32mGiven [0m[32mthe application is running (US1)[0m                                                                                     [90m# features.US1_CreateTodoStepDefinition.the_todo_application_is_running()[0m
+‘  [32mGiven [0m[32mthe todo with title [0m[32m[1m"My second todo"[0m[32m and the description [0m[32m[1m"This is my second todo"[0m[32m does not exist in the system (US1)[0m [90m# features.US1_CreateTodoStepDefinition.the_todo_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)[0m
+æ  [32mWhen [0m[32mI create a todo with the title [0m[32m[1m"My second todo"[0m[32m and description [0m[32m[1m"This is my second todo"[0m[32m (US1)[0m                        [90m# features.US1_CreateTodoStepDefinition.i_create_a_todo_with_title_and_the_description(java.lang.String,java.lang.String)[0m
+œ  [32mThen [0m[32mthe todo with title [0m[32m[1m"My second todo"[0m[32m and the description [0m[32m[1m"This is my second todo"[0m[32m shall exist in the system (US1)[0m     [90m# features.US1_CreateTodoStepDefinition.the_todo_with_title_and_the_description_should_be_in_the_system(java.lang.String,java.lang.String)[0m
+ ------ After Scenario ------
+application stopped
+
+¶Scenario Outline: Create a todo that has already been completed                                              [90m# src/test/resources/US1_CreateATodo.feature:27[0m
+“  [32mGiven [0m[32mthe application is running (US1)[0m                                                                     [90m# features.US1_CreateTodoStepDefinition.the_todo_application_is_running()[0m
+â  [32mGiven [0m[32mthe todo with title [0m[32m[1m"A todo with DoneStatus"[0m[32m does not exist in the system (US1)[0m                      [90m# features.US1_CreateTodoStepDefinition.the_todo_with_title_does_not_exist_in_the_system(java.lang.String)[0m
+û  [32mWhen [0m[32mI create a todo with the title [0m[32m[1m"A todo with DoneStatus"[0m[32m and doneStatus [0m[32m[1m"true"[0m[32m (US1)[0m                   [90m# features.US1_CreateTodoStepDefinition.i_create_a_todo_with_the_title(java.lang.String,java.lang.String)[0m
+Ω  [32mThen [0m[32mthe todo with title [0m[32m[1m"A todo with DoneStatus"[0m[32m with a doneStatus [0m[32m[1m"true"[0m[32m shall exist in the system (US1)[0m [90m# features.US1_CreateTodoStepDefinition.the_todo_with_title_with_a_doneStatus_should_be_in_the_system(java.lang.String,java.lang.String)[0m
+ ------ After Scenario ------
+application stopped
+ 
+ öScenario Outline: Create a todo that has already been completed                                  [90m# src/test/resources/US1_CreateATodo.feature:28[0m
+ ∆  [32mGiven [0m[32mthe application is running (US1)[0m                                                         [90m# features.US1_CreateTodoStepDefinition.the_todo_application_is_running()[0m
+ ˝  [32mGiven [0m[32mthe todo with title [0m[32m[1m"Finish US1"[0m[32m does not exist in the system (US1)[0m                      [90m# features.US1_CreateTodoStepDefinition.the_todo_with_title_does_not_exist_in_the_system(java.lang.String)[0m
+ í  [32mWhen [0m[32mI create a todo with the title [0m[32m[1m"Finish US1"[0m[32m and doneStatus [0m[32m[1m"true"[0m[32m (US1)[0m                   [90m# features.US1_CreateTodoStepDefinition.i_create_a_todo_with_the_title(java.lang.String,java.lang.String)[0m
+ ±  [32mThen [0m[32mthe todo with title [0m[32m[1m"Finish US1"[0m[32m with a doneStatus [0m[32m[1m"true"[0m[32m shall exist in the system (US1)[0m [90m# features.US1_CreateTodoStepDefinition.the_todo_with_title_with_a_doneStatus_should_be_in_the_system(java.lang.String,java.lang.String)[0m
+  ------ After Scenario ------
+ application stopped
+!
+!ßScenario Outline: Create a todo with an empty title                                                           [90m# src/test/resources/US1_CreateATodo.feature:37[0m
+!”  [32mGiven [0m[32mthe application is running (US1)[0m                                                                      [90m# features.US1_CreateTodoStepDefinition.the_todo_application_is_running()[0m
+!‘  [32mWhen [0m[32mI create a todo with empty title (US1)[0m                                                                 [90m# features.US1_CreateTodoStepDefinition.i_create_a_todo_with_empty_title()[0m
+!©  [32mThen [0m[32mthe status code shall be [0m[32m[1m400[0m[32m with an error message [0m[32m[1m"Failed Validation: title : can not be empty"[0m[32m (US1)[0m [90m# features.US1_CreateTodoStepDefinition.the_todo_with_empty_title_should_not_be_in_the_system(int,java.lang.String)[0m
+! ------ After Scenario ------
+!application stopped
+"
+"öScenario Outline: Update a todo's title and description                                           [90m# src/test/resources/US2_UpdateTodo.feature:21[0m
+" the_todo_application_is_running
+"«  [32mGiven [0m[32mthe todo application is running (US2)[0m                                                     [90m# features.US2_UpdateTodoStepDefinition.the_todo_application_is_running()[0m
+"ê  [32mAnd [0m[32mthe following todos exist in the system (US2)[0m                                               [90m# features.US2_UpdateTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+")    | title | description | doneStatus |
+")    | todo1 | not done    | false      |
+")    | todo2 | not done    | false      |
+"‰  [32mGiven [0m[32ma todo with [0m[32m[1m3[0m[32m exists in the system (US2)[0m                                                  [90m# features.US2_UpdateTodoStepDefinition.a_todo_with_id_exists_in_the_system(int)[0m
+"ò  [32mWhen [0m[32mI update the todo with [0m[32m[1m3[0m[32m with a new description [0m[32m[1m"almost done"[0m[32m (US2)[0m                        [90m# features.US2_UpdateTodoStepDefinition.i_update_the_todo_with_id_with_a_new_description(int,java.lang.String)[0m
+"‡  [32mThen [0m[32mthe todo with [0m[32m[1m3[0m[32m should have title [0m[32m[1m"todo1"[0m[32m, description [0m[32m[1m"almost done"[0m[32m, status [0m[32m[1m"false"[0m[32m (US2)[0m [90m# features.US2_UpdateTodoStepDefinition.the_todo_with_id_should_have_a_description(int,java.lang.String,java.lang.String,java.lang.String)[0m
+" ------ After Scenario ------
+"application stopped
+#
+#öScenario Outline: Update a todo's title and description                                           [90m# src/test/resources/US2_UpdateTodo.feature:22[0m
+# the_todo_application_is_running
+#«  [32mGiven [0m[32mthe todo application is running (US2)[0m                                                     [90m# features.US2_UpdateTodoStepDefinition.the_todo_application_is_running()[0m
+#ê  [32mAnd [0m[32mthe following todos exist in the system (US2)[0m                                               [90m# features.US2_UpdateTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+#)    | title | description | doneStatus |
+#)    | todo1 | not done    | false      |
+#)    | todo2 | not done    | false      |
+#‰  [32mGiven [0m[32ma todo with [0m[32m[1m4[0m[32m exists in the system (US2)[0m                                                  [90m# features.US2_UpdateTodoStepDefinition.a_todo_with_id_exists_in_the_system(int)[0m
+#ò  [32mWhen [0m[32mI update the todo with [0m[32m[1m4[0m[32m with a new description [0m[32m[1m"almost done"[0m[32m (US2)[0m                        [90m# features.US2_UpdateTodoStepDefinition.i_update_the_todo_with_id_with_a_new_description(int,java.lang.String)[0m
+#‡  [32mThen [0m[32mthe todo with [0m[32m[1m4[0m[32m should have title [0m[32m[1m"todo2"[0m[32m, description [0m[32m[1m"almost done"[0m[32m, status [0m[32m[1m"false"[0m[32m (US2)[0m [90m# features.US2_UpdateTodoStepDefinition.the_todo_with_id_should_have_a_description(int,java.lang.String,java.lang.String,java.lang.String)[0m
+# ------ After Scenario ------
+#application stopped
+$
+$zScenario Outline: Mark a tasks as done                            [90m# src/test/resources/US2_UpdateTodo.feature:31[0m
+$ the_todo_application_is_running
+$ß  [32mGiven [0m[32mthe todo application is running (US2)[0m                     [90m# features.US2_UpdateTodoStepDefinition.the_todo_application_is_running()[0m
+$  [32mAnd [0m[32mthe following todos exist in the system (US2)[0m               [90m# features.US2_UpdateTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+$)    | title | description | doneStatus |
+$)    | todo1 | not done    | false      |
+$)    | todo2 | not done    | false      |
+$‘  [32mGiven [0m[32ma incomplete todo with id [0m[32m[1m3[0m[32m exists in the system (US2)[0m    [90m# features.US2_UpdateTodoStepDefinition.a_todo_with_id_with_doneStatus_exists_in_the_system(int)[0m
+$Î  [32mWhen [0m[32mI update the todo with id [0m[32m[1m3[0m[32m with [0m[32m[1m"true"[0m[32m (US2)[0m              [90m# features.US2_UpdateTodoStepDefinition.when_i_update_the_todo_with_id_with(int,java.lang.String)[0m
+$ˆ  [32mThen [0m[32mthe todo with [0m[32m[1m3[0m[32m should have an updated status [0m[32m[1m"true"[0m[32m (US2)[0m [90m# features.US2_UpdateTodoStepDefinition.the_todo_with_id_should_have_an_updated_status(int,java.lang.String)[0m
+$ ------ After Scenario ------
+$application stopped
+%
+%zScenario Outline: Mark a tasks as done                            [90m# src/test/resources/US2_UpdateTodo.feature:32[0m
+% the_todo_application_is_running
+%ß  [32mGiven [0m[32mthe todo application is running (US2)[0m                     [90m# features.US2_UpdateTodoStepDefinition.the_todo_application_is_running()[0m
+%  [32mAnd [0m[32mthe following todos exist in the system (US2)[0m               [90m# features.US2_UpdateTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+%)    | title | description | doneStatus |
+%)    | todo1 | not done    | false      |
+%)    | todo2 | not done    | false      |
+%‘  [32mGiven [0m[32ma incomplete todo with id [0m[32m[1m4[0m[32m exists in the system (US2)[0m    [90m# features.US2_UpdateTodoStepDefinition.a_todo_with_id_with_doneStatus_exists_in_the_system(int)[0m
+%Î  [32mWhen [0m[32mI update the todo with id [0m[32m[1m4[0m[32m with [0m[32m[1m"true"[0m[32m (US2)[0m              [90m# features.US2_UpdateTodoStepDefinition.when_i_update_the_todo_with_id_with(int,java.lang.String)[0m
+%ˆ  [32mThen [0m[32mthe todo with [0m[32m[1m4[0m[32m should have an updated status [0m[32m[1m"true"[0m[32m (US2)[0m [90m# features.US2_UpdateTodoStepDefinition.the_todo_with_id_should_have_an_updated_status(int,java.lang.String)[0m
+% ------ After Scenario ------
+%application stopped
+&
+&úScenario Outline: Update doneStatus to invalid value                                                [90m# src/test/resources/US2_UpdateTodo.feature:42[0m
+& the_todo_application_is_running
+&…  [32mGiven [0m[32mthe todo application is running (US2)[0m                                                       [90m# features.US2_UpdateTodoStepDefinition.the_todo_application_is_running()[0m
+&í  [32mAnd [0m[32mthe following todos exist in the system (US2)[0m                                                 [90m# features.US2_UpdateTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+&)    | title | description | doneStatus |
+&)    | todo1 | not done    | false      |
+&)    | todo2 | not done    | false      |
+&Î  [32mGiven [0m[32ma todo with [0m[32m[1m1[0m[32m that exists in the system (US2)[0m                                               [90m# features.US2_UpdateTodoStepDefinition.a_todo_with_id_that_exists_in_the_system(int)[0m
+&õ  [32mWhen [0m[32mI update the todo with id [0m[32m[1m1[0m[32m with invalid doneStatus [0m[32m[1m"asd"[0m[32m (US2)[0m                              [90m# features.US2_UpdateTodoStepDefinition.i_update_the_todo_with_id_with_invalid_doneStatus(int,java.lang.String)[0m
+&ä  [32mThen [0m[32mI should receive a [0m[32m[1m400[0m[32m response with [0m[32m[1m"Failed Validation: doneStatus should be BOOLEAN"[0m[32m (US2)[0m [90m# features.US2_UpdateTodoStepDefinition.i_should_receive_a_response_with(int,java.lang.String)[0m
+& ------ After Scenario ------
+&application stopped
+'
+'ïScenario Outline: Get all todos                                                              [90m# src/test/resources/US3_GetAllTodo.feature:21[0m
+' the_todo_application_is_running
+'¬  [32mGiven [0m[32mthe todo application is running (US3)[0m                                                [90m# features.US3_GetAllTodoStepDefinition.the_todo_application_is_running()[0m
+'ã  [32mAnd [0m[32mthe following todos exist in the system (US3)[0m                                          [90m# features.US3_GetAllTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+'*    | title | description  | doneStatus |
+'*    | todo1 | description1 | false      |
+'*    | todo2 | description2 | true       |
+'*    | todo3 | description3 | false      |
+'≤  [32mWhen [0m[32mI get all todos (US3)[0m                                                                 [90m# features.US3_GetAllTodoStepDefinition.i_get_all_todos()[0m
+'∆  [32mThen [0m[32mthe todos with title [0m[32m[1m"todo1"[0m[32m, description [0m[32m[1m"description1"[0m[32m and doneStatus [0m[32m[1m"false"[0m[32m (US3)[0m [90m# features.US3_GetAllTodoStepDefinition.the_todos_with_title_description_and_doneStatus(java.lang.String,java.lang.String,java.lang.String)[0m
+' ------ After Scenario ------
+'application stopped
+(
+(îScenario Outline: Get all todos                                                             [90m# src/test/resources/US3_GetAllTodo.feature:22[0m
+( the_todo_application_is_running
+(¡  [32mGiven [0m[32mthe todo application is running (US3)[0m                                               [90m# features.US3_GetAllTodoStepDefinition.the_todo_application_is_running()[0m
+(ä  [32mAnd [0m[32mthe following todos exist in the system (US3)[0m                                         [90m# features.US3_GetAllTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+(*    | title | description  | doneStatus |
+(*    | todo1 | description1 | false      |
+(*    | todo2 | description2 | true       |
+(*    | todo3 | description3 | false      |
+(±  [32mWhen [0m[32mI get all todos (US3)[0m                                                                [90m# features.US3_GetAllTodoStepDefinition.i_get_all_todos()[0m
+(≈  [32mThen [0m[32mthe todos with title [0m[32m[1m"todo2"[0m[32m, description [0m[32m[1m"description2"[0m[32m and doneStatus [0m[32m[1m"true"[0m[32m (US3)[0m [90m# features.US3_GetAllTodoStepDefinition.the_todos_with_title_description_and_doneStatus(java.lang.String,java.lang.String,java.lang.String)[0m
+( ------ After Scenario ------
+(application stopped
+)
+)ïScenario Outline: Get all todos                                                              [90m# src/test/resources/US3_GetAllTodo.feature:23[0m
+) the_todo_application_is_running
+)¬  [32mGiven [0m[32mthe todo application is running (US3)[0m                                                [90m# features.US3_GetAllTodoStepDefinition.the_todo_application_is_running()[0m
+)ã  [32mAnd [0m[32mthe following todos exist in the system (US3)[0m                                          [90m# features.US3_GetAllTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+)*    | title | description  | doneStatus |
+)*    | todo1 | description1 | false      |
+)*    | todo2 | description2 | true       |
+)*    | todo3 | description3 | false      |
+)≤  [32mWhen [0m[32mI get all todos (US3)[0m                                                                 [90m# features.US3_GetAllTodoStepDefinition.i_get_all_todos()[0m
+)∆  [32mThen [0m[32mthe todos with title [0m[32m[1m"todo3"[0m[32m, description [0m[32m[1m"description3"[0m[32m and doneStatus [0m[32m[1m"false"[0m[32m (US3)[0m [90m# features.US3_GetAllTodoStepDefinition.the_todos_with_title_description_and_doneStatus(java.lang.String,java.lang.String,java.lang.String)[0m
+) ------ After Scenario ------
+)application stopped
+*
+*†Scenario Outline: Get all todos with a specific status                                                  [90m# src/test/resources/US3_GetAllTodo.feature:32[0m
+* the_todo_application_is_running
+*Õ  [32mGiven [0m[32mthe todo application is running (US3)[0m                                                           [90m# features.US3_GetAllTodoStepDefinition.the_todo_application_is_running()[0m
+*ñ  [32mAnd [0m[32mthe following todos exist in the system (US3)[0m                                                     [90m# features.US3_GetAllTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+**    | title | description  | doneStatus |
+**    | todo1 | description1 | false      |
+**    | todo2 | description2 | true       |
+**    | todo3 | description3 | false      |
+*˙  [32mWhen [0m[32mI get all todos with status doneStatus [0m[32m[1m"false"[0m[32m (US3)[0m                                             [90m# features.US3_GetAllTodoStepDefinition.i_get_all_todos_with_status_doneStatus(java.lang.String)[0m
+*¬  [32mThen [0m[32mI should see 2 todos (US3)[0m                                                                       [90m# features.US3_GetAllTodoStepDefinition.i_should_see_2_todos()[0m
+*›  [32mThen [0m[32mthe todos with title [0m[32m[1m"todo1"[0m[32m, description [0m[32m[1m"description1"[0m[32m and incomplete doneStatus [0m[32m[1m"false"[0m[32m (US3)[0m [90m# features.US3_GetAllTodoStepDefinition.the_todos_with_title_description_and_incompleted_doneStatus(java.lang.String,java.lang.String,java.lang.String)[0m
+* ------ After Scenario ------
+*application stopped
++
++†Scenario Outline: Get all todos with a specific status                                                  [90m# src/test/resources/US3_GetAllTodo.feature:33[0m
++ the_todo_application_is_running
++Õ  [32mGiven [0m[32mthe todo application is running (US3)[0m                                                           [90m# features.US3_GetAllTodoStepDefinition.the_todo_application_is_running()[0m
++ñ  [32mAnd [0m[32mthe following todos exist in the system (US3)[0m                                                     [90m# features.US3_GetAllTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
++*    | title | description  | doneStatus |
++*    | todo1 | description1 | false      |
++*    | todo2 | description2 | true       |
++*    | todo3 | description3 | false      |
++˙  [32mWhen [0m[32mI get all todos with status doneStatus [0m[32m[1m"false"[0m[32m (US3)[0m                                             [90m# features.US3_GetAllTodoStepDefinition.i_get_all_todos_with_status_doneStatus(java.lang.String)[0m
++¬  [32mThen [0m[32mI should see 2 todos (US3)[0m                                                                       [90m# features.US3_GetAllTodoStepDefinition.i_should_see_2_todos()[0m
++›  [32mThen [0m[32mthe todos with title [0m[32m[1m"todo3"[0m[32m, description [0m[32m[1m"description3"[0m[32m and incomplete doneStatus [0m[32m[1m"false"[0m[32m (US3)[0m [90m# features.US3_GetAllTodoStepDefinition.the_todos_with_title_description_and_incompleted_doneStatus(java.lang.String,java.lang.String,java.lang.String)[0m
++ ------ After Scenario ------
++application stopped
+,
+,pScenario Outline: Get all todos with the wrong endpoint [90m# src/test/resources/US3_GetAllTodo.feature:41[0m
+, the_todo_application_is_running
+,ù  [32mGiven [0m[32mthe todo application is running (US3)[0m           [90m# features.US3_GetAllTodoStepDefinition.the_todo_application_is_running()[0m
+,Ê  [32mAnd [0m[32mthe following todos exist in the system (US3)[0m     [90m# features.US3_GetAllTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+,*    | title | description  | doneStatus |
+,*    | todo1 | description1 | false      |
+,*    | todo2 | description2 | true       |
+,*    | todo3 | description3 | false      |
+,§  [32mWhen [0m[32mI get all todos with mistyped endpoint (US3)[0m     [90m# features.US3_GetAllTodoStepDefinition.i_get_all_todos_with_mistyped_endpoint()[0m
+,±  [32mThen [0m[32mI should receive an error code [0m[32m[1m404[0m[32m (US3)[0m         [90m# features.US3_GetAllTodoStepDefinition.i_should_see_an_error_code(int)[0m
+, ------ After Scenario ------
+,application stopped
+-
+-ÇScenario Outline: Delete a completed todo                                [90m# src/test/resources/US4_DeleteATodo.feature:22[0m
+- the_todo_application_is_running
+-Ø  [32mGiven [0m[32mthe todo application is running (US4)[0m                            [90m# features.US4_DeleteATodoStepDefinition.the_todo_application_is_running()[0m
+-Ã  [32mGiven [0m[32mthe completed todo with id [0m[32m[1m3[0m[32m exists in the system (US4)[0m          [90m# features.US4_DeleteATodoStepDefinition.a_todo_with_id_exists_in_the_system(int)[0m
+-¯  [32mAnd [0m[32mthe following completed todos exist in the system (US4)[0m            [90m# features.US4_DeleteATodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+-*    | title | description  | doneStatus |
+-*    | todo1 | description1 | true       |
+-*    | todo2 | description2 | true       |
+-¬  [32mWhen [0m[32mI delete the completed todo with id [0m[32m[1m3[0m[32m (US4)[0m                       [90m# features.US4_DeleteATodoStepDefinition.i_delete_the_todo_with_id(int)[0m
+-ÿ  [32mThen [0m[32mthe completed todo with id [0m[32m[1m3[0m[32m should not exist in the system (US4)[0m [90m# features.US4_DeleteATodoStepDefinition.the_todo_with_id_should_not_exist_in_the_system(int)[0m
+-µ  [32mThen [0m[32mthere should be 1 todo in the system (US4)[0m                        [90m# features.US4_DeleteATodoStepDefinition.there_should_be_1_todos_in_the_system()[0m
+- ------ After Scenario ------
+-application stopped
+.
+.ÑScenario Outline: Delete an incompleted todo                               [90m# src/test/resources/US4_DeleteATodo.feature:36[0m
+. the_todo_application_is_running
+.±  [32mGiven [0m[32mthe todo application is running (US4)[0m                              [90m# features.US4_DeleteATodoStepDefinition.the_todo_application_is_running()[0m
+.ﬂ  [32mGiven [0m[32mthe incompleted todo with id [0m[32m[1m3[0m[32m exists in the system (US4)[0m          [90m# features.US4_DeleteATodoStepDefinition.the_incompleted_todo_with_id_id_exists_in_the_system(int)[0m
+.Ü  [32mAnd [0m[32mthe following incompleted todos exist in the system (US4)[0m            [90m# features.US4_DeleteATodoStepDefinition.the_following_incompleted_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+.*    | title | description  | doneStatus |
+.*    | todo1 | description1 | false      |
+.*    | todo2 | description2 | false      |
+.–  [32mWhen [0m[32mI delete the incompleted todo with id [0m[32m[1m3[0m[32m (US4)[0m                       [90m# features.US4_DeleteATodoStepDefinition.i_delete_the_incompleted_todo_with_id(int)[0m
+.Ê  [32mThen [0m[32mthe incompleted todo with id [0m[32m[1m3[0m[32m should not exist in the system (US4)[0m [90m# features.US4_DeleteATodoStepDefinition.the_incompleted_todo_with_id_should_not_exist_in_the_system(int)[0m
+.   [32mThen [0m[32mthere should be 1 todo in the current system (US4)[0m                  [90m# features.US4_DeleteATodoStepDefinition.there_should_be_1_incompleted_todo_in_the_current_system()[0m
+. ------ After Scenario ------
+.application stopped
+/
+/ØScenario Outline: Delete a todo that does not exist                                                                   [90m# src/test/resources/US4_DeleteATodo.feature:46[0m
+/ the_todo_application_is_running
+/‹  [32mGiven [0m[32mthe todo application is running (US4)[0m                                                                         [90m# features.US4_DeleteATodoStepDefinition.the_todo_application_is_running()[0m
+/Å  [32mGiven [0m[32mthe todo with id [0m[32m[1m10[0m[32m does not exist in the system (US4)[0m                                                        [90m# features.US4_DeleteATodoStepDefinition.a_todo_with_id_does_not_exist_in_the_system(int)[0m
+/˙  [32mWhen [0m[32mI delete the todo with inexistant id [0m[32m[1m10[0m[32m (US4)[0m                                                                  [90m# features.US4_DeleteATodoStepDefinition.i_delete_the_todo_with_inexistant_id(int)[0m
+/π  [32mThen [0m[32mI should receive a status code [0m[32m[1m404[0m[32m and see an error message [0m[32m[1m"Could not find any instances with todos/10"[0m[32m (US4)[0m [90m# features.US4_DeleteATodoStepDefinition.then_i_should_receive_a_status_code_and_see_an_error_message(int,java.lang.String)[0m
+/ ------ After Scenario ------
+/application stopped
+0
+0™Scenario Outline: Get a specific todo that                                                                   [90m# src/test/resources/US5_GetSpecificTodo.feature:24[0m
+0 the_todo_application_is_running
+0ÿ  [32mGiven [0m[32mthe todo application is running (US5)[0m                                                                [90m# features.US5_GetASpecificTodoStepDefinition.the_todo_application_is_running()[0m
+0°  [32mAnd [0m[32mthe following todos exist in the system: (US5)[0m                                                         [90m# features.US5_GetASpecificTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+09    | title                | description  | doneStatus |
+09    | todo1                | description1 | false      |
+09    | todo2                | description2 | true       |
+09    | todo3                | description3 | false      |
+09    | emptyDescriptionTodo | [empty]      | false      |
+0ı  [32mGiven [0m[32mthe todo with id [0m[32m[1m3[0m[32m exists in the system (US5)[0m                                                        [90m# features.US5_GetASpecificTodoStepDefinition.a_todo_with_id_exists_in_the_system(int)[0m
+0Ë  [32mWhen [0m[32mI get the todo with id [0m[32m[1m3[0m[32m (US5)[0m                                                                        [90m# features.US5_GetASpecificTodoStepDefinition.i_get_the_todo_with_id(int)[0m
+0¸  [32mThen [0m[32mI should get a todo with id [0m[32m[1m3[0m[32m, title [0m[32m[1m"todo1"[0m[32m, description [0m[32m[1m"description1"[0m[32m and doneStatus [0m[32m[1m"false"[0m[32m (US5)[0m [90m# features.US5_GetASpecificTodoStepDefinition.the_todo_with_id_should_have_title_description_status(int,java.lang.String,java.lang.String,java.lang.String)[0m
+0 ------ After Scenario ------
+0application stopped
+1
+1©Scenario Outline: Get a specific todo that                                                                  [90m# src/test/resources/US5_GetSpecificTodo.feature:25[0m
+1 the_todo_application_is_running
+1◊  [32mGiven [0m[32mthe todo application is running (US5)[0m                                                               [90m# features.US5_GetASpecificTodoStepDefinition.the_todo_application_is_running()[0m
+1†  [32mAnd [0m[32mthe following todos exist in the system: (US5)[0m                                                        [90m# features.US5_GetASpecificTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+19    | title                | description  | doneStatus |
+19    | todo1                | description1 | false      |
+19    | todo2                | description2 | true       |
+19    | todo3                | description3 | false      |
+19    | emptyDescriptionTodo | [empty]      | false      |
+1Ù  [32mGiven [0m[32mthe todo with id [0m[32m[1m4[0m[32m exists in the system (US5)[0m                                                       [90m# features.US5_GetASpecificTodoStepDefinition.a_todo_with_id_exists_in_the_system(int)[0m
+1Á  [32mWhen [0m[32mI get the todo with id [0m[32m[1m4[0m[32m (US5)[0m                                                                       [90m# features.US5_GetASpecificTodoStepDefinition.i_get_the_todo_with_id(int)[0m
+1˚  [32mThen [0m[32mI should get a todo with id [0m[32m[1m4[0m[32m, title [0m[32m[1m"todo2"[0m[32m, description [0m[32m[1m"description2"[0m[32m and doneStatus [0m[32m[1m"true"[0m[32m (US5)[0m [90m# features.US5_GetASpecificTodoStepDefinition.the_todo_with_id_should_have_title_description_status(int,java.lang.String,java.lang.String,java.lang.String)[0m
+1 ------ After Scenario ------
+1application stopped
+2
+2™Scenario Outline: Get a specific todo that                                                                   [90m# src/test/resources/US5_GetSpecificTodo.feature:26[0m
+2 the_todo_application_is_running
+2ÿ  [32mGiven [0m[32mthe todo application is running (US5)[0m                                                                [90m# features.US5_GetASpecificTodoStepDefinition.the_todo_application_is_running()[0m
+2°  [32mAnd [0m[32mthe following todos exist in the system: (US5)[0m                                                         [90m# features.US5_GetASpecificTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+29    | title                | description  | doneStatus |
+29    | todo1                | description1 | false      |
+29    | todo2                | description2 | true       |
+29    | todo3                | description3 | false      |
+29    | emptyDescriptionTodo | [empty]      | false      |
+2ı  [32mGiven [0m[32mthe todo with id [0m[32m[1m5[0m[32m exists in the system (US5)[0m                                                        [90m# features.US5_GetASpecificTodoStepDefinition.a_todo_with_id_exists_in_the_system(int)[0m
+2Ë  [32mWhen [0m[32mI get the todo with id [0m[32m[1m5[0m[32m (US5)[0m                                                                        [90m# features.US5_GetASpecificTodoStepDefinition.i_get_the_todo_with_id(int)[0m
+2¸  [32mThen [0m[32mI should get a todo with id [0m[32m[1m5[0m[32m, title [0m[32m[1m"todo3"[0m[32m, description [0m[32m[1m"description3"[0m[32m and doneStatus [0m[32m[1m"false"[0m[32m (US5)[0m [90m# features.US5_GetASpecificTodoStepDefinition.the_todo_with_id_should_have_title_description_status(int,java.lang.String,java.lang.String,java.lang.String)[0m
+2 ------ After Scenario ------
+2application stopped
+3
+3ÀScenario Outline: Get a todo that has an empty description                                                                                    [90m# src/test/resources/US5_GetSpecificTodo.feature:36[0m
+3 the_todo_application_is_running
+3˘  [32mGiven [0m[32mthe todo application is running (US5)[0m                                                                                                 [90m# features.US5_GetASpecificTodoStepDefinition.the_todo_application_is_running()[0m
+3¬  [32mAnd [0m[32mthe following todos exist in the system: (US5)[0m                                                                                          [90m# features.US5_GetASpecificTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+39    | title                | description  | doneStatus |
+39    | todo1                | description1 | false      |
+39    | todo2                | description2 | true       |
+39    | todo3                | description3 | false      |
+39    | emptyDescriptionTodo | [empty]      | false      |
+3´  [32mGiven [0m[32mthe todo with id [0m[32m[1m6[0m[32m and no description exists in the system (US5)[0m                                                                      [90m# features.US5_GetASpecificTodoStepDefinition.the_todo_with_id_and_no_description_exists_in_the_system(int)[0m
+3°  [32mWhen [0m[32mI get the todo with id [0m[32m[1m6[0m[32m that has no description (US5)[0m                                                                                 [90m# features.US5_GetASpecificTodoStepDefinition.i_get_the_todo_with_id_that_has_no_description(int)[0m
+3¬  [32mThen [0m[32mI should get a todo that has an empty description with id [0m[32m[1m6[0m[32m, title [0m[32m[1m"emptyDescriptionTodo"[0m[32m, description [0m[32m[1m""[0m[32m and doneStatus [0m[32m[1m"false"[0m[32m (US5)[0m [90m# features.US5_GetASpecificTodoStepDefinition.i_should_get_a_todo_that_has_an_empty_description_with_id_title_description_and_doneStatus(int,java.lang.String,java.lang.String,java.lang.String)[0m
+3 ------ After Scenario ------
+3application stopped
+4
+4ÆScenario Outline: Get a todo that does not exist                                                                 [90m# src/test/resources/US5_GetSpecificTodo.feature:48[0m
+4 the_todo_application_is_running
+4‹  [32mGiven [0m[32mthe todo application is running (US5)[0m                                                                    [90m# features.US5_GetASpecificTodoStepDefinition.the_todo_application_is_running()[0m
+4•  [32mAnd [0m[32mthe following todos exist in the system: (US5)[0m                                                             [90m# features.US5_GetASpecificTodoStepDefinition.the_following_todos_with_title_description_doneStatus_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+49    | title                | description  | doneStatus |
+49    | todo1                | description1 | false      |
+49    | todo2                | description2 | true       |
+49    | todo3                | description3 | false      |
+49    | emptyDescriptionTodo | [empty]      | false      |
+4É  [32mGiven [0m[32mthe todo with id [0m[32m[1m100[0m[32m does not exist in the system (US5)[0m                                                  [90m# features.US5_GetASpecificTodoStepDefinition.the_todo_with_id_does_not_exist_in_the_system(int)[0m
+4Ù  [32mWhen [0m[32mI get the todo with invalid id [0m[32m[1m100[0m[32m (US5)[0m                                                                  [90m# features.US5_GetASpecificTodoStepDefinition.i_get_the_todo_with_invalid_id(int)[0m
+4null
+4ó  [32mThen [0m[32mI should receive a [0m[32m[1m404[0m[32m status code and an error message [0m[32m[1m"Could not find an instance with todos/100"[0m[32m (US5)[0m [90m# features.US5_GetASpecificTodoStepDefinition.i_should_get_a_status_code(int,java.lang.String)[0m
+4 ------ After Scenario ------
+4application stopped
+5
+5¿Scenario Outline: Create a project                                                                                                  [90m# src/test/resources/US6_CreateAProject.feature:17[0m
+5  [32mGiven [0m[32mthe application is running (US6)[0m                                                                                            [90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()[0m
+5‚  [32mGiven [0m[32mthe project with title [0m[32m[1m"My first project"[0m[32m and the description [0m[32m[1m"This is my first project"[0m[32m does not exist in the system (US6)[0m [90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)[0m
+5Ã  [32mWhen [0m[32mI create a project with the title [0m[32m[1m"My first project"[0m[32m and description [0m[32m[1m"This is my first project"[0m[32m (US6)[0m                        [90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_title_and_the_description(java.lang.String,java.lang.String)[0m
+5›  [32mThen [0m[32mthe project with title [0m[32m[1m"My first project"[0m[32m and the description [0m[32m[1m"This is my first project"[0m[32m shall exist in the system (US6)[0m     [90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_should_be_in_the_system(java.lang.String,java.lang.String)[0m
+5 ------ After Scenario ------
+5application stopped
+6
+6¬Scenario Outline: Create a project                                                                                                    [90m# src/test/resources/US6_CreateAProject.feature:18[0m
+6Ú  [32mGiven [0m[32mthe application is running (US6)[0m                                                                                              [90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()[0m
+6‰  [32mGiven [0m[32mthe project with title [0m[32m[1m"My second project"[0m[32m and the description [0m[32m[1m"This is my second project"[0m[32m does not exist in the system (US6)[0m [90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)[0m
+6Œ  [32mWhen [0m[32mI create a project with the title [0m[32m[1m"My second project"[0m[32m and description [0m[32m[1m"This is my second project"[0m[32m (US6)[0m                        [90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_title_and_the_description(java.lang.String,java.lang.String)[0m
+6ﬂ  [32mThen [0m[32mthe project with title [0m[32m[1m"My second project"[0m[32m and the description [0m[32m[1m"This is my second project"[0m[32m shall exist in the system (US6)[0m     [90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_should_be_in_the_system(java.lang.String,java.lang.String)[0m
+6 ------ After Scenario ------
+6application stopped
+7
+7≠Scenario Outline: Create a project that has already been completed                                               [90m# src/test/resources/US6_CreateAProject.feature:27[0m
+7›  [32mGiven [0m[32mthe application is running (US6)[0m                                                                         [90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()[0m
+7î  [32mGiven [0m[32mthe project with title [0m[32m[1m"A project with completed"[0m[32m does not exist in the system (US6)[0m                     [90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_does_not_exist_in_the_system(java.lang.String)[0m
+7©  [32mWhen [0m[32mI create a project with the title [0m[32m[1m"A project with completed"[0m[32m and completed [0m[32m[1m"true"[0m[32m (US6)[0m                   [90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_the_title(java.lang.String,java.lang.String)[0m
+7«  [32mThen [0m[32mthe project with title [0m[32m[1m"A project with completed"[0m[32m with a completed [0m[32m[1m"true"[0m[32m shall exist in the system (US6)[0m [90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_with_a_completed_should_be_in_the_system(java.lang.String,java.lang.String)[0m
+7 ------ After Scenario ------
+7application stopped
+8
+8£Scenario Outline: Create a project that has already been completed                                     [90m# src/test/resources/US6_CreateAProject.feature:28[0m
+8”  [32mGiven [0m[32mthe application is running (US6)[0m                                                               [90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()[0m
+8ä  [32mGiven [0m[32mthe project with title [0m[32m[1m"Second Project"[0m[32m does not exist in the system (US6)[0m                     [90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_does_not_exist_in_the_system(java.lang.String)[0m
+8ü  [32mWhen [0m[32mI create a project with the title [0m[32m[1m"Second Project"[0m[32m and completed [0m[32m[1m"true"[0m[32m (US6)[0m                   [90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_the_title(java.lang.String,java.lang.String)[0m
+8Ω  [32mThen [0m[32mthe project with title [0m[32m[1m"Second Project"[0m[32m with a completed [0m[32m[1m"true"[0m[32m shall exist in the system (US6)[0m [90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_with_a_completed_should_be_in_the_system(java.lang.String,java.lang.String)[0m
+8 ------ After Scenario ------
+8application stopped
+9
+9¡Scenario Outline: Create a project with empty title                                                                                  [90m# src/test/resources/US6_CreateAProject.feature:37[0m
+9Ò  [32mGiven [0m[32mthe application is running (US6)[0m                                                                                             [90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()[0m
+9À  [32mWhen [0m[32mI create a project with an invalid [0m[32m[1m"asdf"[0m[32m and title [0m[32m[1m"testing"[0m[32m (US6)[0m                                                           [90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_an_invalid_id_and_title(java.lang.String,java.lang.String)[0m
+9∆  [32mThen [0m[32mthe status code shall be [0m[32m[1m400[0m[32m with an error message [0m[32m[1m"Invalid Creation: Failed Validation: Not allowed to create with id"[0m[32m (US6)[0m [90m# features.US6_CreateAProjectStepDefinition.the_project_with_invalid_id_should_not_be_in_the_system(int,java.lang.String)[0m
+9 ------ After Scenario ------
+9application stopped
+:
+:∞Scenario Outline: Get all projects                                                                                  [90m# src/test/resources/US7_GetAllProjects.feature:21[0m
+:‡  [32mGiven [0m[32mthe project application is running (US7)[0m                                                                    [90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()[0m
+:á  [32mAnd [0m[32mthe following projects exist in the system (US7)[0m                                                              [90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+:7    | title     | description   | completed | active |
+:7    | project 1 | description 1 | false     | false  |
+:7    | project 2 | description 2 | true      | true   |
+:7    | project 3 | description 3 | false     | true   |
+:–  [32mWhen [0m[32mI get all projects (US7)[0m                                                                                     [90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects()[0m
+:à  [32mThen [0m[32mthe projects with title [0m[32m[1m"project 1"[0m[32m, description [0m[32m[1m"description 1"[0m[32m, completed [0m[32m[1m"false"[0m[32m and active [0m[32m[1m"false"[0m[32m (US7)[0m [90m# features.US7_GetAllProjectsStepDefinition.the_todos_with_title_description_and_doneStatus(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[0m
+: ------ After Scenario ------
+:application stopped
+;
+;ÆScenario Outline: Get all projects                                                                                [90m# src/test/resources/US7_GetAllProjects.feature:22[0m
+;ﬁ  [32mGiven [0m[32mthe project application is running (US7)[0m                                                                  [90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()[0m
+;Ö  [32mAnd [0m[32mthe following projects exist in the system (US7)[0m                                                            [90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+;7    | title     | description   | completed | active |
+;7    | project 1 | description 1 | false     | false  |
+;7    | project 2 | description 2 | true      | true   |
+;7    | project 3 | description 3 | false     | true   |
+;Œ  [32mWhen [0m[32mI get all projects (US7)[0m                                                                                   [90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects()[0m
+;Ü  [32mThen [0m[32mthe projects with title [0m[32m[1m"project 2"[0m[32m, description [0m[32m[1m"description 2"[0m[32m, completed [0m[32m[1m"true"[0m[32m and active [0m[32m[1m"true"[0m[32m (US7)[0m [90m# features.US7_GetAllProjectsStepDefinition.the_todos_with_title_description_and_doneStatus(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[0m
+; ------ After Scenario ------
+;application stopped
+<
+<ØScenario Outline: Get all projects                                                                                 [90m# src/test/resources/US7_GetAllProjects.feature:23[0m
+<ﬂ  [32mGiven [0m[32mthe project application is running (US7)[0m                                                                   [90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()[0m
+<Ü  [32mAnd [0m[32mthe following projects exist in the system (US7)[0m                                                             [90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+<7    | title     | description   | completed | active |
+<7    | project 1 | description 1 | false     | false  |
+<7    | project 2 | description 2 | true      | true   |
+<7    | project 3 | description 3 | false     | true   |
+<œ  [32mWhen [0m[32mI get all projects (US7)[0m                                                                                    [90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects()[0m
+<á  [32mThen [0m[32mthe projects with title [0m[32m[1m"project 3"[0m[32m, description [0m[32m[1m"description 3"[0m[32m, completed [0m[32m[1m"false"[0m[32m and active [0m[32m[1m"true"[0m[32m (US7)[0m [90m# features.US7_GetAllProjectsStepDefinition.the_todos_with_title_description_and_doneStatus(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[0m
+< ------ After Scenario ------
+<application stopped
+=
+=ùScenario Outline: Get all projects with completed is true                                        [90m# src/test/resources/US7_GetAllProjects.feature:32[0m
+=Õ  [32mGiven [0m[32mthe project application is running (US7)[0m                                                 [90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()[0m
+=Ù  [32mAnd [0m[32mthe following projects exist in the system (US7)[0m                                           [90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+=7    | title     | description   | completed | active |
+=7    | project 1 | description 1 | false     | false  |
+=7    | project 2 | description 2 | true      | true   |
+=7    | project 3 | description 3 | false     | true   |
+=—  [32mWhen [0m[32mI get all projects with completed is true (US7)[0m                                           [90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects_with_completed_true()[0m
+=¡  [32mThen [0m[32mI should see 1 project (US7)[0m                                                              [90m# features.US7_GetAllProjectsStepDefinition.i_should_see_1_project()[0m
+=◊  [32mThen [0m[32mthe projects with title [0m[32m[1m"project 2"[0m[32m, description [0m[32m[1m"description 2"[0m[32m, and active [0m[32m[1m"true"[0m[32m (US7)[0m [90m# features.US7_GetAllProjectsStepDefinition.the_projects_with_title_description_completecTrue_active(java.lang.String,java.lang.String,java.lang.String)[0m
+= ------ After Scenario ------
+=application stopped
+>
+>wScenario Outline: Get all projects with the wrong endpoint [90m# src/test/resources/US7_GetAllProjects.feature:40[0m
+>ß  [32mGiven [0m[32mthe project application is running (US7)[0m           [90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()[0m
+>Œ  [32mAnd [0m[32mthe following projects exist in the system (US7)[0m     [90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+>7    | title     | description   | completed | active |
+>7    | project 1 | description 1 | false     | false  |
+>7    | project 2 | description 2 | true      | true   |
+>7    | project 3 | description 3 | false     | true   |
+>Æ  [32mWhen [0m[32mI get all projects with mistyped endpoint (US7)[0m     [90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects_with_mistyped_endpoint()[0m
+>µ  [32mThen [0m[32mI should receive error code [0m[32m[1m404[0m[32m (US7)[0m               [90m# features.US7_GetAllProjectsStepDefinition.i_should_see_error_code(int)[0m
+> ------ After Scenario ------
+>application stopped
+?
+?ÑScenario Outline: Delete an active project                               [90m# src/test/resources/US8_DeleteProject.feature:22[0m
+?¥  [32mGiven [0m[32mthe project application is running (US8)[0m                         [90m# features.US8_DeleteProjectStepDefinition.the_project_application_is_running()[0m
+?÷  [32mGiven [0m[32mthe active project with id [0m[32m[1m2[0m[32m exists in the system (US8)[0m          [90m# features.US8_DeleteProjectStepDefinition.active_project_with_id_exists_in_the_system(int)[0m
+?‚  [32mAnd [0m[32mthe following active projects exist in the system (US8)[0m            [90m# features.US8_DeleteProjectStepDefinition.the_following_active_projects_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+?F    | id | title          | description        | completed | active |
+?F    | 2  | first project  | description proj 1 | true      | true   |
+?F    | 3  | second project | description proj 2 | false     | true   |
+?«  [32mWhen [0m[32mI delete the active project with id [0m[32m[1m2[0m[32m (US8)[0m                       [90m# features.US8_DeleteProjectStepDefinition.i_delete_the_project_with_id(int)[0m
+?‰  [32mThen [0m[32mthe active project with id [0m[32m[1m2[0m[32m should not exist in the system (US8)[0m [90m# features.US8_DeleteProjectStepDefinition.the_active_project_with_id_should_not_exist_in_the_system(int)[0m
+?¿  [32mThen [0m[32mthere should be 1 active project in the system (US8)[0m              [90m# features.US8_DeleteProjectStepDefinition.there_should_be_1_active_project_in_the_system()[0m
+? ------ After Scenario ------
+?application stopped
+@
+@áScenario Outline: Delete a completed project                                [90m# src/test/resources/US8_DeleteProject.feature:36[0m
+@∑  [32mGiven [0m[32mthe project application is running (US8)[0m                            [90m# features.US8_DeleteProjectStepDefinition.the_project_application_is_running()[0m
+@„  [32mGiven [0m[32mthe completed project with id [0m[32m[1m2[0m[32m exists in the system (US8)[0m          [90m# features.US8_DeleteProjectStepDefinition.the_completed_project_with_id_id_exists_in_the_system(int)[0m
+@Ë  [32mAnd [0m[32mthe following completed projects exist in the system (US8)[0m            [90m# features.US8_DeleteProjectStepDefinition.the_following_completed_projects_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+@9    | title  | description        | completed | active |
+@9    | proj 1 | first description  | true      | false  |
+@9    | proj 2 | second description | true      | true   |
+@‘  [32mWhen [0m[32mI delete the completed project with id [0m[32m[1m2[0m[32m (US8)[0m                       [90m# features.US8_DeleteProjectStepDefinition.i_delete_the_completed_project_with_id(int)[0m
+@Í  [32mThen [0m[32mthe completed project with id [0m[32m[1m2[0m[32m should not exist in the system (US8)[0m [90m# features.US8_DeleteProjectStepDefinition.the_completed_project_with_id_should_not_exist_in_the_system(int)[0m
+@∆  [32mThen [0m[32mthere should be 1 project in the current system (US8)[0m                [90m# features.US8_DeleteProjectStepDefinition.there_should_be_one_project_in_the_current_system()[0m
+@ ------ After Scenario ------
+@application stopped
+A
+A¥Scenario Outline: Delete a project that does not exist                                                                   [90m# src/test/resources/US8_DeleteProject.feature:46[0m
+A‰  [32mGiven [0m[32mthe project application is running (US8)[0m                                                                         [90m# features.US8_DeleteProjectStepDefinition.the_project_application_is_running()[0m
+Aâ  [32mGiven [0m[32mthe project with id [0m[32m[1m10[0m[32m does not exist in the system (US8)[0m                                                        [90m# features.US8_DeleteProjectStepDefinition.a_project_with_id_does_not_exist_in_the_system(int)[0m
+AÇ  [32mWhen [0m[32mI delete the project with inexistant id [0m[32m[1m10[0m[32m (US8)[0m                                                                  [90m# features.US8_DeleteProjectStepDefinition.i_delete_the_project_with_inexistant_id(int)[0m
+A√  [32mThen [0m[32mI should receive a status code [0m[32m[1m404[0m[32m and see an error message [0m[32m[1m"Could not find any instances with projects/10"[0m[32m (US8)[0m [90m# features.US8_DeleteProjectStepDefinition.then_i_should_receive_a_status_code_and_see_an_error_message_proj(int,java.lang.String)[0m
+A ------ After Scenario ------
+Aapplication stopped
+B
+BøScenario Outline: Get a specific project                                                                                       [90m# src/test/resources/US9_GetSpecificProject.feature:24[0m
+BÔ  [32mGiven [0m[32mthe project application is running (US9)[0m                                                                               [90m# features.US9_GetSpecificProjectStepDefinition.the_project_application_is_running()[0m
+Bó  [32mAnd [0m[32mthe following projects exist in the system: (US9)[0m                                                                        [90m# features.US9_GetSpecificProjectStepDefinition.the_following_projectss_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+B:    | title       | description    | completed | active |
+B:    | first proj  | fun proj       | false     | true   |
+B:    | second proj | boring proj    | true      | false  |
+B:    | third proj  | super fun proj | false     | false  |
+B:    | fourth proj | [empty]        | true      | true   |
+Bå  [32mGiven [0m[32mthe project with id [0m[32m[1m2[0m[32m exists in the system (US9)[0m                                                                       [90m# features.US9_GetSpecificProjectStepDefinition.a_project_with_id_exists_in_the_system(int)[0m
+Bˇ  [32mWhen [0m[32mI get the project with id [0m[32m[1m2[0m[32m (US9)[0m                                                                                       [90m# features.US9_GetSpecificProjectStepDefinition.i_get_the_project_with_id(int)[0m
+Bƒ  [32mThen [0m[32mI should get a project with id [0m[32m[1m2[0m[32m, title [0m[32m[1m"first proj"[0m[32m, description [0m[32m[1m"fun proj"[0m[32m, completed [0m[32m[1m"false"[0m[32m and active [0m[32m[1m"true"[0m[32m (US9)[0m [90m# features.US9_GetSpecificProjectStepDefinition.the_project_with_id_should_have_title_description_completed_active(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[0m
+B ------ After Scenario ------
+Bapplication stopped
+C
+C√Scenario Outline: Get a specific project                                                                                           [90m# src/test/resources/US9_GetSpecificProject.feature:25[0m
+CÛ  [32mGiven [0m[32mthe project application is running (US9)[0m                                                                                   [90m# features.US9_GetSpecificProjectStepDefinition.the_project_application_is_running()[0m
+Cõ  [32mAnd [0m[32mthe following projects exist in the system: (US9)[0m                                                                            [90m# features.US9_GetSpecificProjectStepDefinition.the_following_projectss_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+C:    | title       | description    | completed | active |
+C:    | first proj  | fun proj       | false     | true   |
+C:    | second proj | boring proj    | true      | false  |
+C:    | third proj  | super fun proj | false     | false  |
+C:    | fourth proj | [empty]        | true      | true   |
+Cê  [32mGiven [0m[32mthe project with id [0m[32m[1m3[0m[32m exists in the system (US9)[0m                                                                           [90m# features.US9_GetSpecificProjectStepDefinition.a_project_with_id_exists_in_the_system(int)[0m
+CÉ  [32mWhen [0m[32mI get the project with id [0m[32m[1m3[0m[32m (US9)[0m                                                                                           [90m# features.US9_GetSpecificProjectStepDefinition.i_get_the_project_with_id(int)[0m
+C»  [32mThen [0m[32mI should get a project with id [0m[32m[1m3[0m[32m, title [0m[32m[1m"second proj"[0m[32m, description [0m[32m[1m"boring proj"[0m[32m, completed [0m[32m[1m"true"[0m[32m and active [0m[32m[1m"false"[0m[32m (US9)[0m [90m# features.US9_GetSpecificProjectStepDefinition.the_project_with_id_should_have_title_description_completed_active(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[0m
+C ------ After Scenario ------
+Capplication stopped
+D
+D∆Scenario Outline: Get a specific project                                                                                              [90m# src/test/resources/US9_GetSpecificProject.feature:26[0m
+Dˆ  [32mGiven [0m[32mthe project application is running (US9)[0m                                                                                      [90m# features.US9_GetSpecificProjectStepDefinition.the_project_application_is_running()[0m
+Dû  [32mAnd [0m[32mthe following projects exist in the system: (US9)[0m                                                                               [90m# features.US9_GetSpecificProjectStepDefinition.the_following_projectss_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+D:    | title       | description    | completed | active |
+D:    | first proj  | fun proj       | false     | true   |
+D:    | second proj | boring proj    | true      | false  |
+D:    | third proj  | super fun proj | false     | false  |
+D:    | fourth proj | [empty]        | true      | true   |
+Dì  [32mGiven [0m[32mthe project with id [0m[32m[1m4[0m[32m exists in the system (US9)[0m                                                                              [90m# features.US9_GetSpecificProjectStepDefinition.a_project_with_id_exists_in_the_system(int)[0m
+DÜ  [32mWhen [0m[32mI get the project with id [0m[32m[1m4[0m[32m (US9)[0m                                                                                              [90m# features.US9_GetSpecificProjectStepDefinition.i_get_the_project_with_id(int)[0m
+DÀ  [32mThen [0m[32mI should get a project with id [0m[32m[1m4[0m[32m, title [0m[32m[1m"third proj"[0m[32m, description [0m[32m[1m"super fun proj"[0m[32m, completed [0m[32m[1m"false"[0m[32m and active [0m[32m[1m"false"[0m[32m (US9)[0m [90m# features.US9_GetSpecificProjectStepDefinition.the_project_with_id_should_have_title_description_completed_active(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[0m
+D ------ After Scenario ------
+Dapplication stopped
+E
+E’Scenario Outline: Get a project that has an empty description                                                                                        [90m# src/test/resources/US9_GetSpecificProject.feature:36[0m
+EÖ  [32mGiven [0m[32mthe project application is running (US9)[0m                                                                                                     [90m# features.US9_GetSpecificProjectStepDefinition.the_project_application_is_running()[0m
+E≠  [32mAnd [0m[32mthe following projects exist in the system: (US9)[0m                                                                                              [90m# features.US9_GetSpecificProjectStepDefinition.the_following_projectss_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+E:    | title       | description    | completed | active |
+E:    | first proj  | fun proj       | false     | true   |
+E:    | second proj | boring proj    | true      | false  |
+E:    | third proj  | super fun proj | false     | false  |
+E:    | fourth proj | [empty]        | true      | true   |
+E∑  [32mGiven [0m[32mthe project with id [0m[32m[1m5[0m[32m and no description exists in the system (US9)[0m                                                                          [90m# features.US9_GetSpecificProjectStepDefinition.the_project_with_id_and_no_description_exists_in_the_system(int)[0m
+E≠  [32mWhen [0m[32mI get the project with id [0m[32m[1m5[0m[32m that has no description (US9)[0m                                                                                     [90m# features.US9_GetSpecificProjectStepDefinition.i_get_the_project_with_id_that_has_no_description(int)[0m
+E˜  [32mThen [0m[32mI should get a project that has an empty description with id [0m[32m[1m5[0m[32m, title [0m[32m[1m"fourth proj"[0m[32m, description [0m[32m[1m""[0m[32m, completed [0m[32m[1m"true"[0m[32m and active [0m[32m[1m"true"[0m[32m (US9)[0m [90m# features.US9_GetSpecificProjectStepDefinition.i_should_get_a_project_that_has_an_empty_description_with_id_title_description_completed_active(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[0m
+E ------ After Scenario ------
+Eapplication stopped
+F
+F¥Scenario Outline: Get a project that does not exist                                                                 [90m# src/test/resources/US9_GetSpecificProject.feature:48[0m
+F‰  [32mGiven [0m[32mthe project application is running (US9)[0m                                                                    [90m# features.US9_GetSpecificProjectStepDefinition.the_project_application_is_running()[0m
+Få  [32mAnd [0m[32mthe following projects exist in the system: (US9)[0m                                                             [90m# features.US9_GetSpecificProjectStepDefinition.the_following_projectss_exist_in_the_system(io.cucumber.datatable.DataTable)[0m
+F:    | title       | description    | completed | active |
+F:    | first proj  | fun proj       | false     | true   |
+F:    | second proj | boring proj    | true      | false  |
+F:    | third proj  | super fun proj | false     | false  |
+F:    | fourth proj | [empty]        | true      | true   |
+Fã  [32mGiven [0m[32mthe project with id [0m[32m[1m100[0m[32m does not exist in the system (US9)[0m                                                  [90m# features.US9_GetSpecificProjectStepDefinition.the_project_with_id_does_not_exist_in_the_system(int)[0m
+F¸  [32mWhen [0m[32mI get the project with invalid id [0m[32m[1m100[0m[32m (US9)[0m                                                                  [90m# features.US9_GetSpecificProjectStepDefinition.i_get_the_project_with_invalid_id(int)[0m
+Fnull
+Fù  [32mThen [0m[32mI should receive a [0m[32m[1m404[0m[32m status code and an error message [0m[32m[1m"Could not find an instance with projects/100"[0m[32m (US9)[0m [90m# features.US9_GetSpecificProjectStepDefinition.i_should_get_a_status_code_(int,java.lang.String)[0m
+F ------ After Scenario ------
+Fapplication stopped
