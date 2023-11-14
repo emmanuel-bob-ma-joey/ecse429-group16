@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">5</div>
+<div class="counter">23</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">6</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">32.056s</div>
+<div class="counter">2m21.77s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">73%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,115 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="Delete a category"></a>
+<h3 class="failures">Delete a category</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;0&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at app//features.US14_DeleteACategoryStepDefinition.a_category_with_id_exists_in_the_system(US14_DeleteACategoryStepDefinition.java:62)
+	at ✽.the category with id 1 exists in the system (US14)(file:///Users/emmanuelma/Desktop/mcgill_stuff/Fall2023/ECSE429/project/ecse429-group16/PartB/src/test/resources/US14_DeleteACategory.feature:17)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Delete a category that has an empty description"></a>
+<h3 class="failures">Delete a category that has an empty description</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError: expected: &lt;200&gt; but was: &lt;404&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at app//features.US14_DeleteACategoryStepDefinition.i_delete_the_incompleted_category_with_id(US14_DeleteACategoryStepDefinition.java:118)
+	at ✽.I delete the incompleted category with id 3 (US14)(file:///Users/emmanuelma/Desktop/mcgill_stuff/Fall2023/ECSE429/project/ecse429-group16/PartB/src/test/resources/US14_DeleteACategory.feature:33)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Get a category that has an empty description"></a>
+<h3 class="failures">Get a category that has an empty description</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError: expected: &lt;0&gt; but was: &lt;1&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at app//features.US15_GetASpecificCategoryStepDefinition.the_category_with_id_and_no_description_exists_in_the_system(US15_GetASpecificCategoryStepDefinition.java:92)
+	at ✽.the category with id 6 and no description exists in the system (US5)(file:///Users/emmanuelma/Desktop/mcgill_stuff/Fall2023/ECSE429/project/ecse429-group16/PartB/src/test/resources/US15_GetSpecificCategory.feature:30)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Get a specific category that #1"></a>
+<h3 class="failures">Get a specific category that #1</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError: expected: &lt;0&gt; but was: &lt;1&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at app//features.US15_GetASpecificCategoryStepDefinition.a_category_with_id_exists_in_the_system(US15_GetASpecificCategoryStepDefinition.java:60)
+	at ✽.the category with id 3 exists in the system (US5)(file:///Users/emmanuelma/Desktop/mcgill_stuff/Fall2023/ECSE429/project/ecse429-group16/PartB/src/test/resources/US15_GetSpecificCategory.feature:18)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Get a specific category that #2"></a>
+<h3 class="failures">Get a specific category that #2</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError: expected: &lt;0&gt; but was: &lt;1&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at app//features.US15_GetASpecificCategoryStepDefinition.a_category_with_id_exists_in_the_system(US15_GetASpecificCategoryStepDefinition.java:60)
+	at ✽.the category with id 4 exists in the system (US5)(file:///Users/emmanuelma/Desktop/mcgill_stuff/Fall2023/ECSE429/project/ecse429-group16/PartB/src/test/resources/US15_GetSpecificCategory.feature:18)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Get a specific category that #3"></a>
+<h3 class="failures">Get a specific category that #3</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError: expected: &lt;0&gt; but was: &lt;1&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at app//features.US15_GetASpecificCategoryStepDefinition.a_category_with_id_exists_in_the_system(US15_GetASpecificCategoryStepDefinition.java:60)
+	at ✽.the category with id 5 exists in the system (US5)(file:///Users/emmanuelma/Desktop/mcgill_stuff/Fall2023/ECSE429/project/ecse429-group16/PartB/src/test/resources/US15_GetSpecificCategory.feature:18)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -78,99 +180,465 @@
 </tr>
 </thead>
 <tr>
+<td class="success">Create a category #1</td>
+<td class="success">7.606s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Create a category #2</td>
+<td class="success">6.103s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Create a category that has already been created #1</td>
+<td class="success">6.100s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Create a category that has already been created #2</td>
+<td class="success">6.079s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Create a category with an empty title</td>
+<td class="success">6.101s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">Delete a category</td>
+<td class="failures">6.107s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">Delete a category that does not exist</td>
+<td class="success">6.093s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">Delete a category that has an empty description</td>
+<td class="failures">6.071s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">Get a category that does not exist</td>
+<td class="success">6.105s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">Get a category that has an empty description</td>
+<td class="failures">6.089s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">Get a specific category that #1</td>
+<td class="failures">6.072s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">Get a specific category that #2</td>
+<td class="failures">6.103s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">Get a specific category that #3</td>
+<td class="failures">6.090s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
 <td class="success">Get all categories #1</td>
-<td class="success">7.587s</td>
+<td class="success">6.187s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Get all categories #2</td>
-<td class="success">6.124s</td>
+<td class="success">6.116s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Get all categories #3</td>
-<td class="success">6.119s</td>
+<td class="success">6.093s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Get all categories with a specific title</td>
-<td class="success">6.130s</td>
+<td class="success">6.115s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Get all categories with the wrong endpoint</td>
-<td class="success">6.096s</td>
+<td class="success">6.073s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Update a categories title and description #1</td>
+<td class="success">6.113s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Update a categories title and description #2</td>
+<td class="success">6.090s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Update a category with empty title</td>
+<td class="success">6.077s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update a category with only the title #1</td>
+<td class="success">6.093s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update a category with only the title #2</td>
+<td class="success">6.095s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>
-Scenario Outline: Get all categories                                                 ?[90m# src/test/resources/US3_GetAllCategories.feature:21?[0m
+Scenario Outline: Create a category                                                                                                     ?[90m# src/test/resources/US11_CreateACategory.feature:17?[0m
 application started
-the_todo_application_is_running
-  ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                                        ?[90m# features.US3_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
-  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US3)?[0m                             ?[90m# features.US3_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
-    | title     | description  |
-    | category1 | description1 |
-    | category2 | description2 |
-    | category3 | description3 |
-  ?[32mWhen ?[0m?[32mI get all categories (US3)?[0m                                                    ?[90m# features.US3_GetAllCategoriesStepDefinition.i_get_all_categories()?[0m
-  ?[32mThen ?[0m?[32mthe categories with title ?[0m?[32m?[1m&quot;category1&quot;?[0m?[32m, description ?[0m?[32m?[1m&quot;description1&quot;?[0m?[32m exist (US3)?[0m ?[90m# features.US3_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US11)?[0m                                                                                               ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe category with title ?[0m?[32m?[1m&quot;My first category&quot;?[0m?[32m and the description ?[0m?[32m?[1m&quot;This is my first category&quot;?[0m?[32m does not exist in the system (US11)?[0m ?[90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create a category with the title ?[0m?[32m?[1m&quot;My first category&quot;?[0m?[32m and description ?[0m?[32m?[1m&quot;This is my first category&quot;?[0m?[32m (US11)?[0m                        ?[90m# features.US11_CreateCategoryStepDefinition.i_create_a_category_with_title_and_the_description(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe category with title ?[0m?[32m?[1m&quot;My first category&quot;?[0m?[32m and the description ?[0m?[32m?[1m&quot;This is my first category&quot;?[0m?[32m shall exist in the system (US11)?[0m     ?[90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
 application stopped
 
-Scenario Outline: Get all categories                                                 ?[90m# src/test/resources/US3_GetAllCategories.feature:22?[0m
+Scenario Outline: Create a category                                                                                                       ?[90m# src/test/resources/US11_CreateACategory.feature:18?[0m
 application started
-the_todo_application_is_running
-  ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                                        ?[90m# features.US3_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
-  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US3)?[0m                             ?[90m# features.US3_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
-    | title     | description  |
-    | category1 | description1 |
-    | category2 | description2 |
-    | category3 | description3 |
-  ?[32mWhen ?[0m?[32mI get all categories (US3)?[0m                                                    ?[90m# features.US3_GetAllCategoriesStepDefinition.i_get_all_categories()?[0m
-  ?[32mThen ?[0m?[32mthe categories with title ?[0m?[32m?[1m&quot;category2&quot;?[0m?[32m, description ?[0m?[32m?[1m&quot;description2&quot;?[0m?[32m exist (US3)?[0m ?[90m# features.US3_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US11)?[0m                                                                                                 ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe category with title ?[0m?[32m?[1m&quot;My second category&quot;?[0m?[32m and the description ?[0m?[32m?[1m&quot;This is my second category&quot;?[0m?[32m does not exist in the system (US11)?[0m ?[90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create a category with the title ?[0m?[32m?[1m&quot;My second category&quot;?[0m?[32m and description ?[0m?[32m?[1m&quot;This is my second category&quot;?[0m?[32m (US11)?[0m                        ?[90m# features.US11_CreateCategoryStepDefinition.i_create_a_category_with_title_and_the_description(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe category with title ?[0m?[32m?[1m&quot;My second category&quot;?[0m?[32m and the description ?[0m?[32m?[1m&quot;This is my second category&quot;?[0m?[32m shall exist in the system (US11)?[0m     ?[90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
 application stopped
 
-Scenario Outline: Get all categories                                                 ?[90m# src/test/resources/US3_GetAllCategories.feature:23?[0m
+Scenario Outline: Create a category that has already been created                                                                  ?[90m# src/test/resources/US11_CreateACategory.feature:27?[0m
 application started
-the_todo_application_is_running
-  ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                                        ?[90m# features.US3_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
-  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US3)?[0m                             ?[90m# features.US3_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
-    | title     | description  |
-    | category1 | description1 |
-    | category2 | description2 |
-    | category3 | description3 |
-  ?[32mWhen ?[0m?[32mI get all categories (US3)?[0m                                                    ?[90m# features.US3_GetAllCategoriesStepDefinition.i_get_all_categories()?[0m
-  ?[32mThen ?[0m?[32mthe categories with title ?[0m?[32m?[1m&quot;category3&quot;?[0m?[32m, description ?[0m?[32m?[1m&quot;description3&quot;?[0m?[32m exist (US3)?[0m ?[90m# features.US3_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US11)?[0m                                                                                          ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe category with title ?[0m?[32m?[1m&quot;My first category&quot;?[0m?[32m does exist in the system (US11)?[0m                                                ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_with_title_does_exist_in_the_system(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create a duplicate category with the title ?[0m?[32m?[1m&quot;My first category&quot;?[0m?[32m and description ?[0m?[32m?[1m&quot;this is my first category&quot;?[0m?[32m (US11)?[0m         ?[90m# features.US11_CreateCategoryStepDefinition.i_create_a_duplicate_category_with_the_title(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe category with title ?[0m?[32m?[1m&quot;My first category&quot;?[0m?[32m with a description ?[0m?[32m?[1m&quot;this is my first category&quot;?[0m?[32m shall exist in the system (US11)?[0m ?[90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_with_a_description_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
 application stopped
 
-Scenario Outline: Get all categories with a specific title          ?[90m# src/test/resources/US3_GetAllCategories.feature:32?[0m
+Scenario Outline: Create a category that has already been created                                                                    ?[90m# src/test/resources/US11_CreateACategory.feature:28?[0m
 application started
-the_todo_application_is_running
-  ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                       ?[90m# features.US3_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
-  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US3)?[0m            ?[90m# features.US3_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
-    | title     | description  |
-    | category1 | description1 |
-    | category2 | description2 |
-    | category3 | description3 |
-  ?[32mWhen ?[0m?[32mI get all categories with a specific title ?[0m?[32m?[1m&quot;category1&quot;?[0m?[32m (US3)?[0m ?[90m# features.US3_GetAllCategoriesStepDefinition.i_get_all_categories_with_a_specific_title(java.lang.String)?[0m
-  ?[32mThen ?[0m?[32mI should see ?[0m?[32m?[1m1?[0m?[32m categories with title ?[0m?[32m?[1m&quot;category1&quot;?[0m?[32m (US3)?[0m       ?[90m# features.US3_GetAllCategoriesStepDefinition.i_should_see_category_us3(java.lang.Integer,java.lang.String)?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US11)?[0m                                                                                            ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe category with title ?[0m?[32m?[1m&quot;My second category&quot;?[0m?[32m does exist in the system (US11)?[0m                                                 ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_with_title_does_exist_in_the_system(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create a duplicate category with the title ?[0m?[32m?[1m&quot;My second category&quot;?[0m?[32m and description ?[0m?[32m?[1m&quot;this is my second category&quot;?[0m?[32m (US11)?[0m         ?[90m# features.US11_CreateCategoryStepDefinition.i_create_a_duplicate_category_with_the_title(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe category with title ?[0m?[32m?[1m&quot;My second category&quot;?[0m?[32m with a description ?[0m?[32m?[1m&quot;this is my second category&quot;?[0m?[32m shall exist in the system (US11)?[0m ?[90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_with_a_description_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
 application stopped
 
-Scenario Outline: Get all categories with the wrong endpoint ?[90m# src/test/resources/US3_GetAllCategories.feature:40?[0m
+Scenario Outline: Create a category with an empty title                                                        ?[90m# src/test/resources/US11_CreateACategory.feature:37?[0m
+application started
+  ?[32mGiven ?[0m?[32mthe application is running (US11)?[0m                                                                      ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mWhen ?[0m?[32mI create a category with empty title (US11)?[0m                                                             ?[90m# features.US11_CreateCategoryStepDefinition.i_create_a_category_with_empty_title()?[0m
+  ?[32mThen ?[0m?[32mthe status code shall be ?[0m?[32m?[1m400?[0m?[32m with an error message ?[0m?[32m?[1m&quot;Failed Validation: title : can not be empty&quot;?[0m?[32m (US11)?[0m ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_with_empty_title_should_not_be_in_the_system(int,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Update a categories title and description                                          ?[90m# src/test/resources/US12_UpdateCategory.feature:21?[0m
 application started
 the_todo_application_is_running
-  ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                ?[90m# features.US3_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
-  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US3)?[0m     ?[90m# features.US3_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+  ?[32mGiven ?[0m?[32mthe todo application is running (US12)?[0m                                                       ?[90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US12)?[0m                                            ?[90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description   |
+    | category1 | description 1 |
+    | category2 | description 2 |
+  ?[32mGiven ?[0m?[32ma category with ?[0m?[32m?[1m3?[0m?[32m exists in the system (US12)?[0m                                                ?[90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI update the category with id ?[0m?[32m?[1m3?[0m?[32m with a new title ?[0m?[32m?[1m&quot;category1&quot;?[0m?[32m, description ?[0m?[32m?[1m&quot;category 1&quot;?[0m?[32m (US12)?[0m ?[90m# features.US12_UpdateCategoryStepDefinition.i_update_the_category_with_id_with_a_new_title_and_description(int,java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe category with id ?[0m?[32m?[1m3?[0m?[32m should have title ?[0m?[32m?[1m&quot;category1&quot;?[0m?[32m, description ?[0m?[32m?[1m&quot;category 1&quot;?[0m?[32m (US12)?[0m         ?[90m# features.US12_UpdateCategoryStepDefinition.the_category_with_id_should_have_a_description(int,java.lang.String,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Update a categories title and description                                          ?[90m# src/test/resources/US12_UpdateCategory.feature:22?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US12)?[0m                                                       ?[90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US12)?[0m                                            ?[90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description   |
+    | category1 | description 1 |
+    | category2 | description 2 |
+  ?[32mGiven ?[0m?[32ma category with ?[0m?[32m?[1m4?[0m?[32m exists in the system (US12)?[0m                                                ?[90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI update the category with id ?[0m?[32m?[1m4?[0m?[32m with a new title ?[0m?[32m?[1m&quot;category2&quot;?[0m?[32m, description ?[0m?[32m?[1m&quot;category 2&quot;?[0m?[32m (US12)?[0m ?[90m# features.US12_UpdateCategoryStepDefinition.i_update_the_category_with_id_with_a_new_title_and_description(int,java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe category with id ?[0m?[32m?[1m4?[0m?[32m should have title ?[0m?[32m?[1m&quot;category2&quot;?[0m?[32m, description ?[0m?[32m?[1m&quot;category 2&quot;?[0m?[32m (US12)?[0m         ?[90m# features.US12_UpdateCategoryStepDefinition.the_category_with_id_should_have_a_description(int,java.lang.String,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: update a category with only the title                                           ?[90m# src/test/resources/US12_UpdateCategory.feature:31?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US12)?[0m                                                    ?[90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US12)?[0m                                         ?[90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description   |
+    | category1 | description 1 |
+    | category2 | description 2 |
+  ?[32mGiven ?[0m?[32ma category with id ?[0m?[32m?[1m3?[0m?[32m exists in the system (US12)?[0m                                          ?[90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_with_doneStatus_exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI update the category with id ?[0m?[32m?[1m3?[0m?[32m with a title ?[0m?[32m?[1m&quot;new category 1&quot;?[0m?[32m and empty description (US12)?[0m ?[90m# features.US12_UpdateCategoryStepDefinition.when_i_update_the_category_with_id_with(int,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe category with ?[0m?[32m?[1m3?[0m?[32m should have an updated title ?[0m?[32m?[1m&quot;new category 1&quot;?[0m?[32m (US12)?[0m                   ?[90m# features.US12_UpdateCategoryStepDefinition.the_category_with_id_should_have_an_updated_status(int,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: update a category with only the title                                           ?[90m# src/test/resources/US12_UpdateCategory.feature:32?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US12)?[0m                                                    ?[90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US12)?[0m                                         ?[90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description   |
+    | category1 | description 1 |
+    | category2 | description 2 |
+  ?[32mGiven ?[0m?[32ma category with id ?[0m?[32m?[1m4?[0m?[32m exists in the system (US12)?[0m                                          ?[90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_with_doneStatus_exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI update the category with id ?[0m?[32m?[1m4?[0m?[32m with a title ?[0m?[32m?[1m&quot;new category 2&quot;?[0m?[32m and empty description (US12)?[0m ?[90m# features.US12_UpdateCategoryStepDefinition.when_i_update_the_category_with_id_with(int,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe category with ?[0m?[32m?[1m4?[0m?[32m should have an updated title ?[0m?[32m?[1m&quot;new category 2&quot;?[0m?[32m (US12)?[0m                   ?[90m# features.US12_UpdateCategoryStepDefinition.the_category_with_id_should_have_an_updated_status(int,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Update a category with empty title              ?[90m# src/test/resources/US12_UpdateCategory.feature:42?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US12)?[0m                    ?[90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US12)?[0m         ?[90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description   |
+    | category1 | description 1 |
+    | category2 | description 2 |
+  ?[32mGiven ?[0m?[32ma category with ?[0m?[32m?[1m1?[0m?[32m that exists in the system (US12)?[0m        ?[90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_that_exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI update the category with id ?[0m?[32m?[1m1?[0m?[32m with an empty title (US12)?[0m ?[90m# features.US12_UpdateCategoryStepDefinition.i_update_the_category_with_id_with_empty_title(int)?[0m
+  ?[32mThen ?[0m?[32mI should receive a ?[0m?[32m?[1m400?[0m?[32m response (US12)?[0m                     ?[90m# features.US12_UpdateCategoryStepDefinition.i_should_receive_a_response_with(int)?[0m
+application stopped
+
+Scenario Outline: Get all categories                                                  ?[90m# src/test/resources/US13_GetAllCategories.feature:21?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US13)?[0m                                        ?[90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US13)?[0m                             ?[90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title     | description  |
     | category1 | description1 |
     | category2 | description2 |
     | category3 | description3 |
-  ?[32mWhen ?[0m?[32mI get all categories with mistyped endpoint (US3)?[0m     ?[90m# features.US3_GetAllCategoriesStepDefinition.i_get_all_categories_with_mistyped_endpoint()?[0m
-  ?[32mThen ?[0m?[32mI should receive an error code ?[0m?[32m?[1m404?[0m?[32m (US3)?[0m              ?[90m# features.US3_GetAllCategoriesStepDefinition.i_should_see_an_error_code(int)?[0m
+  ?[32mWhen ?[0m?[32mI get all categories (US13)?[0m                                                    ?[90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories()?[0m
+  ?[32mThen ?[0m?[32mthe categories with title ?[0m?[32m?[1m&quot;category1&quot;?[0m?[32m, description ?[0m?[32m?[1m&quot;description1&quot;?[0m?[32m exist (US13)?[0m ?[90m# features.US13_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Get all categories                                                  ?[90m# src/test/resources/US13_GetAllCategories.feature:22?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US13)?[0m                                        ?[90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US13)?[0m                             ?[90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description  |
+    | category1 | description1 |
+    | category2 | description2 |
+    | category3 | description3 |
+  ?[32mWhen ?[0m?[32mI get all categories (US13)?[0m                                                    ?[90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories()?[0m
+  ?[32mThen ?[0m?[32mthe categories with title ?[0m?[32m?[1m&quot;category2&quot;?[0m?[32m, description ?[0m?[32m?[1m&quot;description2&quot;?[0m?[32m exist (US13)?[0m ?[90m# features.US13_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Get all categories                                                  ?[90m# src/test/resources/US13_GetAllCategories.feature:23?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US13)?[0m                                        ?[90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US13)?[0m                             ?[90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description  |
+    | category1 | description1 |
+    | category2 | description2 |
+    | category3 | description3 |
+  ?[32mWhen ?[0m?[32mI get all categories (US13)?[0m                                                    ?[90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories()?[0m
+  ?[32mThen ?[0m?[32mthe categories with title ?[0m?[32m?[1m&quot;category3&quot;?[0m?[32m, description ?[0m?[32m?[1m&quot;description3&quot;?[0m?[32m exist (US13)?[0m ?[90m# features.US13_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Get all categories with a specific title           ?[90m# src/test/resources/US13_GetAllCategories.feature:32?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US13)?[0m                       ?[90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US13)?[0m            ?[90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description  |
+    | category1 | description1 |
+    | category2 | description2 |
+    | category3 | description3 |
+  ?[32mWhen ?[0m?[32mI get all categories with a specific title ?[0m?[32m?[1m&quot;category1&quot;?[0m?[32m (US13)?[0m ?[90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories_with_a_specific_title(java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mI should see ?[0m?[32m?[1m1?[0m?[32m categories with title ?[0m?[32m?[1m&quot;category1&quot;?[0m?[32m (US13)?[0m       ?[90m# features.US13_GetAllCategoriesStepDefinition.i_should_see_category_us3(java.lang.Integer,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Get all categories with the wrong endpoint ?[90m# src/test/resources/US13_GetAllCategories.feature:40?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US13)?[0m               ?[90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US13)?[0m    ?[90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description  |
+    | category1 | description1 |
+    | category2 | description2 |
+    | category3 | description3 |
+  ?[32mWhen ?[0m?[32mI get all categories with mistyped endpoint (US13)?[0m    ?[90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories_with_mistyped_endpoint()?[0m
+  ?[32mThen ?[0m?[32mI should receive an error code ?[0m?[32m?[1m404?[0m?[32m (US13)?[0m             ?[90m# features.US13_GetAllCategoriesStepDefinition.i_should_see_an_error_code(int)?[0m
+application stopped
+
+Scenario Outline: Delete a category                                 ?[90m# src/test/resources/US14_DeleteACategory.feature:23?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US14)?[0m                      ?[90m# features.US14_DeleteACategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe following categories exist in the system (US14)?[0m         ?[90m# features.US14_DeleteACategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system_US141(io.cucumber.datatable.DataTable)?[0m
+    | title     | description  |
+    | category1 | description1 |
+    | category2 | description2 |
+  ?[31mAnd ?[0m?[31mthe category with id ?[0m?[31m?[1m1?[0m?[31m exists in the system (US14)?[0m            ?[90m# features.US14_DeleteACategoryStepDefinition.a_category_with_id_exists_in_the_system(int)?[0m
+      ?[31morg.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;0&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at features.US14_DeleteACategoryStepDefinition.a_category_with_id_exists_in_the_system(US14_DeleteACategoryStepDefinition.java:62)
+	at ✽.the category with id 1 exists in the system (US14)(file:///Users/emmanuelma/Desktop/mcgill_stuff/Fall2023/ECSE429/project/ecse429-group16/PartB/src/test/resources/US14_DeleteACategory.feature:17)
+?[0m
+  ?[36mWhen ?[0m?[36mI delete the category with id ?[0m?[36m?[1m1?[0m?[36m (US14)?[0m                       ?[90m# features.US14_DeleteACategoryStepDefinition.i_delete_the_category_with_id(int)?[0m
+  ?[36mThen ?[0m?[36mthe category with id ?[0m?[36m?[1m1?[0m?[36m should not exist in the system (US14)?[0m ?[90m# features.US14_DeleteACategoryStepDefinition.the_category_with_id_should_not_exist_in_the_system(int)?[0m
+  ?[36mThen ?[0m?[36mthere should be 1 todo in the system (US14)?[0m
+application stopped
+
+Scenario Outline: Delete a category that has an empty description               ?[90m# src/test/resources/US14_DeleteACategory.feature:38?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US14)?[0m                                  ?[90m# features.US14_DeleteACategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe following incomplete categories exist in the system (US14)?[0m          ?[90m# features.US14_DeleteACategoryStepDefinition.the_following_categories_exist_in_the_system_US142(io.cucumber.datatable.DataTable)?[0m
+    | title | description  |
+    | todo1 | description1 |
+    | todo2 | &quot;&quot;           |
+  ?[31mWhen ?[0m?[31mI delete the incompleted category with id ?[0m?[31m?[1m3?[0m?[31m (US14)?[0m                       ?[90m# features.US14_DeleteACategoryStepDefinition.i_delete_the_incompleted_category_with_id(int)?[0m
+      ?[31morg.opentest4j.AssertionFailedError: expected: &lt;200&gt; but was: &lt;404&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at features.US14_DeleteACategoryStepDefinition.i_delete_the_incompleted_category_with_id(US14_DeleteACategoryStepDefinition.java:118)
+	at ✽.I delete the incompleted category with id 3 (US14)(file:///Users/emmanuelma/Desktop/mcgill_stuff/Fall2023/ECSE429/project/ecse429-group16/PartB/src/test/resources/US14_DeleteACategory.feature:33)
+?[0m
+  ?[36mThen ?[0m?[36mthe incompleted category with id ?[0m?[36m?[1m3?[0m?[36m should not exist in the system (US14)?[0m ?[90m# features.US14_DeleteACategoryStepDefinition.the_incompleted_category_with_id_should_not_exist_in_the_system(int)?[0m
+  ?[36mThen ?[0m?[36mthere should be 1 todo in the current system (US14)?[0m
+application stopped
+
+Scenario Outline: Delete a category that does not exist                                                                      ?[90m# src/test/resources/US14_DeleteACategory.feature:48?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US14)?[0m                                                                               ?[90m# features.US14_DeleteACategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe category with id ?[0m?[32m?[1m100?[0m?[32m does not exist in the system (US14)?[0m                                                         ?[90m# features.US14_DeleteACategoryStepDefinition.a_category_with_id_does_not_exist_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI delete the category with inexistant id ?[0m?[32m?[1m100?[0m?[32m (US14)?[0m                                                                   ?[90m# features.US14_DeleteACategoryStepDefinition.i_delete_the_category_with_inexistant_id(int)?[0m
+  ?[32mThen ?[0m?[32mI should receive a status code ?[0m?[32m?[1m404?[0m?[32m and see an error message ?[0m?[32m?[1m&quot;Could not find any instances with categories/100&quot;?[0m?[32m (US14)?[0m ?[90m# features.US14_DeleteACategoryStepDefinition.then_i_should_receive_a_status_code_and_see_an_error_message(int,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Get a specific category that                                                 ?[90m# src/test/resources/US15_GetSpecificCategory.feature:24?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US5)?[0m                                                  ?[90m# features.US15_GetASpecificCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system: (US5)?[0m                                      ?[90m# features.US15_GetASpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title                    | description  |
+    | category1                | description1 |
+    | category2                | description2 |
+    | category3                | description3 |
+    | emptyDescriptionCategory | [empty]      |
+  ?[31mGiven ?[0m?[31mthe category with id ?[0m?[31m?[1m3?[0m?[31m exists in the system (US5)?[0m                                      ?[90m# features.US15_GetASpecificCategoryStepDefinition.a_category_with_id_exists_in_the_system(int)?[0m
+      ?[31morg.opentest4j.AssertionFailedError: expected: &lt;0&gt; but was: &lt;1&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at features.US15_GetASpecificCategoryStepDefinition.a_category_with_id_exists_in_the_system(US15_GetASpecificCategoryStepDefinition.java:60)
+	at ✽.the category with id 3 exists in the system (US5)(file:///Users/emmanuelma/Desktop/mcgill_stuff/Fall2023/ECSE429/project/ecse429-group16/PartB/src/test/resources/US15_GetSpecificCategory.feature:18)
+?[0m
+  ?[36mWhen ?[0m?[36mI get the category with id ?[0m?[36m?[1m3?[0m?[36m (US5)?[0m                                                      ?[90m# features.US15_GetASpecificCategoryStepDefinition.i_get_the_category_with_id(int)?[0m
+  ?[36mThen ?[0m?[36mI should get a category with id 3, title &quot;category1&quot;, description &quot;description1&quot;  (US5)?[0m
+application stopped
+
+Scenario Outline: Get a specific category that                                                 ?[90m# src/test/resources/US15_GetSpecificCategory.feature:25?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US5)?[0m                                                  ?[90m# features.US15_GetASpecificCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system: (US5)?[0m                                      ?[90m# features.US15_GetASpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title                    | description  |
+    | category1                | description1 |
+    | category2                | description2 |
+    | category3                | description3 |
+    | emptyDescriptionCategory | [empty]      |
+  ?[31mGiven ?[0m?[31mthe category with id ?[0m?[31m?[1m4?[0m?[31m exists in the system (US5)?[0m                                      ?[90m# features.US15_GetASpecificCategoryStepDefinition.a_category_with_id_exists_in_the_system(int)?[0m
+      ?[31morg.opentest4j.AssertionFailedError: expected: &lt;0&gt; but was: &lt;1&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at features.US15_GetASpecificCategoryStepDefinition.a_category_with_id_exists_in_the_system(US15_GetASpecificCategoryStepDefinition.java:60)
+	at ✽.the category with id 4 exists in the system (US5)(file:///Users/emmanuelma/Desktop/mcgill_stuff/Fall2023/ECSE429/project/ecse429-group16/PartB/src/test/resources/US15_GetSpecificCategory.feature:18)
+?[0m
+  ?[36mWhen ?[0m?[36mI get the category with id ?[0m?[36m?[1m4?[0m?[36m (US5)?[0m                                                      ?[90m# features.US15_GetASpecificCategoryStepDefinition.i_get_the_category_with_id(int)?[0m
+  ?[36mThen ?[0m?[36mI should get a category with id 4, title &quot;category2&quot;, description &quot;description2&quot;  (US5)?[0m
+application stopped
+
+Scenario Outline: Get a specific category that                                                 ?[90m# src/test/resources/US15_GetSpecificCategory.feature:26?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US5)?[0m                                                  ?[90m# features.US15_GetASpecificCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system: (US5)?[0m                                      ?[90m# features.US15_GetASpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title                    | description  |
+    | category1                | description1 |
+    | category2                | description2 |
+    | category3                | description3 |
+    | emptyDescriptionCategory | [empty]      |
+  ?[31mGiven ?[0m?[31mthe category with id ?[0m?[31m?[1m5?[0m?[31m exists in the system (US5)?[0m                                      ?[90m# features.US15_GetASpecificCategoryStepDefinition.a_category_with_id_exists_in_the_system(int)?[0m
+      ?[31morg.opentest4j.AssertionFailedError: expected: &lt;0&gt; but was: &lt;1&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at features.US15_GetASpecificCategoryStepDefinition.a_category_with_id_exists_in_the_system(US15_GetASpecificCategoryStepDefinition.java:60)
+	at ✽.the category with id 5 exists in the system (US5)(file:///Users/emmanuelma/Desktop/mcgill_stuff/Fall2023/ECSE429/project/ecse429-group16/PartB/src/test/resources/US15_GetSpecificCategory.feature:18)
+?[0m
+  ?[36mWhen ?[0m?[36mI get the category with id ?[0m?[36m?[1m5?[0m?[36m (US5)?[0m                                                      ?[90m# features.US15_GetASpecificCategoryStepDefinition.i_get_the_category_with_id(int)?[0m
+  ?[36mThen ?[0m?[36mI should get a category with id 5, title &quot;category3&quot;, description &quot;description3&quot;  (US5)?[0m
+application stopped
+
+Scenario Outline: Get a category that has an empty description                                                                     ?[90m# src/test/resources/US15_GetSpecificCategory.feature:36?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US5)?[0m                                                                                      ?[90m# features.US15_GetASpecificCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system: (US5)?[0m                                                                          ?[90m# features.US15_GetASpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title                    | description  |
+    | category1                | description1 |
+    | category2                | description2 |
+    | category3                | description3 |
+    | emptyDescriptionCategory | [empty]      |
+  ?[31mGiven ?[0m?[31mthe category with id ?[0m?[31m?[1m6?[0m?[31m and no description exists in the system (US5)?[0m                                                       ?[90m# features.US15_GetASpecificCategoryStepDefinition.the_category_with_id_and_no_description_exists_in_the_system(int)?[0m
+      ?[31morg.opentest4j.AssertionFailedError: expected: &lt;0&gt; but was: &lt;1&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at features.US15_GetASpecificCategoryStepDefinition.the_category_with_id_and_no_description_exists_in_the_system(US15_GetASpecificCategoryStepDefinition.java:92)
+	at ✽.the category with id 6 and no description exists in the system (US5)(file:///Users/emmanuelma/Desktop/mcgill_stuff/Fall2023/ECSE429/project/ecse429-group16/PartB/src/test/resources/US15_GetSpecificCategory.feature:30)
+?[0m
+  ?[36mWhen ?[0m?[36mI get the category with id ?[0m?[36m?[1m6?[0m?[36m that has no description (US5)?[0m                                                                  ?[90m# features.US15_GetASpecificCategoryStepDefinition.i_get_the_category_with_id_that_has_no_description(int)?[0m
+  ?[36mThen ?[0m?[36mI should get a category that has an empty description with id 6, title &quot;emptyDescriptionCategory&quot; and description &quot;&quot;  (US5)?[0m
+application stopped
+
+Scenario Outline: Get a category that does not exist                                                                  ?[90m# src/test/resources/US15_GetSpecificCategory.feature:48?[0m
+application started
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US5)?[0m                                                                         ?[90m# features.US15_GetASpecificCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system: (US5)?[0m                                                             ?[90m# features.US15_GetASpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title                    | description  |
+    | category1                | description1 |
+    | category2                | description2 |
+    | category3                | description3 |
+    | emptyDescriptionCategory | [empty]      |
+  ?[32mGiven ?[0m?[32mthe category with id ?[0m?[32m?[1m100?[0m?[32m does not exist in the system (US5)?[0m                                                   ?[90m# features.US15_GetASpecificCategoryStepDefinition.the_category_with_id_does_not_exist_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI get the category with invalid id ?[0m?[32m?[1m100?[0m?[32m (US5)?[0m                                                                   ?[90m# features.US15_GetASpecificCategoryStepDefinition.i_get_the_category_with_invalid_id(int)?[0m
+null
+  ?[32mThen ?[0m?[32mI should receive a ?[0m?[32m?[1m404?[0m?[32m status code and an error message ?[0m?[32m?[1m&quot;Could not find an instance with categories/100&quot;?[0m?[32m (US5)?[0m ?[90m# features.US15_GetASpecificCategoryStepDefinition.i_should_get_a_status_code(int,java.lang.String)?[0m
 application stopped
 </pre>
 </span>
@@ -183,7 +651,7 @@ application stopped
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.2</a> at Nov 13, 2023, 5:16:59 p.m.</p>
+<a href="http://www.gradle.org">Gradle 8.2</a> at Nov 14, 2023, 12:35:32 p.m.</p>
 </div>
 </div>
 </body>

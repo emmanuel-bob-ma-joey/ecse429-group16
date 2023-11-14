@@ -16,13 +16,13 @@ public class US13_GetAllCategoriesStepDefinition {
     private Response response;
 
     // BACKGROUND
-    @Given("the todo application is running \\(US3)")
+    @Given("the todo application is running \\(US13)")
     public void the_todo_application_is_running() throws InterruptedException {
         System.out.println("the_todo_application_is_running");
 
         HelperFunctions.startApplication();
 
-         // delete all todos so that we can start fresh
+         // delete all categories so that we can start fresh
          Response response = HelperFunctions.getAllCategories("");
          List<Map<String, String>> categories = response.jsonPath().getList("categories");
          for (Map<String, String> category : categories) {
@@ -31,7 +31,7 @@ public class US13_GetAllCategoriesStepDefinition {
          }
     }
 
-    @And("the following categories exist in the system \\(US3)")
+    @And("the following categories exist in the system \\(US13)")
     public void the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable dataTable) {
 
         List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
@@ -44,13 +44,13 @@ public class US13_GetAllCategoriesStepDefinition {
     }
 
     // Normal Scenario
-    @When("I get all categories \\(US3)")
+    @When("I get all categories \\(US13)")
     public void i_get_all_categories() {
         Response response = HelperFunctions.getAllCategories("");
         assertEquals(200, response.getStatusCode());
     }
 
-    @Then("the categories with title {string}, description {string} exist \\(US3)")
+    @Then("the categories with title {string}, description {string} exist \\(US13)")
     public void the_categories_with_title_description(String title, String description) {
         Response response = HelperFunctions.getAllCategories("");
         List<Map<String, String>> categories = response.jsonPath().getList("categories");
@@ -69,7 +69,7 @@ public class US13_GetAllCategoriesStepDefinition {
     }
 
     // Alternate Scenario
-    @When("I get all categories with a specific title {string} \\(US3)")
+    @When("I get all categories with a specific title {string} \\(US13)")
     public void i_get_all_categories_with_a_specific_title(String title) {
         response = HelperFunctions.getAllCategories("title="+title);
         List<Map<String, String>> categories = response.jsonPath().getList("categories");
@@ -79,7 +79,7 @@ public class US13_GetAllCategoriesStepDefinition {
         }
     }
 
-    @Then("I should see {int} categories with title {string} \\(US3)")
+    @Then("I should see {int} categories with title {string} \\(US13)")
     public void i_should_see_category_us3(Integer num, String title) {
         response = HelperFunctions.getAllCategories("title="+title);
         List<Map<String, String>> categories = response.jsonPath().getList("categories");
@@ -88,12 +88,12 @@ public class US13_GetAllCategoriesStepDefinition {
     }
     
     // Error Scenario
-    @When("I get all categories with mistyped endpoint \\(US3)")
+    @When("I get all categories with mistyped endpoint \\(US13)")
     public void i_get_all_categories_with_mistyped_endpoint() {
         response = HelperFunctions.getAllCategoriesWithIncorrectEndpoint();
     }
 
-    @Then("I should receive an error code {int} \\(US3)")
+    @Then("I should receive an error code {int} \\(US13)")
     public void i_should_see_an_error_code(int statusCode) {
         assertEquals(statusCode, response.getStatusCode());
     }
