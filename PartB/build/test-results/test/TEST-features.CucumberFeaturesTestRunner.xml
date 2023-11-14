@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="features.CucumberFeaturesTestRunner" tests="23" skipped="0" failures="1" errors="0" timestamp="2023-11-14T04:18:18" hostname="macbook-air-3" time="63.185">
+  <properties/>
+  <testcase name="Update a project's title and description #1" classname="features.CucumberFeaturesTestRunner" time="6.965"/>
+  <testcase name="Update a project's title and description #2" classname="features.CucumberFeaturesTestRunner" time="2.571"/>
+  <testcase name="Mark a project as completed" classname="features.CucumberFeaturesTestRunner" time="2.561"/>
+  <testcase name="Update completed to invalid value" classname="features.CucumberFeaturesTestRunner" time="2.637"/>
+  <testcase name="Create a project #1" classname="features.CucumberFeaturesTestRunner" time="2.612"/>
+  <testcase name="Create a project #2" classname="features.CucumberFeaturesTestRunner" time="2.446"/>
+  <testcase name="Create a project that has already been completed #1" classname="features.CucumberFeaturesTestRunner" time="2.61"/>
+  <testcase name="Create a project that has already been completed #2" classname="features.CucumberFeaturesTestRunner" time="2.433"/>
+  <testcase name="Create a project with empty title" classname="features.CucumberFeaturesTestRunner" time="2.158">
+    <failure message="io.cucumber.junit.UndefinedStepException: The step 'I create a project with an invalid asdf and title &quot;testing&quot; (US6)' is undefined.&#10;You can implement this step using the snippet(s) below:&#10;&#10;@When(&quot;I create a project with an invalid asdf and title {string} \\(US6)&quot;)&#10;public void i_create_a_project_with_an_invalid_asdf_and_title_us6(String string) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: The step 'I create a project with an invalid asdf and title &quot;testing&quot; (US6)' is undefined.
+You can implement this step using the snippet(s) below:
+
+@When(&quot;I create a project with an invalid asdf and title {string} \\(US6)&quot;)
+public void i_create_a_project_with_an_invalid_asdf_and_title_us6(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</failure>
+  </testcase>
+  <testcase name="Get all projects #1" classname="features.CucumberFeaturesTestRunner" time="2.923"/>
+  <testcase name="Get all projects #2" classname="features.CucumberFeaturesTestRunner" time="2.54"/>
+  <testcase name="Get all projects #3" classname="features.CucumberFeaturesTestRunner" time="2.51"/>
+  <testcase name="Get all projects with completed is true" classname="features.CucumberFeaturesTestRunner" time="3.35"/>
+  <testcase name="Get all projects with the wrong endpoint" classname="features.CucumberFeaturesTestRunner" time="2.528"/>
+  <testcase name="Delete an active project" classname="features.CucumberFeaturesTestRunner" time="2.503"/>
+  <testcase name="Delete a completed project" classname="features.CucumberFeaturesTestRunner" time="2.491"/>
+  <testcase name="Delete a project that does not exist" classname="features.CucumberFeaturesTestRunner" time="2.409"/>
+  <testcase name="Get a specific project #1" classname="features.CucumberFeaturesTestRunner" time="2.524"/>
+  <testcase name="Get a specific project #2" classname="features.CucumberFeaturesTestRunner" time="2.702"/>
+  <testcase name="Get a specific project #3" classname="features.CucumberFeaturesTestRunner" time="2.525"/>
+  <testcase name="Get a project that has an empty description" classname="features.CucumberFeaturesTestRunner" time="2.636"/>
+  <testcase name="Get a project that does not exist" classname="features.CucumberFeaturesTestRunner" time="4.314"/>
+  <testcase name="Credit amount" classname="features.CucumberFeaturesTestRunner" time="0.132"/>
+  <system-out><![CDATA[
+Scenario Outline: Update a project's title and description                                                                      ?[90m# src/test/resources/US10_UpdateProject.feature:21?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US10)?[0m                                                                               ?[90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US10)?[0m                                                                         ?[90m# features.US10_UpdateProjectStepDefinition.the_following_projects_with_title_description_completed_active_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title       | description | completed | active |
+    | first proj  | fun proj    | false     | true   |
+    | second proj | boring proj | true      | false  |
+  ?[32mGiven ?[0m?[32ma project with ?[0m?[32m?[1m2?[0m?[32m exists in the system (US10)?[0m                                                                            ?[90m# features.US10_UpdateProjectStepDefinition.a_project_with_id_exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI update the project with ?[0m?[32m?[1m2?[0m?[32m with a new description ?[0m?[32m?[1m"fun project"?[0m?[32m (US10)?[0m                                                  ?[90m# features.US10_UpdateProjectStepDefinition.i_update_the_project_with_id_with_a_new_description(int,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe project with ?[0m?[32m?[1m2?[0m?[32m should have title ?[0m?[32m?[1m"first proj"?[0m?[32m, description ?[0m?[32m?[1m"fun project"?[0m?[32m, completed ?[0m?[32m?[1m"false"?[0m?[32m and active ?[0m?[32m?[1m"true"?[0m?[32m (US10)?[0m ?[90m# features.US10_UpdateProjectStepDefinition.the_project_with_id_should_have_a_description(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Update a project's title and description                                                                          ?[90m# src/test/resources/US10_UpdateProject.feature:22?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US10)?[0m                                                                                   ?[90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US10)?[0m                                                                             ?[90m# features.US10_UpdateProjectStepDefinition.the_following_projects_with_title_description_completed_active_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title       | description | completed | active |
+    | first proj  | fun proj    | false     | true   |
+    | second proj | boring proj | true      | false  |
+  ?[32mGiven ?[0m?[32ma project with ?[0m?[32m?[1m3?[0m?[32m exists in the system (US10)?[0m                                                                                ?[90m# features.US10_UpdateProjectStepDefinition.a_project_with_id_exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI update the project with ?[0m?[32m?[1m3?[0m?[32m with a new description ?[0m?[32m?[1m"boring project"?[0m?[32m (US10)?[0m                                                   ?[90m# features.US10_UpdateProjectStepDefinition.i_update_the_project_with_id_with_a_new_description(int,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe project with ?[0m?[32m?[1m3?[0m?[32m should have title ?[0m?[32m?[1m"second proj"?[0m?[32m, description ?[0m?[32m?[1m"boring project"?[0m?[32m, completed ?[0m?[32m?[1m"true"?[0m?[32m and active ?[0m?[32m?[1m"false"?[0m?[32m (US10)?[0m ?[90m# features.US10_UpdateProjectStepDefinition.the_project_with_id_should_have_a_description(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Mark a project as completed                            ?[90m# src/test/resources/US10_UpdateProject.feature:31?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US10)?[0m                        ?[90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US10)?[0m                  ?[90m# features.US10_UpdateProjectStepDefinition.the_following_projects_with_title_description_completed_active_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title       | description | completed | active |
+    | first proj  | fun proj    | false     | true   |
+    | second proj | boring proj | true      | false  |
+  ?[32mGiven ?[0m?[32ma incomplete project with id ?[0m?[32m?[1m2?[0m?[32m exists in the system (US10)?[0m       ?[90m# features.US10_UpdateProjectStepDefinition.a_project_with_id__exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI update the project with id ?[0m?[32m?[1m2?[0m?[32m with ?[0m?[32m?[1m"true"?[0m?[32m (US10)?[0m                 ?[90m# features.US10_UpdateProjectStepDefinition.when_i_update_the_project_with_id_with(int,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe project with ?[0m?[32m?[1m2?[0m?[32m should have an updated completed ?[0m?[32m?[1m"true"?[0m?[32m (US10)?[0m ?[90m# features.US10_UpdateProjectStepDefinition.the_project_with_id_should_have_an_updated_completed(int,java.lang.String)?[0m
+
+Scenario Outline: Update completed to invalid value                                                 ?[90m# src/test/resources/US10_UpdateProject.feature:41?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US10)?[0m                                                   ?[90m# features.US10_UpdateProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US10)?[0m                                             ?[90m# features.US10_UpdateProjectStepDefinition.the_following_projects_with_title_description_completed_active_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title       | description | completed | active |
+    | first proj  | fun proj    | false     | true   |
+    | second proj | boring proj | true      | false  |
+  ?[32mGiven ?[0m?[32ma project with ?[0m?[32m?[1m1?[0m?[32m that exists in the system (US10)?[0m                                           ?[90m# features.US10_UpdateProjectStepDefinition.a_project_with_id_that_exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI update the project with id ?[0m?[32m?[1m1?[0m?[32m with invalid completed ?[0m?[32m?[1m"asd"?[0m?[32m (US10)?[0m                           ?[90m# features.US10_UpdateProjectStepDefinition.i_update_the_project_with_id_with_invalid_completed(int,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mI should receive a ?[0m?[32m?[1m400?[0m?[32m response with ?[0m?[32m?[1m"Failed Validation: completed should be BOOLEAN"?[0m?[32m (US10)?[0m ?[90m# features.US10_UpdateProjectStepDefinition.i_should_receive_a_response_with_(int,java.lang.String)?[0m
+
+Scenario Outline: Create a project                                                                                                  ?[90m# src/test/resources/US6_CreateAProject.feature:17?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                                                            ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe project with title ?[0m?[32m?[1m"My first project"?[0m?[32m and the description ?[0m?[32m?[1m"This is my first project"?[0m?[32m does not exist in the system (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create a project with the title ?[0m?[32m?[1m"My first project"?[0m?[32m and description ?[0m?[32m?[1m"This is my first project"?[0m?[32m (US6)?[0m                        ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_title_and_the_description(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe project with title ?[0m?[32m?[1m"My first project"?[0m?[32m and the description ?[0m?[32m?[1m"This is my first project"?[0m?[32m shall exist in the system (US6)?[0m     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Create a project                                                                                                    ?[90m# src/test/resources/US6_CreateAProject.feature:18?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                                                              ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe project with title ?[0m?[32m?[1m"My second project"?[0m?[32m and the description ?[0m?[32m?[1m"This is my second project"?[0m?[32m does not exist in the system (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create a project with the title ?[0m?[32m?[1m"My second project"?[0m?[32m and description ?[0m?[32m?[1m"This is my second project"?[0m?[32m (US6)?[0m                        ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_title_and_the_description(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe project with title ?[0m?[32m?[1m"My second project"?[0m?[32m and the description ?[0m?[32m?[1m"This is my second project"?[0m?[32m shall exist in the system (US6)?[0m     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_and_the_description_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Create a project that has already been completed                                               ?[90m# src/test/resources/US6_CreateAProject.feature:27?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                                         ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe project with title ?[0m?[32m?[1m"A project with completed"?[0m?[32m does not exist in the system (US6)?[0m                     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_does_not_exist_in_the_system(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create a project with the title ?[0m?[32m?[1m"A project with completed"?[0m?[32m and completed ?[0m?[32m?[1m"true"?[0m?[32m (US6)?[0m                   ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_the_title(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe project with title ?[0m?[32m?[1m"A project with completed"?[0m?[32m with a completed ?[0m?[32m?[1m"true"?[0m?[32m shall exist in the system (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_with_a_completed_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Create a project that has already been completed                                     ?[90m# src/test/resources/US6_CreateAProject.feature:28?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                               ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe project with title ?[0m?[32m?[1m"Second Project"?[0m?[32m does not exist in the system (US6)?[0m                     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_does_not_exist_in_the_system(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create a project with the title ?[0m?[32m?[1m"Second Project"?[0m?[32m and completed ?[0m?[32m?[1m"true"?[0m?[32m (US6)?[0m                   ?[90m# features.US6_CreateAProjectStepDefinition.i_create_a_project_with_the_title(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe project with title ?[0m?[32m?[1m"Second Project"?[0m?[32m with a completed ?[0m?[32m?[1m"true"?[0m?[32m shall exist in the system (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_title_with_a_completed_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Create a project with empty title                                                                          ?[90m# src/test/resources/US6_CreateAProject.feature:37?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US6)?[0m                                                                                     ?[90m# features.US6_CreateAProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[33mWhen ?[0m?[33mI create a project with an invalid asdf and title "testing" (US6)?[0m
+  ?[36mThen ?[0m?[36mthe status code shall be ?[0m?[36m?[1m404?[0m?[36m with an error message ?[0m?[36m?[1m"No such project entity instance with GUID or ID asdf found"?[0m?[36m (US6)?[0m ?[90m# features.US6_CreateAProjectStepDefinition.the_project_with_invalid_id_should_not_be_in_the_system(int,java.lang.String)?[0m
+
+Scenario Outline: Get all projects                                                                                  ?[90m# src/test/resources/US7_GetAllProjects.feature:21?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m                                                                    ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US7)?[0m                                                              ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description   | completed | active |
+    | project 1 | description 1 | false     | false  |
+    | project 2 | description 2 | true      | true   |
+    | project 3 | description 3 | false     | true   |
+  ?[32mWhen ?[0m?[32mI get all projects (US7)?[0m                                                                                     ?[90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects()?[0m
+  ?[32mThen ?[0m?[32mthe projects with title ?[0m?[32m?[1m"project 1"?[0m?[32m, description ?[0m?[32m?[1m"description 1"?[0m?[32m, completed ?[0m?[32m?[1m"false"?[0m?[32m and active ?[0m?[32m?[1m"false"?[0m?[32m (US7)?[0m ?[90m# features.US7_GetAllProjectsStepDefinition.the_todos_with_title_description_and_doneStatus(java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Get all projects                                                                                ?[90m# src/test/resources/US7_GetAllProjects.feature:22?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m                                                                  ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US7)?[0m                                                            ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description   | completed | active |
+    | project 1 | description 1 | false     | false  |
+    | project 2 | description 2 | true      | true   |
+    | project 3 | description 3 | false     | true   |
+  ?[32mWhen ?[0m?[32mI get all projects (US7)?[0m                                                                                   ?[90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects()?[0m
+  ?[32mThen ?[0m?[32mthe projects with title ?[0m?[32m?[1m"project 2"?[0m?[32m, description ?[0m?[32m?[1m"description 2"?[0m?[32m, completed ?[0m?[32m?[1m"true"?[0m?[32m and active ?[0m?[32m?[1m"true"?[0m?[32m (US7)?[0m ?[90m# features.US7_GetAllProjectsStepDefinition.the_todos_with_title_description_and_doneStatus(java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Get all projects                                                                                 ?[90m# src/test/resources/US7_GetAllProjects.feature:23?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m                                                                   ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US7)?[0m                                                             ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description   | completed | active |
+    | project 1 | description 1 | false     | false  |
+    | project 2 | description 2 | true      | true   |
+    | project 3 | description 3 | false     | true   |
+  ?[32mWhen ?[0m?[32mI get all projects (US7)?[0m                                                                                    ?[90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects()?[0m
+  ?[32mThen ?[0m?[32mthe projects with title ?[0m?[32m?[1m"project 3"?[0m?[32m, description ?[0m?[32m?[1m"description 3"?[0m?[32m, completed ?[0m?[32m?[1m"false"?[0m?[32m and active ?[0m?[32m?[1m"true"?[0m?[32m (US7)?[0m ?[90m# features.US7_GetAllProjectsStepDefinition.the_todos_with_title_description_and_doneStatus(java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Get all projects with completed is true                                        ?[90m# src/test/resources/US7_GetAllProjects.feature:32?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m                                                 ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US7)?[0m                                           ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description   | completed | active |
+    | project 1 | description 1 | false     | false  |
+    | project 2 | description 2 | true      | true   |
+    | project 3 | description 3 | false     | true   |
+  ?[32mWhen ?[0m?[32mI get all projects with completed is true (US7)?[0m                                           ?[90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects_with_completed_true()?[0m
+  ?[32mThen ?[0m?[32mI should see 1 project (US7)?[0m                                                              ?[90m# features.US7_GetAllProjectsStepDefinition.i_should_see_1_project()?[0m
+  ?[32mThen ?[0m?[32mthe projects with title ?[0m?[32m?[1m"project 2"?[0m?[32m, description ?[0m?[32m?[1m"description 2"?[0m?[32m, and active ?[0m?[32m?[1m"true"?[0m?[32m (US7)?[0m ?[90m# features.US7_GetAllProjectsStepDefinition.the_projects_with_title_description_completecTrue_active(java.lang.String,java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Get all projects with the wrong endpoint ?[90m# src/test/resources/US7_GetAllProjects.feature:40?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US7)?[0m           ?[90m# features.US7_GetAllProjectsStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system (US7)?[0m     ?[90m# features.US7_GetAllProjectsStepDefinition.the_following_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description   | completed | active |
+    | project 1 | description 1 | false     | false  |
+    | project 2 | description 2 | true      | true   |
+    | project 3 | description 3 | false     | true   |
+  ?[32mWhen ?[0m?[32mI get all projects with mistyped endpoint (US7)?[0m     ?[90m# features.US7_GetAllProjectsStepDefinition.i_get_all_projects_with_mistyped_endpoint()?[0m
+  ?[32mThen ?[0m?[32mI should receive error code ?[0m?[32m?[1m404?[0m?[32m (US7)?[0m               ?[90m# features.US7_GetAllProjectsStepDefinition.i_should_see_error_code(int)?[0m
+
+Scenario Outline: Delete an active project                               ?[90m# src/test/resources/US8_DeleteProject.feature:22?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US8)?[0m                         ?[90m# features.US8_DeleteProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe active project with id ?[0m?[32m?[1m2?[0m?[32m exists in the system (US8)?[0m          ?[90m# features.US8_DeleteProjectStepDefinition.active_project_with_id_exists_in_the_system(int)?[0m
+  ?[32mAnd ?[0m?[32mthe following active projects exist in the system (US8)?[0m            ?[90m# features.US8_DeleteProjectStepDefinition.the_following_active_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | id | title          | description        | completed | active |
+    | 2  | first project  | description proj 1 | true      | true   |
+    | 3  | second project | description proj 2 | false     | true   |
+  ?[32mWhen ?[0m?[32mI delete the active project with id ?[0m?[32m?[1m2?[0m?[32m (US8)?[0m                       ?[90m# features.US8_DeleteProjectStepDefinition.i_delete_the_project_with_id(int)?[0m
+  ?[32mThen ?[0m?[32mthe active project with id ?[0m?[32m?[1m2?[0m?[32m should not exist in the system (US8)?[0m ?[90m# features.US8_DeleteProjectStepDefinition.the_active_project_with_id_should_not_exist_in_the_system(int)?[0m
+  ?[32mThen ?[0m?[32mthere should be 1 active project in the system (US8)?[0m              ?[90m# features.US8_DeleteProjectStepDefinition.there_should_be_1_active_project_in_the_system()?[0m
+
+Scenario Outline: Delete a completed project                                ?[90m# src/test/resources/US8_DeleteProject.feature:36?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US8)?[0m                            ?[90m# features.US8_DeleteProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe completed project with id ?[0m?[32m?[1m2?[0m?[32m exists in the system (US8)?[0m          ?[90m# features.US8_DeleteProjectStepDefinition.the_completed_project_with_id_id_exists_in_the_system(int)?[0m
+  ?[32mAnd ?[0m?[32mthe following completed projects exist in the system (US8)?[0m            ?[90m# features.US8_DeleteProjectStepDefinition.the_following_completed_projects_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title  | description        | completed | active |
+    | proj 1 | first description  | true      | false  |
+    | proj 2 | second description | true      | true   |
+  ?[32mWhen ?[0m?[32mI delete the completed project with id ?[0m?[32m?[1m2?[0m?[32m (US8)?[0m                       ?[90m# features.US8_DeleteProjectStepDefinition.i_delete_the_completed_project_with_id(int)?[0m
+  ?[32mThen ?[0m?[32mthe completed project with id ?[0m?[32m?[1m2?[0m?[32m should not exist in the system (US8)?[0m ?[90m# features.US8_DeleteProjectStepDefinition.the_completed_project_with_id_should_not_exist_in_the_system(int)?[0m
+  ?[32mThen ?[0m?[32mthere should be 1 project in the current system (US8)?[0m                ?[90m# features.US8_DeleteProjectStepDefinition.there_should_be_one_project_in_the_current_system()?[0m
+
+Scenario Outline: Delete a project that does not exist                                                                   ?[90m# src/test/resources/US8_DeleteProject.feature:46?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US8)?[0m                                                                         ?[90m# features.US8_DeleteProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe project with id ?[0m?[32m?[1m10?[0m?[32m does not exist in the system (US8)?[0m                                                        ?[90m# features.US8_DeleteProjectStepDefinition.a_project_with_id_does_not_exist_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI delete the project with inexistant id ?[0m?[32m?[1m10?[0m?[32m (US8)?[0m                                                                  ?[90m# features.US8_DeleteProjectStepDefinition.i_delete_the_project_with_inexistant_id(int)?[0m
+  ?[32mThen ?[0m?[32mI should receive a status code ?[0m?[32m?[1m404?[0m?[32m and see an error message ?[0m?[32m?[1m"Could not find any instances with projects/10"?[0m?[32m (US8)?[0m ?[90m# features.US8_DeleteProjectStepDefinition.then_i_should_receive_a_status_code_and_see_an_error_message_proj(int,java.lang.String)?[0m
+
+Scenario Outline: Get a specific project                                                                                       ?[90m# src/test/resources/US9_GetSpecificProject.feature:24?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US9)?[0m                                                                               ?[90m# features.US9_GetSpecificProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system: (US9)?[0m                                                                        ?[90m# features.US9_GetSpecificProjectStepDefinition.the_following_projectss_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title       | description    | completed | active |
+    | first proj  | fun proj       | false     | true   |
+    | second proj | boring proj    | true      | false  |
+    | third proj  | super fun proj | false     | false  |
+    | fourth proj | [empty]        | true      | true   |
+  ?[32mGiven ?[0m?[32mthe project with id ?[0m?[32m?[1m2?[0m?[32m exists in the system (US9)?[0m                                                                       ?[90m# features.US9_GetSpecificProjectStepDefinition.a_project_with_id_exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI get the project with id ?[0m?[32m?[1m2?[0m?[32m (US9)?[0m                                                                                       ?[90m# features.US9_GetSpecificProjectStepDefinition.i_get_the_project_with_id(int)?[0m
+  ?[32mThen ?[0m?[32mI should get a project with id ?[0m?[32m?[1m2?[0m?[32m, title ?[0m?[32m?[1m"first proj"?[0m?[32m, description ?[0m?[32m?[1m"fun proj"?[0m?[32m, completed ?[0m?[32m?[1m"false"?[0m?[32m and active ?[0m?[32m?[1m"true"?[0m?[32m (US9)?[0m ?[90m# features.US9_GetSpecificProjectStepDefinition.the_project_with_id_should_have_title_description_completed_active(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Get a specific project                                                                                           ?[90m# src/test/resources/US9_GetSpecificProject.feature:25?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US9)?[0m                                                                                   ?[90m# features.US9_GetSpecificProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system: (US9)?[0m                                                                            ?[90m# features.US9_GetSpecificProjectStepDefinition.the_following_projectss_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title       | description    | completed | active |
+    | first proj  | fun proj       | false     | true   |
+    | second proj | boring proj    | true      | false  |
+    | third proj  | super fun proj | false     | false  |
+    | fourth proj | [empty]        | true      | true   |
+  ?[32mGiven ?[0m?[32mthe project with id ?[0m?[32m?[1m3?[0m?[32m exists in the system (US9)?[0m                                                                           ?[90m# features.US9_GetSpecificProjectStepDefinition.a_project_with_id_exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI get the project with id ?[0m?[32m?[1m3?[0m?[32m (US9)?[0m                                                                                           ?[90m# features.US9_GetSpecificProjectStepDefinition.i_get_the_project_with_id(int)?[0m
+  ?[32mThen ?[0m?[32mI should get a project with id ?[0m?[32m?[1m3?[0m?[32m, title ?[0m?[32m?[1m"second proj"?[0m?[32m, description ?[0m?[32m?[1m"boring proj"?[0m?[32m, completed ?[0m?[32m?[1m"true"?[0m?[32m and active ?[0m?[32m?[1m"false"?[0m?[32m (US9)?[0m ?[90m# features.US9_GetSpecificProjectStepDefinition.the_project_with_id_should_have_title_description_completed_active(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Get a specific project                                                                                              ?[90m# src/test/resources/US9_GetSpecificProject.feature:26?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US9)?[0m                                                                                      ?[90m# features.US9_GetSpecificProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system: (US9)?[0m                                                                               ?[90m# features.US9_GetSpecificProjectStepDefinition.the_following_projectss_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title       | description    | completed | active |
+    | first proj  | fun proj       | false     | true   |
+    | second proj | boring proj    | true      | false  |
+    | third proj  | super fun proj | false     | false  |
+    | fourth proj | [empty]        | true      | true   |
+  ?[32mGiven ?[0m?[32mthe project with id ?[0m?[32m?[1m4?[0m?[32m exists in the system (US9)?[0m                                                                              ?[90m# features.US9_GetSpecificProjectStepDefinition.a_project_with_id_exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI get the project with id ?[0m?[32m?[1m4?[0m?[32m (US9)?[0m                                                                                              ?[90m# features.US9_GetSpecificProjectStepDefinition.i_get_the_project_with_id(int)?[0m
+  ?[32mThen ?[0m?[32mI should get a project with id ?[0m?[32m?[1m4?[0m?[32m, title ?[0m?[32m?[1m"third proj"?[0m?[32m, description ?[0m?[32m?[1m"super fun proj"?[0m?[32m, completed ?[0m?[32m?[1m"false"?[0m?[32m and active ?[0m?[32m?[1m"false"?[0m?[32m (US9)?[0m ?[90m# features.US9_GetSpecificProjectStepDefinition.the_project_with_id_should_have_title_description_completed_active(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Get a project that has an empty description                                                                                        ?[90m# src/test/resources/US9_GetSpecificProject.feature:36?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US9)?[0m                                                                                                     ?[90m# features.US9_GetSpecificProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system: (US9)?[0m                                                                                              ?[90m# features.US9_GetSpecificProjectStepDefinition.the_following_projectss_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title       | description    | completed | active |
+    | first proj  | fun proj       | false     | true   |
+    | second proj | boring proj    | true      | false  |
+    | third proj  | super fun proj | false     | false  |
+    | fourth proj | [empty]        | true      | true   |
+  ?[32mGiven ?[0m?[32mthe project with id ?[0m?[32m?[1m5?[0m?[32m and no description exists in the system (US9)?[0m                                                                          ?[90m# features.US9_GetSpecificProjectStepDefinition.the_project_with_id_and_no_description_exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI get the project with id ?[0m?[32m?[1m5?[0m?[32m that has no description (US9)?[0m                                                                                     ?[90m# features.US9_GetSpecificProjectStepDefinition.i_get_the_project_with_id_that_has_no_description(int)?[0m
+  ?[32mThen ?[0m?[32mI should get a project that has an empty description with id ?[0m?[32m?[1m5?[0m?[32m, title ?[0m?[32m?[1m"fourth proj"?[0m?[32m, description ?[0m?[32m?[1m""?[0m?[32m, completed ?[0m?[32m?[1m"true"?[0m?[32m and active ?[0m?[32m?[1m"true"?[0m?[32m (US9)?[0m ?[90m# features.US9_GetSpecificProjectStepDefinition.i_should_get_a_project_that_has_an_empty_description_with_id_title_description_completed_active(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: Get a project that does not exist                                                                 ?[90m# src/test/resources/US9_GetSpecificProject.feature:48?[0m
+  ?[32mGiven ?[0m?[32mthe project application is running (US9)?[0m                                                                    ?[90m# features.US9_GetSpecificProjectStepDefinition.the_project_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following projects exist in the system: (US9)?[0m                                                             ?[90m# features.US9_GetSpecificProjectStepDefinition.the_following_projectss_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title       | description    | completed | active |
+    | first proj  | fun proj       | false     | true   |
+    | second proj | boring proj    | true      | false  |
+    | third proj  | super fun proj | false     | false  |
+    | fourth proj | [empty]        | true      | true   |
+  ?[32mGiven ?[0m?[32mthe project with id ?[0m?[32m?[1m100?[0m?[32m does not exist in the system (US9)?[0m                                                  ?[90m# features.US9_GetSpecificProjectStepDefinition.the_project_with_id_does_not_exist_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI get the project with invalid id ?[0m?[32m?[1m100?[0m?[32m (US9)?[0m                                                                  ?[90m# features.US9_GetSpecificProjectStepDefinition.i_get_the_project_with_invalid_id(int)?[0m
+null
+  ?[32mThen ?[0m?[32mI should receive a ?[0m?[32m?[1m404?[0m?[32m status code and an error message ?[0m?[32m?[1m"Could not find an instance with projects/100"?[0m?[32m (US9)?[0m ?[90m# features.US9_GetSpecificProjectStepDefinition.i_should_get_a_status_code_(int,java.lang.String)?[0m
+
+Scenario: Credit amount                      ?[90m# src/test/resources/example.feature:3?[0m
+givenAccountBalance
+  ?[32mGiven ?[0m?[32maccount balance is ?[0m?[32m?[1m0.0?[0m               ?[90m# features.example.givenAccountBalance(java.lang.Double)?[0m
+  ?[32mWhen ?[0m?[32mthe account is credited with ?[0m?[32m?[1m10.0?[0m     ?[90m# features.example.whenIDeposit(java.lang.Double)?[0m
+  ?[32mThen ?[0m?[32maccount should have a balance of ?[0m?[32m?[1m10.0?[0m ?[90m# features.example.thenAccountBalanceIs(java.lang.Double)?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
