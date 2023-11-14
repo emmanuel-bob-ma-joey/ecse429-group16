@@ -181,22 +181,30 @@ public class HelperFunctions {
     }
 
     // public static Response updateCategoryWithId(int id, String title) {
-    //     RestAssured.baseURI = baseUrl;
-    //     RequestSpecification request = RestAssured.given();
+    // RestAssured.baseURI = baseUrl;
+    // RequestSpecification request = RestAssured.given();
 
-    //     request.header("Content-Type", "application/json");
-    //     JSONObject requestParams = new JSONObject();
-    //     requestParams.put("title", title);
-   
+    // request.header("Content-Type", "application/json");
+    // JSONObject requestParams = new JSONObject();
+    // requestParams.put("title", title);
 
-    //     request.body(requestParams.toJSONString());
+    // request.body(requestParams.toJSONString());
 
-    //     Response response = request.post("/categories/" + id);
+    // Response response = request.post("/categories/" + id);
 
-    //     return response;
+    // return response;
     // }
 
     public static Response deleteCategoryWithId(int id) {
+        RestAssured.baseURI = baseUrl;
+        RequestSpecification request = RestAssured.given();
+
+        Response response = request.delete("/categories/" + id);
+
+        return response;
+    }
+
+    public static Response deleteCategoryWithIDString(String id) {
         RestAssured.baseURI = baseUrl;
         RequestSpecification request = RestAssured.given();
 

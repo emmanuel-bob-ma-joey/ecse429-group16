@@ -1,75 +1,286 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="features.CucumberFeaturesTestRunner" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-11-13T22:16:26" hostname="MacBook-Pro.local" time="32.057">
+<testsuite name="features.CucumberFeaturesTestRunner" tests="23" skipped="0" failures="0" errors="0" timestamp="2023-11-14T19:09:27" hostname="macbook-air-3" time="84.872">
   <properties/>
-  <testcase name="Get all categories #1" classname="features.CucumberFeaturesTestRunner" time="7.587"/>
-  <testcase name="Get all categories #2" classname="features.CucumberFeaturesTestRunner" time="6.124"/>
-  <testcase name="Get all categories #3" classname="features.CucumberFeaturesTestRunner" time="6.119"/>
-  <testcase name="Get all categories with a specific title" classname="features.CucumberFeaturesTestRunner" time="6.13"/>
-  <testcase name="Get all categories with the wrong endpoint" classname="features.CucumberFeaturesTestRunner" time="6.096"/>
+  <testcase name="Create a category #1" classname="features.CucumberFeaturesTestRunner" time="7.125"/>
+  <testcase name="Create a category #2" classname="features.CucumberFeaturesTestRunner" time="3.493"/>
+  <testcase name="Create a category that has already been created #1" classname="features.CucumberFeaturesTestRunner" time="3.437"/>
+  <testcase name="Create a category that has already been created #2" classname="features.CucumberFeaturesTestRunner" time="3.438"/>
+  <testcase name="Create a category with an empty title" classname="features.CucumberFeaturesTestRunner" time="3.507"/>
+  <testcase name="Update a categories title and description #1" classname="features.CucumberFeaturesTestRunner" time="3.718"/>
+  <testcase name="Update a categories title and description #2" classname="features.CucumberFeaturesTestRunner" time="3.512"/>
+  <testcase name="update a category with only the title #1" classname="features.CucumberFeaturesTestRunner" time="3.488"/>
+  <testcase name="update a category with only the title #2" classname="features.CucumberFeaturesTestRunner" time="3.513"/>
+  <testcase name="Update a category with empty title" classname="features.CucumberFeaturesTestRunner" time="3.473"/>
+  <testcase name="Get all categories #1" classname="features.CucumberFeaturesTestRunner" time="3.503"/>
+  <testcase name="Get all categories #2" classname="features.CucumberFeaturesTestRunner" time="3.508"/>
+  <testcase name="Get all categories #3" classname="features.CucumberFeaturesTestRunner" time="3.49"/>
+  <testcase name="Get all categories with a specific title" classname="features.CucumberFeaturesTestRunner" time="4.025"/>
+  <testcase name="Get all categories with the wrong endpoint" classname="features.CucumberFeaturesTestRunner" time="3.471"/>
+  <testcase name="Delete a category" classname="features.CucumberFeaturesTestRunner" time="3.537"/>
+  <testcase name="Delete a category that has an empty description" classname="features.CucumberFeaturesTestRunner" time="3.601"/>
+  <testcase name="Delete a category that does not exist" classname="features.CucumberFeaturesTestRunner" time="3.48"/>
+  <testcase name="Get a specific category that #1" classname="features.CucumberFeaturesTestRunner" time="3.498"/>
+  <testcase name="Get a specific category that #2" classname="features.CucumberFeaturesTestRunner" time="3.675"/>
+  <testcase name="Get a specific category that #3" classname="features.CucumberFeaturesTestRunner" time="3.42"/>
+  <testcase name="Get a category that has an empty description" classname="features.CucumberFeaturesTestRunner" time="3.444"/>
+  <testcase name="Get a category that does not exist" classname="features.CucumberFeaturesTestRunner" time="3.464"/>
   <system-out><![CDATA[
-Scenario Outline: Get all categories                                                 ?[90m# src/test/resources/US3_GetAllCategories.feature:21?[0m
-application started
-the_todo_application_is_running
-  ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                                        ?[90m# features.US3_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
-  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US3)?[0m                             ?[90m# features.US3_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
-    | title     | description  |
-    | category1 | description1 |
-    | category2 | description2 |
-    | category3 | description3 |
-  ?[32mWhen ?[0m?[32mI get all categories (US3)?[0m                                                    ?[90m# features.US3_GetAllCategoriesStepDefinition.i_get_all_categories()?[0m
-  ?[32mThen ?[0m?[32mthe categories with title ?[0m?[32m?[1m"category1"?[0m?[32m, description ?[0m?[32m?[1m"description1"?[0m?[32m exist (US3)?[0m ?[90m# features.US3_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)?[0m
+Scenario Outline: Create a category                                                                                                     ?[90m# src/test/resources/US11_CreateACategory.feature:17?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US11)?[0m                                                                                               ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe category with title ?[0m?[32m?[1m"My first category"?[0m?[32m and the description ?[0m?[32m?[1m"This is my first category"?[0m?[32m does not exist in the system (US11)?[0m ?[90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create a category with the title ?[0m?[32m?[1m"My first category"?[0m?[32m and description ?[0m?[32m?[1m"This is my first category"?[0m?[32m (US11)?[0m                        ?[90m# features.US11_CreateCategoryStepDefinition.i_create_a_category_with_title_and_the_description(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe category with title ?[0m?[32m?[1m"My first category"?[0m?[32m and the description ?[0m?[32m?[1m"This is my first category"?[0m?[32m shall exist in the system (US11)?[0m     ?[90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
 application stopped
 
-Scenario Outline: Get all categories                                                 ?[90m# src/test/resources/US3_GetAllCategories.feature:22?[0m
-application started
-the_todo_application_is_running
-  ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                                        ?[90m# features.US3_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
-  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US3)?[0m                             ?[90m# features.US3_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
-    | title     | description  |
-    | category1 | description1 |
-    | category2 | description2 |
-    | category3 | description3 |
-  ?[32mWhen ?[0m?[32mI get all categories (US3)?[0m                                                    ?[90m# features.US3_GetAllCategoriesStepDefinition.i_get_all_categories()?[0m
-  ?[32mThen ?[0m?[32mthe categories with title ?[0m?[32m?[1m"category2"?[0m?[32m, description ?[0m?[32m?[1m"description2"?[0m?[32m exist (US3)?[0m ?[90m# features.US3_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)?[0m
+Scenario Outline: Create a category                                                                                                       ?[90m# src/test/resources/US11_CreateACategory.feature:18?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US11)?[0m                                                                                                 ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe category with title ?[0m?[32m?[1m"My second category"?[0m?[32m and the description ?[0m?[32m?[1m"This is my second category"?[0m?[32m does not exist in the system (US11)?[0m ?[90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_does_not_exist_in_the_system(java.lang.String,java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create a category with the title ?[0m?[32m?[1m"My second category"?[0m?[32m and description ?[0m?[32m?[1m"This is my second category"?[0m?[32m (US11)?[0m                        ?[90m# features.US11_CreateCategoryStepDefinition.i_create_a_category_with_title_and_the_description(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe category with title ?[0m?[32m?[1m"My second category"?[0m?[32m and the description ?[0m?[32m?[1m"This is my second category"?[0m?[32m shall exist in the system (US11)?[0m     ?[90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_and_the_description_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
 application stopped
 
-Scenario Outline: Get all categories                                                 ?[90m# src/test/resources/US3_GetAllCategories.feature:23?[0m
-application started
-the_todo_application_is_running
-  ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                                        ?[90m# features.US3_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
-  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US3)?[0m                             ?[90m# features.US3_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
-    | title     | description  |
-    | category1 | description1 |
-    | category2 | description2 |
-    | category3 | description3 |
-  ?[32mWhen ?[0m?[32mI get all categories (US3)?[0m                                                    ?[90m# features.US3_GetAllCategoriesStepDefinition.i_get_all_categories()?[0m
-  ?[32mThen ?[0m?[32mthe categories with title ?[0m?[32m?[1m"category3"?[0m?[32m, description ?[0m?[32m?[1m"description3"?[0m?[32m exist (US3)?[0m ?[90m# features.US3_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)?[0m
+Scenario Outline: Create a category that has already been created                                                                  ?[90m# src/test/resources/US11_CreateACategory.feature:27?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US11)?[0m                                                                                          ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe category with title ?[0m?[32m?[1m"My first category"?[0m?[32m does not exist in the system (US11)?[0m                                            ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_with_title_does_not_exist_in_the_system(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create a duplicate category with the title ?[0m?[32m?[1m"My first category"?[0m?[32m and description ?[0m?[32m?[1m"this is my first category"?[0m?[32m (US11)?[0m         ?[90m# features.US11_CreateCategoryStepDefinition.i_create_a_duplicate_category_with_the_title(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe category with title ?[0m?[32m?[1m"My first category"?[0m?[32m with a description ?[0m?[32m?[1m"this is my first category"?[0m?[32m shall exist in the system (US11)?[0m ?[90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_with_a_description_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
 application stopped
 
-Scenario Outline: Get all categories with a specific title          ?[90m# src/test/resources/US3_GetAllCategories.feature:32?[0m
-application started
-the_todo_application_is_running
-  ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                       ?[90m# features.US3_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
-  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US3)?[0m            ?[90m# features.US3_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
-    | title     | description  |
-    | category1 | description1 |
-    | category2 | description2 |
-    | category3 | description3 |
-  ?[32mWhen ?[0m?[32mI get all categories with a specific title ?[0m?[32m?[1m"category1"?[0m?[32m (US3)?[0m ?[90m# features.US3_GetAllCategoriesStepDefinition.i_get_all_categories_with_a_specific_title(java.lang.String)?[0m
-  ?[32mThen ?[0m?[32mI should see ?[0m?[32m?[1m1?[0m?[32m categories with title ?[0m?[32m?[1m"category1"?[0m?[32m (US3)?[0m       ?[90m# features.US3_GetAllCategoriesStepDefinition.i_should_see_category_us3(java.lang.Integer,java.lang.String)?[0m
+Scenario Outline: Create a category that has already been created                                                                    ?[90m# src/test/resources/US11_CreateACategory.feature:28?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US11)?[0m                                                                                            ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe category with title ?[0m?[32m?[1m"My second category"?[0m?[32m does not exist in the system (US11)?[0m                                             ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_with_title_does_not_exist_in_the_system(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create a duplicate category with the title ?[0m?[32m?[1m"My second category"?[0m?[32m and description ?[0m?[32m?[1m"this is my second category"?[0m?[32m (US11)?[0m         ?[90m# features.US11_CreateCategoryStepDefinition.i_create_a_duplicate_category_with_the_title(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe category with title ?[0m?[32m?[1m"My second category"?[0m?[32m with a description ?[0m?[32m?[1m"this is my second category"?[0m?[32m shall exist in the system (US11)?[0m ?[90m# features.US11_CreateCategoryStepDefinition.the_category_with_title_with_a_description_should_be_in_the_system(java.lang.String,java.lang.String)?[0m
 application stopped
 
-Scenario Outline: Get all categories with the wrong endpoint ?[90m# src/test/resources/US3_GetAllCategories.feature:40?[0m
-application started
+Scenario Outline: Create a category with an empty title                                                        ?[90m# src/test/resources/US11_CreateACategory.feature:37?[0m
+  ?[32mGiven ?[0m?[32mthe application is running (US11)?[0m                                                                      ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mWhen ?[0m?[32mI create a category with empty title (US11)?[0m                                                             ?[90m# features.US11_CreateCategoryStepDefinition.i_create_a_category_with_empty_title()?[0m
+  ?[32mThen ?[0m?[32mthe status code shall be ?[0m?[32m?[1m400?[0m?[32m with an error message ?[0m?[32m?[1m"Failed Validation: title : can not be empty"?[0m?[32m (US11)?[0m ?[90m# features.US11_CreateCategoryStepDefinition.the_todo_with_empty_title_should_not_be_in_the_system(int,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Update a categories title and description                                          ?[90m# src/test/resources/US12_UpdateCategory.feature:21?[0m
 the_todo_application_is_running
-  ?[32mGiven ?[0m?[32mthe todo application is running (US3)?[0m                ?[90m# features.US3_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
-  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US3)?[0m     ?[90m# features.US3_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+  ?[32mGiven ?[0m?[32mthe todo application is running (US12)?[0m                                                       ?[90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US12)?[0m                                            ?[90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description   |
+    | category1 | description 1 |
+    | category2 | description 2 |
+  ?[32mGiven ?[0m?[32ma category with ?[0m?[32m?[1m3?[0m?[32m exists in the system (US12)?[0m                                                ?[90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI update the category with id ?[0m?[32m?[1m3?[0m?[32m with a new title ?[0m?[32m?[1m"category1"?[0m?[32m, description ?[0m?[32m?[1m"category 1"?[0m?[32m (US12)?[0m ?[90m# features.US12_UpdateCategoryStepDefinition.i_update_the_category_with_id_with_a_new_title_and_description(int,java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe category with id ?[0m?[32m?[1m3?[0m?[32m should have title ?[0m?[32m?[1m"category1"?[0m?[32m, description ?[0m?[32m?[1m"category 1"?[0m?[32m (US12)?[0m         ?[90m# features.US12_UpdateCategoryStepDefinition.the_category_with_id_should_have_a_description(int,java.lang.String,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Update a categories title and description                                          ?[90m# src/test/resources/US12_UpdateCategory.feature:22?[0m
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US12)?[0m                                                       ?[90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US12)?[0m                                            ?[90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description   |
+    | category1 | description 1 |
+    | category2 | description 2 |
+  ?[32mGiven ?[0m?[32ma category with ?[0m?[32m?[1m4?[0m?[32m exists in the system (US12)?[0m                                                ?[90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI update the category with id ?[0m?[32m?[1m4?[0m?[32m with a new title ?[0m?[32m?[1m"category2"?[0m?[32m, description ?[0m?[32m?[1m"category 2"?[0m?[32m (US12)?[0m ?[90m# features.US12_UpdateCategoryStepDefinition.i_update_the_category_with_id_with_a_new_title_and_description(int,java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe category with id ?[0m?[32m?[1m4?[0m?[32m should have title ?[0m?[32m?[1m"category2"?[0m?[32m, description ?[0m?[32m?[1m"category 2"?[0m?[32m (US12)?[0m         ?[90m# features.US12_UpdateCategoryStepDefinition.the_category_with_id_should_have_a_description(int,java.lang.String,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: update a category with only the title                                           ?[90m# src/test/resources/US12_UpdateCategory.feature:31?[0m
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US12)?[0m                                                    ?[90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US12)?[0m                                         ?[90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description   |
+    | category1 | description 1 |
+    | category2 | description 2 |
+  ?[32mGiven ?[0m?[32ma category with id ?[0m?[32m?[1m3?[0m?[32m exists in the system (US12)?[0m                                          ?[90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_with_doneStatus_exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI update the category with id ?[0m?[32m?[1m3?[0m?[32m with a title ?[0m?[32m?[1m"new category 1"?[0m?[32m and empty description (US12)?[0m ?[90m# features.US12_UpdateCategoryStepDefinition.when_i_update_the_category_with_id_with(int,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe category with ?[0m?[32m?[1m3?[0m?[32m should have an updated title ?[0m?[32m?[1m"new category 1"?[0m?[32m (US12)?[0m                   ?[90m# features.US12_UpdateCategoryStepDefinition.the_category_with_id_should_have_an_updated_status(int,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: update a category with only the title                                           ?[90m# src/test/resources/US12_UpdateCategory.feature:32?[0m
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US12)?[0m                                                    ?[90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US12)?[0m                                         ?[90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description   |
+    | category1 | description 1 |
+    | category2 | description 2 |
+  ?[32mGiven ?[0m?[32ma category with id ?[0m?[32m?[1m4?[0m?[32m exists in the system (US12)?[0m                                          ?[90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_with_doneStatus_exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI update the category with id ?[0m?[32m?[1m4?[0m?[32m with a title ?[0m?[32m?[1m"new category 2"?[0m?[32m and empty description (US12)?[0m ?[90m# features.US12_UpdateCategoryStepDefinition.when_i_update_the_category_with_id_with(int,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe category with ?[0m?[32m?[1m4?[0m?[32m should have an updated title ?[0m?[32m?[1m"new category 2"?[0m?[32m (US12)?[0m                   ?[90m# features.US12_UpdateCategoryStepDefinition.the_category_with_id_should_have_an_updated_status(int,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Update a category with empty title              ?[90m# src/test/resources/US12_UpdateCategory.feature:42?[0m
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US12)?[0m                    ?[90m# features.US12_UpdateCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US12)?[0m         ?[90m# features.US12_UpdateCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description   |
+    | category1 | description 1 |
+    | category2 | description 2 |
+  ?[32mGiven ?[0m?[32ma category with ?[0m?[32m?[1m1?[0m?[32m that exists in the system (US12)?[0m        ?[90m# features.US12_UpdateCategoryStepDefinition.a_category_with_id_that_exists_in_the_system(int)?[0m
+  ?[32mWhen ?[0m?[32mI update the category with id ?[0m?[32m?[1m1?[0m?[32m with an empty title (US12)?[0m ?[90m# features.US12_UpdateCategoryStepDefinition.i_update_the_category_with_id_with_empty_title(int)?[0m
+  ?[32mThen ?[0m?[32mI should receive a ?[0m?[32m?[1m400?[0m?[32m response (US12)?[0m                     ?[90m# features.US12_UpdateCategoryStepDefinition.i_should_receive_a_response_with(int)?[0m
+application stopped
+
+Scenario Outline: Get all categories                                                  ?[90m# src/test/resources/US13_GetAllCategories.feature:21?[0m
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US13)?[0m                                        ?[90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US13)?[0m                             ?[90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
     | title     | description  |
     | category1 | description1 |
     | category2 | description2 |
     | category3 | description3 |
-  ?[32mWhen ?[0m?[32mI get all categories with mistyped endpoint (US3)?[0m     ?[90m# features.US3_GetAllCategoriesStepDefinition.i_get_all_categories_with_mistyped_endpoint()?[0m
-  ?[32mThen ?[0m?[32mI should receive an error code ?[0m?[32m?[1m404?[0m?[32m (US3)?[0m              ?[90m# features.US3_GetAllCategoriesStepDefinition.i_should_see_an_error_code(int)?[0m
+  ?[32mWhen ?[0m?[32mI get all categories (US13)?[0m                                                    ?[90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories()?[0m
+  ?[32mThen ?[0m?[32mthe categories with title ?[0m?[32m?[1m"category1"?[0m?[32m, description ?[0m?[32m?[1m"description1"?[0m?[32m exist (US13)?[0m ?[90m# features.US13_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Get all categories                                                  ?[90m# src/test/resources/US13_GetAllCategories.feature:22?[0m
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US13)?[0m                                        ?[90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US13)?[0m                             ?[90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description  |
+    | category1 | description1 |
+    | category2 | description2 |
+    | category3 | description3 |
+  ?[32mWhen ?[0m?[32mI get all categories (US13)?[0m                                                    ?[90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories()?[0m
+  ?[32mThen ?[0m?[32mthe categories with title ?[0m?[32m?[1m"category2"?[0m?[32m, description ?[0m?[32m?[1m"description2"?[0m?[32m exist (US13)?[0m ?[90m# features.US13_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Get all categories                                                  ?[90m# src/test/resources/US13_GetAllCategories.feature:23?[0m
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US13)?[0m                                        ?[90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US13)?[0m                             ?[90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description  |
+    | category1 | description1 |
+    | category2 | description2 |
+    | category3 | description3 |
+  ?[32mWhen ?[0m?[32mI get all categories (US13)?[0m                                                    ?[90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories()?[0m
+  ?[32mThen ?[0m?[32mthe categories with title ?[0m?[32m?[1m"category3"?[0m?[32m, description ?[0m?[32m?[1m"description3"?[0m?[32m exist (US13)?[0m ?[90m# features.US13_GetAllCategoriesStepDefinition.the_categories_with_title_description(java.lang.String,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Get all categories with a specific title           ?[90m# src/test/resources/US13_GetAllCategories.feature:32?[0m
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US13)?[0m                       ?[90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US13)?[0m            ?[90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description  |
+    | category1 | description1 |
+    | category2 | description2 |
+    | category3 | description3 |
+  ?[32mWhen ?[0m?[32mI get all categories with a specific title ?[0m?[32m?[1m"category1"?[0m?[32m (US13)?[0m ?[90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories_with_a_specific_title(java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mI should see ?[0m?[32m?[1m1?[0m?[32m categories with title ?[0m?[32m?[1m"category1"?[0m?[32m (US13)?[0m       ?[90m# features.US13_GetAllCategoriesStepDefinition.i_should_see_category_us3(java.lang.Integer,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Get all categories with the wrong endpoint ?[90m# src/test/resources/US13_GetAllCategories.feature:40?[0m
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US13)?[0m               ?[90m# features.US13_GetAllCategoriesStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US13)?[0m    ?[90m# features.US13_GetAllCategoriesStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description  |
+    | category1 | description1 |
+    | category2 | description2 |
+    | category3 | description3 |
+  ?[32mWhen ?[0m?[32mI get all categories with mistyped endpoint (US13)?[0m    ?[90m# features.US13_GetAllCategoriesStepDefinition.i_get_all_categories_with_mistyped_endpoint()?[0m
+  ?[32mThen ?[0m?[32mI should receive an error code ?[0m?[32m?[1m404?[0m?[32m (US13)?[0m             ?[90m# features.US13_GetAllCategoriesStepDefinition.i_should_see_an_error_code(int)?[0m
+application stopped
+
+Scenario Outline: Delete a category                                 ?[90m# src/test/resources/US14_DeleteACategory.feature:22?[0m
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US14)?[0m                      ?[90m# features.US14_DeleteCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe category with id ?[0m?[32m?[1m3?[0m?[32m exists in the system (US14)?[0m          ?[90m# features.US14_DeleteCategoryStepDefinition.the_category_with_id_exists_in_the_system(java.lang.Integer)?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the current system (US14)?[0m   ?[90m# features.US14_DeleteCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title     | description  |
+    | category1 | description1 |
+    | category2 | description2 |
+  ?[32mWhen ?[0m?[32mI delete the category with id ?[0m?[32m?[1m3?[0m?[32m (US14)?[0m                       ?[90m# features.US14_DeleteCategoryStepDefinition.i_delete_the_category_with_id(java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mthe category with id ?[0m?[32m?[1m3?[0m?[32m should not exist in the system (US14)?[0m ?[90m# features.US14_DeleteCategoryStepDefinition.the_category_with_id_should_not_exist_in_the_system(java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mthere should be 1 todo in the system (US14)?[0m                  ?[90m# features.US14_DeleteCategoryStepDefinition.there_should_be_1_todo_in_the_system()?[0m
+application stopped
+
+Scenario Outline: Delete a category that has an empty description                         ?[90m# src/test/resources/US14_DeleteACategory.feature:37?[0m
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US14)?[0m                                            ?[90m# features.US14_DeleteCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe category with id ?[0m?[32m?[1m3?[0m?[32m no description exists in the system (US14)?[0m                 ?[90m# features.US14_DeleteCategoryStepDefinition.the_category_with_id_does_not_exist_in_the_system(java.lang.Integer)?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system (US14)?[0m                                 ?[90m# features.US14_DeleteCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system2(io.cucumber.datatable.DataTable)?[0m
+    | title | description  |
+    | todo1 | description1 |
+    | todo2 | [empty]      |
+  ?[32mWhen ?[0m?[32mI delete the category without a description with id ?[0m?[32m?[1m3?[0m?[32m (US14)?[0m                       ?[90m# features.US14_DeleteCategoryStepDefinition.i_delete_the_category_without_a_description_with_id(java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mthe category without a description with id ?[0m?[32m?[1m3?[0m?[32m should not exist in the system (US14)?[0m ?[90m# features.US14_DeleteCategoryStepDefinition.the_category_without_a_description_with_id_should_not_exist_in_the_system(java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mthere should be 1 todo in the current system (US14)?[0m                                ?[90m# features.US14_DeleteCategoryStepDefinition.there_should_be_1_todo_in_the_current_system()?[0m
+application stopped
+
+Scenario Outline: Delete a category that does not exist                                                                      ?[90m# src/test/resources/US14_DeleteACategory.feature:47?[0m
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US14)?[0m                                                                               ?[90m# features.US14_DeleteCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mGiven ?[0m?[32mthe category with invalid id ?[0m?[32m?[1m"qwe"?[0m?[32m does not exist in the system (US14)?[0m                                               ?[90m# features.US14_DeleteCategoryStepDefinition.the_category_with_id_does_not_exist_in_the_system2(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI delete the category with inexistant id ?[0m?[32m?[1m"qwe"?[0m?[32m (US14)?[0m                                                                 ?[90m# features.US14_DeleteCategoryStepDefinition.i_delete_the_category_with_inexistant_id(java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mI should receive a status code ?[0m?[32m?[1m404?[0m?[32m and see an error message ?[0m?[32m?[1m"Could not find any instances with categories/qwe"?[0m?[32m (US14)?[0m ?[90m# features.US14_DeleteCategoryStepDefinition.i_should_receive_a_status_code_and_see_an_error_message(int,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Get a specific category that                                                 ?[90m# src/test/resources/US15_GetSpecificCategory.feature:24?[0m
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US15)?[0m                                                 ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system: (US15)?[0m                                     ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title                    | description  |
+    | category1                | description1 |
+    | category2                | description2 |
+    | category3                | description3 |
+    | emptyDescriptionCategory | [empty]      |
+  ?[32mGiven ?[0m?[32mthe category with id ?[0m?[32m?[1m3?[0m?[32m exists in the system (US15)?[0m                                     ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_category_with_id_exists_in_the_system(java.lang.Integer)?[0m
+  ?[32mWhen ?[0m?[32mI get the category with specific id ?[0m?[32m?[1m3?[0m?[32m (US15)?[0m                                            ?[90m# features.US15_GetSpecificCategoryStepDefinition.i_get_the_category_with_id(java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mI should get a category with id ?[0m?[32m?[1m3?[0m?[32m, title ?[0m?[32m?[1m"category1"?[0m?[32m, description ?[0m?[32m?[1m"description1"?[0m?[32m (US15)?[0m ?[90m# features.US15_GetSpecificCategoryStepDefinition.then_i_should_get_a_category_with_id_title_description(int,java.lang.String,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Get a specific category that                                                 ?[90m# src/test/resources/US15_GetSpecificCategory.feature:25?[0m
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US15)?[0m                                                 ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system: (US15)?[0m                                     ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title                    | description  |
+    | category1                | description1 |
+    | category2                | description2 |
+    | category3                | description3 |
+    | emptyDescriptionCategory | [empty]      |
+  ?[32mGiven ?[0m?[32mthe category with id ?[0m?[32m?[1m4?[0m?[32m exists in the system (US15)?[0m                                     ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_category_with_id_exists_in_the_system(java.lang.Integer)?[0m
+  ?[32mWhen ?[0m?[32mI get the category with specific id ?[0m?[32m?[1m4?[0m?[32m (US15)?[0m                                            ?[90m# features.US15_GetSpecificCategoryStepDefinition.i_get_the_category_with_id(java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mI should get a category with id ?[0m?[32m?[1m4?[0m?[32m, title ?[0m?[32m?[1m"category2"?[0m?[32m, description ?[0m?[32m?[1m"description2"?[0m?[32m (US15)?[0m ?[90m# features.US15_GetSpecificCategoryStepDefinition.then_i_should_get_a_category_with_id_title_description(int,java.lang.String,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Get a specific category that                                                 ?[90m# src/test/resources/US15_GetSpecificCategory.feature:26?[0m
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US15)?[0m                                                 ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system: (US15)?[0m                                     ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title                    | description  |
+    | category1                | description1 |
+    | category2                | description2 |
+    | category3                | description3 |
+    | emptyDescriptionCategory | [empty]      |
+  ?[32mGiven ?[0m?[32mthe category with id ?[0m?[32m?[1m5?[0m?[32m exists in the system (US15)?[0m                                     ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_category_with_id_exists_in_the_system(java.lang.Integer)?[0m
+  ?[32mWhen ?[0m?[32mI get the category with specific id ?[0m?[32m?[1m5?[0m?[32m (US15)?[0m                                            ?[90m# features.US15_GetSpecificCategoryStepDefinition.i_get_the_category_with_id(java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mI should get a category with id ?[0m?[32m?[1m5?[0m?[32m, title ?[0m?[32m?[1m"category3"?[0m?[32m, description ?[0m?[32m?[1m"description3"?[0m?[32m (US15)?[0m ?[90m# features.US15_GetSpecificCategoryStepDefinition.then_i_should_get_a_category_with_id_title_description(int,java.lang.String,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Get a category that has an empty description                                                                     ?[90m# src/test/resources/US15_GetSpecificCategory.feature:36?[0m
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US15)?[0m                                                                                     ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system: (US15)?[0m                                                                         ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title                    | description  |
+    | category1                | description1 |
+    | category2                | description2 |
+    | category3                | description3 |
+    | emptyDescriptionCategory | [empty]      |
+  ?[32mGiven ?[0m?[32mthe category with id ?[0m?[32m?[1m6?[0m?[32m and no description exists in the system (US15)?[0m                                                      ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_category_with_id_and_no_description_exists_in_the_system(java.lang.Integer)?[0m
+  ?[32mWhen ?[0m?[32mI get the category with id ?[0m?[32m?[1m6?[0m?[32m that has no description (US15)?[0m                                                                 ?[90m# features.US15_GetSpecificCategoryStepDefinition.i_get_the_category_with_id_that_has_no_description(java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mI should get a category that has an empty description with id ?[0m?[32m?[1m6?[0m?[32m, title ?[0m?[32m?[1m"emptyDescriptionCategory"?[0m?[32m and description ?[0m?[32m?[1m""?[0m?[32m (US15)?[0m ?[90m# features.US15_GetSpecificCategoryStepDefinition.i_should_get_a_category_that_has_an_empty_description_with_id_title_and_description(java.lang.Integer,java.lang.String,java.lang.String)?[0m
+application stopped
+
+Scenario Outline: Get a category that does not exist                                                                   ?[90m# src/test/resources/US15_GetSpecificCategory.feature:48?[0m
+the_todo_application_is_running
+  ?[32mGiven ?[0m?[32mthe todo application is running (US15)?[0m                                                                         ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_todo_application_is_running()?[0m
+  ?[32mAnd ?[0m?[32mthe following categories exist in the system: (US15)?[0m                                                             ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_following_categories_with_title_description_exist_in_the_system(io.cucumber.datatable.DataTable)?[0m
+    | title                    | description  |
+    | category1                | description1 |
+    | category2                | description2 |
+    | category3                | description3 |
+    | emptyDescriptionCategory | [empty]      |
+  ?[32mGiven ?[0m?[32mthe category with id ?[0m?[32m?[1m100?[0m?[32m does not exist in the system (US15)?[0m                                                   ?[90m# features.US15_GetSpecificCategoryStepDefinition.the_category_with_id_does_not_exist_in_the_system(java.lang.Integer)?[0m
+  ?[32mWhen ?[0m?[32mI get the category with invalid id ?[0m?[32m?[1m100?[0m?[32m (US15)?[0m                                                                   ?[90m# features.US15_GetSpecificCategoryStepDefinition.i_get_the_category_with_invalid_id(java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mI should receive a ?[0m?[32m?[1m404?[0m?[32m status code and an error message ?[0m?[32m?[1m"Could not find an instance with categories/100"?[0m?[32m (US15)?[0m ?[90m# features.US15_GetSpecificCategoryStepDefinition.i_should_receive_a_status_code_and_an_error_message(int,java.lang.String)?[0m
 application stopped
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
