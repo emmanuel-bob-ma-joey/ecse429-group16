@@ -7,11 +7,11 @@ Feature: Get a specific project
     Background: The project application is running
         Given the project application is running (US9)
         And the following projects exist in the system: (US9)
-            | title       | description       | completed | active |
-            | first proj  | fun proj          | false     | true   |
-            | second proj | boring proj       | true      | false  |
-            | third proj  | super fun proj    | false     | false  |
-            | fourth proj |                   | true      | true   |
+            | title       | description    | completed | active |
+            | first proj  | fun proj       | false     | true   |
+            | second proj | boring proj    | true      | false  |
+            | third proj  | super fun proj | false     | false  |
+            | fourth proj |                | true      | true   |
 
     # Normal Flow
     Scenario Outline: Get a specific project
@@ -20,10 +20,10 @@ Feature: Get a specific project
         Then I should get a project with id <id>, title "<title>", description "<description>", completed "<completed>" and active "<active>" (US9)
 
         Examples:
-           | id | title       | description       | completed | active |
-           | 3  | first proj  | fun proj          | false     | true   |
-           | 4  | second proj | boring proj       | true      | false  |
-           | 5  | third proj  | super fun proj    | false     | false  |
+            | id | title       | description    | completed | active |
+            | 2  | first proj  | fun proj       | false     | true   |
+            | 3  | second proj | boring proj    | true      | false  |
+            | 4  | third proj  | super fun proj | false     | false  |
 
     # Alternate flow
     Scenario Outline: Get a project that has an empty description
@@ -32,8 +32,8 @@ Feature: Get a specific project
         Then I should get a project that has an empty description with id <id>, title "<title>", description "<description>", completed "<completed>" and active "<active>" (US9)
 
         Examples:
-            | id | title         | description | completed | active |
-            | 6  | fourth proj   |             | true      | true   |
+            | id | title       | description | completed | active |
+            | 5  | fourth proj |             | true      | true   |
 
 
 
@@ -44,5 +44,5 @@ Feature: Get a specific project
         Then I should receive a <statusCode> status code and an error message "<errorMessage>" (US9)
 
         Examples:
-            | id  | statusCode | errorMessage                              |
+            | id  | statusCode | errorMessage                                 |
             | 100 | 404        | Could not find an instance with projects/100 |

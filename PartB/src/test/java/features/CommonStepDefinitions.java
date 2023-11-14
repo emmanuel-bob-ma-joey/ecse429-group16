@@ -14,9 +14,4 @@ public class CommonStepDefinitions {
         HelperFunctions.stopApplication();
     }
 
-    @Before
-    public void startUp() throws InterruptedException{
-        HelperFunctions.startApplication();
-    }
-
 }

@@ -1,15 +1,16 @@
 package features;
 
-
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import java.io.IOException;
 import org.json.simple.JSONObject;
+
 public class HelperFunctions {
     public static Process application;
 
     private static String baseUrl = "http://localhost:4567";
+
     public static void startApplication() throws InterruptedException {
         try {
             application = Runtime.getRuntime().exec("java -jar runTodoManagerRestAPI-1.5.5.jar");
@@ -39,8 +40,7 @@ public class HelperFunctions {
         return response;
     }
 
-
-    public static Response createProject(String id, String title, String description, String completed, String active) {
+    public static Response createProject(String title, String description, String completed, String active) {
         RestAssured.baseURI = baseUrl;
         RequestSpecification request = RestAssured.given();
 
@@ -53,17 +53,12 @@ public class HelperFunctions {
 
         request.body(requestParams.toJSONString());
 
-
         Response response;
-        if (id.equals(""))
-            response = request.post("/projects");
-        else
-            response = request.post("/projects/" + id);
-        //TODO BUG DOESNT WORK FOR /PROJECTS/ID
+
+        response = request.post("/projects");
 
         return response;
     }
-
 
     public static Response deleteProjectWithId(int id) {
         RestAssured.baseURI = baseUrl;
@@ -88,15 +83,25 @@ public class HelperFunctions {
         return response;
     }
 
-    public static Response updateProjectWithId(int id, String title, String description, boolean completed) {
+    public static Response updateProjectWithId(int id, String title, String description, String completed) {
         RestAssured.baseURI = baseUrl;
         RequestSpecification request = RestAssured.given();
 
         request.header("Content-Type", "application/json");
         JSONObject requestParams = new JSONObject();
-        requestParams.put("title", title);
-        requestParams.put("description", description);
-        requestParams.put("completed", completed);
+        if (title != null) {
+            requestParams.put("title", title);
+        }
+
+        if (description != null) {
+            requestParams.put("description", description);
+        }
+
+        if (completed.equals("true")) {
+            requestParams.put("completed", true);
+        } else if (completed.equals("true")) {
+            requestParams.put("completed", false);
+        }
 
         request.body(requestParams.toJSONString());
 
@@ -104,8 +109,9 @@ public class HelperFunctions {
 
         return response;
     }
+
     public static Response updateProjectWithIdAndInvalidCompleted(int id, String title,
-                                                                String completed) {
+            String completed) {
         RestAssured.baseURI = baseUrl;
         RequestSpecification request = RestAssured.given();
 

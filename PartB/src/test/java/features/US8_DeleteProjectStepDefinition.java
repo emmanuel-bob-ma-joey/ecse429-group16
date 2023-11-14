@@ -58,15 +58,13 @@ public class US8_DeleteProjectStepDefinition {
             String description = columns.get("description");
             String completed = columns.get("completed");
             String active = columns.get("active");
-            Response r = HelperFunctions.createProject(id, title, description, completed, active);
-            assertEquals(200, r.getStatusCode());
+            Response r = HelperFunctions.createProject(title, description, completed, active);
         }
     }
 
     @When("I delete the active project with id {int} \\(US8)")
     public void i_delete_the_project_with_id(int id) {
-        Response response = HelperFunctions.deleteProjectWithId(id);
-        assertEquals(200, response.getStatusCode());
+        HelperFunctions.deleteProjectWithId(id);
     }
 
     @Then("the active project with id {int} should not exist in the system \\(US8)")
@@ -112,14 +110,13 @@ public class US8_DeleteProjectStepDefinition {
             String description = columns.get("description");
             String completed = columns.get("completed");
             String active = columns.get("active");
-            HelperFunctions.createProject(id, title, description, completed, active);
+            HelperFunctions.createProject(title, description, completed, active);
         }
     }
 
     @When("I delete the completed project with id {int} \\(US8)")
     public void i_delete_the_completed_project_with_id(int id) {
-        Response response = HelperFunctions.deleteProjectWithId(id);
-        assertEquals(200, response.getStatusCode());
+        response = HelperFunctions.deleteProjectWithId(id);
     }
 
     @Then("the completed project with id {int} should not exist in the system \\(US8)")

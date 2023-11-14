@@ -39,7 +39,7 @@ public class US7_GetAllProjectsStepDefinition {
             String description = columns.get("description");
             String active = columns.get("active");
             String completed = columns.get("completed");
-            Response response = HelperFunctions.createProject("", title, description,  completed, active);
+            Response response = HelperFunctions.createProject(title, description, completed, active);
             assertEquals(201, response.getStatusCode());
         }
     }
@@ -52,7 +52,8 @@ public class US7_GetAllProjectsStepDefinition {
     }
 
     @Then("the projects with title {string}, description {string}, completed {string} and active {string} \\(US7)")
-    public void the_todos_with_title_description_and_doneStatus(String title, String description, String completed, String active) {
+    public void the_todos_with_title_description_and_doneStatus(String title, String description, String completed,
+            String active) {
         Response response = HelperFunctions.getAllProjects("");
         List<Map<String, String>> projects = response.jsonPath().getList("projects");
         for (Map<String, String> project : projects) {
@@ -60,7 +61,6 @@ public class US7_GetAllProjectsStepDefinition {
             String projectDescription = project.get("description");
             String projectCompleted = project.get("completed");
             String projectActive = project.get("active");
-
 
             // Check if the project is in the list of todos
             if (projectTitle.equals(title) && projectDescription.equals(description)
@@ -93,7 +93,7 @@ public class US7_GetAllProjectsStepDefinition {
 
     @Then("the projects with title {string}, description {string}, and active {string} \\(US7)")
     public void the_projects_with_title_description_completecTrue_active(String title, String description,
-                                                                            String active) {
+            String active) {
         List<Map<String, String>> projects = response.jsonPath().getList("projects");
         for (Map<String, String> project : projects) {
             String projectTitle = project.get("title");

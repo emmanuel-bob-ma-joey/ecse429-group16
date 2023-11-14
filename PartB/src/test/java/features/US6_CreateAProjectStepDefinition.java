@@ -25,7 +25,7 @@ public class US6_CreateAProjectStepDefinition {
 
     @Given("the project with title {string} and the description {string} does not exist in the system \\(US6)")
     public void the_project_with_title_and_the_description_does_not_exist_in_the_system(String title,
-                                                                                     String description) {
+            String description) {
 
         Response response = HelperFunctions.getAllProjects("");
         List<Map<String, String>> projects = response.jsonPath().getList("projects");
@@ -38,7 +38,7 @@ public class US6_CreateAProjectStepDefinition {
 
     @When("I create a project with the title {string} and description {string} \\(US6)")
     public void i_create_a_project_with_title_and_the_description(String title, String description) {
-        Response response = HelperFunctions.createProject("", title, description, "false", "false");
+        Response response = HelperFunctions.createProject(title, description, "false", "false");
         assertEquals(201, response.getStatusCode());
     }
 
@@ -50,7 +50,6 @@ public class US6_CreateAProjectStepDefinition {
         for (Map<String, String> project : projects) {
             String projectTitle = project.get("title");
             String projectDescription = project.get("description");
-
 
             if (projectTitle.equals(title) && projectDescription.equals(description)) {
                 assertEquals(projectTitle, title);
@@ -74,7 +73,7 @@ public class US6_CreateAProjectStepDefinition {
 
     @When("I create a project with the title {string} and completed {string} \\(US6)")
     public void i_create_a_project_with_the_title(String title, String completed) {
-        Response response = HelperFunctions.createProject("", title, "", completed, "false");
+        Response response = HelperFunctions.createProject(title, "", completed, "false");
         assertEquals(201, response.getStatusCode());
     }
 
@@ -98,13 +97,11 @@ public class US6_CreateAProjectStepDefinition {
         }
     }
 
-
-
     // Error Scenario
     @When("I create a project with an invalid id \\(US6)")
     public void i_create_a_project_with_an_invalid_id() {
         String invalidID = "asdf";
-        response = HelperFunctions.createProject(invalidID, "title!", "description", "false", "false");
+        response = HelperFunctions.createProject("title!", "description", "false", "false");
 
     }
 

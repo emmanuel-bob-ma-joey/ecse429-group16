@@ -13,7 +13,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class US9_GetSpecificProjectStepDefinition {
-    
+
     private Response response;
 
     // BACKGROUND
@@ -41,7 +41,7 @@ public class US9_GetSpecificProjectStepDefinition {
             String description = columns.get("description");
             String completed = columns.get("completed");
             String active = columns.get("active");
-            HelperFunctions.createProject("", title, description, completed, active);
+            HelperFunctions.createProject(title, description, completed, active);
         }
     }
 
@@ -68,8 +68,8 @@ public class US9_GetSpecificProjectStepDefinition {
 
     @Then("I should get a project with id {int}, title {string}, description {string}, completed {string} and active {string} \\(US9)")
     public void the_project_with_id_should_have_title_description_completed_active(int id,
-                                                                      String title, String description,
-                                                                      String completed, String active) {
+            String title, String description,
+            String completed, String active) {
         List<Map<String, String>> projects = response.jsonPath().getList("projects");
         Map<String, String> project = projects.get(0);
         assertEquals(id, Integer.parseInt(project.get("id")));
@@ -101,8 +101,8 @@ public class US9_GetSpecificProjectStepDefinition {
 
     @Then("I should get a project that has an empty description with id {int}, title {string}, description {string}, completed {string} and active {string} \\(US9)")
     public void i_should_get_a_project_that_has_an_empty_description_with_id_title_description_completed_active(int id,
-                                                                                                           String title, String description,
-                                                                                                           String completed, String active) {
+            String title, String description,
+            String completed, String active) {
         List<Map<String, String>> projects = response.jsonPath().getList("projects");
         Map<String, String> project = projects.get(0);
         assertEquals(id, Integer.parseInt(project.get("id")));

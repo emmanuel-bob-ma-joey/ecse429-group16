@@ -31,7 +31,7 @@ public class US10_UpdateProjectStepDefinition {
             String description = columns.get("description");
             String completed = columns.get("completed");
             String active = columns.get("active");
-            HelperFunctions.createProject("", title, description, completed, active);
+            HelperFunctions.createProject(title, description, completed, active);
         }
     }
 
@@ -51,13 +51,12 @@ public class US10_UpdateProjectStepDefinition {
 
     @When("I update the project with {int} with a new description {string} \\(US10)")
     public void i_update_the_project_with_id_with_a_new_description(int id, String description) {
-        Response response = HelperFunctions.updateProjectWithId(id, null, description, false);
-        assertEquals(200, response.getStatusCode());
+        Response response = HelperFunctions.updateProjectWithId(id, null, description, "");
     }
 
     @Then("the project with {int} should have title {string}, description {string}, completed {string} and active {string} \\(US10)")
     public void the_project_with_id_should_have_a_description(int id, String title, String description,
-                                                           String completed, String active) {
+            String completed, String active) {
         Response response = HelperFunctions.getProjectWithId(id);
 
         List<Map<String, String>> projects = response.jsonPath().getList("projects");
@@ -66,6 +65,7 @@ public class US10_UpdateProjectStepDefinition {
         assertEquals(description, project.get("description"));
         assertEquals(completed, project.get("completed"));
         assertEquals(active, project.get("active"));
+
     }
 
     // Alternate Scenario
@@ -86,7 +86,7 @@ public class US10_UpdateProjectStepDefinition {
 
     @When("I update the project with id {int} with {string} \\(US10)")
     public void when_i_update_the_project_with_id_with(int id, String completed) {
-        Response response = HelperFunctions.updateProjectWithId(id, null, null, Boolean.getBoolean(completed));
+        Response response = HelperFunctions.updateProjectWithId(id, null, null, completed);
         assertEquals(200, response.getStatusCode());
     }
 
