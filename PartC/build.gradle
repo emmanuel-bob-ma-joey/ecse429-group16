@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+    // sonarqube
+    id "org.sonarqube" version "4.4.1.3373"
+  }
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+    testImplementation 'io.rest-assured:rest-assured:5.3.2'
+}
+
+test {
+    useJUnitPlatform()
+
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+task cucumberCliWithRandomizer() {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+              '--plugin', 'pretty',
+              '--plugin', 'html:target/cucumber-report.html', 
+              '--glue', 'features', 
+              'src/test/resources',
+              '--order', 'random',
+              ]
+        }
+    }
+}
