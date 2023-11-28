@@ -6,7 +6,8 @@ import io.restassured.specification.RequestSpecification;
 
 public class Utils {
     public static final String baseUrl = "http://localhost:4567";
-    public static int[] ITERATIONS = { 1, 10, 100, 1000, 5000, 10000 };
+    public static int[] ITERATIONS = { 1, 30, 50, 80, 100, 200, 300, 400, 500,
+            600, 800, 900, 1000, 2000, 3000, 5000 };
     public static final int millisecondsInNano = 1000000;
 
     public static Response getAllTodos(String queryString) {
