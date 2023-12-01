@@ -9,7 +9,9 @@ public class Utils {
     public static int[] ITERATIONS = { 1, 30, 50, 80, 100, 200, 300, 400, 500,
             600, 800, 900, 1000, 2000, 3000, 5000 };
     public static final int millisecondsInNano = 1000000;
+    public static final String startCommand = "java -jar runTodoManagerRestAPI-1.5.5.jar";
 
+    // --------- Todo API Helper Functions ---------
     public static Response getAllTodos(String queryString) {
         RestAssured.baseURI = baseUrl;
         RequestSpecification request = RestAssured.given();

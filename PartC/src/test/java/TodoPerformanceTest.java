@@ -1,13 +1,10 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.io.IOException;
 import java.util.List;
 
+import org.apache.http.client.ClientProtocolException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 
 import io.restassured.response.Response;
 
@@ -18,7 +15,7 @@ public class TodoPerformanceTest {
   public void setUp() throws Exception {
 
     try {
-      RunRestAPI = Runtime.getRuntime().exec("java -jar runTodoManagerRestAPI-1.5.5.jar");
+      RunRestAPI = Runtime.getRuntime().exec(Utils.startCommand);
     } catch (IOException e) {
       e.printStackTrace();
     }
@@ -33,7 +30,7 @@ public class TodoPerformanceTest {
   }
 
   @Test
-  public void testTodoPerformance() {
+  public void testTodoPerformance() throws ClientProtocolException, IOException {
 
     for (int ITERATIONS : Utils.ITERATIONS) {
 
@@ -68,8 +65,6 @@ public class TodoPerformanceTest {
       Utils.updateTodoWithId(id,
           "new title", "Updated todo", true);
 
-      assertEquals(200, response.getStatusCode());
-
       long endTimeForUpdate = System.nanoTime();
 
       System.out.println("Time taken to update a todo: "
@@ -79,8 +74,7 @@ public class TodoPerformanceTest {
 
       long startTimeForDelete = System.nanoTime();
 
-      Response deletedTodo = Utils.deleteTodoWithId(id);
-      assertEquals(200, response.getStatusCode());
+      Utils.deleteTodoWithId(id);
       long endTimeForDelete = System.nanoTime();
 
       System.out.println("Time taken to delete a todo: "
