@@ -19,6 +19,30 @@
         <rest-assured-version>4.4.0</rest-assured-version>
     </properties>
 
+  <build>
+      <plugins>
+          <plugin>
+              <groupId>org.jacoco</groupId>
+              <artifactId>jacoco-maven-plugin</artifactId>
+              <version>0.8.7</version> <!-- Use the latest version available -->
+              <executions>
+                  <execution>
+                      <id>default-prepare-agent</id>
+                      <goals>
+                          <goal>prepare-agent</goal>
+                      </goals>
+                  </execution>
+                  <execution>
+                      <id>default-report</id>
+                      <goals>
+                          <goal>report</goal>
+                      </goals>
+                  </execution>
+              </executions>
+          </plugin>
+      </plugins>
+  </build>
+
     <modules>
         <module>ercoremodel</module>
         <module>thingifier</module>
