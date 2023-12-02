@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ProjectApiTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2023-10-22T21:36:16" hostname="Victors-MacBook-Pro.local" time="31.185">
+  <properties/>
+  <testcase name="testGETValidID()" classname="ProjectApiTest" time="3.635"/>
+  <testcase name="testXmlPayload()" classname="ProjectApiTest" time="3.047"/>
+  <testcase name="testPOSTSameJSONTwice()" classname="ProjectApiTest" time="3.11"/>
+  <testcase name="testPOSTValidID()" classname="ProjectApiTest" time="3.072"/>
+  <testcase name="testPOSTMalformedJSON()" classname="ProjectApiTest" time="3.065"/>
+  <testcase name="testHEAD()" classname="ProjectApiTest" time="3.039"/>
+  <testcase name="testPOST()" classname="ProjectApiTest" time="3.063"/>
+  <testcase name="testGETInvalidID()" classname="ProjectApiTest" time="3.053"/>
+  <testcase name="testGET()" classname="ProjectApiTest" time="3.039"/>
+  <testcase name="testPOSTInvalidID()" classname="ProjectApiTest" time="3.047"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
