@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TodoPerformanceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-03T22:31:51" hostname="MacBook-Pro.local" time="76.856">
+  <properties/>
+  <testcase name="testTodoPerformance()" classname="TodoPerformanceTest" time="76.856"/>
+  <system-out><![CDATA[------------ 1 Todos Added ------------
+Number of todos: 4
+Time taken to add a todo: 8.570863 milliseconds
+Time taken to update a todo: 14.049389 milliseconds
+Time taken to delete a todo: 9.215198 milliseconds
+memory usage:23
+------------ 30 Todos Added ------------
+Number of todos: 35
+Time taken to add a todo: 6.266109 milliseconds
+Time taken to update a todo: 7.52619 milliseconds
+Time taken to delete a todo: 5.007996 milliseconds
+memory usage:24
+------------ 50 Todos Added ------------
+Number of todos: 86
+Time taken to add a todo: 5.344232 milliseconds
+Time taken to update a todo: 8.622836 milliseconds
+Time taken to delete a todo: 9.325837 milliseconds
+memory usage:24
+------------ 80 Todos Added ------------
+Number of todos: 167
+Time taken to add a todo: 4.723702 milliseconds
+Time taken to update a todo: 4.800115 milliseconds
+Time taken to delete a todo: 3.881925 milliseconds
+memory usage:25
+------------ 100 Todos Added ------------
+Number of todos: 268
+Time taken to add a todo: 4.534947 milliseconds
+Time taken to update a todo: 4.927589 milliseconds
+Time taken to delete a todo: 3.557677 milliseconds
+memory usage:26
+------------ 200 Todos Added ------------
+Number of todos: 469
+Time taken to add a todo: 5.350868 milliseconds
+Time taken to update a todo: 5.065155 milliseconds
+Time taken to delete a todo: 5.165736 milliseconds
+memory usage:23
+------------ 300 Todos Added ------------
+Number of todos: 770
+Time taken to add a todo: 3.832898 milliseconds
+Time taken to update a todo: 5.566987 milliseconds
+Time taken to delete a todo: 4.657064 milliseconds
+memory usage:23
+------------ 400 Todos Added ------------
+Number of todos: 1171
+Time taken to add a todo: 6.41995 milliseconds
+Time taken to update a todo: 3.890338 milliseconds
+Time taken to delete a todo: 3.863746 milliseconds
+memory usage:24
+------------ 500 Todos Added ------------
+Number of todos: 1672
+Time taken to add a todo: 4.777087 milliseconds
+Time taken to update a todo: 3.935611 milliseconds
+Time taken to delete a todo: 4.811187 milliseconds
+memory usage:24
+------------ 600 Todos Added ------------
+Number of todos: 2273
+Time taken to add a todo: 40.772583 milliseconds
+Time taken to update a todo: 17.564972 milliseconds
+Time taken to delete a todo: 11.040192 milliseconds
+memory usage:34
+------------ 800 Todos Added ------------
+Number of todos: 3074
+Time taken to add a todo: 3.303416 milliseconds
+Time taken to update a todo: 3.240628 milliseconds
+Time taken to delete a todo: 3.88473 milliseconds
+memory usage:25
+------------ 900 Todos Added ------------
+Number of todos: 3975
+Time taken to add a todo: 46.75152 milliseconds
+Time taken to update a todo: 21.380552 milliseconds
+Time taken to delete a todo: 8.943322 milliseconds
+memory usage:26
+------------ 1000 Todos Added ------------
+Number of todos: 4976
+Time taken to add a todo: 2.713482 milliseconds
+Time taken to update a todo: 5.465036 milliseconds
+Time taken to delete a todo: 7.967331 milliseconds
+memory usage:27
+------------ 2000 Todos Added ------------
+Number of todos: 6977
+Time taken to add a todo: 3.316932 milliseconds
+Time taken to update a todo: 6.715576 milliseconds
+Time taken to delete a todo: 12.585632 milliseconds
+memory usage:29
+------------ 3000 Todos Added ------------
+Number of todos: 9978
+Time taken to add a todo: 4.469163 milliseconds
+Time taken to update a todo: 6.942021 milliseconds
+Time taken to delete a todo: 14.220701 milliseconds
+memory usage:31
+------------ 5000 Todos Added ------------
+Number of todos: 14979
+Time taken to add a todo: 3.012774 milliseconds
+Time taken to update a todo: 9.064048 milliseconds
+Time taken to delete a todo: 16.83739 milliseconds
+memory usage:35
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

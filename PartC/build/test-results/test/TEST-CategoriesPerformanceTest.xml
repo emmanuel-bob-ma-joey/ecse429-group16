@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CategoriesPerformanceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-03T22:30:20" hostname="MacBook-Pro.local" time="90.712">
+  <properties/>
+  <testcase name="testCategoryPerformance()" classname="CategoriesPerformanceTest" time="90.712"/>
+  <system-out><![CDATA[------------ 1 Categories Added ------------
+Number of categories: 4
+Time taken to add a category: 32.019386 milliseconds
+Time taken to update a category: 26.739431 milliseconds
+Time taken to delete a Category: 0.007508 milliseconds
+memory usage:22
+------------ 30 Categories Added ------------
+Number of categories: 36
+Time taken to add a category: 14.23869 milliseconds
+Time taken to update a category: 16.537235 milliseconds
+Time taken to delete a Category: 4.69E-4 milliseconds
+memory usage:22
+------------ 50 Categories Added ------------
+Number of categories: 88
+Time taken to add a category: 15.053972 milliseconds
+Time taken to update a category: 14.788616 milliseconds
+Time taken to delete a Category: 6.09E-4 milliseconds
+memory usage:23
+------------ 80 Categories Added ------------
+Number of categories: 170
+Time taken to add a category: 17.380238 milliseconds
+Time taken to update a category: 13.995214 milliseconds
+Time taken to delete a Category: 7.33E-4 milliseconds
+memory usage:24
+------------ 100 Categories Added ------------
+Number of categories: 272
+Time taken to add a category: 29.371956 milliseconds
+Time taken to update a category: 12.290955 milliseconds
+Time taken to delete a Category: 0.002106 milliseconds
+memory usage:21
+------------ 200 Categories Added ------------
+Number of categories: 474
+Time taken to add a category: 12.904203 milliseconds
+Time taken to update a category: 7.51283 milliseconds
+Time taken to delete a Category: 7.2E-4 milliseconds
+memory usage:23
+------------ 300 Categories Added ------------
+Number of categories: 776
+Time taken to add a category: 7.200302 milliseconds
+Time taken to update a category: 11.577926 milliseconds
+Time taken to delete a Category: 6.89E-4 milliseconds
+memory usage:22
+------------ 400 Categories Added ------------
+Number of categories: 1178
+Time taken to add a category: 13.152568 milliseconds
+Time taken to update a category: 6.103994 milliseconds
+Time taken to delete a Category: 6.51E-4 milliseconds
+memory usage:28
+------------ 500 Categories Added ------------
+Number of categories: 1680
+Time taken to add a category: 4.743184 milliseconds
+Time taken to update a category: 5.576165 milliseconds
+Time taken to delete a Category: 7.29E-4 milliseconds
+memory usage:22
+------------ 600 Categories Added ------------
+Number of categories: 2282
+Time taken to add a category: 4.002602 milliseconds
+Time taken to update a category: 5.602699 milliseconds
+Time taken to delete a Category: 8.99E-4 milliseconds
+memory usage:23
+------------ 800 Categories Added ------------
+Number of categories: 3084
+Time taken to add a category: 25.03018 milliseconds
+Time taken to update a category: 16.284986 milliseconds
+Time taken to delete a Category: 6.72E-4 milliseconds
+memory usage:23
+------------ 900 Categories Added ------------
+Number of categories: 3986
+Time taken to add a category: 4.057509 milliseconds
+Time taken to update a category: 8.690098 milliseconds
+Time taken to delete a Category: 7.22E-4 milliseconds
+memory usage:24
+------------ 1000 Categories Added ------------
+Number of categories: 4988
+Time taken to add a category: 3.069666 milliseconds
+Time taken to update a category: 6.187211 milliseconds
+Time taken to delete a Category: 5.59E-4 milliseconds
+memory usage:24
+------------ 2000 Categories Added ------------
+Number of categories: 6990
+Time taken to add a category: 2.784979 milliseconds
+Time taken to update a category: 3.502161 milliseconds
+Time taken to delete a Category: 6.44E-4 milliseconds
+memory usage:25
+------------ 3000 Categories Added ------------
+Number of categories: 9992
+Time taken to add a category: 3.009559 milliseconds
+Time taken to update a category: 8.132394 milliseconds
+Time taken to delete a Category: 6.44E-4 milliseconds
+memory usage:28
+------------ 5000 Categories Added ------------
+Number of categories: 14994
+Time taken to add a category: 2.793826 milliseconds
+Time taken to update a category: 5.377695 milliseconds
+Time taken to delete a Category: 7.18E-4 milliseconds
+memory usage:30
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
