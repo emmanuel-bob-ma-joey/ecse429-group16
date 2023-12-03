@@ -67,6 +67,56 @@ public class Utils {
         return response;
     }
 
+    public static Response createCategory(String title, String description) {
+        RestAssured.baseURI = baseUrl;
+        RequestSpecification request = RestAssured.given();
+
+        request.header("Content-Type", "application/json");
+        JSONObject requestParams = new JSONObject();
+        requestParams.put("title", title);
+        requestParams.put("description", description);
+        request.body(requestParams.toJSONString());
+
+        Response response = request.post("/categories");
+
+        return response;
+    }
+
+    public static Response getAllCategories(String queryString) {
+        RestAssured.baseURI = baseUrl;
+        RequestSpecification request = RestAssured.given();
+        Response response;
+
+        if (queryString.equals("")) {
+            response = request.get("/categories");
+
+        } else {
+            response = request.get("/categories?" + queryString);
+        }
+        return response;
+    }
+
+    public static Response updateCategoryWithId(int id, String title, String description){
+        RestAssured.baseURI = baseUrl;
+        RequestSpecification request = RestAssured.given();
+
+        request.header("Content-Type", "application/json");
+        JSONObject requestParams = new JSONObject();
+        requestParams.put("title", title);
+        requestParams.put("description", description);
+
+        request.body(requestParams.toJSONString());
+
+        Response response = request.post("/categories/" + id);
+        return response;
+    }
+
+    public static Response deleteCategoryWithId(int id) {
+        RestAssured.baseURI = baseUrl;
+        RequestSpecification request = RestAssured.given();
+        Response response = request.delete("/todos/" + id);
+        return response;
+    }
     // --------- Projects API Helper Functions ---------
 
     public static Response getAllProjects(String queryString) {
@@ -109,6 +159,7 @@ public class Utils {
 
         request.header("Content-Type", "application/json");
         JSONObject requestParams = new JSONObject();
+        
         if (title != null) {
             requestParams.put("title", title);
         }
@@ -129,7 +180,6 @@ public class Utils {
 
         return response;
     }
-
     public static Response deleteProjectWithId(int id) {
         RestAssured.baseURI = baseUrl;
         RequestSpecification request = RestAssured.given();

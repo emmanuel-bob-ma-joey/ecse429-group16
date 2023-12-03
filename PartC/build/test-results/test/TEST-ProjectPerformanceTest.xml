@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ProjectPerformanceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-03T23:20:26" hostname="MacBook-Pro.local" time="135.864">
+  <properties/>
+  <testcase name="testProjectPerformance()" classname="ProjectPerformanceTest" time="135.864"/>
+  <system-out><![CDATA[------------ 1 Project Added ------------
+Number of projects: 3
+Time taken to add a project: 8.261973 milliseconds
+Time taken to update a project: 161.78954 milliseconds
+Time taken to delete a project: 5.913133 milliseconds
+memory usage:23
+------------ 30 Project Added ------------
+Number of projects: 34
+Time taken to add a project: 14.14685 milliseconds
+Time taken to update a project: 7.581261 milliseconds
+Time taken to delete a project: 5.505468 milliseconds
+memory usage:24
+------------ 50 Project Added ------------
+Number of projects: 85
+Time taken to add a project: 65.333244 milliseconds
+Time taken to update a project: 25.0495 milliseconds
+Time taken to delete a project: 7.201804 milliseconds
+memory usage:24
+------------ 80 Project Added ------------
+Number of projects: 166
+Time taken to add a project: 7.20234 milliseconds
+Time taken to update a project: 8.415614 milliseconds
+Time taken to delete a project: 12.385402 milliseconds
+memory usage:25
+------------ 100 Project Added ------------
+Number of projects: 267
+Time taken to add a project: 5.352585 milliseconds
+Time taken to update a project: 6.095763 milliseconds
+Time taken to delete a project: 5.772272 milliseconds
+memory usage:26
+------------ 200 Project Added ------------
+Number of projects: 468
+Time taken to add a project: 11.648275 milliseconds
+Time taken to update a project: 53.1778 milliseconds
+Time taken to delete a project: 10.310933 milliseconds
+memory usage:23
+------------ 300 Project Added ------------
+Number of projects: 769
+Time taken to add a project: 65.466125 milliseconds
+Time taken to update a project: 6.215138 milliseconds
+Time taken to delete a project: 4.397984 milliseconds
+memory usage:24
+------------ 400 Project Added ------------
+Number of projects: 1170
+Time taken to add a project: 18.849104 milliseconds
+Time taken to update a project: 8.489115 milliseconds
+Time taken to delete a project: 6.486317 milliseconds
+memory usage:24
+------------ 500 Project Added ------------
+Number of projects: 1671
+Time taken to add a project: 12.74747 milliseconds
+Time taken to update a project: 5.428691 milliseconds
+Time taken to delete a project: 6.123303 milliseconds
+memory usage:24
+------------ 600 Project Added ------------
+Number of projects: 2272
+Time taken to add a project: 16.684155 milliseconds
+Time taken to update a project: 8.306003 milliseconds
+Time taken to delete a project: 10.462439 milliseconds
+memory usage:25
+------------ 800 Project Added ------------
+Number of projects: 3073
+Time taken to add a project: 3.860426 milliseconds
+Time taken to update a project: 92.54508 milliseconds
+Time taken to delete a project: 7.617983 milliseconds
+memory usage:26
+------------ 900 Project Added ------------
+Number of projects: 3974
+Time taken to add a project: 3.696947 milliseconds
+Time taken to update a project: 5.783711 milliseconds
+Time taken to delete a project: 8.597867 milliseconds
+memory usage:26
+------------ 1000 Project Added ------------
+Number of projects: 4975
+Time taken to add a project: 3.667282 milliseconds
+Time taken to update a project: 36.65949 milliseconds
+Time taken to delete a project: 6.7627 milliseconds
+memory usage:27
+------------ 2000 Project Added ------------
+Number of projects: 6976
+Time taken to add a project: 3.540248 milliseconds
+Time taken to update a project: 27.969925 milliseconds
+Time taken to delete a project: 9.944042 milliseconds
+memory usage:30
+------------ 3000 Project Added ------------
+Number of projects: 9977
+Time taken to add a project: 31.733107 milliseconds
+Time taken to update a project: 43.864067 milliseconds
+Time taken to delete a project: 8.336083 milliseconds
+memory usage:32
+------------ 5000 Project Added ------------
+Number of projects: 14978
+Time taken to add a project: 3.61723 milliseconds
+Time taken to update a project: 12.441412 milliseconds
+Time taken to delete a project: 21.494087 milliseconds
+memory usage:37
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
