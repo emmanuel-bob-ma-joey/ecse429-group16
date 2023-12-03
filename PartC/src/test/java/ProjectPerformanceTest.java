@@ -4,8 +4,7 @@ import java.util.List;
 import org.apache.http.client.ClientProtocolException;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Test;
 import io.restassured.response.Response;
 
 public class ProjectPerformanceTest {
@@ -53,7 +52,8 @@ public class ProjectPerformanceTest {
             long endTimeForAdd = System.nanoTime();
 
             System.out.println(
-                    "Time taken to add a project: " + (float) (endTimeForAdd - startTimeForAdd) / Utils.millisecondsInNano
+                    "Time taken to add a project: "
+                            + (float) (endTimeForAdd - startTimeForAdd) / Utils.millisecondsInNano
                             + " milliseconds");
 
             int id = Integer.parseInt(newProject.getBody().jsonPath().getString("id"));
