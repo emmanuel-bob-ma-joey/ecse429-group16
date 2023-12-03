@@ -67,4 +67,76 @@ public class Utils {
         return response;
     }
 
+    // --------- Projects API Helper Functions ---------
+
+    public static Response getAllProjects(String queryString) {
+        RestAssured.baseURI = baseUrl;
+        RequestSpecification request = RestAssured.given();
+        Response response;
+
+        if (queryString.equals("")) {
+            response = request.get("/projects");
+
+        } else {
+            response = request.get("/projects?" + queryString);
+        }
+        return response;
+    }
+
+    public static Response createProject(String title, String description, String completed, String active) {
+        RestAssured.baseURI = baseUrl;
+        RequestSpecification request = RestAssured.given();
+
+        request.header("Content-Type", "application/json");
+        JSONObject requestParams = new JSONObject();
+        requestParams.put("title", title);
+        requestParams.put("description", description);
+        requestParams.put("completed", Boolean.valueOf(completed));
+        requestParams.put("active", Boolean.valueOf(active));
+
+        request.body(requestParams.toJSONString());
+
+        Response response;
+
+        response = request.post("/projects");
+
+        return response;
+    }
+
+    public static Response updateProjectWithId(int id, String title, String description, String completed) {
+        RestAssured.baseURI = baseUrl;
+        RequestSpecification request = RestAssured.given();
+
+        request.header("Content-Type", "application/json");
+        JSONObject requestParams = new JSONObject();
+        if (title != null) {
+            requestParams.put("title", title);
+        }
+
+        if (description != null) {
+            requestParams.put("description", description);
+        }
+
+        if (completed.equals("true")) {
+            requestParams.put("completed", true);
+        } else if (completed.equals("true")) {
+            requestParams.put("completed", false);
+        }
+
+        request.body(requestParams.toJSONString());
+
+        Response response = request.post("/projects/" + id);
+
+        return response;
+    }
+
+    public static Response deleteProjectWithId(int id) {
+        RestAssured.baseURI = baseUrl;
+        RequestSpecification request = RestAssured.given();
+
+        Response response = request.delete("/projects/" + id);
+
+        return response;
+    }
+
 }
