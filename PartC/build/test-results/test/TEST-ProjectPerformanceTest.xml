@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ProjectPerformanceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-03T01:30:46" hostname="Victors-MacBook-Pro.local" time="14.337">
+  <properties/>
+  <testcase name="testProjectPerformance()" classname="ProjectPerformanceTest" time="14.337"/>
+  <system-out><![CDATA[------------ 1 Project Added ------------
+Number of projects: 1250
+Time taken to add a project: 9.064375 milliseconds
+Time taken to update a project: 5.715208 milliseconds
+Time taken to delete a project: 3.602667 milliseconds
+------------ 30 Project Added ------------
+Number of projects: 1281
+Time taken to add a project: 3.405208 milliseconds
+Time taken to update a project: 2.949917 milliseconds
+Time taken to delete a project: 2.321833 milliseconds
+------------ 50 Project Added ------------
+Number of projects: 1332
+Time taken to add a project: 2.863208 milliseconds
+Time taken to update a project: 2.226125 milliseconds
+Time taken to delete a project: 1.631541 milliseconds
+------------ 80 Project Added ------------
+Number of projects: 1413
+Time taken to add a project: 2.819834 milliseconds
+Time taken to update a project: 3.841708 milliseconds
+Time taken to delete a project: 2.43775 milliseconds
+------------ 100 Project Added ------------
+Number of projects: 1514
+Time taken to add a project: 2.455792 milliseconds
+Time taken to update a project: 2.78225 milliseconds
+Time taken to delete a project: 2.082791 milliseconds
+------------ 200 Project Added ------------
+Number of projects: 1715
+Time taken to add a project: 2.204458 milliseconds
+Time taken to update a project: 3.352667 milliseconds
+Time taken to delete a project: 2.841792 milliseconds
+------------ 300 Project Added ------------
+Number of projects: 2016
+Time taken to add a project: 3.611958 milliseconds
+Time taken to update a project: 4.692208 milliseconds
+Time taken to delete a project: 3.251 milliseconds
+------------ 400 Project Added ------------
+Number of projects: 2417
+Time taken to add a project: 2.117042 milliseconds
+Time taken to update a project: 2.188291 milliseconds
+Time taken to delete a project: 2.226625 milliseconds
+------------ 500 Project Added ------------
+Number of projects: 2918
+Time taken to add a project: 1.916917 milliseconds
+Time taken to update a project: 2.910416 milliseconds
+Time taken to delete a project: 2.643542 milliseconds
+------------ 600 Project Added ------------
+Number of projects: 3519
+Time taken to add a project: 1.876541 milliseconds
+Time taken to update a project: 3.298583 milliseconds
+Time taken to delete a project: 2.000875 milliseconds
+------------ 800 Project Added ------------
+Number of projects: 4320
+Time taken to add a project: 5.276833 milliseconds
+Time taken to update a project: 2.687542 milliseconds
+Time taken to delete a project: 1.944625 milliseconds
+------------ 900 Project Added ------------
+Number of projects: 5221
+Time taken to add a project: 1.935791 milliseconds
+Time taken to update a project: 3.103125 milliseconds
+Time taken to delete a project: 3.13225 milliseconds
+------------ 1000 Project Added ------------
+Number of projects: 6222
+Time taken to add a project: 2.217584 milliseconds
+Time taken to update a project: 8.164667 milliseconds
+Time taken to delete a project: 6.439291 milliseconds
+------------ 2000 Project Added ------------
+Number of projects: 8223
+Time taken to add a project: 2.319167 milliseconds
+Time taken to update a project: 4.465833 milliseconds
+Time taken to delete a project: 2.093583 milliseconds
+------------ 3000 Project Added ------------
+Number of projects: 11224
+Time taken to add a project: 2.050542 milliseconds
+Time taken to update a project: 10.866125 milliseconds
+Time taken to delete a project: 8.939459 milliseconds
+------------ 5000 Project Added ------------
+Number of projects: 16225
+Time taken to add a project: 2.894334 milliseconds
+Time taken to update a project: 7.590459 milliseconds
+Time taken to delete a project: 5.40275 milliseconds
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
