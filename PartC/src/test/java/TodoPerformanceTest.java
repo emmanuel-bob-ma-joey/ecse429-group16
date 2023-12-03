@@ -20,7 +20,6 @@ import org.jfree.data.xy.XYSeriesCollection;
 import java.io.File;
 import java.io.IOException;
 import com.sun.management.OperatingSystemMXBean;
-
 import org.apache.http.client.ClientProtocolException;
 import org.junit.After;
 import org.junit.Before;

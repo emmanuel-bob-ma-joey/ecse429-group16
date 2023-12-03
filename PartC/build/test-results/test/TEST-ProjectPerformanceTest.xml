@@ -1,7 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ProjectPerformanceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-03T22:31:51" hostname="MacBook-Pro.local" time="0.003">
+<testsuite name="ProjectPerformanceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-03T23:06:26" hostname="MacBook-Pro.local" time="75.455">
   <properties/>
-  <testcase name="test()" classname="ProjectPerformanceTest" time="0.003"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="testProjectPerformance()" classname="ProjectPerformanceTest" time="75.455"/>
+  <system-out><![CDATA[------------ 1 Project Added ------------
+Number of projects: 3
+Time taken to add a project: 8.652878 milliseconds
+Time taken to update a project: 17.688671 milliseconds
+Time taken to delete a project: 9.877892 milliseconds
+------------ 30 Project Added ------------
+Number of projects: 34
+Time taken to add a project: 61.311745 milliseconds
+Time taken to update a project: 7.224885 milliseconds
+Time taken to delete a project: 4.72274 milliseconds
+------------ 50 Project Added ------------
+Number of projects: 85
+Time taken to add a project: 6.039972 milliseconds
+Time taken to update a project: 5.289743 milliseconds
+Time taken to delete a project: 4.35163 milliseconds
+------------ 80 Project Added ------------
+Number of projects: 166
+Time taken to add a project: 6.213686 milliseconds
+Time taken to update a project: 5.521028 milliseconds
+Time taken to delete a project: 4.110285 milliseconds
+------------ 100 Project Added ------------
+Number of projects: 267
+Time taken to add a project: 5.405325 milliseconds
+Time taken to update a project: 4.693685 milliseconds
+Time taken to delete a project: 4.857357 milliseconds
+------------ 200 Project Added ------------
+Number of projects: 468
+Time taken to add a project: 5.756461 milliseconds
+Time taken to update a project: 5.208134 milliseconds
+Time taken to delete a project: 3.584066 milliseconds
+------------ 300 Project Added ------------
+Number of projects: 769
+Time taken to add a project: 24.996342 milliseconds
+Time taken to update a project: 5.865618 milliseconds
+Time taken to delete a project: 4.578657 milliseconds
+------------ 400 Project Added ------------
+Number of projects: 1170
+Time taken to add a project: 3.836989 milliseconds
+Time taken to update a project: 3.469126 milliseconds
+Time taken to delete a project: 3.852132 milliseconds
+------------ 500 Project Added ------------
+Number of projects: 1671
+Time taken to add a project: 3.899463 milliseconds
+Time taken to update a project: 3.660906 milliseconds
+Time taken to delete a project: 7.587389 milliseconds
+------------ 600 Project Added ------------
+Number of projects: 2272
+Time taken to add a project: 2.746528 milliseconds
+Time taken to update a project: 4.57216 milliseconds
+Time taken to delete a project: 4.845518 milliseconds
+------------ 800 Project Added ------------
+Number of projects: 3073
+Time taken to add a project: 5.395615 milliseconds
+Time taken to update a project: 3.820803 milliseconds
+Time taken to delete a project: 4.421255 milliseconds
+------------ 900 Project Added ------------
+Number of projects: 3974
+Time taken to add a project: 3.968409 milliseconds
+Time taken to update a project: 5.136887 milliseconds
+Time taken to delete a project: 4.169636 milliseconds
+------------ 1000 Project Added ------------
+Number of projects: 4975
+Time taken to add a project: 2.53529 milliseconds
+Time taken to update a project: 4.463284 milliseconds
+Time taken to delete a project: 7.316619 milliseconds
+------------ 2000 Project Added ------------
+Number of projects: 6976
+Time taken to add a project: 4.111515 milliseconds
+Time taken to update a project: 10.734837 milliseconds
+Time taken to delete a project: 8.661502 milliseconds
+------------ 3000 Project Added ------------
+Number of projects: 9977
+Time taken to add a project: 26.870535 milliseconds
+Time taken to update a project: 10.759796 milliseconds
+Time taken to delete a project: 13.181418 milliseconds
+------------ 5000 Project Added ------------
+Number of projects: 14978
+Time taken to add a project: 4.560252 milliseconds
+Time taken to update a project: 9.165973 milliseconds
+Time taken to delete a project: 17.203775 milliseconds
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
