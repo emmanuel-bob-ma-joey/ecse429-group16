@@ -4,13 +4,15 @@ import java.util.List;
 import org.apache.http.client.ClientProtocolException;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import io.restassured.response.Response;
 
 public class TodoPerformanceTest {
   public Process RunRestAPI;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
 
     try {
@@ -22,7 +24,7 @@ public class TodoPerformanceTest {
     Thread.sleep(3000); // wait for server to start
   }
 
-  @After
+  @AfterEach
   public void tearDown() throws Exception {
     RunRestAPI.destroy();
     Thread.sleep(1000);
