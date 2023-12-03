@@ -1,272 +1,288 @@
 ------------- 1 Categories Added ------------
 Number of categories: 4
-5Time taken to add a category: 27.104128 milliseconds
-8Time taken to update a category: 22.919365 milliseconds
-7Time taken to delete a Category: 20.55709 milliseconds
-memory usage:21
+5Time taken to add a category: 71.682686 milliseconds
+7Time taken to update a category: 95.27066 milliseconds
+8Time taken to delete a Category: 27.152617 milliseconds
+memory usage:22
 .------------ 30 Categories Added ------------
 Number of categories: 36
-5Time taken to add a category: 12.383188 milliseconds
-8Time taken to update a category: 14.810118 milliseconds
-8Time taken to delete a Category: 12.323959 milliseconds
+4Time taken to add a category: 21.69636 milliseconds
+7Time taken to update a category: 72.33121 milliseconds
+8Time taken to delete a Category: 44.713337 milliseconds
 memory usage:22
 .------------ 50 Categories Added ------------
 Number of categories: 88
-5Time taken to add a category: 11.167178 milliseconds
-8Time taken to update a category: 10.524169 milliseconds
-7Time taken to delete a Category: 8.813017 milliseconds
+5Time taken to add a category: 16.095467 milliseconds
+8Time taken to update a category: 20.135813 milliseconds
+8Time taken to delete a Category: 22.447376 milliseconds
 memory usage:23
 .------------ 80 Categories Added ------------
 Number of categories: 170
-4Time taken to add a category: 8.738679 milliseconds
-7Time taken to update a category: 9.498444 milliseconds
-7Time taken to delete a Category: 7.948855 milliseconds
+5Time taken to add a category: 31.844728 milliseconds
+8Time taken to update a category: 16.056929 milliseconds
+8Time taken to delete a Category: 56.950897 milliseconds
 memory usage:24
 /------------ 100 Categories Added ------------
 Number of categories: 272
-5Time taken to add a category: 20.994473 milliseconds
-8Time taken to update a category: 26.078764 milliseconds
-8Time taken to delete a Category: 62.173256 milliseconds
+5Time taken to add a category: 12.312692 milliseconds
+8Time taken to update a category: 21.535055 milliseconds
+8Time taken to delete a Category: 13.379443 milliseconds
 memory usage:21
 /------------ 200 Categories Added ------------
 Number of categories: 474
-4Time taken to add a category: 6.931157 milliseconds
-7Time taken to update a category: 7.431954 milliseconds
-7Time taken to delete a Category: 5.575829 milliseconds
-memory usage:23
+5Time taken to add a category: 15.234184 milliseconds
+8Time taken to update a category: 14.493182 milliseconds
+8Time taken to delete a Category: 11.092472 milliseconds
+memory usage:21
 /------------ 300 Categories Added ------------
 Number of categories: 776
-3Time taken to add a category: 6.88279 milliseconds
-7Time taken to update a category: 7.285928 milliseconds
-7Time taken to delete a Category: 6.699346 milliseconds
+5Time taken to add a category: 168.15587 milliseconds
+7Time taken to update a category: 8.367415 milliseconds
+8Time taken to delete a Category: 16.129036 milliseconds
 memory usage:22
 /------------ 400 Categories Added ------------
 Number of categories: 1178
-5Time taken to add a category: 14.082316 milliseconds
-7Time taken to update a category: 8.146927 milliseconds
-7Time taken to delete a Category: 4.671209 milliseconds
+5Time taken to add a category: 11.062609 milliseconds
+8Time taken to update a category: 24.788652 milliseconds
+8Time taken to delete a Category: 14.577124 milliseconds
 memory usage:29
 /------------ 500 Categories Added ------------
 Number of categories: 1680
-4Time taken to add a category: 4.676037 milliseconds
-7Time taken to update a category: 4.005544 milliseconds
-7Time taken to delete a Category: 4.193303 milliseconds
+4Time taken to add a category: 5.699579 milliseconds
+7Time taken to update a category: 5.510828 milliseconds
+7Time taken to delete a Category: 5.527685 milliseconds
 memory usage:22
 /------------ 600 Categories Added ------------
 Number of categories: 2282
-4Time taken to add a category: 5.801581 milliseconds
-7Time taken to update a category: 5.166051 milliseconds
-7Time taken to delete a Category: 4.608887 milliseconds
+4Time taken to add a category: 8.805966 milliseconds
+8Time taken to update a category: 23.183516 milliseconds
+8Time taken to delete a Category: 12.659882 milliseconds
 memory usage:23
 /------------ 800 Categories Added ------------
 Number of categories: 3084
-4Time taken to add a category: 4.257497 milliseconds
-6Time taken to update a category: 7.91895 milliseconds
-6Time taken to delete a Category: 3.57945 milliseconds
+4Time taken to add a category: 5.636335 milliseconds
+7Time taken to update a category: 5.197286 milliseconds
+7Time taken to delete a Category: 3.918082 milliseconds
 memory usage:23
 /------------ 900 Categories Added ------------
 Number of categories: 3986
-5Time taken to add a category: 26.078163 milliseconds
-8Time taken to update a category: 17.507372 milliseconds
-7Time taken to delete a Category: 89.40314 milliseconds
+5Time taken to add a category: 11.057395 milliseconds
+7Time taken to update a category: 7.084195 milliseconds
+7Time taken to delete a Category: 4.363187 milliseconds
 memory usage:24
 0------------ 1000 Categories Added ------------
 Number of categories: 4988
-4Time taken to add a category: 4.479424 milliseconds
-8Time taken to update a category: 20.461216 milliseconds
-7Time taken to delete a Category: 6.643986 milliseconds
+4Time taken to add a category: 3.682639 milliseconds
+7Time taken to update a category: 4.473828 milliseconds
+7Time taken to delete a Category: 3.731378 milliseconds
 memory usage:24
 0------------ 2000 Categories Added ------------
 Number of categories: 6990
-5Time taken to add a category: 177.69072 milliseconds
-8Time taken to update a category: 10.498486 milliseconds
-7Time taken to delete a Category: 21.25656 milliseconds
+3Time taken to add a category: 4.31371 milliseconds
+7Time taken to update a category: 7.301694 milliseconds
+7Time taken to delete a Category: 3.902753 milliseconds
 memory usage:25
 0------------ 3000 Categories Added ------------
 Number of categories: 9992
-4Time taken to add a category: 3.478804 milliseconds
-7Time taken to update a category: 4.280825 milliseconds
-7Time taken to delete a Category: 3.416783 milliseconds
+4Time taken to add a category: 3.475005 milliseconds
+7Time taken to update a category: 5.930836 milliseconds
+6Time taken to delete a Category: 3.65241 milliseconds
 memory usage:28
 0------------ 5000 Categories Added ------------
 Number of categories: 14994
-4Time taken to add a category: 2.365226 milliseconds
-7Time taken to update a category: 3.278057 milliseconds
-7Time taken to delete a Category: 2.996249 milliseconds
-memory usage:31
+4Time taken to add a category: 4.715076 milliseconds
+7Time taken to update a category: 9.008382 milliseconds
+7Time taken to delete a Category: 3.667242 milliseconds
+memory usage:30
 *------------ 1 Project Added ------------
 Number of projects: 3
-3Time taken to add a project: 8.652878 milliseconds
-7Time taken to update a project: 17.688671 milliseconds
-6Time taken to delete a project: 9.877892 milliseconds
+3Time taken to add a project: 8.261973 milliseconds
+7Time taken to update a project: 161.78954 milliseconds
+6Time taken to delete a project: 5.913133 milliseconds
+memory usage:23
 +------------ 30 Project Added ------------
 Number of projects: 34
-4Time taken to add a project: 61.311745 milliseconds
-6Time taken to update a project: 7.224885 milliseconds
-5Time taken to delete a project: 4.72274 milliseconds
+3Time taken to add a project: 14.14685 milliseconds
+6Time taken to update a project: 7.581261 milliseconds
+6Time taken to delete a project: 5.505468 milliseconds
+memory usage:24
 +------------ 50 Project Added ------------
 Number of projects: 85
-3Time taken to add a project: 6.039972 milliseconds
-6Time taken to update a project: 5.289743 milliseconds
-5Time taken to delete a project: 4.35163 milliseconds
+4Time taken to add a project: 65.333244 milliseconds
+5Time taken to update a project: 25.0495 milliseconds
+6Time taken to delete a project: 7.201804 milliseconds
+memory usage:24
 +------------ 80 Project Added ------------
 Number of projects: 166
-3Time taken to add a project: 6.213686 milliseconds
-6Time taken to update a project: 5.521028 milliseconds
-6Time taken to delete a project: 4.110285 milliseconds
+2Time taken to add a project: 7.20234 milliseconds
+6Time taken to update a project: 8.415614 milliseconds
+7Time taken to delete a project: 12.385402 milliseconds
+memory usage:25
 ,------------ 100 Project Added ------------
 Number of projects: 267
-3Time taken to add a project: 5.405325 milliseconds
-6Time taken to update a project: 4.693685 milliseconds
-6Time taken to delete a project: 4.857357 milliseconds
+3Time taken to add a project: 5.352585 milliseconds
+6Time taken to update a project: 6.095763 milliseconds
+6Time taken to delete a project: 5.772272 milliseconds
+memory usage:26
 ,------------ 200 Project Added ------------
 Number of projects: 468
-3Time taken to add a project: 5.756461 milliseconds
-6Time taken to update a project: 5.208134 milliseconds
-6Time taken to delete a project: 3.584066 milliseconds
+4Time taken to add a project: 11.648275 milliseconds
+5Time taken to update a project: 53.1778 milliseconds
+7Time taken to delete a project: 10.310933 milliseconds
+memory usage:23
 ,------------ 300 Project Added ------------
 Number of projects: 769
-4Time taken to add a project: 24.996342 milliseconds
-6Time taken to update a project: 5.865618 milliseconds
-6Time taken to delete a project: 4.578657 milliseconds
+4Time taken to add a project: 65.466125 milliseconds
+6Time taken to update a project: 6.215138 milliseconds
+6Time taken to delete a project: 4.397984 milliseconds
+memory usage:24
 ,------------ 400 Project Added ------------
 Number of projects: 1170
-3Time taken to add a project: 3.836989 milliseconds
-6Time taken to update a project: 3.469126 milliseconds
-6Time taken to delete a project: 3.852132 milliseconds
+4Time taken to add a project: 18.849104 milliseconds
+6Time taken to update a project: 8.489115 milliseconds
+6Time taken to delete a project: 6.486317 milliseconds
+memory usage:24
 ,------------ 500 Project Added ------------
 Number of projects: 1671
-3Time taken to add a project: 3.899463 milliseconds
-6Time taken to update a project: 3.660906 milliseconds
-6Time taken to delete a project: 7.587389 milliseconds
+3Time taken to add a project: 12.74747 milliseconds
+6Time taken to update a project: 5.428691 milliseconds
+6Time taken to delete a project: 6.123303 milliseconds
+memory usage:24
 ,------------ 600 Project Added ------------
 Number of projects: 2272
-3Time taken to add a project: 2.746528 milliseconds
-5Time taken to update a project: 4.57216 milliseconds
-6Time taken to delete a project: 4.845518 milliseconds
+4Time taken to add a project: 16.684155 milliseconds
+6Time taken to update a project: 8.306003 milliseconds
+7Time taken to delete a project: 10.462439 milliseconds
+memory usage:25
 ,------------ 800 Project Added ------------
 Number of projects: 3073
-3Time taken to add a project: 5.395615 milliseconds
-6Time taken to update a project: 3.820803 milliseconds
-6Time taken to delete a project: 4.421255 milliseconds
+3Time taken to add a project: 3.860426 milliseconds
+6Time taken to update a project: 92.54508 milliseconds
+6Time taken to delete a project: 7.617983 milliseconds
+memory usage:26
 ,------------ 900 Project Added ------------
 Number of projects: 3974
-3Time taken to add a project: 3.968409 milliseconds
-6Time taken to update a project: 5.136887 milliseconds
-6Time taken to delete a project: 4.169636 milliseconds
+3Time taken to add a project: 3.696947 milliseconds
+6Time taken to update a project: 5.783711 milliseconds
+6Time taken to delete a project: 8.597867 milliseconds
+memory usage:26
 ------------- 1000 Project Added ------------
 Number of projects: 4975
-2Time taken to add a project: 2.53529 milliseconds
-6Time taken to update a project: 4.463284 milliseconds
-6Time taken to delete a project: 7.316619 milliseconds
+3Time taken to add a project: 3.667282 milliseconds
+6Time taken to update a project: 36.65949 milliseconds
+4Time taken to delete a project: 6.7627 milliseconds
+memory usage:27
 ------------- 2000 Project Added ------------
 Number of projects: 6976
-3Time taken to add a project: 4.111515 milliseconds
-7Time taken to update a project: 10.734837 milliseconds
-6Time taken to delete a project: 8.661502 milliseconds
+3Time taken to add a project: 3.540248 milliseconds
+7Time taken to update a project: 27.969925 milliseconds
+6Time taken to delete a project: 9.944042 milliseconds
+memory usage:30
 ------------- 3000 Project Added ------------
 Number of projects: 9977
-4Time taken to add a project: 26.870535 milliseconds
-7Time taken to update a project: 10.759796 milliseconds
-7Time taken to delete a project: 13.181418 milliseconds
+4Time taken to add a project: 31.733107 milliseconds
+7Time taken to update a project: 43.864067 milliseconds
+6Time taken to delete a project: 8.336083 milliseconds
+memory usage:32
 ------------- 5000 Project Added ------------
 Number of projects: 14978
-3Time taken to add a project: 4.560252 milliseconds
-6Time taken to update a project: 9.165973 milliseconds
-7Time taken to delete a project: 17.203775 milliseconds
+2Time taken to add a project: 3.61723 milliseconds
+7Time taken to update a project: 12.441412 milliseconds
+7Time taken to delete a project: 21.494087 milliseconds
+memory usage:37
 (------------ 1 Todos Added ------------
 Number of todos: 4
-0Time taken to add a todo: 7.554163 milliseconds
-4Time taken to update a todo: 51.085144 milliseconds
-3Time taken to delete a todo: 7.057189 milliseconds
+0Time taken to add a todo: 6.684822 milliseconds
+4Time taken to update a todo: 10.090401 milliseconds
+3Time taken to delete a todo: 5.719965 milliseconds
 memory usage:23
 )------------ 30 Todos Added ------------
 Number of todos: 35
-0Time taken to add a todo: 6.917628 milliseconds
-3Time taken to update a todo: 6.469339 milliseconds
-3Time taken to delete a todo: 5.115885 milliseconds
+1Time taken to add a todo: 10.046625 milliseconds
+4Time taken to update a todo: 25.662275 milliseconds
+3Time taken to delete a todo: 5.136707 milliseconds
 memory usage:24
 )------------ 50 Todos Added ------------
 Number of todos: 86
-0Time taken to add a todo: 7.191664 milliseconds
-3Time taken to update a todo: 4.946508 milliseconds
-3Time taken to delete a todo: 7.537574 milliseconds
+1Time taken to add a todo: 10.156651 milliseconds
+3Time taken to update a todo: 6.070597 milliseconds
+3Time taken to delete a todo: 4.671696 milliseconds
 memory usage:24
 )------------ 80 Todos Added ------------
 Number of todos: 167
-0Time taken to add a todo: 5.871087 milliseconds
-4Time taken to update a todo: 19.524704 milliseconds
-3Time taken to delete a todo: 7.114127 milliseconds
+0Time taken to add a todo: 6.694652 milliseconds
+3Time taken to update a todo: 73.20651 milliseconds
+3Time taken to delete a todo: 6.419984 milliseconds
 memory usage:25
 *------------ 100 Todos Added ------------
 Number of todos: 268
-1Time taken to add a todo: 19.794806 milliseconds
-3Time taken to update a todo: 5.635322 milliseconds
-3Time taken to delete a todo: 4.564207 milliseconds
+0Time taken to add a todo: 6.047486 milliseconds
+2Time taken to update a todo: 5.34899 milliseconds
+2Time taken to delete a todo: 5.35622 milliseconds
 memory usage:26
 *------------ 200 Todos Added ------------
 Number of todos: 469
-0Time taken to add a todo: 6.021464 milliseconds
-3Time taken to update a todo: 5.121931 milliseconds
-4Time taken to delete a todo: 10.754821 milliseconds
-memory usage:29
+0Time taken to add a todo: 6.022188 milliseconds
+3Time taken to update a todo: 6.395495 milliseconds
+3Time taken to delete a todo: 53.37296 milliseconds
+memory usage:23
 *------------ 300 Todos Added ------------
 Number of todos: 770
-0Time taken to add a todo: 4.354996 milliseconds
-3Time taken to update a todo: 5.723716 milliseconds
-3Time taken to delete a todo: 3.455212 milliseconds
-memory usage:23
+0Time taken to add a todo: 4.522215 milliseconds
+4Time taken to update a todo: 49.479637 milliseconds
+2Time taken to delete a todo: 5.02562 milliseconds
+memory usage:24
 *------------ 400 Todos Added ------------
 Number of todos: 1171
-0Time taken to add a todo: 4.556671 milliseconds
-4Time taken to update a todo: 11.368208 milliseconds
-3Time taken to delete a todo: 7.059582 milliseconds
-memory usage:27
+0Time taken to add a todo: 4.521418 milliseconds
+4Time taken to update a todo: 155.31271 milliseconds
+3Time taken to delete a todo: 4.848444 milliseconds
+memory usage:28
 *------------ 500 Todos Added ------------
 Number of todos: 1672
-0Time taken to add a todo: 3.685851 milliseconds
-3Time taken to update a todo: 3.683759 milliseconds
-4Time taken to delete a todo: 13.496881 milliseconds
+0Time taken to add a todo: 4.225488 milliseconds
+3Time taken to update a todo: 4.506234 milliseconds
+3Time taken to delete a todo: 5.353047 milliseconds
 memory usage:24
 *------------ 600 Todos Added ------------
 Number of todos: 2273
-0Time taken to add a todo: 6.738561 milliseconds
-3Time taken to update a todo: 5.886514 milliseconds
-3Time taken to delete a todo: 4.314979 milliseconds
+0Time taken to add a todo: 3.622172 milliseconds
+3Time taken to update a todo: 10.73202 milliseconds
+3Time taken to delete a todo: 9.023085 milliseconds
 memory usage:25
 *------------ 800 Todos Added ------------
 Number of todos: 3074
-0Time taken to add a todo: 4.383625 milliseconds
-3Time taken to update a todo: 3.574769 milliseconds
-3Time taken to delete a todo: 4.936575 milliseconds
+1Time taken to add a todo: 35.985153 milliseconds
+3Time taken to update a todo: 4.367177 milliseconds
+2Time taken to delete a todo: 6.34767 milliseconds
 memory usage:25
 *------------ 900 Todos Added ------------
 Number of todos: 3975
-/Time taken to add a todo: 2.75882 milliseconds
-3Time taken to update a todo: 7.036706 milliseconds
-2Time taken to delete a todo: 6.67782 milliseconds
+0Time taken to add a todo: 5.252927 milliseconds
+3Time taken to update a todo: 4.304289 milliseconds
+3Time taken to delete a todo: 5.378496 milliseconds
 memory usage:26
 +------------ 1000 Todos Added ------------
 Number of todos: 4976
-0Time taken to add a todo: 4.384687 milliseconds
-3Time taken to update a todo: 4.407001 milliseconds
-3Time taken to delete a todo: 4.579661 milliseconds
+0Time taken to add a todo: 6.826644 milliseconds
+4Time taken to update a todo: 66.586205 milliseconds
+3Time taken to delete a todo: 7.663307 milliseconds
 memory usage:27
 +------------ 2000 Todos Added ------------
 Number of todos: 6977
-/Time taken to add a todo: 2.63501 milliseconds
-3Time taken to update a todo: 5.174153 milliseconds
-3Time taken to delete a todo: 9.715641 milliseconds
+0Time taken to add a todo: 30.97576 milliseconds
+3Time taken to update a todo: 7.177871 milliseconds
+4Time taken to delete a todo: 11.735977 milliseconds
 memory usage:29
 +------------ 3000 Todos Added ------------
 Number of todos: 9978
-1Time taken to add a todo: 419.68002 milliseconds
-3Time taken to update a todo: 3.838036 milliseconds
-3Time taken to delete a todo: 4.399846 milliseconds
+0Time taken to add a todo: 3.243347 milliseconds
+3Time taken to update a todo: 6.595467 milliseconds
+4Time taken to delete a todo: 12.120777 milliseconds
 memory usage:31
 +------------ 5000 Todos Added ------------
 Number of todos: 14979
-0Time taken to add a todo: 4.403842 milliseconds
-3Time taken to update a todo: 95.94486 milliseconds
-4Time taken to delete a todo: 238.28386 milliseconds
+0Time taken to add a todo: 6.110909 milliseconds
+4Time taken to update a todo: 41.928673 milliseconds
+3Time taken to delete a todo: 21.22278 milliseconds
 memory usage:35
