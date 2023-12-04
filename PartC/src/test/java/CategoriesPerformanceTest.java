@@ -48,7 +48,14 @@ public class CategoriesPerformanceTest {
     XYSeries series3 = new XYSeries("Delete Time Data");
     XYSeries series4 = new XYSeries("Update Time Data");
     XYSeries series5 = new XYSeries("Process CPU Data");
-    // XYSeries series6 = new XYSeries("System CPU Data");
+
+    XYSeries series6 = new XYSeries("Memory Data Sample Time");
+    XYSeries series7 = new XYSeries("Add Time Data Sample Time");
+    XYSeries series8 = new XYSeries("Delete Time Data Sample Time");
+    XYSeries series9 = new XYSeries("Update Time Data Sample Time");
+    XYSeries series10 = new XYSeries("Process CPU Data Sample Time");
+
+    long start = System.currentTimeMillis();
 
     for (int ITERATIONS : Utils.ITERATIONS) {
       // Add iterations amount of categories
@@ -75,6 +82,9 @@ public class CategoriesPerformanceTest {
               + " milliseconds");
       series2.add(size, (float) (endTimeForAdd - startTimeForAdd) / Utils.millisecondsInNano);
 
+      series7.add((float) (System.currentTimeMillis() - start) / 100, (float) (endTimeForAdd - startTimeForAdd)
+          / Utils.millisecondsInNano);
+
       int id = Integer.parseInt(newCategory.getBody().jsonPath().getString("id"));
 
       // Update the Category
@@ -88,6 +98,9 @@ public class CategoriesPerformanceTest {
       System.out.println("Time taken to update a category: "
           + (float) (endTimeForUpdate - startTimeForUpdate) / Utils.millisecondsInNano + " milliseconds");
       series4.add(size, (float) (endTimeForUpdate - startTimeForUpdate) / Utils.millisecondsInNano);
+      series9.add((float) (System.currentTimeMillis() - start) / 1000, (float) (endTimeForUpdate - startTimeForUpdate)
+          / Utils.millisecondsInNano);
+
       // Delete the Category
 
       long startTimeForDelete = System.nanoTime();
@@ -98,24 +111,39 @@ public class CategoriesPerformanceTest {
       System.out.println("Time taken to delete a Category: "
           + (float) (endTimeForDelete - startTimeForDelete) / Utils.millisecondsInNano + " milliseconds");
       series3.add(size, (float) (endTimeForDelete - startTimeForDelete) / Utils.millisecondsInNano);
+      series8.add((float) (System.currentTimeMillis() - start) / 1000, (float) (endTimeForDelete - startTimeForDelete)
+          / Utils.millisecondsInNano);
+
       System.gc();
       Runtime rt = Runtime.getRuntime();
       long usedMB = (rt.totalMemory() - rt.freeMemory()) / 1024 / 1024;
       System.out.println("memory usage:" + usedMB);
       series.add(size, usedMB);
       series5.add(size, osBean.getProcessCpuLoad());
-      // System.out.println("System CPU load is at:"+osBean.getSystemCpuLoad());
 
+      series6.add((float) (System.currentTimeMillis() - start) / 1000, usedMB);
+      series10.add((float) (System.currentTimeMillis() - start) / 1000, osBean.getProcessCpuLoad());
     }
     XYSeriesCollection timedataset = new XYSeriesCollection();
     XYSeriesCollection memorydataset = new XYSeriesCollection();
     XYSeriesCollection cpudataset = new XYSeriesCollection();
+
+    XYSeriesCollection timeDatasetSampleTime = new XYSeriesCollection();
+    XYSeriesCollection memoryDatasetSampleTime = new XYSeriesCollection();
+    XYSeriesCollection cpuDatasetSampleTime = new XYSeriesCollection();
+
     memorydataset.addSeries(series);
     timedataset.addSeries(series2);
     timedataset.addSeries(series3);
     timedataset.addSeries(series4);
     cpudataset.addSeries(series5);
-    ;
+
+    memoryDatasetSampleTime.addSeries(series6);
+    timeDatasetSampleTime.addSeries(series7);
+    timeDatasetSampleTime.addSeries(series8);
+    timeDatasetSampleTime.addSeries(series9);
+    cpuDatasetSampleTime.addSeries(series10);
+
     JFreeChart timechart = ChartFactory.createXYLineChart(
         "Category api time usage",
         "number of category objects",
@@ -133,12 +161,34 @@ public class CategoriesPerformanceTest {
         "cpu  usage (%)",
         cpudataset);
 
+    JFreeChart timechartSampleTime = ChartFactory.createXYLineChart(
+        "Category api time usage",
+        "time (seconds)",
+        "time (milliseconds)",
+        timeDatasetSampleTime);
+    JFreeChart memorychartSampleTime = ChartFactory.createXYLineChart(
+        "Category api memory usage",
+        "time (seconds)",
+        "memory (MB)",
+        memoryDatasetSampleTime);
+
+    JFreeChart cpuchartSampleTime = ChartFactory.createXYLineChart(
+        "Category api cpu usage",
+        "time (seconds)",
+        "cpu  usage (%)",
+        cpuDatasetSampleTime);
+
     // Save the chart to an image file
     try {
       ChartUtils.saveChartAsPNG(new File("./graphs/category_time_chart.png"), timechart, 600, 400);
       ChartUtils.saveChartAsPNG(new File("./graphs/category_memory_chart.png"), memorychart, 600, 400);
       ChartUtils.saveChartAsPNG(new File("./graphs/category_cpu_chart.png"), cpuchart, 600, 400);
-      // System.out.println("Chart saved to line_chart.png");
+
+      ChartUtils.saveChartAsPNG(new File("./graphs/category_time_chart_sample_time.png"), timechartSampleTime, 600,
+          400);
+      ChartUtils.saveChartAsPNG(new File("./graphs/category_memory_chart_sample_time.png"), memorychartSampleTime, 600,
+          400);
+      ChartUtils.saveChartAsPNG(new File("./graphs/category_cpu_chart_sample_time.png"), cpuchartSampleTime, 600, 400);
     } catch (IOException e) {
       e.printStackTrace();
     }
