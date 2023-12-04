@@ -83,7 +83,7 @@ public class ProjectPerformanceTest {
               + " milliseconds");
       series2.add(size, (float) (endTimeForAdd - startTimeForAdd) / Utils.millisecondsInNano);
 
-      series7.add((float) (System.currentTimeMillis() - start) / 100, (float) (endTimeForAdd - startTimeForAdd)
+      series7.add((float) (System.currentTimeMillis() - start) / 1000, (float) (endTimeForAdd - startTimeForAdd)
           / Utils.millisecondsInNano);
 
       int id = Integer.parseInt(newProject.getBody().jsonPath().getString("id"));
