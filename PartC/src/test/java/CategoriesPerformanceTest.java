@@ -82,7 +82,7 @@ public class CategoriesPerformanceTest {
               + " milliseconds");
       series2.add(size, (float) (endTimeForAdd - startTimeForAdd) / Utils.millisecondsInNano);
 
-      series7.add((float) (System.currentTimeMillis() - start) / 0, (float) (endTimeForAdd - startTimeForAdd)
+      series7.add((float) (System.currentTimeMillis() - start) / 1000, (float) (endTimeForAdd - startTimeForAdd)
           / Utils.millisecondsInNano);
 
       int id = Integer.parseInt(newCategory.getBody().jsonPath().getString("id"));
@@ -166,6 +166,7 @@ public class CategoriesPerformanceTest {
         "time (seconds)",
         "time (milliseconds)",
         timeDatasetSampleTime);
+
     JFreeChart memorychartSampleTime = ChartFactory.createXYLineChart(
         "Category api memory usage",
         "time (seconds)",
